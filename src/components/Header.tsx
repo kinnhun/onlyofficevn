@@ -246,9 +246,12 @@ export default function Header() {
               )}
             </div>
 
-            <Link
+            <a
               className="oo-header-btn en"
-              href="/docspace-registration"
+              href="https://m.me/onlyoffice.official.vn"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Liên hệ qua Messenger"
               style={{
                 whiteSpace: "nowrap",
                 flexWrap: "nowrap",
@@ -257,6 +260,7 @@ export default function Header() {
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: "7px",
                 padding: "0 16px",
                 height: "38px",
                 fontSize: "13px",
@@ -266,8 +270,14 @@ export default function Header() {
                 lineHeight: "1",
               }}
             >
-              Log in <span style={{ margin: "0 4px", opacity: 0.6 }}>/</span> Sign up
-            </Link>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+                <path
+                  d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
+                  fill="#0084FF"
+                />
+              </svg>
+              Liên hệ
+            </a>
           </div>
 
           <a className="oo-header-menu-phone-mobile en" href="tel:+37163399867" style={{ marginTop: "12px" }}>
