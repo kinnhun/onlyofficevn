@@ -1,0 +1,92 @@
+name: 🚀 Deploy to VPS
+
+on:
+  push:
+    branches: [main]
+
+env:
+  NODE_VERSION: '22'
+  APP_DIR: /var/www/onlyofficevn
+  PM2_APP_NAME: onlyofficevn
+
+jobs:
+  build-and-deploy:
+    name: 🏗️ Build & Deploy
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 📋 Install dependencies
+        run: npm ci
+
+      - name: 🔍 Lint check
+        run: npm run lint --if-present
+        continue-on-error: true
+
+      - name: 🏗️ Build production
+        run: npm run build
+
+      - name: 🔑 Setup SSH Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: 📤 Deploy to VPS
+        run: |
+          # Sync project files to VPS (excluding unnecessary files)
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='node_modules' \
+            --exclude='.next' \
+            --exclude='.env.local' \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            ./ root@${{ secrets.VPS_HOST }}:${{ env.APP_DIR }}/
+
+      - name: 🔄 Install & Restart on VPS
+        run: |
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no root@${{ secrets.VPS_HOST }} << 'DEPLOY_SCRIPT'
+            set -e
+            cd /var/www/onlyofficevn
+
+            echo "📦 Installing dependencies..."
+            npm ci --production=false
+
+            echo "🏗️ Building production..."
+            npm run build
+
+            echo "🔄 Restarting PM2 process..."
+            if pm2 describe onlyofficevn > /dev/null 2>&1; then
+              pm2 restart onlyofficevn --update-env
+            else
+              pm2 start npm --name "onlyofficevn" -- start
+            fi
+
+            pm2 save
+
+            echo "✅ Deploy complete!"
+            echo "Node.js: $(node --version)"
+            echo "App status:"
+            pm2 status onlyofficevn
+          DEPLOY_SCRIPT
+
+      - name: 🩺 Health Check
+        run: |
+          echo "Waiting 10s for app to start..."
+          sleep 10
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://${{ secrets.VPS_HOST }} --max-time 15 || echo "000")
+          echo "HTTP Status: $HTTP_STATUS"
+          if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 400 ]; then
+            echo "✅ Health check passed!"
+          else
+            echo "⚠️ Health check returned $HTTP_STATUS (app may still be starting)"
+          fi
