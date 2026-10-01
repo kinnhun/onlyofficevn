@@ -35,7 +35,7 @@ export default function PartnersPage() {
 
   return (
     <>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
 
       <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc", color: "#1e293b", paddingBottom: "100px" }}>

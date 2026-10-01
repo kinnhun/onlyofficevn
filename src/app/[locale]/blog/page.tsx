@@ -25,7 +25,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
       <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc", paddingBottom: "80px" }}>
         {/* Hero Section */}

@@ -34,10 +34,66 @@ export default function FloatingTrialButton() {
           zIndex: 9999,
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-end",
           gap: "8px",
         }}
       >
+        {/* Floating Messenger Button */}
+        <a
+          id="btn-floating-messenger"
+          href="https://m.me/onlyoffice.official.vn"
+          target="_blank"
+          rel="noopener noreferrer"
+          title={isVi ? "Chat trực tiếp qua Messenger" : "Chat on Facebook Messenger"}
+          aria-label="Chat Messenger"
+          style={{
+            background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+            color: "#ffffff",
+            border: "none",
+            borderRadius: "50px",
+            padding: "9px 18px",
+            fontSize: "13.5px",
+            fontWeight: 700,
+            cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "8px",
+            boxShadow: "0 8px 22px rgba(0, 106, 255, 0.4)",
+            textDecoration: "none",
+            transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+            marginBottom: "2px",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-3px) scale(1.03)";
+            e.currentTarget.style.boxShadow = "0 12px 28px rgba(0, 106, 255, 0.55)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0) scale(1)";
+            e.currentTarget.style.boxShadow = "0 8px 22px rgba(0, 106, 255, 0.4)";
+          }}
+        >
+          {/* Messenger SVG Icon */}
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
+            <path
+              d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
+              fill="#ffffff"
+            />
+          </svg>
+          <span style={{ letterSpacing: "0.01em" }}>
+            {isVi ? "Chat Messenger" : "Chat Messenger"}
+          </span>
+          <span
+            style={{
+              width: "7px",
+              height: "7px",
+              borderRadius: "50%",
+              backgroundColor: "#22c55e",
+              boxShadow: "0 0 0 2px rgba(255, 255, 255, 0.8)",
+              display: "inline-block",
+            }}
+            title="Online"
+          />
+        </a>
+
         {/* Pulsing Pill Tag */}
         <div
           style={{
