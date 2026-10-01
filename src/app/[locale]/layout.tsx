@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import FloatingTrialButton from "@/components/FloatingTrialButton";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages} locale={locale}>
           <div id="__next">
             <div className="layout">{children}</div>
+            <FloatingTrialButton />
           </div>
         </NextIntlClientProvider>
       </body>

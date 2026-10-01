@@ -24,7 +24,7 @@ export default async function Home({
 
   return (
     <>
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
       <main>
         <HeroSection />

@@ -6,6 +6,7 @@ import { Link } from "@/i18n/routing";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const tBranding = useTranslations("branding");
 
   return (
     <section
@@ -31,6 +32,44 @@ export default function HeroSection() {
           className="Hero-module-scss-module__PeeyJW__hero-wrapper"
           style={{ marginBottom: "56px" }}
         >
+          {/* Official Distributor & Optimization Badge */}
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "7px 18px",
+              borderRadius: "9999px",
+              backgroundColor: "#fff7ed",
+              border: "1px solid #fed7aa",
+              marginBottom: "20px",
+              boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
+            }}
+          >
+            <span style={{ fontSize: "14px" }}>🇻🇳</span>
+            <span
+              style={{
+                fontSize: "13px",
+                fontWeight: 700,
+                color: "#ea580c",
+                letterSpacing: "0.2px",
+                textTransform: "uppercase",
+              }}
+            >
+              {tBranding("distributor")}
+            </span>
+            <span style={{ color: "#cbd5e1", fontSize: "14px" }}>•</span>
+            <span
+              style={{
+                fontSize: "13px",
+                fontWeight: 600,
+                color: "#475569",
+              }}
+            >
+              {tBranding("optimizedBy")}
+            </span>
+          </div>
+
           <h1
             className="Heading-module-scss-module__-NGNla__heading Heading-module-scss-module__-NGNla__size-2 Heading-module-scss-module__-NGNla__text-align-center"
             style={{
@@ -101,9 +140,12 @@ export default function HeroSection() {
                 fontSize: "16px",
                 textDecoration: "none",
                 boxShadow: "0 4px 14px rgba(0, 0, 0, 0.15)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              {t("btnSeeInAction")}
+              <span style={{ color: "#ffffff", fontWeight: 600 }}>{t("btnSeeInAction")}</span>
             </Link>
           </div>
         </div>

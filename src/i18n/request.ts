@@ -10,6 +10,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
   return {
     locale,
+    // Reloads updated locale JSON definitions
     messages: (await import(`../../messages/${locale}.json`)).default,
   };
 });

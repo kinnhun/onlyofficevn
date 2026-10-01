@@ -13,15 +13,29 @@ export default function AnnouncementBar() {
     <div className="oo-advent-announce en" style={{ position: "relative" }}>
       <a
         className="oo-advent-announce-wrapper en"
-        href="https://www.onlyoffice.com/blog/category/back-to-school"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/partners"
       >
         <div className="oo-advent-announce-text en">
           <div className="oo-advent-announce-text-desktop">
-            <span>{t("textMobile")}</span> {t("textDesktop")}
+            <span
+              style={{
+                backgroundColor: "#ffffff",
+                color: "#ea580c",
+                padding: "2px 8px",
+                borderRadius: "4px",
+                fontWeight: 700,
+                marginRight: "8px",
+                fontSize: "11px",
+                letterSpacing: "0.3px",
+                textTransform: "uppercase",
+                boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+              }}
+            >
+              CHÍNH THỨC
+            </span>
+            <span style={{ fontWeight: 700 }}>{t("textMobile")}</span> {t("textDesktop")}
           </div>
-          <div className="oo-advent-announce-text-mobile">
+          <div className="oo-advent-announce-text-mobile" style={{ fontWeight: 700 }}>
             {t("textMobile")}
           </div>
         </div>

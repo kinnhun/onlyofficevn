@@ -11,20 +11,34 @@
     "searchPlaceholder": "Tìm kiếm tài liệu, giải pháp...",
     "contactSales": "Tư vấn doanh nghiệp",
     "globalEurope": "Quốc tế / Châu Âu",
-    "usCanada": "Mỹ & Canada"
+    "usCanada": "Mỹ & Canada",
+    "language": "Ngôn ngữ"
   },
   "announcement": {
-    "textDesktop": "Chào đón năm học mới cùng ONLYOFFICE! Sẵn sàng cho kỳ học mới với các bài viết hữu ích của chúng tôi.",
-    "textMobile": "Chào đón năm học mới cùng ONLYOFFICE!"
+    "textDesktop": "• Hỗ trợ triển khai & kỹ thuật chính hãng toàn quốc",
+    "textMobile": "Đơn vị phân phối tại Việt Nam — Tối ưu bởi Mercy Tech"
+  },
+  "branding": {
+    "distributor": "Đơn vị phân phối tại Việt Nam",
+    "optimizedBy": "Tối ưu bởi Mercy Tech",
+    "company": "CÔNG TY TNHH CÔNG NGHỆ MERCY",
+    "mst": "MST: 0319227767",
+    "hotline": "Hotline / Zalo: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (Mr. Hùng)",
+    "email": "ketoan.mercy@gmail.com",
+    "address": "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam",
+    "mission": "Tiên phong cung cấp giải pháp văn phòng số OnlyOffice chuẩn hóa tại Việt Nam. Hợp thức hóa bản quyền và tối ưu 90% chi phí IT dài hạn."
   },
   "header": {
+    "home": "Trang chủ",
+    "pricing": "Bảng Giá",
+    "partners": "Đăng ký đối tác",
+    "blog": "Blog",
     "products": "Sản phẩm",
     "enterprise": "Doanh nghiệp",
     "developers": "Nhà phát triển",
-    "pricing": "Bảng giá",
-    "partners": "Đối tác",
     "resources": "Tài nguyên",
-    "download": "Tải về",
+    "download": "Dùng Thử",
     "contact": "Liên hệ",
     "menus": {
       "products": {
@@ -45,11 +59,13 @@
         "apiDocs": { "title": "Tài liệu API", "desc": "Hướng dẫn chi tiết, tài liệu plugin và SDK toàn diện" }
       },
       "pricing": {
+        "allPricing": { "title": "Bảng Giá Chi Tiết", "desc": "Xem toàn bộ các gói Docs Enterprise, DocSpace và Developer" },
         "docsPrices": { "title": "Bảng giá Docs Enterprise", "desc": "Bản quyền vĩnh viễn và gói thuê bao định kỳ cho máy chủ" },
         "docspacePrices": { "title": "Bảng giá DocSpace Cloud & Server", "desc": "Các gói linh hoạt phù hợp với mọi quy mô đội ngũ" },
         "developerPrices": { "title": "Bảng giá Developer Edition", "desc": "Gói chi phí tối ưu dành cho ISV và nhà phát triển SaaS" }
       },
       "partners": {
+        "partnerRegister": { "title": "Đăng Ký Đối Tác", "desc": "Gia nhập mạng lưới phân phối và tích hợp ONLYOFFICE tại Việt Nam" },
         "resellers": { "title": "Chương trình Đại lý", "desc": "Trở thành đối tác phân phối giải pháp ONLYOFFICE" },
         "techPartners": { "title": "Đối tác Công nghệ", "desc": "Tích hợp ONLYOFFICE vào phần mềm và dịch vụ của bạn" },
         "hosting": { "title": "Nhà cung cấp Dịch vụ Hosting", "desc": "Cung cấp giải pháp ONLYOFFICE Cloud cho khách hàng của bạn" }
@@ -61,6 +77,7 @@
         "events": { "title": "Sự kiện & Hội nghị", "desc": "Gặp gỡ trực tiếp đội ngũ ONLYOFFICE trên toàn cầu" }
       },
       "download": {
+        "trialBat": { "title": "Tải bản Dùng thử 7 Ngày (.BAT)", "desc": "Công cụ kích hoạt dùng thử 7 ngày bản Enterprise từ Mercy Tech" },
         "desktop": { "title": "Ứng dụng Máy tính", "desc": "Dành cho Windows, Linux, macOS" },
         "mobile": { "title": "Ứng dụng Di động", "desc": "Dành cho iOS, Android" },
         "server": { "title": "Giải pháp Máy chủ", "desc": "Docker, DEB, RPM, Kubernetes" },
@@ -216,5 +233,80 @@
       "support": "Hỗ trợ",
       "company": "Công ty"
     }
+  },
+  "pricingPage": {
+    "badge": "ĐƠN VỊ PHÂN PHỐI TẠI VIỆT NAM — TỐI ƯU BỞI MERCY TECH",
+    "title": "Bảng Giá Bản Quyền ONLYOFFICE",
+    "subtitle": "Giải pháp văn phòng bảo mật tuyệt đối cho máy chủ riêng hoặc đám mây. Bản quyền vĩnh viễn hoặc thuê bao linh hoạt theo nhu cầu.",
+    "billingYearly": "Gói Hàng Năm",
+    "billingLifetime": "Bản Quyền Vĩnh Viễn",
+    "savePercent": "Tiết kiệm 20%",
+    "popularBadge": "KHUYÊN DÙNG",
+    "plans": {
+      "community": {
+        "name": "Bản Cộng Đồng",
+        "tag": "Cá nhân & Nhóm nhỏ",
+        "price": "Miễn Phí",
+        "period": "trọn đời",
+        "desc": "Bộ soạn thảo trực tuyến mạnh mẽ cho văn bản, bảng tính, trình chiếu và PDF.",
+        "btn": "Dùng Thử Miễn Phí"
+      },
+      "enterprise": {
+        "name": "Docs Enterprise",
+        "tag": "Doanh nghiệp & Tổ chức",
+        "price": "1.250.000 ₫",
+        "period": "/ server / tháng",
+        "desc": "Bảo mật cao cấp, mở rộng không giới hạn cho máy chủ riêng với hỗ trợ kỹ thuật 24/7 từ Mercy Tech.",
+        "btn": "Tải Bản Dùng Thử 7 Ngày"
+      },
+      "developer": {
+        "name": "Developer Edition",
+        "tag": "Nhà phát triển & ISV",
+        "price": "Liên hệ",
+        "period": "báo giá riêng",
+        "desc": "Nhúng bộ ứng dụng văn phòng vào nền tảng Web / SaaS của bạn với toàn quyền điều khiển API.",
+        "btn": "Tư Vấn & Dùng Thử API"
+      }
+    },
+    "comparisonTitle": "So Sánh Chi Tiết Các Tính Năng",
+    "faqTitle": "Câu Hỏi Thường Gặp Về Bản Quyền",
+    "ctaTitle": "Cần tư vấn giải pháp bản quyền cho doanh nghiệp của bạn?",
+    "ctaDesc": "Đội ngũ chuyên viên Mercy Technology luôn sẵn sàng khảo sát nhu cầu, demo trực tiếp và gửi báo giá tối ưu nhất.",
+    "ctaBtn": "Liên Hệ Zalo / Hotline: 0763.068.614"
+  },
+  "partnersPage": {
+    "badge": "MẠNG LƯỚI ĐỐI TÁC TẠI VIỆT NAM — TỐI ƯU & ĐIỀU PHỐI BỞI MERCY TECH",
+    "title": "Trở Thành Đối Tác ONLYOFFICE Tại Việt Nam",
+    "subtitle": "Đồng hành cùng Công ty TNHH Công Nghệ Mercy mang giải pháp văn phòng an toàn, bảo mật và hiệu quả kinh tế đến hàng ngàn doanh nghiệp Việt Nam.",
+    "benefitsTitle": "Quyền Lợi Dành Cho Đối Tác",
+    "tiersTitle": "Các Hạng Mục Hợp Tác",
+    "formTitle": "Đăng Ký Tham Gia Mạng Lưới Đối Tác",
+    "formDesc": "Vui lòng điền thông tin bên dưới, chuyên viên phụ trách đối tác của Mercy Tech sẽ liên hệ lại với bạn trong vòng 24 giờ làm việc.",
+    "form": {
+      "fullName": "Họ và tên người liên hệ",
+      "company": "Tên công ty / Doanh nghiệp",
+      "taxId": "Mã số thuế",
+      "email": "Email công việc",
+      "phone": "Số điện thoại / Zalo",
+      "city": "Tỉnh / Thành phố",
+      "partnerType": "Loại hình hợp tác mong muốn",
+      "message": "Nhu cầu hoặc thông tin thêm",
+      "submit": "Gửi Yêu Cầu Đăng Ký Đối Tác",
+      "successTitle": "Đăng Ký Thành Công!",
+      "successDesc": "Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ liên hệ sớm nhất để trao đổi chính sách chiết khấu và gửi bộ tài liệu đại lý."
+    }
+  },
+  "blogPage": {
+    "badge": "TIN TỨC & BÍ QUYẾT TỐI ƯU HÓA — MERCY TECH",
+    "title": "Tin Tức & Hướng Dẫn ONLYOFFICE",
+    "subtitle": "Khám phá các bí quyết làm việc hiệu quả, cập nhật tính năng mới, giải pháp bảo mật dữ liệu và tích hợp trí tuệ nhân tạo.",
+    "filterAll": "Tất cả",
+    "filterRelease": "Bản phát hành",
+    "filterGuides": "Hướng dẫn",
+    "filterSecurity": "Bảo mật & AI",
+    "filterStories": "Khách hàng",
+    "readMore": "Đọc bài viết",
+    "readTime": "phút đọc",
+    "featured": "BÀI VIẾT NỔI BẬT"
   }
 }

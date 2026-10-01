@@ -11,20 +11,34 @@
     "searchPlaceholder": "Search docs, solutions...",
     "contactSales": "Contact Sales",
     "globalEurope": "Global / Europe",
-    "usCanada": "US & Canada"
+    "usCanada": "US & Canada",
+    "language": "Language"
   },
   "announcement": {
-    "textDesktop": "Back to school with ONLYOFFICE! Get prepared for the new academic year with our special blog posts.",
-    "textMobile": "Back to school with ONLYOFFICE!"
+    "textDesktop": "• Official enterprise deployment & technical support nationwide",
+    "textMobile": "Official Distributor in Vietnam — Optimized by Mercy Tech"
+  },
+  "branding": {
+    "distributor": "Official Distributor in Vietnam",
+    "optimizedBy": "Optimized by Mercy Tech",
+    "company": "MERCY TECHNOLOGY CO., LTD",
+    "mst": "Tax ID: 0319227767",
+    "hotline": "Hotline / Zalo: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (Mr. Hùng)",
+    "email": "ketoan.mercy@gmail.com",
+    "address": "175/3 Nguyen Thi Be Street, Hamlet 33, Dong Thanh Commune, Ho Chi Minh City, Vietnam",
+    "mission": "Pioneering standardized OnlyOffice digital workspace solutions in Vietnam. Legalizing software licenses and optimizing 90% long-term IT costs."
   },
   "header": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "partners": "Partners",
+    "blog": "Blog",
     "products": "Products",
     "enterprise": "Enterprise",
     "developers": "Developers",
-    "pricing": "Pricing",
-    "partners": "Partners",
     "resources": "Resources",
-    "download": "Download",
+    "download": "Free Trial",
     "contact": "Contact",
     "menus": {
       "products": {
@@ -45,11 +59,13 @@
         "apiDocs": { "title": "API Documentation", "desc": "Comprehensive guides, plugins, and SDK documentation" }
       },
       "pricing": {
+        "allPricing": { "title": "Detailed Pricing", "desc": "Overview of Docs Enterprise, DocSpace, and Developer plans" },
         "docsPrices": { "title": "Docs Enterprise Pricing", "desc": "Lifetime and subscription licenses for server" },
         "docspacePrices": { "title": "DocSpace Cloud & On-Premises", "desc": "Flexible plans for teams of any size" },
         "developerPrices": { "title": "Developer Edition Pricing", "desc": "Tailored pricing for ISVs and SaaS builders" }
       },
       "partners": {
+        "partnerRegister": { "title": "Register as Partner", "desc": "Join our official distribution and integrator network in Vietnam" },
         "resellers": { "title": "Reseller Program", "desc": "Become a partner and distribute ONLYOFFICE solutions" },
         "techPartners": { "title": "Technology Partners", "desc": "Integrate ONLYOFFICE with your own software products" },
         "hosting": { "title": "Hosting Providers", "desc": "Offer ONLYOFFICE SaaS to your customers" }
@@ -61,6 +77,7 @@
         "events": { "title": "Events & Conferences", "desc": "Meet the ONLYOFFICE team in person worldwide" }
       },
       "download": {
+        "trialBat": { "title": "7-Day Free Trial Tool (.BAT)", "desc": "Automated script to activate 7-day full Enterprise trial by Mercy Tech" },
         "desktop": { "title": "Desktop Editors", "desc": "Windows, Linux, macOS" },
         "mobile": { "title": "Mobile Apps", "desc": "iOS, Android" },
         "server": { "title": "Server Solutions", "desc": "Docker, DEB, RPM, Kubernetes" },
@@ -216,5 +233,80 @@
       "support": "Support",
       "company": "Company"
     }
+  },
+  "pricingPage": {
+    "badge": "OFFICIAL DISTRIBUTOR IN VIETNAM — OPTIMIZED BY MERCY TECH",
+    "title": "ONLYOFFICE Licensing & Pricing",
+    "subtitle": "High-security office solutions for your private server or cloud. Flexible lifetime licenses or periodic subscriptions.",
+    "billingYearly": "Yearly Plan",
+    "billingLifetime": "Lifetime License",
+    "savePercent": "Save 20%",
+    "popularBadge": "RECOMMENDED",
+    "plans": {
+      "community": {
+        "name": "Community Edition",
+        "tag": "Individuals & Small Teams",
+        "price": "Free",
+        "period": "forever",
+        "desc": "Powerful online office suite for documents, spreadsheets, presentations, and PDFs.",
+        "btn": "Try For Free"
+      },
+      "enterprise": {
+        "name": "Docs Enterprise",
+        "tag": "Enterprises & Organizations",
+        "price": "1,250,000 ₫",
+        "period": "/ server / mo",
+        "desc": "High security, scalable office suite for private servers with 24/7 technical support from Mercy Tech.",
+        "btn": "Download 7-Day Trial"
+      },
+      "developer": {
+        "name": "Developer Edition",
+        "tag": "Developers & ISVs",
+        "price": "Contact us",
+        "period": "custom quote",
+        "desc": "Embed office suite into your SaaS platform with full API and white-label control.",
+        "btn": "Consult & Try API"
+      }
+    },
+    "comparisonTitle": "Detailed Feature Comparison",
+    "faqTitle": "Licensing Frequently Asked Questions",
+    "ctaTitle": "Need a customized licensing plan for your business?",
+    "ctaDesc": "The Mercy Technology specialist team is ready to analyze your workflow, run live demos, and offer competitive pricing.",
+    "ctaBtn": "Contact Hotline / Zalo: 0763.068.614"
+  },
+  "partnersPage": {
+    "badge": "PARTNER NETWORK IN VIETNAM — OPTIMIZED & COORDINATED BY MERCY TECH",
+    "title": "Become an ONLYOFFICE Partner in Vietnam",
+    "subtitle": "Join forces with Mercy Technology Co., Ltd to deliver secure, cost-effective office productivity to thousands of businesses.",
+    "benefitsTitle": "Partner Advantages",
+    "tiersTitle": "Partnership Categories",
+    "formTitle": "Register for the Partner Program",
+    "formDesc": "Please submit your company details below. Our partner representative will contact you within 24 business hours.",
+    "form": {
+      "fullName": "Contact Full Name",
+      "company": "Company / Organization Name",
+      "taxId": "Tax Identification Number",
+      "email": "Work Email",
+      "phone": "Phone / Zalo Number",
+      "city": "Province / City",
+      "partnerType": "Desired Partnership Model",
+      "message": "Project requirements or additional notes",
+      "submit": "Submit Partner Application",
+      "successTitle": "Application Submitted!",
+      "successDesc": "Thank you for your interest. The Mercy Tech team will reach out shortly with our discount tiers and partner kit."
+    }
+  },
+  "blogPage": {
+    "badge": "NEWS & OPTIMIZATION INSIGHTS — MERCY TECH",
+    "title": "ONLYOFFICE News & Guides",
+    "subtitle": "Discover productivity tips, new feature announcements, data security practices, and AI enhancements.",
+    "filterAll": "All",
+    "filterRelease": "Releases",
+    "filterGuides": "Guides",
+    "filterSecurity": "Security & AI",
+    "filterStories": "Case Studies",
+    "readMore": "Read Article",
+    "readTime": "min read",
+    "featured": "FEATURED ARTICLE"
   }
 }
