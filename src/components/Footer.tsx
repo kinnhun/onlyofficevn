@@ -71,10 +71,6 @@ export default function Footer() {
     },
   ];
 
-  const languages = [
-    "English", "Français", "Deutsch", "Español", "Português", "Italiano", "Čeština", "Nederlands", "日本語", "中文", "Русский"
-  ];
-
   return (
     <footer
       style={{
