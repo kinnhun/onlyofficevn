@@ -23,9 +23,9 @@
     "optimizedBy": "Tối ưu bởi Mercy Tech",
     "company": "CÔNG TY TNHH CÔNG NGHỆ MERCY",
     "mst": "MST: 0319227767",
-    "hotline": "Hotline / Zalo: 0763.068.614",
-    "hotlineNamed": "0763.068.614 (Mr. Hùng)",
-    "email": "ketoan.mercy@gmail.com",
+    "hotline": "Hotline / Messenger: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
+    "email": "contact@mercytechglobal.com",
     "address": "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam",
     "mission": "Tiên phong cung cấp giải pháp văn phòng số OnlyOffice chuẩn hóa tại Việt Nam. Hợp thức hóa bản quyền và tối ưu 90% chi phí IT dài hạn."
   },
@@ -42,46 +42,130 @@
     "contact": "Liên hệ",
     "menus": {
       "products": {
-        "docs": { "title": "ONLYOFFICE Docs", "desc": "Bộ soạn thảo trực tuyến cho văn bản, bảng tính và trình chiếu" },
-        "docspace": { "title": "ONLYOFFICE DocSpace", "desc": "Nền tảng cộng tác và chia sẻ tài liệu theo phòng làm việc" },
-        "desktop": { "title": "ONLYOFFICE Desktop Editors", "desc": "Ứng dụng văn phòng miễn phí cho Windows, macOS và Linux" },
-        "mobile": { "title": "ONLYOFFICE Mobile Apps", "desc": "Ứng dụng văn phòng di động cho iOS và Android" },
-        "workspace": { "title": "ONLYOFFICE Workspace", "desc": "Bộ công cụ quản lý năng suất toàn diện cho doanh nghiệp" }
+        "docs": {
+          "title": "ONLYOFFICE Docs",
+          "desc": "Bộ soạn thảo trực tuyến cho văn bản, bảng tính và trình chiếu"
+        },
+        "docspace": {
+          "title": "ONLYOFFICE DocSpace",
+          "desc": "Nền tảng cộng tác và chia sẻ tài liệu theo phòng làm việc"
+        },
+        "desktop": {
+          "title": "ONLYOFFICE Desktop Editors",
+          "desc": "Ứng dụng văn phòng miễn phí cho Windows, macOS và Linux"
+        },
+        "mobile": {
+          "title": "ONLYOFFICE Mobile Apps",
+          "desc": "Ứng dụng văn phòng di động cho iOS và Android"
+        },
+        "workspace": {
+          "title": "ONLYOFFICE Workspace",
+          "desc": "Bộ công cụ quản lý năng suất toàn diện cho doanh nghiệp"
+        }
       },
       "enterprise": {
-        "docsEnterprise": { "title": "ONLYOFFICE Docs Enterprise", "desc": "Giải pháp văn phòng bảo mật, mở rộng cao cho máy chủ riêng" },
-        "docspaceEnterprise": { "title": "ONLYOFFICE DocSpace Enterprise", "desc": "Phòng cộng tác tài liệu tự lưu trữ (on-premises) an toàn" },
-        "security": { "title": "Bảo mật & Tuân thủ", "desc": "Chuẩn GDPR, HIPAA, mã hóa nhiều tầng và kiểm tra an ninh" }
+        "docsEnterprise": {
+          "title": "ONLYOFFICE Docs Enterprise",
+          "desc": "Giải pháp văn phòng bảo mật, mở rộng cao cho máy chủ riêng"
+        },
+        "docspaceEnterprise": {
+          "title": "ONLYOFFICE DocSpace Enterprise",
+          "desc": "Phòng cộng tác tài liệu tự lưu trữ (on-premises) an toàn"
+        },
+        "security": {
+          "title": "Bảo mật & Tuân thủ",
+          "desc": "Chuẩn GDPR, HIPAA, mã hóa nhiều tầng và kiểm tra an ninh"
+        }
       },
       "developers": {
-        "developerEdition": { "title": "Developer Edition", "desc": "Tích hợp liền mạch bộ ứng dụng văn phòng vào nền tảng SaaS" },
-        "docspaceDeveloper": { "title": "DocSpace cho Nhà phát triển", "desc": "Nhúng phòng cộng tác với quyền điều khiển API đầy đủ" },
-        "apiDocs": { "title": "Tài liệu API", "desc": "Hướng dẫn chi tiết, tài liệu plugin và SDK toàn diện" }
+        "developerEdition": {
+          "title": "Developer Edition",
+          "desc": "Tích hợp liền mạch bộ ứng dụng văn phòng vào nền tảng SaaS"
+        },
+        "docspaceDeveloper": {
+          "title": "DocSpace cho Nhà phát triển",
+          "desc": "Nhúng phòng cộng tác với quyền điều khiển API đầy đủ"
+        },
+        "apiDocs": {
+          "title": "Tài liệu API",
+          "desc": "Hướng dẫn chi tiết, tài liệu plugin và SDK toàn diện"
+        }
       },
       "pricing": {
-        "allPricing": { "title": "Bảng Giá Chi Tiết", "desc": "Xem toàn bộ các gói Docs Enterprise, DocSpace và Developer" },
-        "docsPrices": { "title": "Bảng giá Docs Enterprise", "desc": "Bản quyền vĩnh viễn và gói thuê bao định kỳ cho máy chủ" },
-        "docspacePrices": { "title": "Bảng giá DocSpace Cloud & Server", "desc": "Các gói linh hoạt phù hợp với mọi quy mô đội ngũ" },
-        "developerPrices": { "title": "Bảng giá Developer Edition", "desc": "Gói chi phí tối ưu dành cho ISV và nhà phát triển SaaS" }
+        "allPricing": {
+          "title": "Bảng Giá Chi Tiết",
+          "desc": "Xem toàn bộ các gói Docs Enterprise, DocSpace và Developer"
+        },
+        "docsPrices": {
+          "title": "Bảng giá Docs Enterprise",
+          "desc": "Bản quyền vĩnh viễn và gói thuê bao định kỳ cho máy chủ"
+        },
+        "docspacePrices": {
+          "title": "Bảng giá DocSpace Cloud & Server",
+          "desc": "Các gói linh hoạt phù hợp với mọi quy mô đội ngũ"
+        },
+        "developerPrices": {
+          "title": "Bảng giá Developer Edition",
+          "desc": "Gói chi phí tối ưu dành cho ISV và nhà phát triển SaaS"
+        }
       },
       "partners": {
-        "partnerRegister": { "title": "Đăng Ký Đối Tác", "desc": "Gia nhập mạng lưới phân phối và tích hợp ONLYOFFICE tại Việt Nam" },
-        "resellers": { "title": "Chương trình Đại lý", "desc": "Trở thành đối tác phân phối giải pháp ONLYOFFICE" },
-        "techPartners": { "title": "Đối tác Công nghệ", "desc": "Tích hợp ONLYOFFICE vào phần mềm và dịch vụ của bạn" },
-        "hosting": { "title": "Nhà cung cấp Dịch vụ Hosting", "desc": "Cung cấp giải pháp ONLYOFFICE Cloud cho khách hàng của bạn" }
+        "partnerRegister": {
+          "title": "Đăng Ký Đối Tác",
+          "desc": "Gia nhập mạng lưới phân phối và tích hợp ONLYOFFICE tại Việt Nam"
+        },
+        "resellers": {
+          "title": "Chương trình Đại lý",
+          "desc": "Trở thành đối tác phân phối giải pháp ONLYOFFICE"
+        },
+        "techPartners": {
+          "title": "Đối tác Công nghệ",
+          "desc": "Tích hợp ONLYOFFICE vào phần mềm và dịch vụ của bạn"
+        },
+        "hosting": {
+          "title": "Nhà cung cấp Dịch vụ Hosting",
+          "desc": "Cung cấp giải pháp ONLYOFFICE Cloud cho khách hàng của bạn"
+        }
       },
       "resources": {
-        "blog": { "title": "Blog & Tin tức", "desc": "Các bản phát hành mới nhất, hướng dẫn và câu chuyện thành công" },
-        "webinars": { "title": "Hội thảo trực tuyến & Video", "desc": "Bản demo tương tác, mẹo hay và hướng dẫn tính năng" },
-        "helpcenter": { "title": "Trung tâm Hỗ trợ & Diễn đàn", "desc": "Nhận trợ giúp từ đội ngũ kỹ thuật và cộng đồng ONLYOFFICE" },
-        "events": { "title": "Sự kiện & Hội nghị", "desc": "Gặp gỡ trực tiếp đội ngũ ONLYOFFICE trên toàn cầu" }
+        "blog": {
+          "title": "Blog & Tin tức",
+          "desc": "Các bản phát hành mới nhất, hướng dẫn và câu chuyện thành công"
+        },
+        "webinars": {
+          "title": "Hội thảo trực tuyến & Video",
+          "desc": "Bản demo tương tác, mẹo hay và hướng dẫn tính năng"
+        },
+        "helpcenter": {
+          "title": "Trung tâm Hỗ trợ & Diễn đàn",
+          "desc": "Nhận trợ giúp từ đội ngũ kỹ thuật và cộng đồng ONLYOFFICE"
+        },
+        "events": {
+          "title": "Sự kiện & Hội nghị",
+          "desc": "Gặp gỡ trực tiếp đội ngũ ONLYOFFICE trên toàn cầu"
+        }
       },
       "download": {
-        "trialBat": { "title": "Tải bản Dùng thử 7 Ngày (.BAT)", "desc": "Công cụ kích hoạt dùng thử 7 ngày bản Enterprise từ Mercy Tech" },
-        "desktop": { "title": "Ứng dụng Máy tính", "desc": "Dành cho Windows, Linux, macOS" },
-        "mobile": { "title": "Ứng dụng Di động", "desc": "Dành cho iOS, Android" },
-        "server": { "title": "Giải pháp Máy chủ", "desc": "Docker, DEB, RPM, Kubernetes" },
-        "connectors": { "title": "Kết nối có sẵn", "desc": "Nextcloud, ownCloud, Jira, Moodle, v.v." }
+        "trialBat": {
+          "title": "Tải bản Dùng thử 7 Ngày (.BAT)",
+          "desc": "Công cụ kích hoạt dùng thử 7 ngày bản Enterprise từ Mercy Tech"
+        },
+        "desktop": {
+          "title": "Ứng dụng Máy tính",
+          "desc": "Dành cho Windows, Linux, macOS"
+        },
+        "mobile": {
+          "title": "Ứng dụng Di động",
+          "desc": "Dành cho iOS, Android"
+        },
+        "server": {
+          "title": "Giải pháp Máy chủ",
+          "desc": "Docker, DEB, RPM, Kubernetes"
+        },
+        "connectors": {
+          "title": "Kết nối có sẵn",
+          "desc": "Nextcloud, ownCloud, Jira, Moodle, v.v."
+        }
       }
     }
   },
@@ -272,7 +356,7 @@
     "faqTitle": "Câu Hỏi Thường Gặp Về Bản Quyền",
     "ctaTitle": "Cần tư vấn giải pháp bản quyền cho doanh nghiệp của bạn?",
     "ctaDesc": "Đội ngũ chuyên viên Mercy Technology luôn sẵn sàng khảo sát nhu cầu, demo trực tiếp và gửi báo giá tối ưu nhất.",
-    "ctaBtn": "Liên Hệ Zalo / Hotline: 0763.068.614"
+    "ctaBtn": "Liên Hệ Messenger / Hotline: 0763.068.614"
   },
   "partnersPage": {
     "badge": "MẠNG LƯỚI ĐỐI TÁC TẠI VIỆT NAM — TỐI ƯU & ĐIỀU PHỐI BỞI MERCY TECH",
@@ -287,7 +371,7 @@
       "company": "Tên công ty / Doanh nghiệp",
       "taxId": "Mã số thuế",
       "email": "Email công việc",
-      "phone": "Số điện thoại / Zalo",
+      "phone": "Số điện thoại liên hệ",
       "city": "Tỉnh / Thành phố",
       "partnerType": "Loại hình hợp tác mong muốn",
       "message": "Nhu cầu hoặc thông tin thêm",

@@ -23,9 +23,9 @@
     "optimizedBy": "Optimized by Mercy Tech",
     "company": "MERCY TECHNOLOGY CO., LTD",
     "mst": "Tax ID: 0319227767",
-    "hotline": "Hotline / Zalo: 0763.068.614",
-    "hotlineNamed": "0763.068.614 (Mr. Hùng)",
-    "email": "ketoan.mercy@gmail.com",
+    "hotline": "Hotline / Messenger: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
+    "email": "contact@mercytechglobal.com",
     "address": "175/3 Nguyen Thi Be Street, Hamlet 33, Dong Thanh Commune, Ho Chi Minh City, Vietnam",
     "mission": "Pioneering standardized OnlyOffice digital workspace solutions in Vietnam. Legalizing software licenses and optimizing 90% long-term IT costs."
   },
@@ -42,46 +42,130 @@
     "contact": "Contact",
     "menus": {
       "products": {
-        "docs": { "title": "ONLYOFFICE Docs", "desc": "Online document, spreadsheet, and presentation editors" },
-        "docspace": { "title": "ONLYOFFICE DocSpace", "desc": "Room-based document collaboration and sharing" },
-        "desktop": { "title": "ONLYOFFICE Desktop Editors", "desc": "Free office apps for Windows, macOS, and Linux" },
-        "mobile": { "title": "ONLYOFFICE Mobile Apps", "desc": "Free office apps for iOS and Android" },
-        "workspace": { "title": "ONLYOFFICE Workspace", "desc": "Complete productivity platform for your enterprise" }
+        "docs": {
+          "title": "ONLYOFFICE Docs",
+          "desc": "Online document, spreadsheet, and presentation editors"
+        },
+        "docspace": {
+          "title": "ONLYOFFICE DocSpace",
+          "desc": "Room-based document collaboration and sharing"
+        },
+        "desktop": {
+          "title": "ONLYOFFICE Desktop Editors",
+          "desc": "Free office apps for Windows, macOS, and Linux"
+        },
+        "mobile": {
+          "title": "ONLYOFFICE Mobile Apps",
+          "desc": "Free office apps for iOS and Android"
+        },
+        "workspace": {
+          "title": "ONLYOFFICE Workspace",
+          "desc": "Complete productivity platform for your enterprise"
+        }
       },
       "enterprise": {
-        "docsEnterprise": { "title": "ONLYOFFICE Docs Enterprise", "desc": "Scalable online office for enterprise private servers" },
-        "docspaceEnterprise": { "title": "ONLYOFFICE DocSpace Enterprise", "desc": "Self-hosted secure document collaboration room platform" },
-        "security": { "title": "Security & Compliance", "desc": "GDPR, HIPAA, multi-layer encryption and audits" }
+        "docsEnterprise": {
+          "title": "ONLYOFFICE Docs Enterprise",
+          "desc": "Scalable online office for enterprise private servers"
+        },
+        "docspaceEnterprise": {
+          "title": "ONLYOFFICE DocSpace Enterprise",
+          "desc": "Self-hosted secure document collaboration room platform"
+        },
+        "security": {
+          "title": "Security & Compliance",
+          "desc": "GDPR, HIPAA, multi-layer encryption and audits"
+        }
       },
       "developers": {
-        "developerEdition": { "title": "Developer Edition", "desc": "Seamlessly integrate office suite into your SaaS" },
-        "docspaceDeveloper": { "title": "DocSpace for Developers", "desc": "Embed collaboration rooms with full API control" },
-        "apiDocs": { "title": "API Documentation", "desc": "Comprehensive guides, plugins, and SDK documentation" }
+        "developerEdition": {
+          "title": "Developer Edition",
+          "desc": "Seamlessly integrate office suite into your SaaS"
+        },
+        "docspaceDeveloper": {
+          "title": "DocSpace for Developers",
+          "desc": "Embed collaboration rooms with full API control"
+        },
+        "apiDocs": {
+          "title": "API Documentation",
+          "desc": "Comprehensive guides, plugins, and SDK documentation"
+        }
       },
       "pricing": {
-        "allPricing": { "title": "Detailed Pricing", "desc": "Overview of Docs Enterprise, DocSpace, and Developer plans" },
-        "docsPrices": { "title": "Docs Enterprise Pricing", "desc": "Lifetime and subscription licenses for server" },
-        "docspacePrices": { "title": "DocSpace Cloud & On-Premises", "desc": "Flexible plans for teams of any size" },
-        "developerPrices": { "title": "Developer Edition Pricing", "desc": "Tailored pricing for ISVs and SaaS builders" }
+        "allPricing": {
+          "title": "Detailed Pricing",
+          "desc": "Overview of Docs Enterprise, DocSpace, and Developer plans"
+        },
+        "docsPrices": {
+          "title": "Docs Enterprise Pricing",
+          "desc": "Lifetime and subscription licenses for server"
+        },
+        "docspacePrices": {
+          "title": "DocSpace Cloud & On-Premises",
+          "desc": "Flexible plans for teams of any size"
+        },
+        "developerPrices": {
+          "title": "Developer Edition Pricing",
+          "desc": "Tailored pricing for ISVs and SaaS builders"
+        }
       },
       "partners": {
-        "partnerRegister": { "title": "Register as Partner", "desc": "Join our official distribution and integrator network in Vietnam" },
-        "resellers": { "title": "Reseller Program", "desc": "Become a partner and distribute ONLYOFFICE solutions" },
-        "techPartners": { "title": "Technology Partners", "desc": "Integrate ONLYOFFICE with your own software products" },
-        "hosting": { "title": "Hosting Providers", "desc": "Offer ONLYOFFICE SaaS to your customers" }
+        "partnerRegister": {
+          "title": "Register as Partner",
+          "desc": "Join our official distribution and integrator network in Vietnam"
+        },
+        "resellers": {
+          "title": "Reseller Program",
+          "desc": "Become a partner and distribute ONLYOFFICE solutions"
+        },
+        "techPartners": {
+          "title": "Technology Partners",
+          "desc": "Integrate ONLYOFFICE with your own software products"
+        },
+        "hosting": {
+          "title": "Hosting Providers",
+          "desc": "Offer ONLYOFFICE SaaS to your customers"
+        }
       },
       "resources": {
-        "blog": { "title": "Blog & Updates", "desc": "Latest releases, tutorials, and success stories" },
-        "webinars": { "title": "Webinars & Videos", "desc": "Interactive demos, tips, and feature walkthroughs" },
-        "helpcenter": { "title": "Help Center & Forums", "desc": "Get help from the ONLYOFFICE support team and community" },
-        "events": { "title": "Events & Conferences", "desc": "Meet the ONLYOFFICE team in person worldwide" }
+        "blog": {
+          "title": "Blog & Updates",
+          "desc": "Latest releases, tutorials, and success stories"
+        },
+        "webinars": {
+          "title": "Webinars & Videos",
+          "desc": "Interactive demos, tips, and feature walkthroughs"
+        },
+        "helpcenter": {
+          "title": "Help Center & Forums",
+          "desc": "Get help from the ONLYOFFICE support team and community"
+        },
+        "events": {
+          "title": "Events & Conferences",
+          "desc": "Meet the ONLYOFFICE team in person worldwide"
+        }
       },
       "download": {
-        "trialBat": { "title": "7-Day Free Trial Tool (.BAT)", "desc": "Automated script to activate 7-day full Enterprise trial by Mercy Tech" },
-        "desktop": { "title": "Desktop Editors", "desc": "Windows, Linux, macOS" },
-        "mobile": { "title": "Mobile Apps", "desc": "iOS, Android" },
-        "server": { "title": "Server Solutions", "desc": "Docker, DEB, RPM, Kubernetes" },
-        "connectors": { "title": "Ready-to-use Connectors", "desc": "Nextcloud, ownCloud, Jira, Moodle, etc." }
+        "trialBat": {
+          "title": "7-Day Free Trial Tool (.BAT)",
+          "desc": "Automated script to activate 7-day full Enterprise trial by Mercy Tech"
+        },
+        "desktop": {
+          "title": "Desktop Editors",
+          "desc": "Windows, Linux, macOS"
+        },
+        "mobile": {
+          "title": "Mobile Apps",
+          "desc": "iOS, Android"
+        },
+        "server": {
+          "title": "Server Solutions",
+          "desc": "Docker, DEB, RPM, Kubernetes"
+        },
+        "connectors": {
+          "title": "Ready-to-use Connectors",
+          "desc": "Nextcloud, ownCloud, Jira, Moodle, etc."
+        }
       }
     }
   },
@@ -272,7 +356,7 @@
     "faqTitle": "Licensing Frequently Asked Questions",
     "ctaTitle": "Need a customized licensing plan for your business?",
     "ctaDesc": "The Mercy Technology specialist team is ready to analyze your workflow, run live demos, and offer competitive pricing.",
-    "ctaBtn": "Contact Hotline / Zalo: 0763.068.614"
+    "ctaBtn": "Contact Messenger / Hotline: 0763.068.614"
   },
   "partnersPage": {
     "badge": "PARTNER NETWORK IN VIETNAM — OPTIMIZED & COORDINATED BY MERCY TECH",
@@ -287,7 +371,7 @@
       "company": "Company / Organization Name",
       "taxId": "Tax Identification Number",
       "email": "Work Email",
-      "phone": "Phone / Zalo Number",
+      "phone": "Contact Phone Number",
       "city": "Province / City",
       "partnerType": "Desired Partnership Model",
       "message": "Project requirements or additional notes",

@@ -21,10 +21,10 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
 
   useEffect(() => {
     if (defaultProduct) {
-      if (defaultProduct.toLowerCase().includes("tem")) setProduct("tem-vat-ly");
-      else if (defaultProduct.toLowerCase().includes("windows")) setProduct("windows-fpp");
-      else if (defaultProduct.toLowerCase().includes("office")) setProduct("office-2024");
-      else if (defaultProduct.toLowerCase().includes("đại lý") || defaultProduct.toLowerCase().includes("sỉ")) setProduct("dai-ly-si");
+      const lower = defaultProduct.toLowerCase();
+      if (lower.includes("tem")) setProduct("tem-vat-ly");
+      else if (lower.includes("enterprise") || lower.includes("server")) setProduct("docs-enterprise");
+      else if (lower.includes("đại lý") || lower.includes("sỉ")) setProduct("dai-ly-si");
       else setProduct("key-online");
     }
   }, [defaultProduct]);
@@ -39,13 +39,13 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
       `Sản phẩm quan tâm: ${product}%0A` +
       `Số lượng dự kiến: ${quantity}%0A` +
       `Khách hàng: ${fullName}%0A` +
-      `SĐT/Zalo: ${phone}%0A` +
+      `SĐT liên hệ: ${phone}%0A` +
       (company ? `Công ty / Cửa hàng: ${company}%0A` : "") +
       (needVat ? `Yêu cầu: Xuất hóa đơn VAT%0A` : "") +
       (note ? `Ghi chú: ${note}%0A` : "");
 
     setTimeout(() => {
-      window.open(`https://zalo.me/0763068614?text=${message}`, "_blank");
+      window.open("https://m.me/onlyoffice.official.vn", "_blank");
     }, 600);
   };
 
@@ -144,7 +144,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                 GỬI YÊU CẦU THÀNH CÔNG!
               </h4>
               <p style={{ fontSize: "14px", color: "#666666", lineHeight: 1.6, margin: "0 0 20px" }}>
-                Hệ thống đang mở kết nối Zalo với chuyên viên tư vấn Mercy Tech (Hotline: <strong>0763.068.614</strong>) để gửi bảng giá chiết khấu chi tiết cho quý khách.
+                Hệ thống đang mở kết nối Messenger với chuyên viên tư vấn Mercy Tech (Hotline: <strong>0763.068.614</strong>) để gửi bảng giá chiết khấu chi tiết cho quý khách.
               </p>
               <button
                 type="button"
@@ -184,11 +184,10 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                     outline: "none",
                   }}
                 >
-                  <option value="key-online">🔑 OnlyOffice Key Online (Vĩnh viễn theo Main)</option>
-                  <option value="tem-vat-ly">✨ OnlyOffice Tem Cào Hologram 7 Màu (Vật lý)</option>
-                  <option value="windows-fpp">💻 Windows Pro 10/11 USB FPP (Hộp USB đổi máy)</option>
-                  <option value="office-2024">📦 Office Home & Business 2024 Full Box</option>
-                  <option value="dai-ly-si">💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng PC</option>
+                  <option value="key-online">🔑 OnlyOffice Key Online (Vĩnh viễn theo Mainboard)</option>
+                  <option value="tem-vat-ly">✨ OnlyOffice Tem Cào Hologram 7 Màu (Vật lý dán PC/Laptop)</option>
+                  <option value="docs-enterprise">🏢 OnlyOffice Docs Enterprise (Máy chủ riêng / On-premise)</option>
+                  <option value="dai-ly-si">💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng máy tính</option>
                 </select>
               </div>
 
@@ -241,7 +240,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                 </div>
                 <div>
                   <label style={{ fontSize: "12.5px", fontWeight: 700, color: "#333333", display: "block", marginBottom: "4px" }}>
-                    Số điện thoại / Zalo *:
+                    Số điện thoại liên hệ *:
                   </label>
                   <input
                     type="tel"
@@ -314,7 +313,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                 }}
               >
                 <MessageCircle size={18} />
-                <span>Gửi Yêu Cầu & Kết Nối Zalo Báo Giá</span>
+                <span>Gửi Yêu Cầu & Kết Nối Messenger Báo Giá</span>
               </button>
             </form>
           )}

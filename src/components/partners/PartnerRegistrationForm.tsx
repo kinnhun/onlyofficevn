@@ -76,27 +76,28 @@ export default function PartnerRegistrationForm() {
               Đăng Ký Thành Công!
             </h3>
             <p style={{ fontSize: "15px", color: "#166534", maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.6 }}>
-              Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ gửi bảng giá sỉ bảo mật và liên hệ qua Số điện thoại/Zalo <strong>{formData.phone}</strong> ngay trong ít phút.
+              Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ gửi bảng giá sỉ bảo mật và liên hệ qua Messenger/Điện thoại <strong>{formData.phone}</strong> ngay trong ít phút.
             </p>
             <a
-              href="https://zalo.me/0763068614"
+              href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "8px",
-                backgroundColor: "#0068ff",
+                background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
                 color: "#ffffff",
                 padding: "12px 24px",
                 borderRadius: "8px",
                 fontWeight: 700,
                 fontSize: "14px",
                 textDecoration: "none",
+                boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
               }}
             >
               <MessageCircle size={16} />
-              <span>Chat Zalo Nhận Báo Giá Ngay</span>
+              <span>Chat Messenger Nhận Báo Giá Ngay</span>
             </a>
           </div>
         ) : (
@@ -118,7 +119,7 @@ export default function PartnerRegistrationForm() {
 
               <div>
                 <label style={{ display: "block", fontSize: "13px", fontWeight: 700, color: "#334155", marginBottom: "6px" }}>
-                  Số điện thoại / Zalo <span style={{ color: "#ef4444" }}>*</span>
+                  Số điện thoại liên hệ <span style={{ color: "#ef4444" }}>*</span>
                 </label>
                 <input
                   type="tel"

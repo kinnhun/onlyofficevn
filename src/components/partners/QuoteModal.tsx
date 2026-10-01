@@ -143,16 +143,16 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                 Tiếp Nhận Thành Công!
               </h4>
               <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "22px" }}>
-                Chuyên viên Mercy Tech sẽ gửi file báo giá sỉ bảo mật và gọi/nhắn Zalo đến số <strong>{formData.phone}</strong> trong ít phút.
+                Chuyên viên Mercy Tech sẽ gửi file báo giá sỉ bảo mật và gọi/nhắn Messenger đến số <strong>{formData.phone}</strong> trong ít phút.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <a
-                  href="https://zalo.me/0763068614"
+                  href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    backgroundColor: "#0068ff",
+                    background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
                     color: "#ffffff",
                     padding: "13px",
                     borderRadius: "8px",
@@ -163,10 +163,11 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "8px",
+                    boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
                   }}
                 >
                   <MessageCircle size={18} />
-                  <span>Nhắn Tin Zalo Trực Tiếp: 0763.068.614</span>
+                  <span>Nhắn Tin Messenger Trực Tiếp</span>
                 </a>
                 <button
                   type="button"
@@ -205,7 +206,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
               >
                 <ShieldCheck size={18} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} />
                 <span>
-                  <strong>Chính sách bảo mật:</strong> Để đảm bảo biên lợi nhuận cho đại lý đã ký kết, bảng giá sỉ không công khai. Quý đối tác vui lòng để lại thông tin hoặc kết nối Zalo để nhận file báo giá.
+                  <strong>Chính sách bảo mật:</strong> Để đảm bảo biên lợi nhuận cho đại lý đã ký kết, bảng giá sỉ không công khai. Quý đối tác vui lòng để lại thông tin hoặc kết nối Messenger để nhận file báo giá.
                 </span>
               </div>
 
@@ -226,7 +227,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
 
                 <div>
                   <label style={{ display: "block", fontSize: "12.5px", fontWeight: 700, color: "#334155", marginBottom: "4px" }}>
-                    Số điện thoại / Zalo nhận báo giá <span style={{ color: "#ef4444" }}>*</span>
+                    Số điện thoại liên hệ nhận báo giá <span style={{ color: "#ef4444" }}>*</span>
                   </label>
                   <input
                     type="tel"
@@ -326,7 +327,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                 }}
               >
                 <a
-                  href="https://zalo.me/0763068614"
+                  href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
@@ -335,12 +336,12 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                     gap: "6px",
                     fontSize: "13px",
                     fontWeight: 700,
-                    color: "#0068ff",
+                    color: "#006aff",
                     textDecoration: "none",
                   }}
                 >
                   <MessageCircle size={16} />
-                  <span>Nhắn Zalo: 0763.068.614</span>
+                  <span>Nhắn Messenger Ngay</span>
                 </a>
                 <a
                   href="tel:0763068614"

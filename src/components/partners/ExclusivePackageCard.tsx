@@ -238,7 +238,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
             { num: "05", title: "Kho Marketing VIP Hàng Tuần", desc: "Hình ảnh • Video • Content • File thiết kế in ấn" },
             { num: "06", title: "Chứng Nhận Cho Khách", desc: "Hỗ trợ xuất chứng nhận theo từng máy (Key-UUID)" },
             { num: "07", title: "Chứng Nhận Đại Lý Khung Kính", desc: "Mộc đỏ • Đóng khung kính gửi bưu phẩm tận nơi" },
-            { num: "08", title: "Trợ Giá Microsoft Box", desc: "Giảm 100k - 200k/hộp Win Pro USB FPP & Office 2024" },
+            { num: "08", title: "Hỗ Trợ Kỹ Thuật VIP 24/7", desc: "Kênh hỗ trợ kỹ thuật 1-1 và đào tạo chuyển giao phần mềm" },
           ].map((p, idx) => (
             <div key={idx} style={{ padding: "10px 12px", background: "#fff7ed", borderRadius: "8px", borderLeft: "3px solid #ea580c" }}>
               <div style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c" }}>{p.num}. {p.title}</div>

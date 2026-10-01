@@ -35,8 +35,8 @@ export function getBlogPosts(isVi: boolean): BlogPost[] {
           ? "Quy trình kích hoạt cực kỳ đơn giản gồm 3 bước: 1. Tải file Kich-Hoat-Demo-OnlyOffice-Mercy.bat về máy tính. 2. Nhấp chuột phải chọn 'Run as administrator'. 3. Hệ thống sẽ tự động cấu hình và kích hoạt giấy phép Enterprise 7 ngày hoàn toàn miễn phí."
           : "The process is simple: 1. Download Kich-Hoat-Demo-OnlyOffice-Mercy.bat. 2. Right-click and choose 'Run as administrator'. 3. The script configures and unlocks 7 days of Enterprise features.",
         isVi
-          ? "Trong suốt quá trình dùng thử, quý khách hàng nhận được sự hỗ trợ kỹ thuật trực tiếp từ đội ngũ kỹ sư Mercy Tech qua Hotline/Zalo: 0763.068.614."
-          : "Throughout your trial, Mercy Tech support engineers are available via Hotline/Zalo: 0763.068.614.",
+          ? "Trong suốt quá trình dùng thử, quý khách hàng nhận được sự hỗ trợ kỹ thuật trực tiếp từ đội ngũ kỹ sư Mercy Tech qua Hotline / Messenger: 0763.068.614."
+          : "Throughout your trial, Mercy Tech support engineers are available via Hotline / Messenger: 0763.068.614.",
       ],
     },
     {

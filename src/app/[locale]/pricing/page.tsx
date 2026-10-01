@@ -35,7 +35,7 @@ export default function PricingPage() {
         {/* 3. 5 Core Guarantees: Main UUID, Machine Swap, Force Majeure, Key Portal, AGPLv3 Certificate */}
         <PricingGuarantees />
 
-        {/* 4. Enterprise Addons & Wholesale Program: Windows Pro, Office 2024, Hologram Sticker & Dealer Club */}
+        {/* 4. OnlyOffice Physical License & Wholesale Program: Hologram Sticker & Dealer Club */}
         <PricingAddonsCatalog onOpenQuote={handleOpenQuote} />
       </main>
 

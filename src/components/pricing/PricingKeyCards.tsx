@@ -242,7 +242,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Hỗ trợ kỹ thuật qua Hotline/Zalo</span>
+                  <span>Hỗ trợ kỹ thuật qua Hotline / Messenger</span>
                 </li>
               </ul>
 

@@ -15,7 +15,7 @@ export default function OperationsWorkflow() {
       step: "02",
       icon: <BookOpen size={20} color="#ff6f3d" />,
       title: "Training 1-1 Tuần Đầu",
-      desc: "Được kỹ sư Mercy Tech đào tạo 1-1 qua Google Meet/Zalo và hỗ trợ kỹ thuật cài đặt chuẩn hóa 24/7.",
+      desc: "Được kỹ sư Mercy Tech đào tạo 1-1 qua Google Meet / Messenger và hỗ trợ kỹ thuật cài đặt chuẩn hóa 24/7.",
     },
     {
       step: "03",

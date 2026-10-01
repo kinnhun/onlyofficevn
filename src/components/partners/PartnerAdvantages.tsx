@@ -9,7 +9,7 @@ export default function PartnerAdvantages() {
       icon: <TrendingUp size={24} color="#f59e0b" />,
       tag: "LỢI NHUẬN CỰC KHỦNG",
       title: "Lợi Nhuận Vượt Trội",
-      desc: "Chiết khấu sỉ cực cao dành cho Đại lý & Đối tác phân phối. Vui lòng liên hệ Zalo để nhận bảng giá sỉ bảo mật.",
+      desc: "Chiết khấu sỉ cực cao dành cho Đại lý & Đối tác phân phối. Vui lòng liên hệ Messenger để nhận bảng giá sỉ bảo mật.",
       color: "#f59e0b",
       bg: "#fef3c7",
     },

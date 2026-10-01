@@ -36,7 +36,7 @@ export default function PricingPrivileges() {
       num: "04",
       title: "KHO MARKETING VIP HÀNG TUẦN",
       desc: "Hình ảnh • Video • Content đăng bài",
-      details: ["Banner thiết kế sẵn chuẩn Facebook, Zalo", "Video review, hướng dẫn cài đặt ngắn cho TikTok", "Bài viết chốt sale tối ưu cập nhật mới hàng tuần"],
+      details: ["Banner thiết kế sẵn chuẩn Facebook, Messenger", "Video review, hướng dẫn cài đặt ngắn cho TikTok", "Bài viết chốt sale tối ưu cập nhật mới hàng tuần"],
       icon: Video,
       color: "#7c3aed",
       bgGradient: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)",

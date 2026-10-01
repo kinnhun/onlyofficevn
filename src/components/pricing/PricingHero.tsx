@@ -206,13 +206,13 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
             </button>
 
             <a
-              href="https://zalo.me/0763068614"
+              href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
               style={{
                 backgroundColor: "#ffffff",
-                color: "#003b8e",
-                border: "1.5px solid #0284c7",
+                color: "#006aff",
+                border: "1.5px solid #0084ff",
                 borderRadius: "10px",
                 padding: "14px 24px",
                 fontSize: "15px",
@@ -226,15 +226,15 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "#f0f9ff";
-                e.currentTarget.style.borderColor = "#0369a1";
+                e.currentTarget.style.borderColor = "#006aff";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "#ffffff";
-                e.currentTarget.style.borderColor = "#0284c7";
+                e.currentTarget.style.borderColor = "#0084ff";
               }}
             >
-              <PhoneCall size={17} color="#0284c7" />
-              <span>Tư Vấn Zalo: 0763.068.614</span>
+              <PhoneCall size={17} color="#006aff" />
+              <span>Tư Vấn Qua Messenger</span>
             </a>
           </div>
         </div>

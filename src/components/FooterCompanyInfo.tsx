@@ -21,8 +21,8 @@ export default function FooterCompanyInfo() {
   const optimizedBy = getSafe("optimizedBy", "Tối ưu bởi Mercy Tech");
   const company = getSafe("company", "CÔNG TY TNHH CÔNG NGHỆ MERCY");
   const mst = getSafe("mst", "MST: 0319227767");
-  const hotlineNamed = getSafe("hotlineNamed", "0763.068.614 (Mr. Hùng)");
-  const email = getSafe("email", "ketoan.mercy@gmail.com");
+  const hotlineNamed = getSafe("hotlineNamed", "0763.068.614 (CSKH MERCY TECH)");
+  const email = getSafe("email", "contact@mercytechglobal.com");
   const address = getSafe(
     "address",
     "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam"
@@ -157,7 +157,7 @@ export default function FooterCompanyInfo() {
             </div>
           </div>
 
-          {/* Hotline / Zalo */}
+          {/* Hotline */}
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <Phone size={16} style={{ color: "#ea580c", flexShrink: 0 }} />
             <div style={{ fontSize: "12.5px", color: "#334155" }}>
@@ -172,7 +172,7 @@ export default function FooterCompanyInfo() {
               >
                 0763.068.614
               </a>
-              <span style={{ color: "#64748b", marginLeft: "4px" }}>(Mr. Hùng)</span>
+              <span style={{ color: "#64748b", marginLeft: "4px" }}>(CSKH MERCY TECH)</span>
             </div>
           </div>
 
@@ -223,12 +223,12 @@ export default function FooterCompanyInfo() {
                 transition: "all 0.2s ease",
               }}
             >
-              <span>Hợp Tác Phân Phối</span>
+              <span>Hợp tác phân phối</span>
               <ArrowRight size={13} />
             </Link>
 
             <a
-              href="https://zalo.me/0763068614"
+              href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -240,13 +240,13 @@ export default function FooterCompanyInfo() {
                 color: "#ffffff",
                 padding: "8px 14px",
                 borderRadius: "6px",
-                backgroundColor: "#ea580c",
+                background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
                 textDecoration: "none",
-                boxShadow: "0 2px 8px rgba(234, 88, 12, 0.25)",
+                boxShadow: "0 2px 10px rgba(0, 106, 255, 0.35)",
               }}
             >
               <MessageCircle size={14} />
-              <span>Tư Vấn Zalo: 0763.068.614</span>
+              <span>Tư Vấn Messenger</span>
             </a>
           </div>
         </div>

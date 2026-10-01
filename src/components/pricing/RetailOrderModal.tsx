@@ -23,8 +23,6 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
   useEffect(() => {
     if (defaultProduct) {
       if (defaultProduct.toLowerCase().includes("tem")) setProduct("tem-vat-ly");
-      else if (defaultProduct.toLowerCase().includes("windows")) setProduct("windows-fpp");
-      else if (defaultProduct.toLowerCase().includes("office")) setProduct("office-2024");
       else setProduct("key-online");
     }
   }, [defaultProduct]);
@@ -44,10 +42,6 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
       if (q >= 50) unitPrice = 699000;
       else if (q >= 5) unitPrice = 899000;
       else unitPrice = 999000;
-    } else if (product === "windows-fpp") {
-      unitPrice = 2900000;
-    } else if (product === "office-2024") {
-      unitPrice = 4500000;
     }
 
     return { unitPrice, total: unitPrice * q };
@@ -65,13 +59,13 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
       `Đơn giá: ${unitPrice.toLocaleString("vi-VN")}đ%0A` +
       `Tổng tiền (gồm VAT): ${total.toLocaleString("vi-VN")}đ%0A` +
       `Khách hàng: ${fullName}%0A` +
-      `SĐT/Zalo: ${phone}%0A` +
+      `SĐT liên hệ: ${phone}%0A` +
       (company ? `Công ty: ${company}%0A` : "") +
       (needVat ? `MST xuất VAT: ${taxCode}%0A` : "") +
       (address ? `Địa chỉ giao: ${address}%0A` : "");
 
     setTimeout(() => {
-      window.open(`https://zalo.me/0763068614?text=${message}`, "_blank");
+      window.open("https://m.me/onlyoffice.official.vn", "_blank");
     }, 600);
   };
 
@@ -170,7 +164,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                 GỬI YÊU CẦU ĐẶT HÀNG THÀNH CÔNG!
               </h3>
               <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, margin: "0 0 20px" }}>
-                Hệ thống đang mở kết nối Zalo với chuyên viên Mercy Tech (Hotline: <strong>0763.068.614</strong>) để bàn giao key và hóa đơn VAT ngay lập tức.
+                Hệ thống đang mở kết nối Messenger với chuyên viên Mercy Tech (Hotline: <strong>0763.068.614</strong>) để bàn giao key và hóa đơn VAT ngay lập tức.
               </p>
               <button
                 type="button"
@@ -212,8 +206,6 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                 >
                   <option value="key-online">🔑 OnlyOffice Key Online Vĩnh Viễn Theo Main (Từ 499k - 799k)</option>
                   <option value="tem-vat-ly">✨ OnlyOffice Tem Cào Hologram 7 Màu (Từ 699k - 999k)</option>
-                  <option value="windows-fpp">💻 Windows Pro 10/11 USB FPP (2.900.000đ/hộp)</option>
-                  <option value="office-2024">📦 Office Home & Business 2024 Full Box (4.500.000đ/hộp)</option>
                 </select>
               </div>
 
@@ -295,7 +287,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                 </div>
                 <div>
                   <label style={{ fontSize: "12px", fontWeight: 700, color: "#334155", display: "block", marginBottom: "4px" }}>
-                    Số điện thoại / Zalo *:
+                    Số điện thoại liên hệ *:
                   </label>
                   <input
                     type="tel"
@@ -387,7 +379,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                 }}
               >
                 <PhoneCall size={18} />
-                <span>Xác Nhận Đặt Mua & Kết Nối Zalo Ngay</span>
+                <span>Xác Nhận Đặt Mua & Kết Nối Messenger Ngay</span>
               </button>
             </form>
           )}

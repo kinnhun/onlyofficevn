@@ -24,7 +24,7 @@ if %errorLevel% equ 0 goto :MAIN_PROCESS
 echo =======================================================================
 echo  CONG CU KICH HOAT ONLYOFFICE - DUNG THU 7 NGAY MIEN PHI
 echo  Cung cap boi: CONG TY TNHH CONG NGHE MERCY (MST: 0319227767)
-echo  Hotline/Zalo CSKH: 0763.068.614
+echo  Hotline CSKH: 0763.068.614 - Messenger: m.me/onlyoffice.official.vn
 echo =======================================================================
 echo.
 echo  [!] Dang yeu cau quyen Administrator (UAC) de cai dat he thong...
@@ -55,7 +55,7 @@ if not defined PS_SCRIPT (
     echo =======================================================================
     echo  CONG CU KICH HOAT ONLYOFFICE - DUNG THU 7 NGAY MIEN PHI
     echo  Cung cap boi: CONG TY TNHH CONG NGHE MERCY (MST: 0319227767)
-    echo  Hotline/Zalo CSKH: 0763.068.614
+    echo  Hotline CSKH: 0763.068.614 - Messenger: m.me/onlyoffice.official.vn
     echo =======================================================================
     echo.
     echo [i] Dang tai cong cu kich hoat tu Server Mercy Tech...
@@ -69,7 +69,7 @@ if not defined PS_SCRIPT (
 echo =======================================================================
 echo  CONG CU KICH HOAT ONLYOFFICE - DUNG THU 7 NGAY MIEN PHI
 echo  Cung cap boi: CONG TY TNHH CONG NGHE MERCY (MST: 0319227767)
-echo  Hotline/Zalo CSKH: 0763.068.614
+echo  Hotline CSKH: 0763.068.614 - Messenger: m.me/onlyoffice.official.vn
 echo =======================================================================
 echo.
 powershell -NoProfile -ExecutionPolicy Bypass -File "%PS_SCRIPT%"

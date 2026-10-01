@@ -103,24 +103,25 @@ export default function PricingRegistrationModal({ isOpen, onClose }: PricingReg
               ĐĂNG KÝ THÀNH CÔNG!
             </h3>
             <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.5, marginBottom: "20px" }}>
-              Chuyên viên đại lý của <strong>Mercy Tech</strong> sẽ liên hệ với bạn trong vòng 15 phút qua Zalo/Điện thoại để hoàn tất thủ tục bàn giao hợp đồng và tài khoản Portal.
+              Chuyên viên đại lý của <strong>Mercy Tech</strong> sẽ liên hệ với bạn trong vòng 15 phút qua Messenger/Điện thoại để hoàn tất thủ tục bàn giao hợp đồng và tài khoản Portal.
             </p>
             <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
               <a
-                href="https://zalo.me/0763068614"
+                href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  backgroundColor: "#003b8e",
+                  background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
                   color: "#ffffff",
                   padding: "10px 20px",
                   borderRadius: "8px",
                   fontSize: "14px",
                   fontWeight: 700,
                   textDecoration: "none",
+                  boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
                 }}
               >
-                Nhắn Zalo Ngay (0763.068.614)
+                Nhắn Messenger Ngay
               </a>
               <button
                 onClick={onClose}
@@ -209,7 +210,7 @@ export default function PricingRegistrationModal({ isOpen, onClose }: PricingReg
 
               <div>
                 <label style={{ display: "block", fontSize: "12.5px", fontWeight: 700, color: "#1e293b", marginBottom: "4px" }}>
-                  Số điện thoại / Zalo nhận chính sách <span style={{ color: "#ef4444" }}>*</span>
+                  Số điện thoại liên hệ nhận chính sách <span style={{ color: "#ef4444" }}>*</span>
                 </label>
                 <input
                   type="tel"

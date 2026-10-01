@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { ShieldCheck, FileText, CheckCircle2, MessageCircle, PhoneCall, Sparkles } from "lucide-react";
+import { ShieldCheck, FileText, CheckCircle2, PhoneCall } from "lucide-react";
 
 interface PricingHeroBannerProps {
   onOpenQuote: () => void;
@@ -84,7 +83,7 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
           Chính sách giá ưu đãi bảo mật theo quy mô thiết bị và đối tác. Cấp phép vĩnh viễn theo Mainboard máy tính, đầy đủ hóa đơn điện tử VAT, hợp đồng kinh tế và chứng nhận nguồn gốc mộc đỏ của Công ty TNHH Công Nghệ Mercy.
         </p>
 
-        {/* CTA Buttons */}
+        {/* Dual CTA Buttons: Quote Form + Messenger Direct */}
         <div
           style={{
             display: "flex",
@@ -95,60 +94,106 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
             marginBottom: "32px",
           }}
         >
+          {/* Button 1: Open Confidential Quote Form Modal */}
           <button
             type="button"
             onClick={onOpenQuote}
+            title="Nhập form nhận báo giá ưu đãi chính hãng"
             style={{
               backgroundColor: "#ff6f3d",
               color: "#ffffff",
               border: "none",
-              borderRadius: "6px",
+              borderRadius: "10px",
               padding: "14px 28px",
-              fontSize: "15px",
+              fontSize: "15.5px",
               fontWeight: 700,
-              cursor: "pointer",
               display: "inline-flex",
               alignItems: "center",
-              gap: "8px",
-              boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
-              transition: "background-color 0.2s ease, transform 0.1s ease",
+              gap: "9px",
+              boxShadow: "0 4px 14px rgba(255, 111, 61, 0.35)",
+              transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+              cursor: "pointer",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ff8559")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#f25626";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(255, 111, 61, 0.45)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#ff6f3d";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 14px rgba(255, 111, 61, 0.35)";
+            }}
           >
-            <PhoneCall size={18} />
+            <PhoneCall size={18} style={{ flexShrink: 0 }} />
             <span>Liên Hệ Nhận Báo Giá Ưu Đãi</span>
           </button>
 
+          {/* Button 2: Direct Messenger Chat */}
           <a
-            href="https://zalo.me/0763068614"
+            href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            title="Nhắn tin trực tiếp qua Facebook Messenger"
             style={{
               backgroundColor: "#ffffff",
-              color: "#333333",
-              border: "1.5px solid #d4d4d8",
-              borderRadius: "6px",
-              padding: "13px 24px",
-              fontSize: "15px",
+              color: "#1e293b",
+              border: "1.5px solid #e2e8f0",
+              borderRadius: "10px",
+              padding: "13px 26px",
+              fontSize: "15.5px",
               fontWeight: 700,
               textDecoration: "none",
               display: "inline-flex",
               alignItems: "center",
-              gap: "8px",
-              transition: "border-color 0.2s ease, background-color 0.2s ease",
+              gap: "9px",
+              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+              transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+              cursor: "pointer",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#ff6f3d";
-              e.currentTarget.style.color = "#ff6f3d";
+              e.currentTarget.style.borderColor = "#0084FF";
+              e.currentTarget.style.backgroundColor = "#f0f7ff";
+              e.currentTarget.style.color = "#0066cc";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 6px 16px rgba(0, 132, 255, 0.15)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#d4d4d8";
-              e.currentTarget.style.color = "#333333";
+              e.currentTarget.style.borderColor = "#e2e8f0";
+              e.currentTarget.style.backgroundColor = "#ffffff";
+              e.currentTarget.style.color = "#1e293b";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
             }}
           >
-            <MessageCircle size={18} color="#0068ff" />
-            <span>Chat Zalo Báo Giá (0763.068.614)</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ flexShrink: 0 }}
+            >
+              <path
+                d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
+                fill="url(#messenger-hero-grad)"
+              />
+              <defs>
+                <linearGradient
+                  id="messenger-hero-grad"
+                  x1="2"
+                  y1="2"
+                  x2="22"
+                  y2="22"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#00B2FE" />
+                  <stop offset="0.5" stopColor="#006AFF" />
+                  <stop offset="1" stopColor="#9B33FF" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Chat Messenger Báo Giá</span>
           </a>
         </div>
 

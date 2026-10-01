@@ -34,6 +34,7 @@ export default function FloatingTrialButton() {
           zIndex: 9999,
           display: "flex",
           flexDirection: "column",
+          alignItems: "flex-end",
           gap: "8px",
         }}
       >
@@ -400,12 +401,12 @@ export default function FloatingTrialButton() {
               </button>
 
               <a
-                href="https://zalo.me/0763068614"
+                href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
                   flex: "1 1 auto",
-                  background: "#0068ff",
+                  background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
                   color: "#ffffff",
                   textDecoration: "none",
                   padding: "12px 18px",
@@ -415,11 +416,11 @@ export default function FloatingTrialButton() {
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "6px",
+                  gap: "8px",
                 }}
               >
-                <span>💬</span>
-                {isVi ? "Zalo/Hotline: 0763.068.614" : "Support: 0763.068.614"}
+                <span>⚡</span>
+                {isVi ? "Hỗ Trợ Qua Messenger" : "Messenger Support"}
               </a>
             </div>
           </div>

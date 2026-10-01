@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ZoomIn, Lock, PhoneCall, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
+import { ZoomIn, Lock, PhoneCall } from "lucide-react";
 import PricingStickerModal from "./PricingStickerModal";
 import PricingWholesaleClub from "./PricingWholesaleClub";
 
@@ -40,10 +40,10 @@ export default function PricingAddonsCatalog({ onOpenQuote }: PricingAddonsCatal
           >
             <div>
               <div style={{ fontSize: "12px", fontWeight: 700, color: "#ff6f3d", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                DANH MỤC SẢN PHẨM MỞ RỘNG
+                BẢN QUYỀN VẬT LÝ ONLYOFFICE CHÍNH HÃNG
               </div>
               <h3 style={{ fontSize: "24px", fontWeight: 800, color: "#333333", margin: "4px 0 0" }}>
-                Bản Quyền Ưu Đãi Doanh Nghiệp & Đối Tác
+                Tem Cào Hologram 7 Màu Dán Case Máy Tính / Laptop
               </h3>
             </div>
 
@@ -69,170 +69,7 @@ export default function PricingAddonsCatalog({ onOpenQuote }: PricingAddonsCatal
 
           {/* Rows */}
           <div style={{ padding: "28px 32px", display: "flex", flexDirection: "column", gap: "22px" }}>
-            {/* Row I: Windows 11 Pro USB FPP */}
-            <div
-              style={{
-                borderRadius: "12px",
-                border: "1px solid #e5e5e5",
-                padding: "20px 24px",
-                backgroundColor: "#fafafa",
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                alignItems: "center",
-                gap: "24px",
-              }}
-              className="addon-row-grid"
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-                <div
-                  style={{
-                    width: "100px",
-                    height: "38px",
-                    background: "linear-gradient(135deg, #0078d4 0%, #004e8c 100%)",
-                    borderRadius: "6px",
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "0 10px",
-                    gap: "6px",
-                    position: "relative",
-                    boxShadow: "0 2px 8px rgba(0, 120, 212, 0.2)",
-                    flexShrink: 0,
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      right: "-10px",
-                      width: "10px",
-                      height: "20px",
-                      backgroundColor: "#cbd5e1",
-                      borderRadius: "0 2px 2px 0",
-                    }}
-                  />
-                  <span style={{ fontSize: "9.5px", fontWeight: 800, color: "#ffffff", letterSpacing: "0.2px" }}>
-                    Windows Pro
-                  </span>
-                </div>
-
-                <div>
-                  <div style={{ fontSize: "11px", fontWeight: 700, color: "#0078d4", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                    I. BẢN QUYỀN WINDOWS 11 PRO (VĨNH VIỄN)
-                  </div>
-                  <div style={{ fontSize: "17px", fontWeight: 800, color: "#333333", marginTop: "2px" }}>
-                    Windows Pro 10/11 USB FPP
-                  </div>
-                  <div style={{ fontSize: "13px", color: "#666666", marginTop: "2px" }}>
-                    Hộp USB FPP cao cấp – <strong style={{ color: "#ea580c" }}>ĐỔI ĐƯỢC MÁY KHI NÂNG CẤP</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ textAlign: "right" }}>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#ffffff", padding: "6px 14px", borderRadius: "6px", border: "1px solid #e5e5e5", marginBottom: "6px" }}>
-                  <Lock size={14} color="#0078d4" />
-                  <span style={{ fontSize: "14px", fontWeight: 800, color: "#0078d4" }}>Liên Hệ Báo Giá</span>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    onClick={() => onOpenQuote("Windows Pro 10/11 USB FPP")}
-                    style={{
-                      backgroundColor: "#ffffff",
-                      color: "#333333",
-                      border: "1px solid #cccccc",
-                      borderRadius: "6px",
-                      padding: "6px 16px",
-                      fontSize: "13px",
-                      fontWeight: 700,
-                      cursor: "pointer",
-                    }}
-                  >
-                    Nhận báo giá
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Row II: Microsoft Office Home & Business 2024 */}
-            <div
-              style={{
-                borderRadius: "12px",
-                border: "1px solid #e5e5e5",
-                padding: "20px 24px",
-                backgroundColor: "#fafafa",
-                display: "grid",
-                gridTemplateColumns: "1fr auto",
-                alignItems: "center",
-                gap: "24px",
-              }}
-              className="addon-row-grid"
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-                <div
-                  style={{
-                    width: "100px",
-                    height: "56px",
-                    backgroundColor: "#ffffff",
-                    border: "1px solid #d4d4d8",
-                    borderRadius: "6px",
-                    padding: "6px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
-                    flexShrink: 0,
-                  }}
-                >
-                  <div style={{ fontSize: "8.5px", fontWeight: 800, color: "#16a34a" }}>
-                    Office 2024
-                  </div>
-                  <div style={{ display: "flex", gap: "2px", justifyContent: "flex-end" }}>
-                    <span style={{ fontSize: "7px", background: "#0284c7", color: "#fff", padding: "1px 2px", borderRadius: "2px", fontWeight: 700 }}>W</span>
-                    <span style={{ fontSize: "7px", background: "#16a34a", color: "#fff", padding: "1px 2px", borderRadius: "2px", fontWeight: 700 }}>X</span>
-                    <span style={{ fontSize: "7px", background: "#ea580c", color: "#fff", padding: "1px 2px", borderRadius: "2px", fontWeight: 700 }}>P</span>
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ fontSize: "11px", fontWeight: 700, color: "#16a34a", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                    II. BẢN QUYỀN MICROSOFT OFFICE (VĨNH VIỄN)
-                  </div>
-                  <div style={{ fontSize: "17px", fontWeight: 800, color: "#333333", marginTop: "2px" }}>
-                    Office Home & Business 2024 Full Box
-                  </div>
-                  <div style={{ fontSize: "13px", color: "#666666", marginTop: "2px" }}>
-                    Hộp vật lý – <strong style={{ color: "#ea580c" }}>ĐỔI ĐƯỢC MÁY KHI NÂNG CẤP</strong>
-                  </div>
-                </div>
-              </div>
-
-              <div style={{ textAlign: "right" }}>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#ffffff", padding: "6px 14px", borderRadius: "6px", border: "1px solid #e5e5e5", marginBottom: "6px" }}>
-                  <Lock size={14} color="#16a34a" />
-                  <span style={{ fontSize: "14px", fontWeight: 800, color: "#16a34a" }}>Liên Hệ Báo Giá</span>
-                </div>
-                <div>
-                  <button
-                    type="button"
-                    onClick={() => onOpenQuote("Office Home & Business 2024 Full Box")}
-                    style={{
-                      backgroundColor: "#ffffff",
-                      color: "#333333",
-                      border: "1px solid #cccccc",
-                      borderRadius: "6px",
-                      padding: "6px 16px",
-                      fontSize: "13px",
-                      fontWeight: 700,
-                      cursor: "pointer",
-                    }}
-                  >
-                    Nhận báo giá
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Row III: OnlyOffice Key Tem Vật Lý */}
+            {/* OnlyOffice Key Tem Vật Lý */}
             <div
               style={{
                 borderRadius: "14px",
@@ -245,10 +82,10 @@ export default function PricingAddonsCatalog({ onOpenQuote }: PricingAddonsCatal
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "8px" }}>
                 <div>
                   <span style={{ fontSize: "11px", fontWeight: 800, color: "#ff6f3d", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                    III. ONLYOFFICE KEY TEM VẬT LÝ (VĨNH VIỄN)
+                    BẢN QUYỀN VĨNH VIỄN THEO MAINBOARD
                   </span>
                   <h4 style={{ fontSize: "19px", fontWeight: 800, color: "#333333", margin: "2px 0 0" }}>
-                    Tem Cào Hologram 7 Màu Chống Giả
+                    Tem Cào Hologram 7 Màu Chống Giả Nguyên Seal
                   </h4>
                 </div>
 
