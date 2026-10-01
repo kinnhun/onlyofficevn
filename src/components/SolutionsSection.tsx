@@ -1,28 +1,31 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function SolutionsSection() {
+  const t = useTranslations("solutionsSection");
+
   const topSolutions = [
     {
-      title: "In ONLYOFFICE DocSpace",
-      desc: "Create rooms within your secure DocSpace, invite people, view, edit, and collaborate on all kinds of documents from any desktop or mobile device.",
-      linkText: "Start with your free account",
+      title: t("items.docspace.title"),
+      desc: t("items.docspace.desc"),
+      linkText: t("items.docspace.btn"),
       linkHref: "/docspace-registration",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/docspace.svg",
     },
     {
-      title: "In the platform you use",
-      desc: "Connect Docs to edit documents directly from your app. 40+ ready integrations: Box, Moodle, Nextcloud, Odoo, Wordpress, etc.",
-      linkText: "Get Docs now",
+      title: t("items.platform.title"),
+      desc: t("items.platform.desc"),
+      linkText: t("items.platform.btn"),
       linkHref: "/download#docs-enterprise",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/connectors.svg",
     },
     {
-      title: "In the platform you build",
-      desc: "Integrate Docs into your service to provide powerful document-editing and building capabilities to your customers under your brand.",
-      linkText: "Learn more",
+      title: t("items.developers.title"),
+      desc: t("items.developers.desc"),
+      linkText: t("items.developers.btn"),
       linkHref: "/developer-edition",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/developers.svg",
     },
@@ -30,16 +33,16 @@ export default function SolutionsSection() {
 
   const bottomSolutions = [
     {
-      title: "From your PC",
-      desc: "Edit docs offline with free office apps for Windows, Linux, and macOS",
-      linkText: "Download now",
+      title: t("items.pc.title"),
+      desc: t("items.pc.desc"),
+      linkText: t("items.pc.btn"),
       linkHref: "/download-desktop",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/from-pc.svg",
     },
     {
-      title: "From your mobile devices",
-      desc: "Work on documents on the go with free apps for iOS and Android devices",
-      linkText: "Install now",
+      title: t("items.mobile.title"),
+      desc: t("items.mobile.desc"),
+      linkText: t("items.mobile.btn"),
       linkHref: "/download-desktop#mobile",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/from-mobile.svg",
     },
@@ -74,7 +77,7 @@ export default function SolutionsSection() {
             marginBottom: "56px",
           }}
         >
-          Get started and choose where to work
+          {t("title")}
         </h2>
 
         {/* Top 3 Cards Grid */}
@@ -105,7 +108,15 @@ export default function SolutionsSection() {
               }}
             >
               <div>
-                <div style={{ height: "120px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px" }}>
+                <div
+                  style={{
+                    height: "120px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "20px",
+                  }}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.img}
@@ -113,10 +124,24 @@ export default function SolutionsSection() {
                     style={{ maxHeight: "100px", maxWidth: "100%", objectFit: "contain" }}
                   />
                 </div>
-                <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#1e293b", marginBottom: "12px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: 700,
+                    color: "#1e293b",
+                    marginBottom: "12px",
+                  }}
+                >
                   {item.title}
                 </h3>
-                <p style={{ fontSize: "15px", color: "#64748b", lineHeight: 1.6, marginBottom: "24px" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    color: "#64748b",
+                    lineHeight: 1.6,
+                    marginBottom: "24px",
+                  }}
+                >
                   {item.desc}
                 </p>
               </div>
@@ -165,7 +190,15 @@ export default function SolutionsSection() {
               }}
             >
               <div>
-                <div style={{ height: "120px", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "20px" }}>
+                <div
+                  style={{
+                    height: "120px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "20px",
+                  }}
+                >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={item.img}
@@ -173,10 +206,24 @@ export default function SolutionsSection() {
                     style={{ maxHeight: "100px", maxWidth: "100%", objectFit: "contain" }}
                   />
                 </div>
-                <h3 style={{ fontSize: "20px", fontWeight: 700, color: "#1e293b", marginBottom: "12px" }}>
+                <h3
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: 700,
+                    color: "#1e293b",
+                    marginBottom: "12px",
+                  }}
+                >
                   {item.title}
                 </h3>
-                <p style={{ fontSize: "15px", color: "#64748b", lineHeight: 1.6, marginBottom: "24px" }}>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    color: "#64748b",
+                    lineHeight: 1.6,
+                    marginBottom: "24px",
+                  }}
+                >
                   {item.desc}
                 </p>
               </div>

@@ -1,11 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, useRouter, usePathname } from "@/i18n/routing";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [langOpen, setLangOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState("English");
+
+  const switchLocale = (newLocale: "vi" | "en") => {
+    router.replace(pathname, { locale: newLocale });
+    setLangOpen(false);
+  };
 
   const appPills = [
     {
@@ -97,7 +106,7 @@ export default function Footer() {
               marginBottom: "16px",
             }}
           >
-            Get Free Apps
+            {t("getFreeApps")}
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
@@ -356,18 +365,21 @@ export default function Footer() {
                 type="button"
                 onClick={() => setLangOpen(!langOpen)}
                 style={{
-                  background: "none",
-                  border: "none",
-                  color: "#666666",
+                  background: "#ffffff",
+                  border: "1px solid #dcdcdc",
+                  borderRadius: "6px",
+                  padding: "6px 12px",
+                  color: "#333333",
                   fontSize: "13px",
+                  fontWeight: 600,
                   cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
-                  gap: "4px",
+                  gap: "6px",
                 }}
               >
-                <span>{selectedLang}</span>
-                <span style={{ fontSize: "10px" }}>▼</span>
+                <span>{locale === "vi" ? "🇻🇳 Tiếng Việt" : "🇬🇧 English"}</span>
+                <span style={{ fontSize: "10px", color: "#888" }}>▼</span>
               </button>
 
               {langOpen && (
@@ -380,39 +392,60 @@ export default function Footer() {
                     backgroundColor: "#ffffff",
                     boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
                     borderRadius: "6px",
-                    padding: "8px 0",
-                    minWidth: "120px",
+                    padding: "6px 0",
+                    minWidth: "150px",
+                    border: "1px solid #eee",
                     zIndex: 100,
                   }}
                 >
-                  {languages.map((l) => (
-                    <button
-                      key={l}
-                      onClick={() => {
-                        setSelectedLang(l);
-                        setLangOpen(false);
-                      }}
-                      style={{
-                        display: "block",
-                        width: "100%",
-                        textAlign: "left",
-                        padding: "6px 14px",
-                        background: "none",
-                        border: "none",
-                        fontSize: "13px",
-                        color: "#333333",
-                        cursor: "pointer",
-                      }}
-                    >
-                      {l}
-                    </button>
-                  ))}
+                  <button
+                    type="button"
+                    onClick={() => switchLocale("vi")}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      width: "100%",
+                      textAlign: "left",
+                      padding: "8px 14px",
+                      background: locale === "vi" ? "#fff7ed" : "none",
+                      border: "none",
+                      fontSize: "13px",
+                      fontWeight: locale === "vi" ? 700 : 500,
+                      color: locale === "vi" ? "#ea580c" : "#333333",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <span>🇻🇳 Tiếng Việt</span>
+                    {locale === "vi" && <span style={{ color: "#ea580c" }}>✓</span>}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => switchLocale("en")}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      width: "100%",
+                      textAlign: "left",
+                      padding: "8px 14px",
+                      background: locale === "en" ? "#fff7ed" : "none",
+                      border: "none",
+                      fontSize: "13px",
+                      fontWeight: locale === "en" ? 700 : 500,
+                      color: locale === "en" ? "#ea580c" : "#333333",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <span>🇬🇧 English</span>
+                    {locale === "en" && <span style={{ color: "#ea580c" }}>✓</span>}
+                  </button>
                 </div>
               )}
             </div>
 
             <div style={{ fontSize: "12px", color: "#888888", textAlign: "right" }}>
-              © Ascensio System SIA 2009-2026. All rights reserved
+              © Ascensio System SIA 2009-2026. {t("rights")}
             </div>
           </div>
         </div>

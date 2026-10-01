@@ -1,9 +1,13 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function SecuritySection() {
+  const t = useTranslations("securitySection");
+  const features = t.raw("features") as string[];
+
   return (
     <section
       style={{
@@ -66,7 +70,7 @@ export default function SecuritySection() {
                 marginBottom: "28px",
               }}
             >
-              <span style={{ color: "#ff6f3d" }}>Security</span> first
+              <span style={{ color: "#ff6f3d" }}>{t("titleHighlight")}</span> {t("titleSuffix")}
             </h2>
 
             <ul
@@ -79,14 +83,7 @@ export default function SecuritySection() {
                 gap: "14px",
               }}
             >
-              {[
-                "Open source code available on GitHub",
-                "Compliance with international security standards",
-                "Three levels of encryption: at rest, in transit, end-to-end",
-                "Secure access and monitoring tools",
-                "Extra document permissions",
-                "Support for secure, local AI models",
-              ].map((text, i) => (
+              {features.map((text, i) => (
                 <li
                   key={i}
                   style={{
@@ -126,11 +123,10 @@ export default function SecuritySection() {
                   transition: "opacity 0.2s",
                 }}
               >
-                Learn more about ONLYOFFICE security features
+                {t("learnMore")}
               </Link>
             </div>
 
-            {/* Official Compliance Badges using SVG sprite */}
             <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
               <a
                 href="https://www.onlyoffice.com/blog/2018/05/how-onlyoffice-complies-with-gdpr"

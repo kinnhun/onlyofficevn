@@ -1,0 +1,220 @@
+{
+  "common": {
+    "brand": "ONLYOFFICE",
+    "learnMore": "Tìm hiểu thêm",
+    "getItNow": "Tải về ngay",
+    "seeInAction": "Trải nghiệm ngay",
+    "contact": "Liên hệ",
+    "contactMessenger": "Liên hệ",
+    "download": "Tải về",
+    "search": "Tìm kiếm",
+    "searchPlaceholder": "Tìm kiếm tài liệu, giải pháp...",
+    "contactSales": "Tư vấn doanh nghiệp",
+    "globalEurope": "Quốc tế / Châu Âu",
+    "usCanada": "Mỹ & Canada"
+  },
+  "announcement": {
+    "textDesktop": "Chào đón năm học mới cùng ONLYOFFICE! Sẵn sàng cho kỳ học mới với các bài viết hữu ích của chúng tôi.",
+    "textMobile": "Chào đón năm học mới cùng ONLYOFFICE!"
+  },
+  "header": {
+    "products": "Sản phẩm",
+    "enterprise": "Doanh nghiệp",
+    "developers": "Nhà phát triển",
+    "pricing": "Bảng giá",
+    "partners": "Đối tác",
+    "resources": "Tài nguyên",
+    "download": "Tải về",
+    "contact": "Liên hệ",
+    "menus": {
+      "products": {
+        "docs": { "title": "ONLYOFFICE Docs", "desc": "Bộ soạn thảo trực tuyến cho văn bản, bảng tính và trình chiếu" },
+        "docspace": { "title": "ONLYOFFICE DocSpace", "desc": "Nền tảng cộng tác và chia sẻ tài liệu theo phòng làm việc" },
+        "desktop": { "title": "ONLYOFFICE Desktop Editors", "desc": "Ứng dụng văn phòng miễn phí cho Windows, macOS và Linux" },
+        "mobile": { "title": "ONLYOFFICE Mobile Apps", "desc": "Ứng dụng văn phòng di động cho iOS và Android" },
+        "workspace": { "title": "ONLYOFFICE Workspace", "desc": "Bộ công cụ quản lý năng suất toàn diện cho doanh nghiệp" }
+      },
+      "enterprise": {
+        "docsEnterprise": { "title": "ONLYOFFICE Docs Enterprise", "desc": "Giải pháp văn phòng bảo mật, mở rộng cao cho máy chủ riêng" },
+        "docspaceEnterprise": { "title": "ONLYOFFICE DocSpace Enterprise", "desc": "Phòng cộng tác tài liệu tự lưu trữ (on-premises) an toàn" },
+        "security": { "title": "Bảo mật & Tuân thủ", "desc": "Chuẩn GDPR, HIPAA, mã hóa nhiều tầng và kiểm tra an ninh" }
+      },
+      "developers": {
+        "developerEdition": { "title": "Developer Edition", "desc": "Tích hợp liền mạch bộ ứng dụng văn phòng vào nền tảng SaaS" },
+        "docspaceDeveloper": { "title": "DocSpace cho Nhà phát triển", "desc": "Nhúng phòng cộng tác với quyền điều khiển API đầy đủ" },
+        "apiDocs": { "title": "Tài liệu API", "desc": "Hướng dẫn chi tiết, tài liệu plugin và SDK toàn diện" }
+      },
+      "pricing": {
+        "docsPrices": { "title": "Bảng giá Docs Enterprise", "desc": "Bản quyền vĩnh viễn và gói thuê bao định kỳ cho máy chủ" },
+        "docspacePrices": { "title": "Bảng giá DocSpace Cloud & Server", "desc": "Các gói linh hoạt phù hợp với mọi quy mô đội ngũ" },
+        "developerPrices": { "title": "Bảng giá Developer Edition", "desc": "Gói chi phí tối ưu dành cho ISV và nhà phát triển SaaS" }
+      },
+      "partners": {
+        "resellers": { "title": "Chương trình Đại lý", "desc": "Trở thành đối tác phân phối giải pháp ONLYOFFICE" },
+        "techPartners": { "title": "Đối tác Công nghệ", "desc": "Tích hợp ONLYOFFICE vào phần mềm và dịch vụ của bạn" },
+        "hosting": { "title": "Nhà cung cấp Dịch vụ Hosting", "desc": "Cung cấp giải pháp ONLYOFFICE Cloud cho khách hàng của bạn" }
+      },
+      "resources": {
+        "blog": { "title": "Blog & Tin tức", "desc": "Các bản phát hành mới nhất, hướng dẫn và câu chuyện thành công" },
+        "webinars": { "title": "Hội thảo trực tuyến & Video", "desc": "Bản demo tương tác, mẹo hay và hướng dẫn tính năng" },
+        "helpcenter": { "title": "Trung tâm Hỗ trợ & Diễn đàn", "desc": "Nhận trợ giúp từ đội ngũ kỹ thuật và cộng đồng ONLYOFFICE" },
+        "events": { "title": "Sự kiện & Hội nghị", "desc": "Gặp gỡ trực tiếp đội ngũ ONLYOFFICE trên toàn cầu" }
+      },
+      "download": {
+        "desktop": { "title": "Ứng dụng Máy tính", "desc": "Dành cho Windows, Linux, macOS" },
+        "mobile": { "title": "Ứng dụng Di động", "desc": "Dành cho iOS, Android" },
+        "server": { "title": "Giải pháp Máy chủ", "desc": "Docker, DEB, RPM, Kubernetes" },
+        "connectors": { "title": "Kết nối có sẵn", "desc": "Nextcloud, ownCloud, Jira, Moodle, v.v." }
+      }
+    }
+  },
+  "hero": {
+    "titlePrefix": "Vận hành văn phòng riêng của bạn với",
+    "titleBrand": "ONLYOFFICE",
+    "subtitle": "— nay được hỗ trợ bởi các trợ lý ảo AI và tác tử thông minh",
+    "btnGetItNow": "Tải về ngay",
+    "btnSeeInAction": "Trải nghiệm ngay"
+  },
+  "docsSection": {
+    "titlePrefix": "ONLYOFFICE Docs",
+    "titleSuffix": ", bộ ứng dụng văn phòng toàn diện nhất",
+    "learnMore": "Tìm hiểu thêm các tính năng của ONLYOFFICE Docs",
+    "items": {
+      "action": "Xem, chỉnh sửa và cộng tác trên tài liệu, bảng tính, bài thuyết trình",
+      "forms": "Tạo biểu mẫu PDF có thể điền và điền trực tuyến",
+      "pdf": "Đọc và chỉnh sửa file PDF, xuất/nhập từ PDF",
+      "convert": "Chuyển đổi tài liệu sang Markdown và HTML",
+      "ebook": "Biến tài liệu học tập thành sách điện tử (e-book)",
+      "diagram": "Xem và điều hướng sơ đồ một cách dễ dàng"
+    }
+  },
+  "collabSection": {
+    "titlePrefix": "Được thiết kế để",
+    "titleHighlight": "cộng tác",
+    "titleSuffix": "liền mạch",
+    "learnMore": "Tìm hiểu thêm về tính năng cộng tác ONLYOFFICE",
+    "items": {
+      "share": "Chia sẻ tài liệu để xem, chỉnh sửa, đánh giá, nhận xét hoặc điền biểu mẫu",
+      "coediting": "Sử dụng chế độ đồng chỉnh sửa theo ký tự hoặc theo đoạn văn",
+      "review": "So sánh, xem xét tài liệu và theo dõi thay đổi (Track Changes)",
+      "comments": "Để lại nhận xét và gắn thẻ thành viên",
+      "chat": "Trao đổi nhanh qua khung chat tích hợp hoặc Telegram",
+      "calls": "Thực hiện cuộc gọi thoại và video qua Jitsi hoặc Rainbow"
+    }
+  },
+  "aiSection": {
+    "titlePrefix": "Nâng tầm với",
+    "titleHighlight": "trợ lý AI và các tác tử thông minh",
+    "learnMore": "Tìm hiểu thêm về AI trong ONLYOFFICE",
+    "items": {
+      "generate": "Tạo tài liệu, bảng tính, slide, biểu mẫu PDF trong vài giây",
+      "code": "Sáng tạo nội dung, hình ảnh và thậm chí viết mã nguồn dễ dàng",
+      "answers": "Nhận câu trả lời tức thì và nhanh chóng tìm kiếm thông tin cần thiết",
+      "translate": "Dịch thuật, viết lại và kiểm tra chính tả hoặc ngữ pháp mượt mà",
+      "ocr": "Trích xuất văn bản từ bản quét PDF — và nhiều hơn nữa",
+      "models": "Kết nối mọi mô hình AI, kể cả mô hình chạy cục bộ (local AI)",
+      "tasks": "Gán các mô hình AI khác nhau cho từng tác vụ để tối ưu hiệu suất"
+    }
+  },
+  "securitySection": {
+    "titleHighlight": "Bảo mật",
+    "titleSuffix": "là ưu tiên hàng đầu",
+    "learnMore": "Tìm hiểu thêm về các tính năng bảo mật ONLYOFFICE",
+    "features": [
+      "Mã nguồn mở minh bạch công khai trên GitHub",
+      "Tuân thủ các tiêu chuẩn bảo mật quốc tế (GDPR, HIPAA)",
+      "Ba cấp độ mã hóa: lưu trữ, truyền tải, và đầu-cuối (E2E)",
+      "Công cụ kiểm soát truy cập và giám sát toàn diện",
+      "Phân quyền tài liệu nâng cao",
+      "Hỗ trợ triển khai các mô hình AI cục bộ bảo mật tuyệt đối"
+    ]
+  },
+  "solutionsSection": {
+    "title": "Bắt đầu và chọn nơi làm việc phù hợp",
+    "items": {
+      "docspace": {
+        "title": "Trên ONLYOFFICE DocSpace",
+        "desc": "Tạo các phòng làm việc trong không gian DocSpace bảo mật của bạn, mời thành viên, xem, chỉnh sửa và cộng tác trên mọi tài liệu từ mọi thiết bị.",
+        "btn": "Bắt đầu với tài khoản miễn phí"
+      },
+      "platform": {
+        "title": "Trên nền tảng bạn đang dùng",
+        "desc": "Kết nối Docs để chỉnh sửa tài liệu trực tiếp từ ứng dụng của bạn. Hơn 40 tích hợp sẵn có: Box, Moodle, Nextcloud, Odoo, Wordpress, v.v.",
+        "btn": "Tải Docs ngay"
+      },
+      "developers": {
+        "title": "Trên nền tảng bạn xây dựng",
+        "desc": "Tích hợp Docs vào dịch vụ của bạn để cung cấp tính năng chỉnh sửa tài liệu mạnh mẽ cho khách hàng dưới thương hiệu riêng của bạn.",
+        "btn": "Tìm hiểu thêm"
+      },
+      "pc": {
+        "title": "Từ máy tính cá nhân",
+        "desc": "Chỉnh sửa tài liệu ngoại tuyến với ứng dụng văn phòng miễn phí cho Windows, Linux và macOS",
+        "btn": "Tải về ngay"
+      },
+      "mobile": {
+        "title": "Từ thiết bị di động",
+        "desc": "Làm việc với tài liệu mọi lúc mọi nơi bằng ứng dụng miễn phí cho thiết bị iOS và Android",
+        "btn": "Cài đặt ngay"
+      }
+    }
+  },
+  "customersSection": {
+    "heading": "Được tin cậy bởi hơn 15.000.000 người dùng trên toàn thế giới",
+    "subheading": "ONLYOFFICE là đối tác tin cậy của các doanh nghiệp, tổ chức giáo dục, viện nghiên cứu và tổ chức phi lợi nhuận toàn cầu."
+  },
+  "ratingsSection": {
+    "heading": "Được đánh giá cao bởi chuyên gia và người dùng",
+    "subheading": "Xem đánh giá của khách hàng về ONLYOFFICE trên các nền tảng đánh giá hàng đầu thế giới."
+  },
+  "newsSection": {
+    "heading": "Tin tức & phân tích chuyên sâu",
+    "viewAll": "Xem tất cả bài viết"
+  },
+  "faqSection": {
+    "title": "Câu hỏi thường gặp",
+    "faqs": [
+      {
+        "q": "ONLYOFFICE có thực sự miễn phí không?",
+        "a": "Có. Mã nguồn của ONLYOFFICE được công khai trên GitHub theo giấy phép GNU AGPL v3. Chúng tôi cung cấp phiên bản cộng đồng miễn phí của ONLYOFFICE Docs lên đến 20 kết nối đồng thời, các ứng dụng máy tính miễn phí cho Windows, Linux, macOS, và ứng dụng di động miễn phí cho iOS và Android. Ngoài ra, ONLYOFFICE DocSpace cung cấp gói đám mây Startup miễn phí cho các nhóm."
+      },
+      {
+        "q": "ONLYOFFICE được sử dụng để làm gì?",
+        "a": "ONLYOFFICE cung cấp đầy đủ các công cụ để tạo, chỉnh sửa và cộng tác trên tài liệu văn bản, bảng tính, bài thuyết trình, biểu mẫu PDF và tệp PDF tiêu chuẩn trên web, máy tính và di động. Bạn có thể sử dụng trình chỉnh sửa trực tuyến trong các phòng cộng tác DocSpace, hoặc tích hợp Docs vào nền tảng đám mây hiện có của bạn (Nextcloud, ownCloud, Jira, WordPress, v.v.)."
+      },
+      {
+        "q": "ONLYOFFICE có an toàn không?",
+        "a": "Có, bảo mật là ưu tiên hàng đầu của chúng tôi. ONLYOFFICE tuân thủ các tiêu chuẩn quốc tế bao gồm GDPR và HIPAA. Chúng tôi cung cấp nhiều tầng bảo mật: mã hóa khi lưu trữ và truyền tải dữ liệu (HTTPS, JWT), Phòng Riêng tư (Private Rooms) mã hóa đầu-cuối (E2E), phân quyền truy cập linh hoạt, theo dõi nhật ký hoạt động và khả năng tự lưu trữ trên máy chủ riêng giúp bạn làm chủ 100% dữ liệu."
+      },
+      {
+        "q": "Tôi có thể sử dụng ONLYOFFICE ngoại tuyến (offline) không?",
+        "a": "Có, ONLYOFFICE Desktop Editors cho phép bạn tạo, xem và chỉnh sửa tài liệu hoàn toàn ngoại tuyến trên máy tính hoặc laptop mà không cần kết nối mạng. Ứng dụng hoàn toàn miễn phí và hỗ trợ Windows, Linux, macOS."
+      },
+      {
+        "q": "ONLYOFFICE có quảng cáo không?",
+        "a": "Không, ONLYOFFICE hoàn toàn không chứa quảng cáo, không theo dõi bên thứ ba và không kiếm tiền từ dữ liệu của người dùng trong bất kỳ giải pháp máy tính, di động hay đám mây nào."
+      },
+      {
+        "q": "Ai là chủ sở hữu của ONLYOFFICE?",
+        "a": "ONLYOFFICE được sở hữu và phát triển bởi Ascensio System SIA, một công ty công nghệ thông tin quốc tế được thành lập vào năm 2009 với trụ sở chính tại Riga, Latvia và các văn phòng trên toàn thế giới."
+      },
+      {
+        "q": "Ai là CEO của ONLYOFFICE?",
+        "a": "Lev Bannov là người sáng lập và CEO của ONLYOFFICE."
+      }
+    ]
+  },
+  "footer": {
+    "getFreeApps": "Tải ứng dụng miễn phí",
+    "rights": "Bảo lưu mọi quyền.",
+    "columns": {
+      "solutions": "Giải pháp",
+      "features": "Tính năng",
+      "byIndustry": "Theo ngành nghề",
+      "resources": "Tài nguyên",
+      "compare": "So sánh",
+      "support": "Hỗ trợ",
+      "company": "Công ty"
+    }
+  }
+}

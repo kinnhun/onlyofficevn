@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function AnnouncementBar() {
   const [visible, setVisible] = useState(true);
+  const t = useTranslations("announcement");
 
   if (!visible) return null;
 
@@ -17,10 +19,10 @@ export default function AnnouncementBar() {
       >
         <div className="oo-advent-announce-text en">
           <div className="oo-advent-announce-text-desktop">
-            <span>Back to school with ONLYOFFICE!</span> Get prepared for the new academic year with our special blog posts.
+            <span>{t("textMobile")}</span> {t("textDesktop")}
           </div>
           <div className="oo-advent-announce-text-mobile">
-            Back to school with ONLYOFFICE!
+            {t("textMobile")}
           </div>
         </div>
       </a>
@@ -47,4 +49,3 @@ export default function AnnouncementBar() {
     </div>
   );
 }
-

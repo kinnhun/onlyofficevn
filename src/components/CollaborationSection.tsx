@@ -1,43 +1,46 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import FeatureSwitcher, { FeatureItem } from "./FeatureSwitcher";
 
 export default function CollaborationSection() {
+  const t = useTranslations("collabSection");
+
   const collabItems: FeatureItem[] = [
     {
       id: "collab-share",
-      label: <span>Share your docs for viewing, editing, reviewing, commenting, or filling forms</span>,
+      label: <span>{t("items.share")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/share.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/share@2x.png",
     },
     {
       id: "collab-coediting",
-      label: <span>Make use of character- and paragraph-level co-editing modes</span>,
+      label: <span>{t("items.coediting")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/co-editing.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/co-editing@2x.png",
     },
     {
       id: "collab-review",
-      label: <span>Compare and review docs and track changes</span>,
+      label: <span>{t("items.review")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/changes.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/changes@2x.png",
     },
     {
       id: "collab-comments",
-      label: <span>Leave comments and mentions</span>,
+      label: <span>{t("items.comments")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/comments.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/comments@2x.png",
     },
     {
       id: "collab-chat",
-      label: <span>Communicate via built-in chat or Telegram</span>,
+      label: <span>{t("items.chat")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/chat.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/chat@2x.png",
     },
     {
       id: "collab-calls",
-      label: <span>Make audio and video calls with Jitsi or Rainbow</span>,
+      label: <span>{t("items.calls")}</span>,
       imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/calls.png",
       imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/calls@2x.png",
     },
@@ -47,14 +50,14 @@ export default function CollaborationSection() {
     <FeatureSwitcher
       title={
         <>
-          Designed to make{" "}
+          {t("titlePrefix")}{" "}
           <span className="Text-module-scss-module__bfsDDa__text" style={{ "--text-color": "#ff6f3d" } as React.CSSProperties}>
-            collaboration
+            {t("titleHighlight")}
           </span>{" "}
-          seamless
+          {t("titleSuffix")}
         </>
       }
-      learnMoreText="Learn more about ONLYOFFICE collaboration features"
+      learnMoreText={t("learnMore")}
       learnMoreHref="/seamless-collaboration"
       items={collabItems}
       imagePosition="right"

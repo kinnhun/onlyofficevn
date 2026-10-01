@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
+
   return (
     <section
       className="Section-module-scss-module__LwzKGG__section"
@@ -39,8 +42,8 @@ export default function HeroSection() {
               margin: "0 0 16px",
             }}
           >
-            Run your private office with <br />
-            the <span style={{ color: "#ff6f3d" }}>ONLYOFFICE</span>
+            {t("titlePrefix")} <br />
+            <span style={{ color: "#ff6f3d" }}>{t("titleBrand")}</span>
           </h1>
 
           <p
@@ -53,9 +56,7 @@ export default function HeroSection() {
               margin: "0 auto 32px",
             }}
           >
-            — now driven by{" "}
-            <span style={{ color: "#ff6f3d" }}>AI-powered</span> virtual
-            assistants and smart agents
+            {t("subtitle")}
           </p>
 
           <div
@@ -83,7 +84,7 @@ export default function HeroSection() {
                 boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
               }}
             >
-              Get it now
+              {t("btnGetItNow")}
             </Link>
 
             <Link
@@ -102,7 +103,7 @@ export default function HeroSection() {
                 boxShadow: "0 4px 14px rgba(0, 0, 0, 0.15)",
               }}
             >
-              See it in action
+              {t("btnSeeInAction")}
             </Link>
           </div>
         </div>
@@ -118,34 +119,11 @@ export default function HeroSection() {
                 "url(https://static-site.onlyoffice.com/public/images/templates/main/hero/hero.png?ver=7)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
-              backgroundPosition: "50% center",
+              backgroundPosition: "center top",
             }}
-          >
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              style={{
-                position: "absolute",
-                top: "55.5%",
-                left: "50%",
-                width: "61.094%",
-                transform: "translate(-50%, -50%)",
-                border: "1px solid #aaaaaa",
-                borderRadius: "4px",
-                objectFit: "contain",
-              }}
-            >
-              <source
-                src="https://static-site.onlyoffice.com/public/images/templates/main/hero/hero.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+          />
         </div>
       </div>
     </section>
   );
 }
-

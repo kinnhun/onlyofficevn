@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, useRouter, usePathname } from "@/i18n/routing";
 
 interface DropdownItem {
   title: string;
@@ -10,6 +11,12 @@ interface DropdownItem {
 }
 
 export default function Header() {
+  const tHeader = useTranslations("header");
+  const tCommon = useTranslations("common");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -18,63 +25,63 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const headerRef = useRef<HTMLElement>(null);
 
-  const menuData: Record<string, DropdownItem[]> = {
-    products: [
-      { title: "ONLYOFFICE Docs", desc: "Online document, spreadsheet, and presentation editors", href: "/office-suite" },
-      { title: "ONLYOFFICE DocSpace", desc: "Room-based document collaboration and sharing", href: "/docspace" },
-      { title: "ONLYOFFICE Desktop Editors", desc: "Free office apps for Windows, macOS, and Linux", href: "/desktop" },
-      { title: "ONLYOFFICE Mobile Apps", desc: "Free office apps for iOS and Android", href: "/download-desktop#mobile" },
-      { title: "ONLYOFFICE Workspace", desc: "Complete productivity platform for your enterprise", href: "/workspace" },
-    ],
-    enterprise: [
-      { title: "ONLYOFFICE Docs Enterprise", desc: "Scalable online office for enterprise private servers", href: "/docs-enterprise" },
-      { title: "ONLYOFFICE DocSpace Enterprise", desc: "Self-hosted secure document collaboration room platform", href: "/docspace-enterprise" },
-      { title: "Security & Compliance", desc: "GDPR, HIPAA, multi-layer encryption and audits", href: "/security" },
-    ],
-    developers: [
-      { title: "Developer Edition", desc: "Seamlessly integrate office suite into your SaaS", href: "/developer-edition" },
-      { title: "DocSpace for Developers", desc: "Embed collaboration rooms with full API control", href: "/docspace-developer" },
-      { title: "API Documentation", desc: "Comprehensive guides, plugins, and SDK documentation", href: "/api-documentation" },
-    ],
-    pricing: [
-      { title: "Docs Enterprise Pricing", desc: "Lifetime and subscription licenses for server", href: "/docs-enterprise-prices" },
-      { title: "DocSpace Cloud & On-Premises", desc: "Flexible plans for teams of any size", href: "/docspace-prices" },
-      { title: "Developer Edition Pricing", desc: "Tailored pricing for ISVs and SaaS builders", href: "/developer-edition-prices" },
-    ],
-    partners: [
-      { title: "Reseller Program", desc: "Become a partner and distribute ONLYOFFICE solutions", href: "/resellers" },
-      { title: "Technology Partners", desc: "Integrate ONLYOFFICE with your own software products", href: "/technology-partners" },
-      { title: "Hosting Providers", desc: "Offer ONLYOFFICE SaaS to your customers", href: "/hosting-providers" },
-    ],
-    resources: [
-      { title: "Blog & Updates", desc: "Latest releases, tutorials, and success stories", href: "/blog" },
-      { title: "Webinars & Videos", desc: "Interactive demos, tips, and feature walkthroughs", href: "/webinars" },
-      { title: "Help Center & Forums", desc: "Get help from the ONLYOFFICE support team and community", href: "/helpcenter" },
-      { title: "Events & Conferences", desc: "Meet the ONLYOFFICE team in person worldwide", href: "/events" },
-    ],
-    download: [
-      { title: "Desktop Editors", desc: "Windows, Linux, macOS", href: "/download-desktop" },
-      { title: "Mobile Apps", desc: "iOS, Android", href: "/download-desktop#mobile" },
-      { title: "Server Solutions", desc: "Docker, DEB, RPM, Kubernetes", href: "/download" },
-      { title: "Ready-to-use Connectors", desc: "Nextcloud, ownCloud, Jira, Moodle, etc.", href: "/all-connectors" },
-    ],
+  const getMenuData = (category: string): DropdownItem[] => {
+    switch (category) {
+      case "products":
+        return [
+          { title: tHeader("menus.products.docs.title"), desc: tHeader("menus.products.docs.desc"), href: "/office-suite" },
+          { title: tHeader("menus.products.docspace.title"), desc: tHeader("menus.products.docspace.desc"), href: "/docspace" },
+          { title: tHeader("menus.products.desktop.title"), desc: tHeader("menus.products.desktop.desc"), href: "/desktop" },
+          { title: tHeader("menus.products.mobile.title"), desc: tHeader("menus.products.mobile.desc"), href: "/download-desktop#mobile" },
+          { title: tHeader("menus.products.workspace.title"), desc: tHeader("menus.products.workspace.desc"), href: "/workspace" },
+        ];
+      case "enterprise":
+        return [
+          { title: tHeader("menus.enterprise.docsEnterprise.title"), desc: tHeader("menus.enterprise.docsEnterprise.desc"), href: "/docs-enterprise" },
+          { title: tHeader("menus.enterprise.docspaceEnterprise.title"), desc: tHeader("menus.enterprise.docspaceEnterprise.desc"), href: "/docspace-enterprise" },
+          { title: tHeader("menus.enterprise.security.title"), desc: tHeader("menus.enterprise.security.desc"), href: "/security" },
+        ];
+      case "developers":
+        return [
+          { title: tHeader("menus.developers.developerEdition.title"), desc: tHeader("menus.developers.developerEdition.desc"), href: "/developer-edition" },
+          { title: tHeader("menus.developers.docspaceDeveloper.title"), desc: tHeader("menus.developers.docspaceDeveloper.desc"), href: "/docspace-developer" },
+          { title: tHeader("menus.developers.apiDocs.title"), desc: tHeader("menus.developers.apiDocs.desc"), href: "/api-documentation" },
+        ];
+      case "pricing":
+        return [
+          { title: tHeader("menus.pricing.docsPrices.title"), desc: tHeader("menus.pricing.docsPrices.desc"), href: "/docs-enterprise-prices" },
+          { title: tHeader("menus.pricing.docspacePrices.title"), desc: tHeader("menus.pricing.docspacePrices.desc"), href: "/docspace-prices" },
+          { title: tHeader("menus.pricing.developerPrices.title"), desc: tHeader("menus.pricing.developerPrices.desc"), href: "/developer-edition-prices" },
+        ];
+      case "partners":
+        return [
+          { title: tHeader("menus.partners.resellers.title"), desc: tHeader("menus.partners.resellers.desc"), href: "/resellers" },
+          { title: tHeader("menus.partners.techPartners.title"), desc: tHeader("menus.partners.techPartners.desc"), href: "/technology-partners" },
+          { title: tHeader("menus.partners.hosting.title"), desc: tHeader("menus.partners.hosting.desc"), href: "/hosting-providers" },
+        ];
+      case "resources":
+        return [
+          { title: tHeader("menus.resources.blog.title"), desc: tHeader("menus.resources.blog.desc"), href: "/blog" },
+          { title: tHeader("menus.resources.webinars.title"), desc: tHeader("menus.resources.webinars.desc"), href: "/webinars" },
+          { title: tHeader("menus.resources.helpcenter.title"), desc: tHeader("menus.resources.helpcenter.desc"), href: "/helpcenter" },
+          { title: tHeader("menus.resources.events.title"), desc: tHeader("menus.resources.events.desc"), href: "/events" },
+        ];
+      case "download":
+        return [
+          { title: tHeader("menus.download.desktop.title"), desc: tHeader("menus.download.desktop.desc"), href: "/download-desktop" },
+          { title: tHeader("menus.download.mobile.title"), desc: tHeader("menus.download.mobile.desc"), href: "/download-desktop#mobile" },
+          { title: tHeader("menus.download.server.title"), desc: tHeader("menus.download.server.desc"), href: "/download" },
+          { title: tHeader("menus.download.connectors.title"), desc: tHeader("menus.download.connectors.desc"), href: "/all-connectors" },
+        ];
+      default:
+        return [];
+    }
   };
 
-  const languages = [
-    { code: "en", name: "English" },
-    { code: "fr", name: "Français" },
-    { code: "de", name: "Deutsch" },
-    { code: "es", name: "Español" },
-    { code: "pt", name: "Português" },
-    { code: "it", name: "Italiano" },
-    { code: "cs", name: "Čeština" },
-    { code: "nl", name: "Nederlands" },
-    { code: "ja", name: "日本語" },
-    { code: "zh", name: "中文" },
-    { code: "ru", name: "Русский" },
-    { code: "sr", name: "Srpski" },
-    { code: "ar", name: "العربية" },
-  ];
+  const switchLocale = (newLocale: "vi" | "en") => {
+    router.replace(pathname, { locale: newLocale });
+    setLangOpen(false);
+  };
 
   // Close menus when clicking outside
   useEffect(() => {
@@ -165,7 +172,7 @@ export default function Header() {
               gap: "16px",
             }}
           >
-            {["products", "enterprise", "developers", "pricing", "partners", "resources"].map((item) => (
+            {(["products", "enterprise", "developers", "pricing", "partners", "resources"] as const).map((item) => (
               <div
                 key={item}
                 className={`oo-menu-item oo-menu-item--${item} en`}
@@ -177,7 +184,7 @@ export default function Header() {
                   className="oo-menu-item-btn"
                   onClick={() => setActiveMenu(activeMenu === item ? null : item)}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {tHeader(item)}
                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 5L0.535899 0.499999L7.4641 0.5L4 5Z" fill="#444444" />
                   </svg>
@@ -185,7 +192,7 @@ export default function Header() {
 
                 {activeMenu === item && (
                   <div className="dropdown-menu">
-                    {menuData[item]?.map((subItem) => (
+                    {getMenuData(item).map((subItem) => (
                       <Link
                         key={subItem.title}
                         href={subItem.href}
@@ -218,7 +225,7 @@ export default function Header() {
                 className="oo-menu-item-btn"
                 onClick={() => setActiveMenu(activeMenu === "download" ? null : "download")}
               >
-                Download
+                {tHeader("download")}
                 <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 5L0.535899 0.499999L7.4641 0.5L4 5Z" fill="#444444" />
                 </svg>
@@ -226,7 +233,7 @@ export default function Header() {
 
               {activeMenu === "download" && (
                 <div className="dropdown-menu">
-                  {menuData.download.map((subItem) => (
+                  {getMenuData("download").map((subItem) => (
                     <Link
                       key={subItem.title}
                       href={subItem.href}
@@ -276,7 +283,7 @@ export default function Header() {
                   fill="#0084FF"
                 />
               </svg>
-              Liên hệ
+              {tCommon("contact")}
             </a>
           </div>
 
@@ -286,7 +293,7 @@ export default function Header() {
         </nav>
 
         {/* Right Icon Actions (Search, Phone, Language) */}
-        <div className="oo-header-icons en" style={{ position: "relative" }}>
+        <div className="oo-header-icons en" style={{ position: "relative", display: "flex", alignItems: "center", gap: "12px" }}>
           {/* Search Button */}
           <button
             className="oo-header-search-btn en"
@@ -312,22 +319,35 @@ export default function Header() {
             <div
               className="dropdown-menu"
               style={{
+                position: "absolute",
+                top: "100%",
                 right: 0,
-                left: "auto",
-                minWidth: "300px",
-                padding: "16px",
+                width: "300px",
+                padding: "12px",
+                backgroundColor: "#ffffff",
+                boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                borderRadius: "8px",
+                zIndex: 1005,
               }}
             >
-              <div style={{ display: "flex", gap: "8px" }}>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (searchQuery.trim()) {
+                    window.open(`https://www.google.com/search?q=site:onlyoffice.com+${encodeURIComponent(searchQuery)}`, "_blank");
+                  }
+                }}
+                style={{ display: "flex", gap: "8px" }}
+              >
                 <input
                   type="text"
-                  placeholder="Search ONLYOFFICE..."
+                  placeholder={tCommon("searchPlaceholder")}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   style={{
                     flex: 1,
                     padding: "8px 12px",
-                    border: "1px solid #ccc",
+                    border: "1px solid #ddd",
                     borderRadius: "4px",
                     fontSize: "14px",
                     outline: "none",
@@ -335,30 +355,40 @@ export default function Header() {
                   autoFocus
                 />
                 <button
-                  className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-primary"
-                  style={{ height: "36px", padding: "0 14px", fontSize: "13px" }}
+                  type="submit"
+                  style={{
+                    backgroundColor: "#ff6f3d",
+                    color: "#fff",
+                    border: "none",
+                    padding: "8px 14px",
+                    borderRadius: "4px",
+                    cursor: "pointer",
+                    fontWeight: 600,
+                  }}
                 >
-                  Go
+                  {tCommon("search")}
                 </button>
-              </div>
+              </form>
             </div>
           )}
 
           {/* Phone Selector */}
-          <div className="oo-phone-selector en">
+          <div className="oo-phone-selector" style={{ position: "relative" }}>
             <button
               className="oo-phone-selector-btn"
-              aria-label="Open phone menu"
+              aria-label="Contact phones"
               onClick={() => {
                 setPhoneOpen(!phoneOpen);
                 setSearchOpen(false);
                 setLangOpen(false);
               }}
+              style={{ background: "none", border: "none", cursor: "pointer", display: "flex", alignItems: "center" }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path
-                  d="M6.79439 3.00858C6.50199 2.97044 6.24775 3.05949 6.03168 3.27535L3.51483 5.80972C3.38771 5.92405 3.27957 6.07328 3.19068 6.25748C3.10167 6.44169 3.04446 6.62268 3.01907 6.80047C3.01907 6.81317 3.0158 6.85138 3.00944 6.91492C3.00312 6.97835 2.99988 7.06092 2.99988 7.16255C2.99988 7.40398 3.04119 7.79465 3.12385 8.33455C3.20651 8.87445 3.40993 9.535 3.73402 10.3162C4.05817 11.0976 4.54446 11.9836 5.1927 12.9745C5.84091 13.9653 6.7308 15.0198 7.86219 16.1377C8.73931 17.0269 9.57829 17.7637 10.3791 18.3481C11.18 18.9325 11.9204 19.4025 12.6005 19.7582C13.2806 20.1139 13.8971 20.3807 14.4501 20.5586C15.0031 20.7364 15.4798 20.8571 15.8802 20.9206C16.2806 20.9841 16.5952 21.0095 16.824 20.9968C17.0529 20.9841 17.18 20.9778 17.2054 20.9778C17.3834 20.9524 17.5645 20.8952 17.7488 20.8063C17.9331 20.7173 18.0825 20.6094 18.1969 20.4823L20.7329 17.948C20.9109 17.7701 20.9999 17.5669 20.9999 17.3382C20.9999 17.1731 20.9522 17.027 20.8569 16.8999C20.7615 16.7729 20.6439 16.6649 20.5041 16.576L16.6334 14.5371C16.43 14.4227 16.2075 14.391 15.966 14.4418C15.7245 14.4926 15.5211 14.6006 15.3558 14.7657L14.4215 15.6994C14.3961 15.7248 14.3548 15.7471 14.2976 15.7661C14.2404 15.7852 14.1927 15.7947 14.1546 15.7947C13.8876 15.7439 13.5825 15.6296 13.2393 15.4517C12.9342 15.2993 12.5624 15.0643 12.1238 14.7467C11.6853 14.4291 11.18 13.9781 10.608 13.3937C10.0232 12.8221 9.56878 12.3139 9.24457 11.8693C8.92054 11.4248 8.6821 11.0531 8.52956 10.7545C8.37702 10.456 8.28486 10.2273 8.25317 10.0686L8.20547 9.83046C8.20547 9.80505 8.21504 9.76367 8.23407 9.70656C8.25317 9.6494 8.27539 9.60811 8.30084 9.58267L9.40677 8.49655C9.61013 8.26776 9.71182 8.00111 9.71182 7.69619C9.71183 7.48017 9.67372 7.30877 9.59742 7.18173L9.59742 7.16271L7.42369 3.48506C7.25831 3.21819 7.04863 3.05942 6.79439 3.00858Z"
-                  fill="#444444"
+                  d="M17.4764 15.0118C16.8927 14.4282 16.1554 14.3644 15.5866 14.8203L14.2882 15.859C13.9039 16.1664 13.3755 16.208 12.9515 15.9622C11.666 15.2173 10.3703 14.0768 9.39088 12.9463C8.41142 11.8158 7.74794 10.7027 7.40455 9.38714C7.29119 8.9529 7.4646 8.49089 7.8288 8.19954L9.06351 7.21177C9.68988 6.71067 9.80556 5.95213 9.32486 5.30906L7.49842 2.86475C7.03714 2.2474 6.27364 2.14652 5.62646 2.61054L4.01908 3.76296C3.21666 4.33777 2.76616 5.32635 2.8596 6.31492C3.12597 9.12423 4.88727 12.8395 7.64449 15.6885C10.4017 18.5375 14.1504 20.4851 16.9442 20.9427C17.9257 21.1034 18.9482 20.7303 19.5898 19.9882L20.8711 18.5061C21.4168 17.8748 21.4018 17.1065 20.8358 16.5405L17.4764 15.0118Z"
+                  stroke="#444444"
+                  strokeWidth="1.5"
                 />
               </svg>
             </button>
@@ -367,21 +397,27 @@ export default function Header() {
               <div
                 className="dropdown-menu"
                 style={{
+                  position: "absolute",
+                  top: "100%",
                   right: 0,
                   left: "auto",
                   minWidth: "240px",
                   padding: "16px",
+                  backgroundColor: "#ffffff",
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.15)",
+                  borderRadius: "8px",
+                  zIndex: 1005,
                 }}
               >
-                <div style={{ fontWeight: 700, marginBottom: "8px", fontSize: "14px" }}>Contact Sales</div>
+                <div style={{ fontWeight: 700, marginBottom: "8px", fontSize: "14px" }}>{tCommon("contactSales")}</div>
                 <div style={{ marginBottom: "8px" }}>
-                  <div style={{ fontSize: "12px", color: "#888" }}>Global / Europe</div>
+                  <div style={{ fontSize: "12px", color: "#888" }}>{tCommon("globalEurope")}</div>
                   <a href="tel:+37163399867" style={{ color: "#ff6f3d", fontWeight: 600, fontSize: "14px" }}>
                     +371 633 998 67
                   </a>
                 </div>
                 <div>
-                  <div style={{ fontSize: "12px", color: "#888" }}>US & Canada</div>
+                  <div style={{ fontSize: "12px", color: "#888" }}>{tCommon("usCanada")}</div>
                   <a href="tel:+18002855430" style={{ color: "#ff6f3d", fontWeight: 600, fontSize: "14px" }}>
                     +1 800 285 5430
                   </a>
@@ -391,32 +427,37 @@ export default function Header() {
           </div>
 
           {/* Language Selector */}
-          <div className="oo-language-selector">
+          <div className="oo-language-selector" style={{ position: "relative" }}>
             <button
               className="oo-language-selector-btn"
               aria-label="Select language"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "5px",
+                background: "#f8f9fa",
+                border: "1px solid #e2e8f0",
+                cursor: "pointer",
+                padding: "6px 10px",
+                borderRadius: "6px",
+                fontSize: "12px",
+                fontWeight: 700,
+                color: "#333333",
+                transition: "all 0.2s ease",
+              }}
               onClick={() => {
                 setLangOpen(!langOpen);
                 setSearchOpen(false);
                 setPhoneOpen(false);
               }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle className="oo-language-selector-icon-stroke" cx="12.4999" cy="12.5" r="9" stroke="#444444" />
-                <path
-                  className="oo-language-selector-icon-stroke"
-                  d="M12.4999 7.5C15.0512 7.5 17.3364 8.1001 18.9667 9.04395C20.6099 9.99529 21.4999 11.2348 21.4999 12.5C21.4999 13.7652 20.6099 15.0047 18.9667 15.9561C17.3364 16.8999 15.0512 17.5 12.4999 17.5C9.94851 17.5 7.66337 16.8999 6.03308 15.9561C4.38985 15.0047 3.49988 13.7652 3.49988 12.5C3.49988 11.2348 4.38985 9.99529 6.03308 9.04395C7.66337 8.1001 9.94851 7.5 12.4999 7.5Z"
-                  stroke="#444444"
-                />
-                <path
-                  className="oo-language-selector-icon-stroke"
-                  d="M17.4999 12.5C17.4999 15.0514 16.8998 17.3365 15.9559 18.9668C15.0046 20.61 13.7651 21.5 12.4999 21.5C11.2347 21.5 9.99517 20.61 9.04382 18.9668C8.09997 17.3365 7.49988 15.0514 7.49988 12.5C7.49988 9.94863 8.09998 7.66349 9.04382 6.0332C9.99517 4.38997 11.2347 3.5 12.4999 3.5C13.7651 3.5 15.0046 4.38997 15.9559 6.0332C16.8998 7.66349 17.4999 9.94863 17.4999 12.5Z"
-                  stroke="#444444"
-                />
-                <path fillRule="evenodd" clipRule="evenodd" d="M20.9999 13H3.99988V12H20.9999V13Z" fill="#444444" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M11.9999 21L11.9999 4L12.9999 4L12.9999 21L11.9999 21Z" fill="#444444" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
               </svg>
-              <svg className="oo-language-selector-icon-arrow" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <span>{locale === "vi" ? "VI" : "EN"}</span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none">
                 <path d="M4 5L0.535899 0.499999L7.4641 0.5L4 5Z" fill="#444444" />
               </svg>
             </button>
@@ -425,23 +466,67 @@ export default function Header() {
               <div
                 className="dropdown-menu"
                 style={{
+                  position: "absolute",
+                  top: "calc(100% + 6px)",
                   right: 0,
                   left: "auto",
                   minWidth: "160px",
-                  maxHeight: "300px",
-                  overflowY: "auto",
+                  backgroundColor: "#ffffff",
+                  boxShadow: "0 10px 25px rgba(0, 0, 0, 0.12)",
+                  borderRadius: "8px",
+                  padding: "6px 0",
+                  zIndex: 1005,
+                  border: "1px solid #e2e8f0",
                 }}
               >
-                {languages.map((l) => (
-                  <button
-                    key={l.code}
-                    className="dropdown-item"
-                    style={{ width: "100%", textAlign: "left", background: "none", border: "none", cursor: "pointer" }}
-                    onClick={() => setLangOpen(false)}
-                  >
-                    {l.name}
-                  </button>
-                ))}
+                <button
+                  type="button"
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "9px 14px",
+                    background: locale === "vi" ? "#fff7ed" : "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    fontSize: "13px",
+                    fontWeight: locale === "vi" ? 700 : 500,
+                    color: locale === "vi" ? "#ea580c" : "#333",
+                    textAlign: "left",
+                  }}
+                  onClick={() => switchLocale("vi")}
+                >
+                  <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span>🇻🇳</span>
+                    <span>Tiếng Việt</span>
+                  </span>
+                  {locale === "vi" && <span style={{ color: "#ea580c" }}>✓</span>}
+                </button>
+                <button
+                  type="button"
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    padding: "9px 14px",
+                    background: locale === "en" ? "#fff7ed" : "transparent",
+                    border: "none",
+                    cursor: "pointer",
+                    fontSize: "13px",
+                    fontWeight: locale === "en" ? 700 : 500,
+                    color: locale === "en" ? "#ea580c" : "#333",
+                    textAlign: "left",
+                  }}
+                  onClick={() => switchLocale("en")}
+                >
+                  <span style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span>🇬🇧</span>
+                    <span>English</span>
+                  </span>
+                  {locale === "en" && <span style={{ color: "#ea580c" }}>✓</span>}
+                </button>
               </div>
             )}
           </div>
