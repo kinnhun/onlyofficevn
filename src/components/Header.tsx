@@ -217,11 +217,10 @@ export default function Header() {
               whiteSpace: "nowrap",
             }}
           >
-            {/* Direct Free Trial Download Button */}
-            <a
+            {/* Free Trial / Demo Navigation Button */}
+            <Link
               id="oo-menu-item-btn-download"
-              href="/api/download-trial"
-              download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+              href="/demo"
               className="oo-header-btn-download"
               style={{
                 background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -253,11 +252,11 @@ export default function Header() {
                 e.currentTarget.style.transform = "translateY(0)";
                 e.currentTarget.style.boxShadow = "0 2px 10px rgba(234, 88, 12, 0.3)";
               }}
-              title={locale === "vi" ? "Tải công cụ kích hoạt dùng thử 7 ngày (.BAT)" : "Download 7-day trial activation tool (.BAT)"}
+              title={locale === "vi" ? "Trải nghiệm dùng thử trực tuyến & kích hoạt 7 ngày" : "Online demo & 7-day trial activation"}
             >
               <Download size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
               <span>{tHeader("download")}</span>
-            </a>
+            </Link>
 
             {/* Messenger / Contact Button */}
             <a

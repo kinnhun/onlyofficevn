@@ -201,9 +201,8 @@ export default function HeaderMobileDrawer({
 
         {/* Mobile Actions */}
         <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "auto", paddingTop: "14px" }}>
-          <a
-            href="/api/download-trial"
-            download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+          <Link
+            href="/demo"
             onClick={onClose}
             style={{
               backgroundColor: "#ff6f3d",
@@ -222,7 +221,7 @@ export default function HeaderMobileDrawer({
           >
             <Download size={16} strokeWidth={2.5} />
             <span>{tHeader("download")}</span>
-          </a>
+          </Link>
 
           <a
             href="https://m.me/onlyoffice.official.vn"
