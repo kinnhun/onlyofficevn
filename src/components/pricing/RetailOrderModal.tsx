@@ -164,13 +164,13 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                 GỬI YÊU CẦU ĐẶT HÀNG THÀNH CÔNG!
               </h3>
               <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, margin: "0 0 20px" }}>
-                Hệ thống đang mở kết nối Messenger với chuyên viên Mercy Tech (Hotline: <strong>0763.068.614</strong>) để bàn giao key và hóa đơn VAT ngay lập tức.
+                Hệ thống đang mở kết nối liên hệ với chuyên viên Mercy Tech (Hotline: <strong>0763.068.614</strong>) để bàn giao key và hóa đơn VAT ngay lập tức.
               </p>
               <button
                 type="button"
                 onClick={onClose}
                 style={{
-                  backgroundColor: "#003b8e",
+                  backgroundColor: "#ea580c",
                   color: "#ffffff",
                   border: "none",
                   borderRadius: "8px",
@@ -362,7 +362,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
               <button
                 type="submit"
                 style={{
-                  background: "linear-gradient(135deg, #0284c7 0%, #003b8e 100%)",
+                  background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                   color: "#ffffff",
                   border: "none",
                   borderRadius: "10px",
@@ -374,12 +374,12 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "8px",
-                  boxShadow: "0 6px 18px rgba(2, 132, 199, 0.3)",
+                  boxShadow: "0 6px 18px rgba(234, 88, 12, 0.35)",
                   marginTop: "6px",
                 }}
               >
                 <PhoneCall size={18} />
-                <span>Xác Nhận Đặt Mua & Kết Nối Messenger Ngay</span>
+                <span>Xác Nhận Đặt Mua & Liên Hệ Ngay</span>
               </button>
             </form>
           )}

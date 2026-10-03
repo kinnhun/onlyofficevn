@@ -134,8 +134,9 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            title="Liên hệ"
             style={{
-              background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",
               textDecoration: "none",
               padding: "15px 28px",
@@ -145,11 +146,11 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              boxShadow: "0 4px 14px rgba(0, 106, 255, 0.35)",
+              boxShadow: "0 4px 14px rgba(234, 88, 12, 0.35)",
             }}
           >
             <MessageCircle size={18} />
-            <span>Nhắn Tin Messenger Ngay</span>
+            <span>Liên hệ</span>
           </a>
         </div>
       </div>

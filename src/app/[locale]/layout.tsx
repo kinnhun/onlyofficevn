@@ -4,7 +4,15 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import FloatingTrialButton from "@/components/FloatingTrialButton";
+import { Open_Sans } from "next/font/google";
 import "../globals.css";
+
+const openSans = Open_Sans({
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-open-sans",
+});
 
 export const metadata: Metadata = {
   title: "ONLYOFFICE - Secure Online Office | ONLYOFFICE Vietnam",
@@ -53,8 +61,8 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir="ltr" suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html lang={locale} dir="ltr" className={openSans.variable} suppressHydrationWarning>
+      <body className={openSans.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <div id="__next">
             <div className="layout">{children}</div>

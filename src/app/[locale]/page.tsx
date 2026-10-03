@@ -7,6 +7,7 @@ import DocsSection from "@/components/DocsSection";
 import CollaborationSection from "@/components/CollaborationSection";
 import AIAssistantsSection from "@/components/AIAssistantsSection";
 import SecuritySection from "@/components/SecuritySection";
+import LegalComplianceSection from "@/components/LegalComplianceSection";
 import SolutionsSection from "@/components/SolutionsSection";
 import CustomersSection from "@/components/CustomersSection";
 import RatingsSection from "@/components/RatingsSection";
@@ -32,6 +33,7 @@ export default async function Home({
         <CollaborationSection />
         <AIAssistantsSection />
         <SecuritySection />
+        <LegalComplianceSection />
         <SolutionsSection />
         <CustomersSection />
         <RatingsSection />

@@ -145,33 +145,33 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
             </div>
           </div>
 
-          {/* Action Buttons */}
+          {/* Action Button */}
           <div
             style={{
               display: "flex",
               justifyContent: "center",
-              gap: "14px",
-              flexWrap: "wrap",
               alignItems: "center",
             }}
           >
-            <button
-              type="button"
-              onClick={onOpenQuote}
+            <a
+              href="https://m.me/onlyoffice.official.vn"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                 color: "#ffffff",
                 border: "none",
                 borderRadius: "12px",
-                padding: "14px 28px",
+                padding: "14px 32px",
                 fontSize: "15px",
                 fontWeight: 700,
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "9px",
+                gap: "10px",
                 cursor: "pointer",
                 boxShadow: "0 8px 20px rgba(234, 88, 12, 0.35)",
                 transition: "all 0.2s ease",
+                textDecoration: "none",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-2px)";
@@ -185,42 +185,6 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               <FileText size={17} />
               <span>Nhận Báo Giá Doanh Nghiệp</span>
               <ArrowRight size={16} />
-            </button>
-
-            <a
-              href="https://m.me/onlyoffice.official.vn"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                color: "#ffffff",
-                border: "1.5px solid rgba(255, 255, 255, 0.2)",
-                borderRadius: "12px",
-                padding: "13px 24px",
-                fontSize: "14.5px",
-                fontWeight: 600,
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "9px",
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.18)";
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.35)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.2)";
-              }}
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
-                  fill="#0084FF"
-                />
-              </svg>
-              <span>Chat Messenger Báo Giá</span>
             </a>
           </div>
         </div>

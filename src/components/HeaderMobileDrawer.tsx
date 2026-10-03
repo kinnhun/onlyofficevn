@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "@/i18n/routing";
-import { X, ChevronRight, Download, Phone } from "lucide-react";
+import { X, ChevronRight, Download, Phone, MessageCircle } from "lucide-react";
 
 interface HeaderMobileDrawerProps {
   isOpen: boolean;
@@ -229,25 +229,21 @@ export default function HeaderMobileDrawer({
             rel="noopener noreferrer"
             onClick={onClose}
             style={{
-              backgroundColor: "#f1f5f9",
-              color: "#1e293b",
+              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+              color: "#ffffff",
               padding: "10px 16px",
               borderRadius: "8px",
-              fontWeight: 600,
+              fontWeight: 700,
               fontSize: "13.5px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               gap: "8px",
               textDecoration: "none",
+              boxShadow: "0 2px 10px rgba(234, 88, 12, 0.25)",
             }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
-                fill="#0084FF"
-              />
-            </svg>
+            <MessageCircle size={18} strokeWidth={2.4} />
             <span>{tCommon("contact")}</span>
           </a>
 

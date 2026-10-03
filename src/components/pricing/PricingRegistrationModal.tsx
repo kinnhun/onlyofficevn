@@ -103,25 +103,26 @@ export default function PricingRegistrationModal({ isOpen, onClose }: PricingReg
               ĐĂNG KÝ THÀNH CÔNG!
             </h3>
             <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.5, marginBottom: "20px" }}>
-              Chuyên viên đại lý của <strong>Mercy Tech</strong> sẽ liên hệ với bạn trong vòng 15 phút qua Messenger/Điện thoại để hoàn tất thủ tục bàn giao hợp đồng và tài khoản Portal.
+              Chuyên viên đại lý của <strong>Mercy Tech</strong> sẽ liên hệ với bạn trong vòng 15 phút qua điện thoại/tin nhắn để hoàn tất thủ tục bàn giao hợp đồng và tài khoản Portal.
             </p>
             <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
               <a
                 href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Liên hệ ngay"
                 style={{
-                  background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+                  background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                   color: "#ffffff",
                   padding: "10px 20px",
                   borderRadius: "8px",
                   fontSize: "14px",
                   fontWeight: 700,
                   textDecoration: "none",
-                  boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
+                  boxShadow: "0 4px 12px rgba(234, 88, 12, 0.35)",
                 }}
               >
-                Nhắn Messenger Ngay
+                Liên hệ ngay
               </a>
               <button
                 onClick={onClose}

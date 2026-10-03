@@ -162,7 +162,7 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
           BẢO MẬT GIÁ SỈ CHO ĐẠI LÝ
         </h3>
         <p style={{ color: "#7c2d12", fontSize: "15px", maxWidth: "680px", margin: "0 auto 20px", lineHeight: 1.6 }}>
-          Để bảo vệ quyền lợi Đại lý & Khách hàng, bảng giá sỉ không hiển thị công khai trên website. Vui lòng bấm vào nút bên dưới để nhắn tin Messenger cho Mercy Tech nhận file Báo Giá Sỉ Chi Tiết & Chính Sách Chiết Khấu Đại Lý tốt nhất.
+          Để bảo vệ quyền lợi Đại lý & Khách hàng, bảng giá sỉ không hiển thị công khai trên website. Vui lòng bấm vào nút bên dưới để liên hệ Mercy Tech nhận file Báo Giá Sỉ Chi Tiết & Chính Sách Chiết Khấu Đại Lý tốt nhất.
         </p>
         <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
           <button
@@ -185,8 +185,9 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            title="Liên hệ"
             style={{
-              background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",
               textDecoration: "none",
               padding: "13px 26px",
@@ -196,11 +197,11 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
               display: "inline-flex",
               alignItems: "center",
               gap: "6px",
-              boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
+              boxShadow: "0 4px 12px rgba(234, 88, 12, 0.35)",
             }}
           >
             <MessageCircle size={16} />
-            <span>Nhận Báo Giá Sỉ Qua Messenger</span>
+            <span>Liên hệ</span>
             <ArrowRight size={15} />
           </a>
         </div>

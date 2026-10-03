@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck, Diamond, Handshake, ArrowRight, PhoneCall, Sparkles } from "lucide-react";
+import { ShieldCheck, Diamond, Handshake, ArrowRight, PhoneCall, Sparkles, MessageCircle } from "lucide-react";
 
 interface PricingHeroProps {
   onOpenRegister: () => void;
@@ -209,10 +209,11 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              title="Liên hệ"
               style={{
-                backgroundColor: "#ffffff",
-                color: "#006aff",
-                border: "1.5px solid #0084ff",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+                color: "#ffffff",
+                border: "none",
                 borderRadius: "10px",
                 padding: "14px 24px",
                 fontSize: "15px",
@@ -222,19 +223,22 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
                 alignItems: "center",
                 gap: "8px",
                 textDecoration: "none",
+                boxShadow: "0 4px 14px rgba(234, 88, 12, 0.35)",
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#f0f9ff";
-                e.currentTarget.style.borderColor = "#006aff";
+                e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
+                e.currentTarget.style.transform = "translateY(-1px)";
+                e.currentTarget.style.boxShadow = "0 6px 18px rgba(234, 88, 12, 0.45)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#ffffff";
-                e.currentTarget.style.borderColor = "#0084ff";
+                e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.35)";
               }}
             >
-              <PhoneCall size={17} color="#006aff" />
-              <span>Tư Vấn Qua Messenger</span>
+              <MessageCircle size={17} color="#ffffff" />
+              <span>Liên hệ</span>
             </a>
           </div>
         </div>

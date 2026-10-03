@@ -143,7 +143,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                 Tiếp Nhận Thành Công!
               </h4>
               <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "22px" }}>
-                Chuyên viên Mercy Tech sẽ gửi file báo giá sỉ bảo mật và gọi/nhắn Messenger đến số <strong>{formData.phone}</strong> trong ít phút.
+                Chuyên viên Mercy Tech sẽ gửi file báo giá sỉ bảo mật và gọi/nhắn tin đến số <strong>{formData.phone}</strong> trong ít phút.
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -151,8 +151,9 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                   href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Liên hệ ngay"
                   style={{
-                    background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+                    background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                     color: "#ffffff",
                     padding: "13px",
                     borderRadius: "8px",
@@ -163,11 +164,11 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "8px",
-                    boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
+                    boxShadow: "0 4px 12px rgba(234, 88, 12, 0.35)",
                   }}
                 >
                   <MessageCircle size={18} />
-                  <span>Nhắn Tin Messenger Trực Tiếp</span>
+                  <span>Liên hệ ngay</span>
                 </a>
                 <button
                   type="button"
@@ -206,7 +207,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
               >
                 <ShieldCheck size={18} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} />
                 <span>
-                  <strong>Chính sách bảo mật:</strong> Để đảm bảo biên lợi nhuận cho đại lý đã ký kết, bảng giá sỉ không công khai. Quý đối tác vui lòng để lại thông tin hoặc kết nối Messenger để nhận file báo giá.
+                  <strong>Chính sách bảo mật:</strong> Để đảm bảo biên lợi nhuận cho đại lý đã ký kết, bảng giá sỉ không công khai. Quý đối tác vui lòng để lại thông tin hoặc kết nối liên hệ để nhận file báo giá.
                 </span>
               </div>
 
@@ -330,18 +331,19 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                   href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  title="Liên hệ ngay"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "6px",
                     fontSize: "13px",
                     fontWeight: 700,
-                    color: "#006aff",
+                    color: "#ea580c",
                     textDecoration: "none",
                   }}
                 >
                   <MessageCircle size={16} />
-                  <span>Nhắn Messenger Ngay</span>
+                  <span>Liên hệ ngay</span>
                 </a>
                 <a
                   href="tel:0763068614"

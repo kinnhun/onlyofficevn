@@ -144,7 +144,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                 GỬI YÊU CẦU THÀNH CÔNG!
               </h4>
               <p style={{ fontSize: "14px", color: "#666666", lineHeight: 1.6, margin: "0 0 20px" }}>
-                Hệ thống đang mở kết nối Messenger với chuyên viên tư vấn Mercy Tech (Hotline: <strong>0763.068.614</strong>) để gửi bảng giá chiết khấu chi tiết cho quý khách.
+                Hệ thống đang mở kết nối liên hệ với chuyên viên tư vấn Mercy Tech (Hotline: <strong>0763.068.614</strong>) để gửi bảng giá chiết khấu chi tiết cho quý khách.
               </p>
               <button
                 type="button"
@@ -313,7 +313,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                 }}
               >
                 <MessageCircle size={18} />
-                <span>Gửi Yêu Cầu & Kết Nối Messenger Báo Giá</span>
+                <span>Gửi Yêu Cầu & Liên Hệ Báo Giá</span>
               </button>
             </form>
           )}

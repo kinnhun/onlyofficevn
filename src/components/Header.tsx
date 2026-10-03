@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, useRouter, usePathname } from "@/i18n/routing";
-import { Download, Menu, X } from "lucide-react";
+import { Download, Menu, X, MessageCircle } from "lucide-react";
 import { FlagVi, FlagEn } from "@/components/HeaderFlags";
 import HeaderMobileDrawer from "@/components/HeaderMobileDrawer";
 import HeaderRightActions from "@/components/HeaderRightActions";
@@ -258,16 +258,16 @@ export default function Header() {
               <span>{tHeader("download")}</span>
             </Link>
 
-            {/* Messenger / Contact Button */}
+            {/* Contact Button */}
             <a
               className="mercy-contact-btn en"
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
-              title="Liên hệ qua Messenger"
+              title={locale === "vi" ? "Liên hệ" : "Contact us"}
               style={{
-                backgroundColor: "#ffffff",
-                border: "1.5px solid #e2e8f0",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+                border: "none",
                 borderRadius: "8px",
                 whiteSpace: "nowrap",
                 flexShrink: 0,
@@ -278,30 +278,26 @@ export default function Header() {
                 padding: "0 15px",
                 height: "38px",
                 fontSize: "13.5px",
-                fontWeight: 600,
-                color: "#1e293b",
+                fontWeight: 700,
+                color: "#ffffff",
                 textDecoration: "none",
                 lineHeight: "1",
+                boxShadow: "0 2px 10px rgba(234, 88, 12, 0.25)",
                 transition: "all 0.2s ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#f8fafc";
-                e.currentTarget.style.borderColor = "#cbd5e1";
+                e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
                 e.currentTarget.style.transform = "translateY(-1px)";
+                e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.4)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#ffffff";
-                e.currentTarget.style.borderColor = "#e2e8f0";
+                e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
                 e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 2px 10px rgba(234, 88, 12, 0.25)";
               }}
             >
-              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-                <path
-                  d="M12 2C6.477 2 2 6.145 2 11.258C2 14.172 3.455 16.78 5.735 18.442V22L9.153 20.124C10.058 20.375 11.017 20.511 12 20.511C17.523 20.511 22 16.366 22 11.258C22 6.145 17.523 2 12 2ZM13.066 14.443L10.459 11.663L5.371 14.443L10.967 8.5L13.64 11.28L18.663 8.5L13.066 14.443Z"
-                  fill="#0084FF"
-                />
-              </svg>
-              <span style={{ fontSize: "13.5px", fontWeight: 600, color: "#1e293b", whiteSpace: "nowrap" }}>{tCommon("contact")}</span>
+              <MessageCircle size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
+              <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#ffffff", whiteSpace: "nowrap" }}>{tCommon("contact")}</span>
             </a>
           </div>
         </nav>

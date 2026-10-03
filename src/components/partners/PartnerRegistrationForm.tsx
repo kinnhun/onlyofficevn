@@ -76,28 +76,29 @@ export default function PartnerRegistrationForm() {
               Đăng Ký Thành Công!
             </h3>
             <p style={{ fontSize: "15px", color: "#166534", maxWidth: "560px", margin: "0 auto 24px", lineHeight: 1.6 }}>
-              Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ gửi bảng giá sỉ bảo mật và liên hệ qua Messenger/Điện thoại <strong>{formData.phone}</strong> ngay trong ít phút.
+              Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ gửi bảng giá sỉ bảo mật và liên hệ qua điện thoại/tin nhắn <strong>{formData.phone}</strong> ngay trong ít phút.
             </p>
             <a
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              title="Liên hệ"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "8px",
-                background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                 color: "#ffffff",
                 padding: "12px 24px",
                 borderRadius: "8px",
                 fontWeight: 700,
                 fontSize: "14px",
                 textDecoration: "none",
-                boxShadow: "0 4px 12px rgba(0, 106, 255, 0.3)",
+                boxShadow: "0 4px 12px rgba(234, 88, 12, 0.35)",
               }}
             >
               <MessageCircle size={16} />
-              <span>Chat Messenger Nhận Báo Giá Ngay</span>
+              <span>Liên hệ</span>
             </a>
           </div>
         ) : (

@@ -240,13 +240,13 @@ export default function FooterCompanyInfo() {
                 color: "#ffffff",
                 padding: "8px 14px",
                 borderRadius: "6px",
-                background: "linear-gradient(135deg, #00B2FE 0%, #006AFF 50%, #9B33FF 100%)",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                 textDecoration: "none",
-                boxShadow: "0 2px 10px rgba(0, 106, 255, 0.35)",
+                boxShadow: "0 2px 10px rgba(234, 88, 12, 0.35)",
               }}
             >
               <MessageCircle size={14} />
-              <span>Tư Vấn Messenger</span>
+              <span>Liên hệ</span>
             </a>
           </div>
         </div>
