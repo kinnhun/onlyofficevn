@@ -3,7 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import DocsSection from "@/components/DocsSection";
+import EcosystemSection from "@/components/EcosystemSection";
 import CollaborationSection from "@/components/CollaborationSection";
 import AIAssistantsSection from "@/components/AIAssistantsSection";
 import SecuritySection from "@/components/SecuritySection";
@@ -29,7 +29,7 @@ export default async function Home({
       <Header />
       <main>
         <HeroSection />
-        <DocsSection />
+        <EcosystemSection />
         <CollaborationSection />
         <AIAssistantsSection />
         <SecuritySection />
