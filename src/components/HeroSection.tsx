@@ -33,35 +33,25 @@ export default function HeroSection() {
           style={{ marginBottom: "56px" }}
         >
           {/* Official Distributor & Optimization Badge */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "7px 18px",
-              borderRadius: "9999px",
-              backgroundColor: "#fff7ed",
-              border: "1px solid #fed7aa",
-              marginBottom: "20px",
-              boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
-            }}
-          >
-            <span style={{ fontSize: "14px" }}>🇻🇳</span>
+          <div className="home-hero-badge">
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span style={{ fontSize: "14px" }}>🇻🇳</span>
+              <span
+                style={{
+                  fontSize: "12.5px",
+                  fontWeight: 700,
+                  color: "#ea580c",
+                  letterSpacing: "0.2px",
+                  textTransform: "uppercase",
+                }}
+              >
+                {tBranding("distributor")}
+              </span>
+            </div>
+            <span className="home-hero-badge-divider" style={{ color: "#cbd5e1", fontSize: "14px" }}>•</span>
             <span
               style={{
-                fontSize: "13px",
-                fontWeight: 700,
-                color: "#ea580c",
-                letterSpacing: "0.2px",
-                textTransform: "uppercase",
-              }}
-            >
-              {tBranding("distributor")}
-            </span>
-            <span style={{ color: "#cbd5e1", fontSize: "14px" }}>•</span>
-            <span
-              style={{
-                fontSize: "13px",
+                fontSize: "12.5px",
                 fontWeight: 600,
                 color: "#475569",
               }}
@@ -73,9 +63,9 @@ export default function HeroSection() {
           <h1
             className="Heading-module-scss-module__-NGNla__heading Heading-module-scss-module__-NGNla__size-2 Heading-module-scss-module__-NGNla__text-align-center"
             style={{
-              fontSize: "48px",
+              fontSize: "clamp(30px, 5.2vw, 48px)",
               fontWeight: 700,
-              lineHeight: "58px",
+              lineHeight: 1.25,
               letterSpacing: "-0.02em",
               color: "#333333",
               margin: "0 0 16px",
@@ -88,10 +78,11 @@ export default function HeroSection() {
           <p
             className="Text-module-scss-module__bfsDDa__text Text-module-scss-module__bfsDDa__font-weight-700 Text-module-scss-module__bfsDDa__text-align-center"
             style={{
-              fontSize: "18px",
-              fontWeight: 700,
-              lineHeight: "27px",
-              color: "#333333",
+              fontSize: "clamp(15px, 2.2vw, 18px)",
+              fontWeight: 600,
+              lineHeight: 1.6,
+              color: "#475569",
+              maxWidth: "760px",
               margin: "0 auto 32px",
             }}
           >
@@ -99,7 +90,7 @@ export default function HeroSection() {
           </p>
 
           <div
-            className="Hero-module-scss-module__PeeyJW__hero-btns"
+            className="Hero-module-scss-module__PeeyJW__hero-btns home-hero-btns"
             style={{
               display: "flex",
               alignItems: "center",
@@ -109,18 +100,21 @@ export default function HeroSection() {
           >
             <Link
               id="hero-get-it-now"
-              className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-primary"
+              className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-primary home-hero-btn"
               href="/download?from=default#docs-enterprise"
               style={{
                 backgroundColor: "#ff6f3d",
                 color: "#ffffff",
-                minHeight: "56px",
-                padding: "16px 32px",
+                minHeight: "54px",
+                padding: "15px 32px",
                 borderRadius: "9px",
                 fontWeight: 600,
                 fontSize: "16px",
                 textDecoration: "none",
                 boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               {t("btnGetItNow")}
@@ -128,13 +122,13 @@ export default function HeroSection() {
 
             <Link
               id="hero-see-it-in-action"
-              className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-secondary"
+              className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-secondary home-hero-btn"
               href="/docspace-registration?from=default"
               style={{
                 backgroundColor: "#444444",
                 color: "#ffffff",
-                minHeight: "56px",
-                padding: "16px 32px",
+                minHeight: "54px",
+                padding: "15px 32px",
                 borderRadius: "9px",
                 fontWeight: 600,
                 fontSize: "16px",

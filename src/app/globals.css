@@ -1551,5 +1551,59 @@ html, body {
   }
 }
 
+/* ==========================================================================
+   Home Hero Section Responsive
+   ========================================================================== */
+
+.home-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.08);
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 641px) {
+  .home-hero-badge {
+    flex-direction: row;
+    gap: 8px;
+    padding: 7px 18px;
+    border-radius: 9999px;
+  }
+  .home-hero-badge-divider {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .home-hero-badge {
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px 18px;
+    border-radius: 14px;
+    max-width: 95%;
+  }
+  .home-hero-badge-divider {
+    display: none;
+  }
+  .home-hero-btns {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    gap: 12px !important;
+  }
+  .home-hero-btn {
+    width: 100% !important;
+    min-height: 52px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 14px 24px !important;
+  }
+}
+
+
 
 
