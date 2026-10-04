@@ -275,7 +275,7 @@ export default function EcosystemSection() {
     <section
       id="oo-features"
       style={{
-        padding: "96px 20px 108px",
+        padding: "clamp(56px, 6vw, 96px) 16px clamp(64px, 7vw, 108px)",
         position: "relative",
         background:
           "radial-gradient(900px circle at 50% -10%, rgba(255, 111, 61, 0.08) 0%, transparent 70%), radial-gradient(700px circle at 10% 50%, rgba(255, 146, 86, 0.05) 0%, transparent 60%), radial-gradient(800px circle at 90% 70%, rgba(255, 111, 61, 0.06) 0%, transparent 70%)",
@@ -412,81 +412,30 @@ export default function EcosystemSection() {
         </div>
 
         {/* Tab Switcher: Apple/Dock-Style Floating Glassmorphism (NO BLACK / NO DARK SLATE) */}
-        <div
-          role="tablist"
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginBottom: "48px",
-          }}
-        >
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              padding: "7px",
-              borderRadius: "100px",
-              background: "rgba(255, 255, 255, 0.88)",
-              backdropFilter: "blur(20px)",
-              border: "1.5px solid rgba(255, 255, 255, 0.95)",
-              boxShadow: "0 14px 34px -8px rgba(234, 88, 12, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02)",
-              gap: "6px",
-              flexWrap: "wrap",
-              justifyContent: "center",
-            }}
-          >
+        {/* Tab Switcher: Apple/Dock-Style Floating Glassmorphism on Desktop, Sleek Segmented Card on Mobile */}
+        <div role="tablist" className="ecosystem-tabs-wrapper">
+          <div className="ecosystem-tabs-container">
             {/* Pill 1: ONLYOFFICE Docs */}
             <button
               type="button"
               role="tab"
               aria-selected={activeTab === "docs"}
               onClick={() => setActiveTab("docs")}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "11px 24px",
-                borderRadius: "100px",
-                fontSize: "14.5px",
-                fontWeight: activeTab === "docs" ? 700 : 600,
-                background:
-                  activeTab === "docs"
-                    ? "linear-gradient(135deg, #FF9256 0%, #FF6F3D 50%, #EA580C 100%)"
-                    : "transparent",
-                color: activeTab === "docs" ? "#ffffff" : "#475569",
-                border: "none",
-                cursor: "pointer",
-                boxShadow:
-                  activeTab === "docs"
-                    ? "0 8px 22px rgba(255, 111, 61, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)"
-                    : "none",
-                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
-              }}
-              onMouseEnter={(e) => {
-                if (activeTab !== "docs") {
-                  e.currentTarget.style.color = "#ea580c";
-                  e.currentTarget.style.backgroundColor = "rgba(255, 247, 237, 0.9)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeTab !== "docs") {
-                  e.currentTarget.style.color = "#475569";
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }
-              }}
+              className={`ecosystem-tab-btn ${activeTab === "docs" ? "active" : ""}`}
             >
-              <span
-                style={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: activeTab === "docs" ? "#ffffff" : "#ea580c",
-                  display: "inline-block",
-                  boxShadow: activeTab === "docs" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
-                }}
-              />
-              <span>ONLYOFFICE Docs</span>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    backgroundColor: activeTab === "docs" ? "#ffffff" : "#ea580c",
+                    display: "inline-block",
+                    boxShadow: activeTab === "docs" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
+                  }}
+                />
+                <span>ONLYOFFICE Docs</span>
+              </div>
               <span
                 style={{
                   fontSize: "11px",
@@ -507,51 +456,21 @@ export default function EcosystemSection() {
               role="tab"
               aria-selected={activeTab === "docspace"}
               onClick={() => setActiveTab("docspace")}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "11px 24px",
-                borderRadius: "100px",
-                fontSize: "14.5px",
-                fontWeight: activeTab === "docspace" ? 700 : 600,
-                background:
-                  activeTab === "docspace"
-                    ? "linear-gradient(135deg, #FF9256 0%, #FF6F3D 50%, #EA580C 100%)"
-                    : "transparent",
-                color: activeTab === "docspace" ? "#ffffff" : "#475569",
-                border: "none",
-                cursor: "pointer",
-                boxShadow:
-                  activeTab === "docspace"
-                    ? "0 8px 22px rgba(255, 111, 61, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)"
-                    : "none",
-                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
-              }}
-              onMouseEnter={(e) => {
-                if (activeTab !== "docspace") {
-                  e.currentTarget.style.color = "#ea580c";
-                  e.currentTarget.style.backgroundColor = "rgba(255, 247, 237, 0.9)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeTab !== "docspace") {
-                  e.currentTarget.style.color = "#475569";
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }
-              }}
+              className={`ecosystem-tab-btn ${activeTab === "docspace" ? "active" : ""}`}
             >
-              <span
-                style={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: activeTab === "docspace" ? "#ffffff" : "#ea580c",
-                  display: "inline-block",
-                  boxShadow: activeTab === "docspace" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
-                }}
-              />
-              <span>ONLYOFFICE DocSpace</span>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    backgroundColor: activeTab === "docspace" ? "#ffffff" : "#ea580c",
+                    display: "inline-block",
+                    boxShadow: activeTab === "docspace" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
+                  }}
+                />
+                <span>ONLYOFFICE DocSpace</span>
+              </div>
               <span
                 style={{
                   fontSize: "11px",
@@ -572,51 +491,21 @@ export default function EcosystemSection() {
               role="tab"
               aria-selected={activeTab === "desktop"}
               onClick={() => setActiveTab("desktop")}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "11px 24px",
-                borderRadius: "100px",
-                fontSize: "14.5px",
-                fontWeight: activeTab === "desktop" ? 700 : 600,
-                background:
-                  activeTab === "desktop"
-                    ? "linear-gradient(135deg, #FF9256 0%, #FF6F3D 50%, #EA580C 100%)"
-                    : "transparent",
-                color: activeTab === "desktop" ? "#ffffff" : "#475569",
-                border: "none",
-                cursor: "pointer",
-                boxShadow:
-                  activeTab === "desktop"
-                    ? "0 8px 22px rgba(255, 111, 61, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3)"
-                    : "none",
-                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
-              }}
-              onMouseEnter={(e) => {
-                if (activeTab !== "desktop") {
-                  e.currentTarget.style.color = "#ea580c";
-                  e.currentTarget.style.backgroundColor = "rgba(255, 247, 237, 0.9)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (activeTab !== "desktop") {
-                  e.currentTarget.style.color = "#475569";
-                  e.currentTarget.style.backgroundColor = "transparent";
-                }
-              }}
+              className={`ecosystem-tab-btn ${activeTab === "desktop" ? "active" : ""}`}
             >
-              <span
-                style={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: activeTab === "desktop" ? "#ffffff" : "#ea580c",
-                  display: "inline-block",
-                  boxShadow: activeTab === "desktop" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
-                }}
-              />
-              <span>ONLYOFFICE Desktop</span>
+              <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    borderRadius: "50%",
+                    backgroundColor: activeTab === "desktop" ? "#ffffff" : "#ea580c",
+                    display: "inline-block",
+                    boxShadow: activeTab === "desktop" ? "0 0 8px rgba(255, 255, 255, 0.9)" : "none",
+                  }}
+                />
+                <span>ONLYOFFICE Desktop</span>
+              </div>
               <span
                 style={{
                   fontSize: "11px",
@@ -639,7 +528,7 @@ export default function EcosystemSection() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
                 gap: "28px",
               }}
             >
@@ -1009,7 +898,7 @@ export default function EcosystemSection() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))",
                 gap: "28px",
               }}
             >
@@ -1206,7 +1095,7 @@ export default function EcosystemSection() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
                 gap: "24px",
               }}
             >

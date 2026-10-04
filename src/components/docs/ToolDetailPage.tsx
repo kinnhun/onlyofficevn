@@ -210,6 +210,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
 
                 {/* Action CTAs */}
                 <div
+                  className="tool-hero-cta-group"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -221,6 +222,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
                 >
                   <Link
                     href="/demo"
+                    className="tool-hero-cta-btn"
                     style={{
                       background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                       color: "#ffffff",
@@ -244,6 +246,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={openMessengerChat}
+                    className="tool-hero-cta-btn"
                     style={{
                       backgroundColor: "#ffffff",
                       border: "1.5px solid #cbd5e1",
@@ -266,20 +269,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
 
                 {/* Media Switcher Buttons (if videoEmbedUrl is available) */}
                 {data.videoEmbedUrl && (
-                  <div
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      backgroundColor: "rgba(255, 255, 255, 0.8)",
-                      backdropFilter: "blur(8px)",
-                      border: "1.5px solid #e2e8f0",
-                      padding: "5px",
-                      borderRadius: "100px",
-                      marginBottom: "24px",
-                      boxShadow: "0 4px 14px rgba(15, 23, 42, 0.04)",
-                    }}
-                  >
+                  <div className="tool-media-switcher">
                     <button
                       type="button"
                       onClick={() => setActiveMedia("video")}
@@ -704,23 +694,8 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
                 </p>
               </div>
 
-              {/* Tabs Navigation Pills */}
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                  gap: "8px",
-                  backgroundColor: "rgba(255, 255, 255, 0.95)",
-                  backdropFilter: "blur(10px)",
-                  border: "1.5px solid #ececec",
-                  borderRadius: "100px",
-                  padding: "6px",
-                  width: "fit-content",
-                  margin: "0 auto 40px",
-                  boxShadow: "0 10px 28px rgba(15, 23, 42, 0.06)",
-                }}
-              >
+              {/* Tabs Navigation Segmented Control */}
+              <div className="tool-interactive-tabs-container">
                 {data.interactiveTabs.map((tab, idx) => {
                   const isActive = activeTabIndex === idx;
                   return (
@@ -728,22 +703,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
                       key={tab.id || idx}
                       type="button"
                       onClick={() => setActiveTabIndex(idx)}
-                      style={{
-                        background: isActive
-                          ? "linear-gradient(135deg, #FF9256 0%, #FF6F3D 100%)"
-                          : "transparent",
-                        color: isActive ? "#ffffff" : "#475569",
-                        border: "none",
-                        borderRadius: "100px",
-                        padding: "12px 24px",
-                        fontFamily: "inherit",
-                        fontSize: "14px",
-                        fontWeight: 700,
-                        cursor: "pointer",
-                        transition: "all 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
-                        boxShadow: isActive ? "0 6px 18px rgba(255, 111, 61, 0.4)" : "none",
-                        whiteSpace: "nowrap",
-                      }}
+                      className={`tool-interactive-tab-btn ${isActive ? "active" : ""}`}
                     >
                       {tab.label}
                     </button>
@@ -753,24 +713,8 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
 
               {/* Active Tab Card */}
               {data.interactiveTabs[activeTabIndex] && (
-                <div
-                  style={{
-                    backgroundColor: "rgba(255, 255, 255, 0.96)",
-                    backdropFilter: "blur(12px)",
-                    border: "1.5px solid #ececec",
-                    borderRadius: "24px",
-                    padding: "48px",
-                    boxShadow: "0 20px 50px rgba(15, 23, 42, 0.06)",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                      gap: "48px",
-                      alignItems: "center",
-                    }}
-                  >
+                <div className="tool-interactive-tab-card">
+                  <div className="tool-interactive-tab-grid">
                     {/* Left text column */}
                     <div>
                       {data.interactiveTabs[activeTabIndex].eyebrow && (
@@ -879,7 +823,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
               <div
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
                   gap: "32px",
                 }}
               >
@@ -982,7 +926,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
                 gap: "24px",
               }}
             >
@@ -1073,7 +1017,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
                 gap: "24px",
               }}
             >
