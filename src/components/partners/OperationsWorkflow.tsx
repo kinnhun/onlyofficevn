@@ -34,43 +34,43 @@ export default function OperationsWorkflow() {
   const steps5 = [
     {
       step: "A",
-      icon: <Trash2 size={20} color="#dc2626" />,
+      icon: <Trash2 size={20} color="#ff6f3d" />,
       title: "Gỡ Sạch Triệt Để Office Lậu",
       desc: "Xóa tệp cài đặt rác, dọn Registry và khóa registry lậu để tránh xung đột hệ thống.",
-      bg: "#fef2f2",
-      color: "#dc2626",
+      bg: "#fff7ed",
+      color: "#ea580c",
     },
     {
       step: "B",
-      icon: <Download size={20} color="#2563eb" />,
+      icon: <Download size={20} color="#ea580c" />,
       title: "Cài Đặt OnlyOffice Chuẩn Hóa",
       desc: "Bản phân phối mượt mà, tối ưu tài nguyên phần cứng tốt cho máy tính văn phòng.",
-      bg: "#eff6ff",
-      color: "#2563eb",
+      bg: "#fff7ed",
+      color: "#ea580c",
     },
     {
       step: "C",
-      icon: <Type size={20} color="#d97706" />,
+      icon: <Type size={20} color="#ff6f3d" />,
       title: "Import Bộ Phông Chữ Việt Hóa",
       desc: "Đồng bộ phông chữ TCVN3, VNI, Unicode loại bỏ hoàn toàn hiện tượng vỡ font văn bản cũ.",
-      bg: "#fffbeb",
-      color: "#d97706",
+      bg: "#fff7ed",
+      color: "#ea580c",
     },
     {
       step: "D",
-      icon: <FileCode size={20} color="#059669" />,
+      icon: <FileCode size={20} color="#ea580c" />,
       title: "Mặc Định Định Dạng Microsoft",
       desc: "Thiết lập mặc định lưu file .docx, .xlsx, .pptx đạt độ tương thích tài liệu 99.8%.",
-      bg: "#ecfdf5",
-      color: "#059669",
+      bg: "#fff7ed",
+      color: "#ea580c",
     },
     {
       step: "E",
-      icon: <Save size={20} color="#7c3aed" />,
+      icon: <Save size={20} color="#ff6f3d" />,
       title: "Cấu Hình Bảo Toàn Tệp Tin AutoSave",
       desc: "Cài đặt lưu tự động định kỳ 1 phút để tránh mất mát dữ liệu khi mất nguồn điện đột ngột.",
-      bg: "#f5f3ff",
-      color: "#7c3aed",
+      bg: "#fff7ed",
+      color: "#ea580c",
     },
   ];
 
@@ -179,7 +179,7 @@ export default function OperationsWorkflow() {
             margin: "0 auto",
             borderRadius: "14px",
             boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-            backgroundColor: "#000000",
+            backgroundColor: "#fff7ed",
           }}
         >
           <iframe

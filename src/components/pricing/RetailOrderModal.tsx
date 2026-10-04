@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { X, ShoppingBag, ShieldCheck, CheckCircle2, PhoneCall } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface RetailOrderModalProps {
   isOpen: boolean;
@@ -22,10 +23,24 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
 
   useEffect(() => {
     if (defaultProduct) {
-      if (defaultProduct.toLowerCase().includes("tem")) setProduct("tem-vat-ly");
+      if (defaultProduct.toLowerCase().includes("portal")) setProduct("portal-quan-tri");
       else setProduct("key-online");
     }
   }, [defaultProduct]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -38,10 +53,8 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
       if (q >= 50) unitPrice = 499000;
       else if (q >= 5) unitPrice = 699000;
       else unitPrice = 799000;
-    } else if (product === "tem-vat-ly") {
-      if (q >= 50) unitPrice = 699000;
-      else if (q >= 5) unitPrice = 899000;
-      else unitPrice = 999000;
+    } else {
+      unitPrice = 0;
     }
 
     return { unitPrice, total: unitPrice * q };
@@ -65,7 +78,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
       (address ? `Địa chỉ giao: ${address}%0A` : "");
 
     setTimeout(() => {
-      window.open("https://m.me/onlyoffice.official.vn", "_blank");
+      openMessengerChat();
     }, 600);
   };
 
@@ -79,7 +92,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
         bottom: 0,
         backgroundColor: "rgba(15, 23, 42, 0.8)",
         backdropFilter: "blur(6px)",
-        zIndex: 9999,
+        zIndex: 100000,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -205,7 +218,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
                   }}
                 >
                   <option value="key-online">🔑 OnlyOffice Key Online Vĩnh Viễn Theo Main (Từ 499k - 799k)</option>
-                  <option value="tem-vat-ly">✨ OnlyOffice Tem Cào Hologram 7 Màu (Từ 699k - 999k)</option>
+                  <option value="portal-quan-tri">⚡ Tài Khoản Portal Quản Trị Đại Lý 24/7 (Kích Hoạt Ngay)</option>
                 </select>
               </div>
 
@@ -340,7 +353,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
               {/* Address (for physical delivery) */}
               <div>
                 <label style={{ fontSize: "12px", fontWeight: 700, color: "#334155", display: "block", marginBottom: "4px" }}>
-                  Địa chỉ nhận hàng (nếu là tem/hộp vật lý):
+                  Địa chỉ nhận hồ sơ chứng nhận pháp lý (nếu có):
                 </label>
                 <input
                   type="text"

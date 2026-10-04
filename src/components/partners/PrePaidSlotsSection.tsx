@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Layers, Lock, MessageCircle, ArrowRight } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PrePaidSlotsSectionProps {
   onOpenModal: (pkgName?: string) => void;
@@ -24,8 +25,8 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
       quantity: "Số lượng nạp: 100 Key",
       desc: "Chiết khấu sâu hơn Gói 1 • Ưu tiên hỗ trợ kỹ thuật 24/7",
       badge: "CẤP 2",
-      badgeBg: "#e0f2fe",
-      badgeColor: "#0369a1",
+      badgeBg: "#fff7ed",
+      badgeColor: "#ea580c",
     },
     {
       title: "GÓI VIP ĐẮT HÀNG",
@@ -33,8 +34,8 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
       quantity: "Số lượng nạp: Từ 200 Key",
       desc: "Giá vốn rẻ nhất hệ thống • Đặc quyền đại lý độc quyền",
       badge: "SIÊU LÃI",
-      badgeBg: "#fee2e2",
-      badgeColor: "#dc2626",
+      badgeBg: "#ffedd5",
+      badgeColor: "#c2410c",
     },
   ];
 
@@ -96,20 +97,20 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
 
               <div
                 style={{
-                  background: "#f8fafc",
-                  border: "1px solid #e2e8f0",
+                  background: "#fffaf5",
+                  border: "1px solid #fed7aa",
                   borderRadius: "10px",
                   padding: "16px",
                   marginBottom: "16px",
                 }}
               >
                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>VỐN NẠP 1 LẦN:</div>
-                <div style={{ fontSize: "15px", fontWeight: 800, color: "#dc2626", marginTop: "2px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                <div style={{ fontSize: "15px", fontWeight: 800, color: "#ea580c", marginTop: "2px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
                   <Lock size={14} /> Liên hệ để lấy chính sách
                 </div>
 
                 <div style={{ fontSize: "12px", color: "#64748b", fontWeight: 600, marginTop: "12px" }}>LỢI NHUẬN RÒNG DỰ KIẾN:</div>
-                <div style={{ fontSize: "15px", fontWeight: 800, color: "#16a34a", marginTop: "2px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                <div style={{ fontSize: "15px", fontWeight: 800, color: "#c2410c", marginTop: "2px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
                   <Lock size={14} /> Liên hệ để lấy chính sách
                 </div>
               </div>
@@ -128,16 +129,17 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
                 width: "100%",
                 padding: "12px",
                 borderRadius: "8px",
-                backgroundColor: "#1e293b",
+                backgroundColor: "#ff6f3d",
                 border: "none",
                 color: "#ffffff",
                 fontWeight: 700,
                 fontSize: "14px",
                 cursor: "pointer",
+                boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
                 transition: "background 0.2s ease",
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1e293b")}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ea580c")}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
             >
               Nhận Báo Giá {slot.sub}
             </button>
@@ -185,6 +187,7 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openMessengerChat}
             title="Liên hệ"
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

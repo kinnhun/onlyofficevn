@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { X, Lock, CheckCircle2, Send, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -75,7 +76,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
         {/* Modal Header */}
         <div
           style={{
-            background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+            background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
             padding: "24px 28px",
             borderTopLeftRadius: "20px",
             borderTopRightRadius: "20px",
@@ -91,7 +92,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
               position: "absolute",
               top: "18px",
               right: "18px",
-              background: "rgba(255, 255, 255, 0.15)",
+              background: "rgba(255, 255, 255, 0.2)",
               border: "none",
               color: "#ffffff",
               width: "32px",
@@ -111,14 +112,15 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
               display: "inline-flex",
               alignItems: "center",
               gap: "6px",
-              backgroundColor: "rgba(255, 111, 61, 0.25)",
-              color: "#ff865c",
+              backgroundColor: "rgba(255, 255, 255, 0.2)",
+              color: "#ffffff",
               fontSize: "11px",
               fontWeight: 800,
               padding: "4px 10px",
               borderRadius: "12px",
               marginBottom: "8px",
               letterSpacing: "0.06em",
+              border: "1px solid rgba(255, 255, 255, 0.35)",
             }}
           >
             <Lock size={12} />
@@ -127,8 +129,8 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
           <h3 style={{ fontSize: "20px", fontWeight: 800, margin: "0 0 6px", color: "#ffffff" }}>
             Nhận Báo Giá Sỉ & Chính Sách Đại Lý
           </h3>
-          <div style={{ fontSize: "13px", color: "#94a3b8" }}>
-            Gói yêu cầu: <strong style={{ color: "#38bdf8" }}>{selectedPackage}</strong>
+          <div style={{ fontSize: "13px", color: "#ffedd5" }}>
+            Gói yêu cầu: <strong style={{ color: "#ffffff" }}>{selectedPackage}</strong>
           </div>
         </div>
 
@@ -151,6 +153,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                   href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={openMessengerChat}
                   title="Liên hệ ngay"
                   style={{
                     background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -276,8 +279,8 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                     onChange={(e) => setFormData({ ...formData, packageChoice: e.target.value })}
                     style={modalInputStyle}
                   >
-                    <option value="Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)">Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)</option>
-                    <option value="Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key + 500 Tem Cào)">Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key + 500 Tem Cào)</option>
+                    <option value="Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)">Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)</option>
+                    <option value="Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key Online Vĩnh Viễn)">Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key Online Vĩnh Viễn)</option>
                     <option value="Gói Đại Lý Sỉ 50 Key Pre-Paid">Gói Đại Lý Sỉ 50 Key Pre-Paid</option>
                     <option value="Gói Đại Lý Sỉ 100 Key Pre-Paid">Gói Đại Lý Sỉ 100 Key Pre-Paid</option>
                     <option value="Gói Đại Lý Sỉ 200 Key VIP">Gói Đại Lý Sỉ 200 Key VIP</option>
@@ -331,6 +334,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                   href="https://m.me/onlyoffice.official.vn"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={openMessengerChat}
                   title="Liên hệ ngay"
                   style={{
                     display: "inline-flex",

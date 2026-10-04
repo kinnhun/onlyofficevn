@@ -14,13 +14,14 @@ import MainPackagesSection from "@/components/partners/MainPackagesSection";
 import PrePaidSlotsSection from "@/components/partners/PrePaidSlotsSection";
 import AffiliateSection from "@/components/partners/AffiliateSection";
 import OperationsWorkflow from "@/components/partners/OperationsWorkflow";
+import PartnerPolicySection from "@/components/partners/PartnerPolicySection";
 import PartnerCommitments from "@/components/partners/PartnerCommitments";
 import PartnerRegistrationForm from "@/components/partners/PartnerRegistrationForm";
 import QuoteModal from "@/components/partners/QuoteModal";
 
 export default function PartnersPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState("Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)");
+  const [selectedPackage, setSelectedPackage] = useState("Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)");
 
   const handleOpenModal = (pkgName?: string) => {
     if (pkgName) {
@@ -62,6 +63,9 @@ export default function PartnersPage() {
 
         {/* 4. Quy Trình 4 Bước Vận Hành, Video YouTube & 5 Bước Chuẩn Hóa Máy Trạm */}
         <OperationsWorkflow />
+
+        {/* 5. Toàn Văn Chính Sách Đại Lý Phân Phối 9 Điều Chi Tiết */}
+        <PartnerPolicySection onOpenModal={handleOpenModal} />
 
         {/* 5 Cam Kết Chân Trang từ Mercy Tech Global */}
         <PartnerCommitments />

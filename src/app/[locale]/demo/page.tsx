@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingTrialButton from "@/components/FloatingTrialButton";
 
 import DemoHero from "@/components/demo/DemoHero";
 import DemoOnlineSuite from "@/components/demo/DemoOnlineSuite";
@@ -45,9 +44,6 @@ export default function DemoPage() {
 
       {/* Global Footer */}
       <Footer />
-
-      {/* Floating 7-day Trial .BAT Download Button */}
-      <FloatingTrialButton />
 
       {/* Price Quote Request Modal */}
       <PricingQuoteModal

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ShieldCheck, Award, Users, Lock, MessageCircle, FileText } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PartnerHeroProps {
   onOpenModal: (pkgName?: string) => void;
@@ -76,10 +77,10 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
           }}
         >
           {[
-            { icon: <ShieldCheck size={16} color="#2563eb" />, text: "SẢN PHẨM CHÍNH HÃNG" },
-            { icon: <Award size={16} color="#d97706" />, text: "BẢO HÀNH VĨNH VIỄN" },
-            { icon: <Users size={16} color="#059669" />, text: "ĐỒNG HÀNH LÂU DÀI" },
-            { icon: <Lock size={16} color="#dc2626" />, text: "GIÁ SỈ BẢO MẬT ĐẠI LÝ" },
+            { icon: <ShieldCheck size={16} color="#ff6f3d" />, text: "SẢN PHẨM CHÍNH HÃNG" },
+            { icon: <Award size={16} color="#ea580c" />, text: "BẢO HÀNH VĨNH VIỄN" },
+            { icon: <Users size={16} color="#d97706" />, text: "ĐỒNG HÀNH LÂU DÀI" },
+            { icon: <Lock size={16} color="#c2410c" />, text: "GIÁ SỈ BẢO MẬT ĐẠI LÝ" },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -134,6 +135,7 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openMessengerChat}
             title="Liên hệ"
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

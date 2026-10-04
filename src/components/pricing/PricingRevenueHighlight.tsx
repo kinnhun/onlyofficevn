@@ -154,12 +154,12 @@ export default function PricingRevenueHighlight() {
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span>• 200 Key Online (99k/key):</span>
+                <span>• 200 Key Online Vĩnh Viễn:</span>
                 <strong>19.800.000đ</strong>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span>• 50 Tem Hologram (299k/tem):</span>
-                <strong>14.950.000đ</strong>
+                <span>• Portal Quản Trị Đại Lý 24/7:</span>
+                <strong style={{ color: "#4ade80" }}>Tặng kèm</strong>
               </div>
             </div>
           </div>
@@ -231,8 +231,8 @@ export default function PricingRevenueHighlight() {
                 <strong style={{ color: "#38bdf8" }}>99,8 – 139,8 Tr</strong>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span>• Bán 50 Tem (699k - 1,399 Tr):</span>
-                <strong style={{ color: "#38bdf8" }}>34,9 – 69,95 Tr</strong>
+                <span>• Bán kèm dịch vụ cài đặt & bảo trì:</span>
+                <strong style={{ color: "#38bdf8" }}>Gia tăng doanh thu</strong>
               </div>
             </div>
           </div>
@@ -363,12 +363,12 @@ export default function PricingRevenueHighlight() {
                 <td style={{ padding: "12px", color: "#fde047", fontWeight: 800 }}>Gấp 5 – 7 lần vốn</td>
               </tr>
               <tr>
-                <td style={{ padding: "12px", fontWeight: 700, color: "#ffffff" }}>Tem Cào Hologram 7 Màu</td>
-                <td style={{ padding: "12px" }}>50 Tem</td>
-                <td style={{ padding: "12px", color: "#ea580c", fontWeight: 700 }}>299.000đ</td>
-                <td style={{ padding: "12px" }}>699.000đ – 1.399.000đ</td>
-                <td style={{ padding: "12px", color: "#4ade80", fontWeight: 800 }}>+400.000đ – 1.100.000đ</td>
-                <td style={{ padding: "12px", color: "#fde047", fontWeight: 800 }}>Gấp 2.3 – 4.6 lần vốn</td>
+                <td style={{ padding: "12px", fontWeight: 700, color: "#ffffff" }}>Portal Quản Trị 24/7</td>
+                <td style={{ padding: "12px" }}>1 Tài khoản</td>
+                <td style={{ padding: "12px", color: "#4ade80", fontWeight: 700 }}>Tặng kèm</td>
+                <td style={{ padding: "12px" }}>Đặc quyền phân phối</td>
+                <td style={{ padding: "12px", color: "#4ade80", fontWeight: 800 }}>Xuất key chủ động 24/7</td>
+                <td style={{ padding: "12px", color: "#fde047", fontWeight: 800 }}>Bảo hành vĩnh viễn</td>
               </tr>
             </tbody>
           </table>

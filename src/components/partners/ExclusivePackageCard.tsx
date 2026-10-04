@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Key, Tag, Sparkles, Globe, Lock, Gift, CheckCircle2 } from "lucide-react";
+import { Key, Sparkles, Globe, Lock, Gift, CheckCircle2 } from "lucide-react";
 
 interface ExclusivePackageCardProps {
   onOpenModal: (pkgName?: string) => void;
@@ -40,7 +40,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
             GÓI KHỞI NGHIỆP ĐỘC QUYỀN TUYẾN
           </h3>
           <div style={{ fontSize: "18px", fontWeight: 700, color: "#ea580c" }}>
-            200 Key Online + 500 Tem Cào Vật Lý Hologram 7 Màu
+            200 Key Online Vĩnh Viễn + Đặc Quyền Tuyến 1 Năm
           </div>
           <div style={{ fontSize: "14px", color: "#64748b", marginTop: "4px" }}>
             Dành cho đại lý muốn triển khai kinh doanh ONLYOFFICE bài bản tại khu vực độc quyền riêng
@@ -57,7 +57,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
         </div>
       </div>
 
-      {/* Grid 2 components: Key Online + 500 Tem Cào */}
+      {/* Grid 2 components: Key Online + Ha Tang & Dac Quyen Tuyen */}
       <div
         style={{
           display: "grid",
@@ -66,7 +66,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           marginBottom: "28px",
         }}
       >
-        {/* 200 Key Online */}
+        {/* Component 1: 200 Key Online */}
         <div
           style={{
             background: "#ffffff",
@@ -90,9 +90,9 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Key bản quyền vĩnh viễn theo thiết bị máy tính</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Kích hoạt nhanh chóng trên Portal Đại Lý</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Dễ dàng cập nhật và phân quyền nhân viên IT</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Key bản quyền vĩnh viễn theo UUID Mainboard máy tính</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Kích hoạt nhanh chóng trên Portal Đại Lý tự động 24/7</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Dễ dàng cập nhật và phân quyền nhân viên kỹ thuật IT</div>
           </div>
 
           <div
@@ -113,7 +113,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           </div>
         </div>
 
-        {/* 500 Tem Cào */}
+        {/* Component 2: Đặc Quyền Tuyến & Hạ Tầng Số Riêng */}
         <div
           style={{
             background: "#ffffff",
@@ -125,21 +125,40 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
             <div style={{ fontSize: "17px", fontWeight: 800, color: "#c2410c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <Tag size={18} />
-              <span>500 TEM CÀO VẬT LÝ</span>
+              <Globe size={18} />
+              <span>HẠ TẦNG SỐ & ĐẶC QUYỀN ĐỊA BÀN</span>
             </div>
             <span style={{ fontSize: "11px", fontWeight: 700, color: "#b45309", background: "#fef3c7", padding: "3px 8px", borderRadius: "4px" }}>
-              SỐ LƯỢNG LỚN
+              ĐỘC QUYỀN 100%
             </span>
           </div>
           <div style={{ fontSize: "13px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
-            TEM CHÍNH HÃNG ONLYOFFICE HOLOGRAM 7 MÀU
+            HỢP ĐỒNG MỘC ĐỎ & BẢN QUYỀN KHU VỰC
+          </div>
+
+          {/* Exclusive Area Infrastructure Preview Box */}
+          <div
+            style={{
+              background: "#fffaf5",
+              border: "1px solid #fed7aa",
+              borderRadius: "10px",
+              padding: "14px",
+              marginBottom: "16px",
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", borderBottom: "1px solid #fed7aa", paddingBottom: "6px" }}>
+              <span style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c" }}>Cam Kết Độc Quyền Tuyến</span>
+              <span style={{ fontSize: "11px", fontWeight: 700, color: "#c2410c", background: "#ffedd5", padding: "2px 6px", borderRadius: "4px" }}>Bảo Vệ Thị Phần</span>
+            </div>
+            <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.5 }}>
+              Cam kết không mở đại lý thứ 2 cùng tuyến, bàn giao website riêng và chuyển giao toàn bộ đơn khách lẻ phát sinh trong khu vực.
+            </div>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Tem chính hãng ONLYOFFICE chống giả cao cấp</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Tăng độ tin cậy và giá trị khi bán kèm máy ráp mới</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Dễ dàng phân phối sỉ lẻ tại địa bàn độc quyền</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Hợp đồng độc quyền phân phối 1 năm mộc đỏ pháp lý</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Tặng website bán lẻ gắn Domain riêng .COM + Hosting 10GB</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Chuyển giao 100% data khách hàng lẻ phát sinh trong khu vực</div>
           </div>
 
           <div
@@ -153,9 +172,9 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
               alignItems: "center",
             }}
           >
-            <span style={{ fontSize: "13px", fontWeight: 700, color: "#9a3412" }}>Đơn giá tem sỉ số lượng:</span>
-            <span style={{ fontSize: "12px", fontWeight: 800, color: "#dc2626", background: "#fee2e2", padding: "4px 8px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
-              <Lock size={12} /> Giá sỉ bảo mật
+            <span style={{ fontSize: "13px", fontWeight: 700, color: "#9a3412" }}>Hạ tầng & Độc quyền:</span>
+            <span style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c", background: "#ffedd5", padding: "4px 8px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "4px" }}>
+              <Sparkles size={12} /> Bàn giao trọn gói
             </span>
           </div>
         </div>
@@ -184,15 +203,15 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
 
         <div>
           <div style={{ fontSize: "11px", color: "#ffedd5", fontWeight: 700, textTransform: "uppercase" }}>GIÁ TRỊ BÁN LẺ DỰ KIẾN</div>
-          <div style={{ fontSize: "20px", fontWeight: 900, color: "#fef08a", marginTop: "4px" }}>
-            539,3 – 759,3 TRIỆU
+          <div style={{ fontSize: "17px", fontWeight: 800, color: "#fef08a", marginTop: "4px" }}>
+            Liên hệ nhận chính sách
           </div>
         </div>
 
         <div>
           <div style={{ fontSize: "11px", color: "#ffedd5", fontWeight: 700, textTransform: "uppercase" }}>LỢI NHUẬN SO VỚI VỐN</div>
-          <div style={{ fontSize: "22px", fontWeight: 900, color: "#ffffff", marginTop: "4px" }}>
-            +445 – 665 TRIỆU
+          <div style={{ fontSize: "17px", fontWeight: 800, color: "#ffffff", marginTop: "4px" }}>
+            Biên độ lợi nhuận tối đa
           </div>
         </div>
 
@@ -234,7 +253,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
             { num: "01", title: "Độc Quyền Tuyến 1 Năm", desc: "Hợp đồng mộc đỏ • Không cấp đại lý thứ 2 cùng tuyến" },
             { num: "02", title: "Website + Domain + Hosting", desc: "Tặng .COM + Hosting 10GB năm đầu (Trị giá 10.8tr)" },
             { num: "03", title: "Bộ Cài White-Label Riêng", desc: "Logo • Tên shop • Hotline đại lý bảo vệ tệp khách" },
-            { num: "04", title: "Tặng Thêm 10 Key Online", desc: "Bán lẻ thu ngay 5 - 8 triệu tiền mặt" },
+            { num: "04", title: "Tặng Thêm 10 Key Online", desc: "Bán lẻ thu hồi vốn & lợi nhuận trực tiếp" },
             { num: "05", title: "Kho Marketing VIP Hàng Tuần", desc: "Hình ảnh • Video • Content • File thiết kế in ấn" },
             { num: "06", title: "Chứng Nhận Cho Khách", desc: "Hỗ trợ xuất chứng nhận theo từng máy (Key-UUID)" },
             { num: "07", title: "Chứng Nhận Đại Lý Khung Kính", desc: "Mộc đỏ • Đóng khung kính gửi bưu phẩm tận nơi" },

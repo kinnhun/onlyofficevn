@@ -97,11 +97,11 @@
 
 *, *::before, *::after {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif !important;
 }
 
 html, body {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif !important;
   margin: 0;
   padding: 0;
   background-color: #ffffff;
@@ -115,12 +115,12 @@ html, body {
 h1, h2, h3, h4, h5, h6,
 p, span, a, li, ul, ol,
 button, input, textarea, select,
-label, table, th, td, blockquote {
-  font-family: 'Open Sans', sans-serif;
+label, table, th, td, blockquote, strong, b, em, i {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif !important;
 }
 
 /* Riêng phần tử code / UUID giữ monospace */
-code, kbd, samp, pre, .font-mono, [style*="monospace"] {
+code, kbd, samp, pre, .font-mono, [style*="monospace"], [style*="font-family: monospace"] {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
 }
 
@@ -964,7 +964,10 @@ a {
   .retail-guarantees-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-  .addon-tem-grid {
+  .addon-portal-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .blog-main-grid {
     grid-template-columns: 1fr !important;
   }
 }
@@ -981,4 +984,228 @@ a {
   }
 }
 
+/* ==========================================================================
+   GLOBAL MANDATORY TYPOGRAPHY: OPEN SANS
+   Ensures ALL pages (Home, Pricing, Partners, Demo, Blog, etc.) strictly use Open Sans font.
+   ========================================================================== */
+*, *::before, *::after {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif !important;
+}
 
+html, body, #__next, .layout, main, section, article, aside, header, footer, nav,
+div, p, span, a, li, ul, ol,
+h1, h2, h3, h4, h5, h6,
+button, input, textarea, select, label,
+table, thead, tbody, tfoot, tr, th, td,
+blockquote, form, fieldset, legend, figure, figcaption {
+  font-family: var(--font-open-sans), 'Open Sans', sans-serif !important;
+}
+
+/* Monospace exception for serial codes, keys, and UUIDs */
+code, kbd, samp, pre, .font-mono, [style*="monospace"], [style*="font-family: monospace"], [style*="font-family:monospace"], [style*="monospace"] * {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+}
+
+/* Responsive Blog Grids */
+@media screen and (max-width: 960px) {
+  .blog-main-grid,
+  .blog-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .blog-nav-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .blog-compact-card {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.blog-compact-card {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   WORDPRESS SCRAPED BLOG CONTENT TYPOGRAPHY & LAYOUT
+   ========================================================================== */
+.blog-html-article {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #334155;
+}
+
+.blog-html-article h2 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 800;
+  color: #1e293b;
+  margin: 36px 0 16px;
+  padding-left: 14px;
+  border-left: 4px solid #ea580c;
+  line-height: 1.4;
+}
+
+.blog-html-article h3 {
+  font-size: clamp(17px, 1.8vw, 20px);
+  font-weight: 800;
+  color: #1e293b;
+  margin: 28px 0 12px;
+  line-height: 1.45;
+}
+
+.blog-html-article h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+  margin: 20px 0 10px;
+}
+
+.blog-html-article p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin: 0 0 18px;
+}
+
+.blog-html-article strong,
+.blog-html-article b {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.blog-html-article a {
+  color: #ea580c;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.15s ease;
+}
+
+.blog-html-article a:hover {
+  color: #c2410c;
+}
+
+.blog-html-article ul,
+.blog-html-article ol {
+  margin: 0 0 20px 24px;
+  padding: 0;
+}
+
+.blog-html-article li {
+  margin-bottom: 8px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.blog-html-article blockquote {
+  border-left: 4px solid #ea580c;
+  background-color: #fffaf5;
+  border-radius: 0 12px 12px 0;
+  padding: 18px 24px;
+  margin: 24px 0;
+  font-style: italic;
+  color: #475569;
+}
+
+.blog-html-article blockquote p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.blog-html-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  margin: 24px auto;
+  display: block;
+}
+
+.blog-html-article figure {
+  margin: 24px 0;
+  text-align: center;
+}
+
+.blog-html-article figcaption {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.blog-html-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1.5px solid #fed7aa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.blog-html-article th {
+  background: #fff7ed;
+  color: #7c2d12;
+  font-weight: 800;
+  font-size: 13.5px;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 2px solid #fed7aa;
+}
+
+.blog-html-article td {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #334155;
+  border-bottom: 1px solid #ffedd5;
+}
+
+.blog-html-article tr:last-child td {
+  border-bottom: none;
+}
+
+.blog-html-article tr:nth-child(even) td {
+  background-color: #fffaf5;
+}
+
+.blog-html-article pre,
+.blog-html-article code {
+  background: #fff7ed;
+  color: #c2410c;
+  padding: 3px 7px;
+  border-radius: 6px;
+  font-size: 13.5px;
+}
+
+/* ========================================================
+   Floating Trial Button & Overlay Layering Rules
+   ======================================================== */
+nextjs-portal {
+  display: none !important;
+}
+
+body.mobile-drawer-open .oo-floating-trial-container,
+body.modal-open .oo-floating-trial-container {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .oo-floating-trial-container {
+    bottom: 16px !important;
+    right: 14px !important;
+    gap: 6px !important;
+  }
+  .oo-floating-trial-container #btn-floating-contact {
+    padding: 7px 14px !important;
+    font-size: 12px !important;
+  }
+  .oo-floating-trial-container #btn-floating-trial-download {
+    padding: 10px 18px !important;
+    font-size: 13.5px !important;
+  }
+}

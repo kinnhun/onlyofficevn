@@ -2,6 +2,7 @@
 
 import React from "react";
 import { ShieldCheck, Diamond, Handshake, ArrowRight, PhoneCall, Sparkles, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PricingHeroProps {
   onOpenRegister: () => void;
@@ -11,7 +12,7 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
   return (
     <section
       style={{
-        background: "linear-gradient(180deg, #f0f7ff 0%, #e0effe 50%, #ffffff 100%)",
+        background: "linear-gradient(180deg, #fff7ed 0%, #fafafa 50%, #ffffff 100%)",
         padding: "54px 24px 36px",
         position: "relative",
         overflow: "hidden",
@@ -26,7 +27,7 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
           transform: "translateX(-50%)",
           width: "700px",
           height: "350px",
-          background: "radial-gradient(circle, rgba(2, 132, 199, 0.18) 0%, rgba(255, 111, 61, 0.12) 50%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(255, 111, 61, 0.15) 0%, rgba(234, 88, 12, 0.08) 50%, transparent 70%)",
           filter: "blur(60px)",
           pointerEvents: "none",
         }}
@@ -146,12 +147,12 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
             style={{
               fontSize: "clamp(18px, 2.8vw, 26px)",
               fontWeight: 800,
-              color: "#0284c7",
+              color: "#ea580c",
               marginBottom: "14px",
               letterSpacing: "-0.2px",
             }}
           >
-            200 Key Online + 50 Tem Cào Vật Lý Hologram
+            200 Key Online Bản Quyền Vĩnh Viễn
           </div>
 
           <div
@@ -209,6 +210,7 @@ export default function PricingHero({ onOpenRegister }: PricingHeroProps) {
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openMessengerChat}
               title="Liên hệ"
               style={{
                 background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

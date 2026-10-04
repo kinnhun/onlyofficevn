@@ -1,8 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "@/i18n/routing";
-import { X, ChevronRight, Download, Phone, MessageCircle } from "lucide-react";
+import { X, ChevronRight, Download, Phone, MessageCircle, ChevronDown } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface HeaderMobileDrawerProps {
   isOpen: boolean;
@@ -34,9 +36,30 @@ export default function HeaderMobileDrawer({
   renderFlagVi,
   renderFlagEn,
 }: HeaderMobileDrawerProps) {
-  if (!isOpen) return null;
+  const [mounted, setMounted] = useState(false);
+  const [mobileEnterpriseOpen, setMobileEnterpriseOpen] = useState(false);
 
-  return (
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("mobile-drawer-open");
+    } else {
+      document.body.style.overflow = "";
+      document.body.classList.remove("mobile-drawer-open");
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("mobile-drawer-open");
+    };
+  }, [isOpen]);
+
+  if (!isOpen || !mounted) return null;
+
+  return createPortal(
     <>
       {/* Backdrop */}
       <div
@@ -47,9 +70,9 @@ export default function HeaderMobileDrawer({
           left: 0,
           width: "100vw",
           height: "100vh",
-          backgroundColor: "rgba(15, 23, 42, 0.5)",
-          backdropFilter: "blur(2px)",
-          zIndex: 1001,
+          backgroundColor: "rgba(15, 23, 42, 0.6)",
+          backdropFilter: "blur(4px)",
+          zIndex: 99998,
         }}
       />
 
@@ -63,7 +86,7 @@ export default function HeaderMobileDrawer({
           maxWidth: "85vw",
           height: "100vh",
           backgroundColor: "#ffffff",
-          zIndex: 1002,
+          zIndex: 99999,
           padding: "20px",
           boxShadow: "4px 0 24px rgba(0, 0, 0, 0.15)",
           display: "flex",
@@ -171,9 +194,206 @@ export default function HeaderMobileDrawer({
           </div>
         </div>
 
-        {/* 4 Direct Navigation Links */}
+        {/* Navigation Links */}
         <div style={{ display: "flex", flexDirection: "column", gap: "6px", margin: "4px 0" }}>
-          {navItems.map((item) => (
+          {/* 1. Trang chủ */}
+          <Link
+            key={navItems[0].key}
+            href={navItems[0].href}
+            onClick={onClose}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "12px 14px",
+              borderRadius: "8px",
+              backgroundColor: navItems[0].isActive ? "#fff7ed" : "#f8fafc",
+              color: navItems[0].isActive ? "#ea580c" : "#1e293b",
+              fontWeight: navItems[0].isActive ? 700 : 600,
+              fontSize: "15px",
+              textDecoration: "none",
+              border: navItems[0].isActive ? "1px solid #fed7aa" : "1px solid #e2e8f0",
+              transition: "all 0.15s ease",
+            }}
+          >
+            <span>{navItems[0].label}</span>
+            <ChevronRight size={16} color={navItems[0].isActive ? "#ea580c" : "#94a3b8"} />
+          </Link>
+
+          {/* 2. Enterprise Dropdown Accordion */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <button
+              type="button"
+              onClick={() => setMobileEnterpriseOpen(!mobileEnterpriseOpen)}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "12px 14px",
+                borderRadius: "8px",
+                backgroundColor: mobileEnterpriseOpen ? "#fff7ed" : "#f8fafc",
+                color: mobileEnterpriseOpen ? "#ea580c" : "#1e293b",
+                fontWeight: 700,
+                fontSize: "15px",
+                border: mobileEnterpriseOpen ? "1.5px solid #fed7aa" : "1px solid #e2e8f0",
+                cursor: "pointer",
+                width: "100%",
+                boxSizing: "border-box",
+                transition: "all 0.15s ease",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <span>Enterprise</span>
+                <span
+                  style={{
+                    fontSize: "10.5px",
+                    backgroundColor: "#ffedd5",
+                    color: "#ea580c",
+                    padding: "2px 7px",
+                    borderRadius: "4px",
+                    fontWeight: 700,
+                  }}
+                >
+                  Messenger
+                </span>
+              </div>
+              <ChevronDown
+                size={16}
+                color={mobileEnterpriseOpen ? "#ea580c" : "#94a3b8"}
+                style={{
+                  transform: mobileEnterpriseOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  transition: "transform 0.2s ease",
+                }}
+              />
+            </button>
+
+            {mobileEnterpriseOpen && (
+              <div
+                style={{
+                  padding: "12px 14px",
+                  margin: "4px 0 6px",
+                  borderRadius: "10px",
+                  backgroundColor: "#fffbf7",
+                  border: "1.5px dashed #fed7aa",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "6px",
+                }}
+              >
+                <div style={{ fontSize: "10.5px", fontWeight: 800, color: "#94a3b8", letterSpacing: "0.5px", textTransform: "uppercase" }}>
+                  DOCS ENTERPRISE
+                </div>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Tại sao chọn Docs Enterprise" : "Why Docs Enterprise"}
+                </a>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Bảng giá bản quyền" : "Pricing"}
+                </a>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Nhận bản quyền ngay" : "Get it now"}
+                </a>
+
+                <div style={{ fontSize: "10.5px", fontWeight: 800, color: "#94a3b8", letterSpacing: "0.5px", textTransform: "uppercase", marginTop: "8px" }}>
+                  DOCSPACE ENTERPRISE
+                </div>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Tại sao chọn DocSpace Enterprise" : "Why DocSpace Enterprise"}
+                </a>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Bảng giá DocSpace" : "Pricing"}
+                </a>
+                <a
+                  href="https://m.me/onlyoffice.official.vn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    onClose();
+                    openMessengerChat(e);
+                  }}
+                  style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
+                >
+                  • {locale === "vi" ? "Kích hoạt dùng thử ngay" : "Get it now"}
+                </a>
+
+                <div style={{ borderTop: "1px solid #fed7aa", paddingTop: "8px", marginTop: "6px", display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <a
+                    href="https://m.me/onlyoffice.official.vn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      onClose();
+                      openMessengerChat(e);
+                    }}
+                    style={{ fontSize: "13px", color: "#ea580c", padding: "4px 6px", fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}
+                  >
+                    <MessageCircle size={14} />
+                    <span>{locale === "vi" ? "Liên hệ tư vấn (Contact sales)" : "Contact sales"}</span>
+                  </a>
+                  <a
+                    href="https://m.me/onlyoffice.official.vn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      onClose();
+                      openMessengerChat(e);
+                    }}
+                    style={{ fontSize: "13px", color: "#ea580c", padding: "4px 6px", fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}
+                  >
+                    <span>🚀</span>
+                    <span>{locale === "vi" ? "Đăng ký Demo trực tiếp (Request demo)" : "Request demo"}</span>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* 3. Bảng Giá, Đăng ký đối tác, Blog */}
+          {navItems.slice(1).map((item) => (
             <Link
               key={item.key}
               href={item.href}
@@ -227,7 +447,10 @@ export default function HeaderMobileDrawer({
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={onClose}
+            onClick={(e) => {
+              onClose();
+              openMessengerChat(e);
+            }}
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",
@@ -266,6 +489,7 @@ export default function HeaderMobileDrawer({
           </a>
         </div>
       </div>
-    </>
+    </>,
+    document.body
   );
 }

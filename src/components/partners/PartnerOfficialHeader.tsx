@@ -7,10 +7,10 @@ export default function PartnerOfficialHeader() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+        background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
         color: "#ffffff",
-        padding: "16px 20px",
-        borderBottom: "3px solid #ff6f3d",
+        padding: "12px 20px",
+        boxShadow: "0 2px 10px rgba(234, 88, 12, 0.2)",
       }}
     >
       <div
@@ -27,7 +27,8 @@ export default function PartnerOfficialHeader() {
         <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
           <div
             style={{
-              background: "#dc2626",
+              background: "rgba(255, 255, 255, 0.22)",
+              border: "1px solid rgba(255, 255, 255, 0.4)",
               color: "#ffffff",
               fontSize: "11px",
               fontWeight: 800,
@@ -43,23 +44,23 @@ export default function PartnerOfficialHeader() {
             <FileCheck size={14} />
             <span>VĂN BẢN CHÍNH THỨC</span>
           </div>
-          <span style={{ fontSize: "13px", color: "#94a3b8", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "6px" }}>
-            <Shield size={14} color="#38bdf8" />
-            HIỆU LỰC VĨNH VIỄN TOÀN QUỐC
+          <span style={{ fontSize: "13px", color: "#ffffff", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <Shield size={14} color="#fef08a" />
+            HIỆU LỰC TOÀN QUỐC
           </span>
         </div>
 
-        <div style={{ fontSize: "12.5px", color: "#cbd5e1", display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+        <div style={{ fontSize: "12.5px", color: "#ffffff", display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-            <Building2 size={14} color="#ff865c" />
+            <Building2 size={14} color="#fef08a" />
             <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong>
           </span>
-          <span style={{ color: "#64748b" }}>•</span>
-          <span>MST: <strong>0319227767</strong></span>
-          <span style={{ color: "#64748b" }}>•</span>
+          <span style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
+          <span>MST: <strong style={{ color: "#fef08a" }}>0319227767</strong></span>
+          <span style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-            <Calendar size={14} color="#94a3b8" />
-            Ngày ban hành: <strong>07/07/2026</strong>
+            <Calendar size={14} color="#fef08a" />
+            Văn bản cập nhật: <strong>2026</strong>
           </span>
         </div>
       </div>

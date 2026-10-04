@@ -7,6 +7,8 @@ import { Download, Menu, X, MessageCircle } from "lucide-react";
 import { FlagVi, FlagEn } from "@/components/HeaderFlags";
 import HeaderMobileDrawer from "@/components/HeaderMobileDrawer";
 import HeaderRightActions from "@/components/HeaderRightActions";
+import HeaderEnterpriseDropdown from "@/components/HeaderEnterpriseDropdown";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function Header() {
   const tHeader = useTranslations("header");
@@ -178,7 +180,36 @@ export default function Header() {
               flexShrink: 0,
             }}
           >
-            {navItems.map((item) => (
+            {/* 1. Trang chủ */}
+            <Link
+              key={navItems[0].key}
+              href={navItems[0].href}
+              className={`oo-main-nav-link ${navItems[0].isActive ? "active" : ""}`}
+              style={{
+                fontSize: "14.5px",
+                fontWeight: navItems[0].isActive ? 700 : 600,
+                color: navItems[0].isActive ? "#ea580c" : "#334155",
+                backgroundColor: navItems[0].isActive ? "rgba(255, 111, 61, 0.09)" : "transparent",
+                borderColor: navItems[0].isActive ? "rgba(255, 111, 61, 0.22)" : "transparent",
+                textDecoration: "none",
+                padding: "8px 14px",
+                borderRadius: "8px",
+                display: "inline-flex",
+                alignItems: "center",
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+                wordBreak: "keep-all",
+                lineHeight: 1.2,
+              }}
+            >
+              {navItems[0].label}
+            </Link>
+
+            {/* 2. Enterprise Dropdown (Click goes directly to Messenger) */}
+            <HeaderEnterpriseDropdown locale={locale} />
+
+            {/* 3. Bảng Giá, Đăng ký đối tác, Blog */}
+            {navItems.slice(1).map((item) => (
               <Link
                 key={item.key}
                 href={item.href}
@@ -264,6 +295,7 @@ export default function Header() {
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openMessengerChat}
               title={locale === "vi" ? "Liên hệ" : "Contact us"}
               style={{
                 background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

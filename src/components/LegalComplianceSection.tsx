@@ -14,6 +14,7 @@ import {
   Copy,
   Check,
 } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function LegalComplianceSection() {
   const locale = useLocale();
@@ -363,38 +364,6 @@ export default function LegalComplianceSection() {
               </div>
             </div>
 
-            {/* Verification link underneath */}
-            <div
-              style={{
-                marginTop: "12px",
-                textAlign: "center",
-              }}
-            >
-              {/* <a
-                href="https://www.onlyoffice.com/partners.aspx"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontSize: "12.5px",
-                  color: "#64748b",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "5px",
-                  fontWeight: 600,
-                  transition: "color 0.15s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = "#ea580c";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = "#64748b";
-                }}
-              >
-                <span>{isVi ? "Tra cứu đối tác trên cổng ONLYOFFICE toàn cầu" : "Verify on global partner portal"}</span>
-                <ExternalLink size={12} />
-              </a> */}
-            </div>
           </div>
 
           {/* ================= RIGHT: STATS & STEPS ================= */}
@@ -532,6 +501,7 @@ export default function LegalComplianceSection() {
                 href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -716,6 +686,7 @@ export default function LegalComplianceSection() {
                 href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   color: "#ea580c",
                   fontWeight: 700,

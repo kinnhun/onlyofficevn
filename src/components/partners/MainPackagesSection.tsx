@@ -27,7 +27,7 @@ export default function MainPackagesSection({ onOpenModal }: MainPackagesSection
           Hai Gói Đại Lý Khởi Nghiệp & Độc Quyền Toàn Diện
         </h2>
         <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "780px", margin: "10px auto 0" }}>
-          Mô hình kinh doanh bản quyền bài bản kết hợp giữa <strong>Key Online tự động xuất trên Portal</strong> và <strong>Tem Cào Vật Lý Hologram 7 Màu</strong> chống giả.
+          Mô hình kinh doanh bản quyền bài bản với <strong>Key Online bản quyền vĩnh viễn</strong> tự động xuất trên <strong>Portal Quản Trị 24/7</strong> và hồ sơ chứng nhận mộc đỏ pháp lý.
         </p>
       </div>
 

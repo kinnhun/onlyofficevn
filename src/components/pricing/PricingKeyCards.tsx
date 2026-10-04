@@ -86,10 +86,11 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
           <div>
             <div
               style={{
-                backgroundColor: "#222222",
+                backgroundColor: "#e2e8f0",
+                border: "1.5px solid #cbd5e1",
                 borderRadius: "12px 12px 4px 4px",
                 padding: "10px 10px 4px",
-                boxShadow: "0 16px 36px rgba(0, 0, 0, 0.12)",
+                boxShadow: "0 16px 36px rgba(15, 23, 42, 0.08)",
                 maxWidth: "460px",
                 margin: "0 auto",
               }}
@@ -164,7 +165,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <div
                 style={{
                   height: "6px",
-                  backgroundColor: "#444444",
+                  backgroundColor: "#cbd5e1",
                   borderRadius: "0 0 8px 8px",
                   marginTop: "3px",
                   width: "104%",

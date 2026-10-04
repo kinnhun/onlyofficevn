@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingTrialButton from "@/components/FloatingTrialButton";
 
 import PricingHeroBanner from "@/components/pricing/PricingHeroBanner";
 import PricingKeyCards from "@/components/pricing/PricingKeyCards";
@@ -41,9 +40,6 @@ export default function PricingPage() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating 7-day Trial .BAT Download Button */}
-      <FloatingTrialButton />
 
       {/* Confidential Price Quote Request Modal */}
       <PricingQuoteModal

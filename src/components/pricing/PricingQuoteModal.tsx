@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { X, PhoneCall, CheckCircle2, ShieldCheck, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PricingQuoteModalProps {
   isOpen: boolean;
@@ -22,12 +23,26 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
   useEffect(() => {
     if (defaultProduct) {
       const lower = defaultProduct.toLowerCase();
-      if (lower.includes("tem")) setProduct("tem-vat-ly");
+      if (lower.includes("portal") || lower.includes("quản trị")) setProduct("portal-quan-tri");
       else if (lower.includes("enterprise") || lower.includes("server")) setProduct("docs-enterprise");
       else if (lower.includes("đại lý") || lower.includes("sỉ")) setProduct("dai-ly-si");
       else setProduct("key-online");
     }
   }, [defaultProduct]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -45,7 +60,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
       (note ? `Ghi chú: ${note}%0A` : "");
 
     setTimeout(() => {
-      window.open("https://m.me/onlyoffice.official.vn", "_blank");
+      openMessengerChat();
     }, 600);
   };
 
@@ -59,7 +74,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
         bottom: 0,
         backgroundColor: "rgba(30, 41, 59, 0.75)",
         backdropFilter: "blur(5px)",
-        zIndex: 9999,
+        zIndex: 100000,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -185,7 +200,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
                   }}
                 >
                   <option value="key-online">🔑 OnlyOffice Key Online (Vĩnh viễn theo Mainboard)</option>
-                  <option value="tem-vat-ly">✨ OnlyOffice Tem Cào Hologram 7 Màu (Vật lý dán PC/Laptop)</option>
+                  <option value="portal-quan-tri">⚡ Tài Khoản Portal Quản Trị Đại Lý 24/7 (Xuất Key Tức Thì)</option>
                   <option value="docs-enterprise">🏢 OnlyOffice Docs Enterprise (Máy chủ riêng / On-premise)</option>
                   <option value="dai-ly-si">💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng máy tính</option>
                 </select>

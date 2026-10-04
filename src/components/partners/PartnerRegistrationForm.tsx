@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { CheckCircle2, Send, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function PartnerRegistrationForm() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -12,7 +13,7 @@ export default function PartnerRegistrationForm() {
     phone: "",
     company: "",
     city: "",
-    packageChoice: "Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)",
+    packageChoice: "Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)",
     note: "",
   });
 
@@ -82,6 +83,7 @@ export default function PartnerRegistrationForm() {
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openMessengerChat}
               title="Liên hệ"
               style={{
                 display: "inline-flex",
@@ -172,8 +174,8 @@ export default function PartnerRegistrationForm() {
                 onChange={(e) => setFormData({ ...formData, packageChoice: e.target.value })}
                 style={inputStyle}
               >
-                <option value="Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)">Gói Đại Lý Tiêu Chuẩn (200 Key + 50 Tem Cào)</option>
-                <option value="Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key + 500 Tem Cào)">Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key + 500 Tem Cào)</option>
+                <option value="Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)">Gói Đại Lý Tiêu Chuẩn (200 Key Online Vĩnh Viễn)</option>
+                <option value="Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key Online Vĩnh Viễn)">Gói Khởi Nghiệp Độc Quyền Tuyến (200 Key Online Vĩnh Viễn)</option>
                 <option value="Gói Đại Lý Sỉ 50 Key Pre-Paid">Gói Đại Lý Sỉ 50 Key Pre-Paid</option>
                 <option value="Gói Đại Lý Sỉ 100 Key Pre-Paid">Gói Đại Lý Sỉ 100 Key Pre-Paid</option>
                 <option value="Gói Đại Lý Sỉ 200 Key VIP">Gói Đại Lý Sỉ 200 Key VIP</option>

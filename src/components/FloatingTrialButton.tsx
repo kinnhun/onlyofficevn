@@ -1,14 +1,29 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocale } from "next-intl";
 import { MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function FloatingTrialButton() {
   const locale = useLocale();
   const isVi = locale === "vi";
   const [modalOpen, setModalOpen] = useState(false);
   const [downloadCount, setDownloadCount] = useState(0);
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.body.classList.remove("modal-open");
+    };
+  }, [modalOpen]);
 
   const handleDownload = () => {
     // Trigger download
@@ -32,7 +47,7 @@ export default function FloatingTrialButton() {
           position: "fixed",
           bottom: "28px",
           right: "28px",
-          zIndex: 9999,
+          zIndex: 900,
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-end",
@@ -45,6 +60,7 @@ export default function FloatingTrialButton() {
           href="https://m.me/onlyoffice.official.vn"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={openMessengerChat}
           title={isVi ? "Liên hệ tư vấn" : "Contact us"}
           aria-label={isVi ? "Liên hệ" : "Contact"}
           style={{
@@ -179,7 +195,7 @@ export default function FloatingTrialButton() {
             inset: 0,
             backgroundColor: "rgba(0, 0, 0, 0.65)",
             backdropFilter: "blur(6px)",
-            zIndex: 10000,
+            zIndex: 100000,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -399,6 +415,7 @@ export default function FloatingTrialButton() {
                 href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   flex: "1 1 auto",
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

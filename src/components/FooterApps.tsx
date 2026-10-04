@@ -50,7 +50,7 @@ export const appPills = [
     bg: "#000000",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#ffffff">
-        <text x="50%" y="65%" dominantBaseline="middle" textAnchor="middle" fill="#ffffff" fontSize="11" fontWeight="bold" fontFamily="sans-serif">
+        <text x="50%" y="65%" dominantBaseline="middle" textAnchor="middle" fill="#ffffff" fontSize="11" fontWeight="bold" fontFamily="'Open Sans', sans-serif">
           iOS
         </text>
       </svg>

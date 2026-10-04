@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { Key, ShieldCheck, CheckCircle2, Plus, Laptop, Layers, Sparkles, QrCode, ZoomIn } from "lucide-react";
-import PricingStickerModal from "./PricingStickerModal";
+import React from "react";
+import { Key, ShieldCheck, CheckCircle2, Plus, Laptop, Layers, Sparkles, QrCode } from "lucide-react";
 
 export default function PricingPackageCards() {
-  const [isZoomOpen, setIsZoomOpen] = useState(false);
   return (
     <section style={{ padding: "20px 24px 40px", backgroundColor: "#ffffff" }}>
       <div style={{ maxWidth: "1240px", margin: "0 auto" }}>
@@ -63,8 +61,8 @@ export default function PricingPackageCards() {
                 }}
               >
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "8px", borderBottom: "1px solid #e2e8f0", paddingBottom: "6px" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "11px", fontWeight: 700, color: "#003b8e" }}>
-                    <Laptop size={14} color="#0284c7" />
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "11px", fontWeight: 700, color: "#1e293b" }}>
+                    <Laptop size={14} color="#ff6f3d" />
                     <span>MERCY KEYS PORTAL</span>
                   </div>
                   <span style={{ fontSize: "10px", color: "#64748b", fontWeight: 600 }}>Đại lý: Quản lý tập trung</span>
@@ -72,8 +70,8 @@ export default function PricingPackageCards() {
 
                 {/* Status Bar */}
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", textAlign: "center", marginBottom: "10px" }}>
-                  <div style={{ background: "#eff6ff", padding: "4px 2px", borderRadius: "4px" }}>
-                    <div style={{ fontSize: "12px", fontWeight: 800, color: "#1d4ed8" }}>320</div>
+                  <div style={{ background: "#fff7ed", padding: "4px 2px", borderRadius: "4px" }}>
+                    <div style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c" }}>320</div>
                     <div style={{ fontSize: "9px", color: "#64748b" }}>Tổng key</div>
                   </div>
                   <div style={{ background: "#f0fdf4", padding: "4px 2px", borderRadius: "4px" }}>
@@ -176,13 +174,13 @@ export default function PricingPackageCards() {
             <Plus size={26} strokeWidth={3.5} />
           </div>
 
-          {/* Card 2: 50 TEM CÀO VẬT LÝ HOLOGRAM 7 MÀU */}
+          {/* Card 2: PORTAL QUẢN TRỊ ĐẠI LÝ 24/7 */}
           <div
             style={{
               backgroundColor: "#ffffff",
               borderRadius: "16px",
-              border: "2px solid #003b8e",
-              boxShadow: "0 10px 30px rgba(0, 59, 142, 0.12)",
+              border: "2px solid #fed7aa",
+              boxShadow: "0 10px 30px rgba(234, 88, 12, 0.08)",
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
@@ -192,141 +190,79 @@ export default function PricingPackageCards() {
             {/* Header Badge */}
             <div
               style={{
-                background: "linear-gradient(135deg, #002b66 0%, #003b8e 100%)",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                 color: "#ffffff",
                 padding: "16px 20px",
                 textAlign: "center",
               }}
             >
               <div style={{ fontSize: "22px", fontWeight: 900, letterSpacing: "0.5px" }}>
-                50 TEM CÀO VẬT LÝ
+                PORTAL QUẢN TRỊ 24/7
               </div>
               <div style={{ fontSize: "12px", opacity: 0.9, fontWeight: 600, letterSpacing: "0.2px" }}>
-                HOLOGRAM 7 MÀU CHỐNG HÀNG GIẢ
+                TỰ ĐỘNG XUẤT KEY & BẢO HÀNH TRỌN ĐỜI
               </div>
             </div>
 
             {/* Content Body */}
             <div style={{ padding: "24px 20px", display: "flex", flexDirection: "column", flex: 1 }}>
-              {/* Real High-Res Hologram Scratch Sticker Image with Zoom */}
               <div
                 style={{
-                  position: "relative",
+                  background: "#fffaf5",
+                  border: "1px solid #fed7aa",
                   borderRadius: "12px",
-                  overflow: "hidden",
+                  padding: "16px",
                   marginBottom: "16px",
-                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.12)",
-                  border: "1.5px solid #cbd5e1",
-                  backgroundColor: "#ffffff",
-                  display: "flex",
-                  flexDirection: "column",
-                  cursor: "pointer",
                 }}
-                onClick={() => setIsZoomOpen(true)}
-                title="Nhấp để xem ảnh tem thực tế phóng to"
               >
-                <div style={{ position: "relative" }}>
-                  <img
-                    src="/tem-onlyoffice-mercy-tech.png"
-                    alt="Ảnh mẫu tem cào vật lý 7 màu Hologram OnlyOffice tối ưu bởi Mercy Tech"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
-                      objectFit: "contain",
-                      transition: "transform 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.transform = "scale(1.02)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = "scale(1)";
-                    }}
-                  />
-                  {/* Zoom Badge Indicator */}
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "10px",
-                      right: "10px",
-                      backgroundColor: "rgba(0, 43, 102, 0.85)",
-                      color: "#ffffff",
-                      padding: "5px 10px",
-                      borderRadius: "20px",
-                      fontSize: "11px",
-                      fontWeight: 700,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      backdropFilter: "blur(4px)",
-                      boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-                    }}
-                  >
-                    <ZoomIn size={13} color="#facc15" />
-                    <span>Nhấp phóng to</span>
-                  </div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px", borderBottom: "1px solid #fed7aa", paddingBottom: "6px" }}>
+                  <span style={{ fontSize: "13px", fontWeight: 800, color: "#ea580c" }}>Portal Đại Lý Mercy Tech</span>
+                  <span style={{ fontSize: "11px", fontWeight: 700, color: "#16a34a", background: "#dcfce7", padding: "2px 6px", borderRadius: "4px" }}>● Trực tuyến 24/7</span>
                 </div>
-
-                <div
-                  style={{
-                    padding: "8px 12px",
-                    backgroundColor: "#f8fafc",
-                    borderTop: "1px solid #e2e8f0",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    fontSize: "11px",
-                    color: "#475569",
-                    fontWeight: 600,
-                  }}
-                >
-                  <span style={{ color: "#ea580c", fontWeight: 700 }}>✨ Tem Hologram 7 màu thực tế</span>
-                  <span style={{ color: "#003b8e", fontWeight: 700 }}>Mã Seri & Vùng phủ cào</span>
+                <div style={{ fontSize: "12.5px", color: "#64748b", lineHeight: 1.5 }}>
+                  Tài khoản Admin riêng: Tự xuất key tức thì, theo dõi tồn kho và cấp lại bản quyền tự động khi khách cài lại Windows.
                 </div>
               </div>
 
               {/* Features List */}
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px 0", display: "flex", flexDirection: "column", gap: "8px" }}>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#1e293b", fontWeight: 600 }}>
-                  <CheckCircle2 size={16} color="#003b8e" style={{ flexShrink: 0 }} />
-                  <span>Tem cào 7 màu sang trọng dán lên Case / Laptop</span>
+                  <CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
+                  <span>Tự động xuất key 24/7 không cần chờ duyệt thủ công</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#1e293b", fontWeight: 600 }}>
-                  <CheckCircle2 size={16} color="#003b8e" style={{ flexShrink: 0 }} />
-                  <span>Khách hàng tự tay cào mã kích hoạt an tâm 100%</span>
+                  <CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
+                  <span>Quản lý tập trung UUID Mainboard máy khách hàng</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13.5px", color: "#1e293b", fontWeight: 600 }}>
-                  <CheckCircle2 size={16} color="#003b8e" style={{ flexShrink: 0 }} />
-                  <span>Tra cứu tính chính hãng trên hệ thống Mercy Tech</span>
+                  <CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
+                  <span>Cấp lại key miễn phí 100% khi máy khách cài lại Windows</span>
                 </li>
               </ul>
 
-              {/* Price footer */}
+              {/* Footer */}
               <div style={{ marginTop: "auto", borderTop: "1px solid #f1f5f9", paddingTop: "14px", textAlign: "center" }}>
                 <div style={{ fontSize: "13px", color: "#64748b", fontWeight: 600, marginBottom: "4px" }}>
-                  Đơn giá đại lý: <strong style={{ color: "#ea580c", fontSize: "15px" }}>299.000đ/tem</strong>
+                  Hạ tầng hệ thống: <strong style={{ color: "#ea580c", fontSize: "15px" }}>Tặng kèm trọn đời</strong>
                 </div>
                 <div
                   style={{
-                    background: "linear-gradient(135deg, #002b66 0%, #003b8e 100%)",
+                    background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                     color: "#ffffff",
                     borderRadius: "8px",
                     padding: "10px",
-                    fontSize: "18px",
-                    fontWeight: 900,
+                    fontSize: "16px",
+                    fontWeight: 800,
                     letterSpacing: "0.2px",
                   }}
                 >
-                  Tổng: 14.950.000đ
+                  Kích Hoạt Tức Thì
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Lightbox Zoom Modal for Real Sticker */}
-      <PricingStickerModal isOpen={isZoomOpen} onClose={() => setIsZoomOpen(false)} />
     </section>
   );
 }

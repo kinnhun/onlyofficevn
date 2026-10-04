@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Building2, MapPin, Phone, Mail, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function FooterCompanyInfo() {
   const tBranding = useTranslations("branding");
@@ -231,6 +232,7 @@ export default function FooterCompanyInfo() {
               href="https://m.me/onlyoffice.official.vn"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={openMessengerChat}
               style={{
                 display: "inline-flex",
                 alignItems: "center",

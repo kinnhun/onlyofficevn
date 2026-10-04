@@ -1,15 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
-import { ShoppingCart, ZoomIn, Check, Sparkles } from "lucide-react";
-import PricingStickerModal from "./PricingStickerModal";
+import React from "react";
+import { ShoppingCart, Check, Sparkles } from "lucide-react";
 
 interface RetailEnterpriseAddonsProps {
   onOpenOrder: (productName?: string) => void;
 }
 
 export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterpriseAddonsProps) {
-  const [isStickerZoomOpen, setIsStickerZoomOpen] = useState(false);
 
   return (
     <section style={{ padding: "0 0 40px" }}>
@@ -228,7 +226,7 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
             </div>
           </div>
 
-          {/* Row III: OnlyOffice Key Tem Vật Lý (HIGHLIGHTED WITH ONLYOFFICE ORANGE) */}
+          {/* Row III: Portal Quản Trị Đại Lý 24/7 */}
           <div
             style={{
               borderRadius: "14px",
@@ -241,10 +239,10 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "8px" }}>
               <div>
                 <span style={{ fontSize: "11px", fontWeight: 800, color: "#ff6f3d", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                  III. ONLYOFFICE KEY TEM VẬT LÝ (VĨNH VIỄN)
+                  III. PORTAL QUẢN TRỊ ĐẠI LÝ 24/7 (ADMIN PRO)
                 </span>
                 <h4 style={{ fontSize: "19px", fontWeight: 800, color: "#333333", margin: "2px 0 0" }}>
-                  Tem Cào Hologram 7 Màu Chống Giả
+                  Hệ Thống Xuất Key Tự Động & Quản Lý Tập Trung
                 </h4>
               </div>
 
@@ -259,7 +257,7 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
                   borderRadius: "12px",
                 }}
               >
-                ✨ Dán trực tiếp lên Case PC / Laptop
+                ⚡ Tự động 24/7 không cần chờ duyệt
               </span>
             </div>
 
@@ -270,76 +268,30 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
                 gap: "28px",
                 alignItems: "center",
               }}
-              className="addon-tem-grid"
+              className="addon-portal-grid"
             >
-              {/* Left: Real Sticker Image */}
-              <div>
-                <div
-                  style={{
-                    position: "relative",
-                    borderRadius: "10px",
-                    overflow: "hidden",
-                    border: "1px solid #e5e5e5",
-                    boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
-                    cursor: "pointer",
-                    backgroundColor: "#ffffff",
-                  }}
-                  onClick={() => setIsStickerZoomOpen(true)}
-                  title="Nhấp để phóng to tem cào thực tế"
-                >
-                  <img
-                    src="/tem-onlyoffice-mercy-tech.png"
-                    alt="Mẫu tem cào Hologram 7 màu OnlyOffice tối ưu bởi Mercy Tech"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
-                      objectFit: "contain",
-                    }}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "8px",
-                      right: "8px",
-                      backgroundColor: "rgba(51, 51, 51, 0.85)",
-                      color: "#ffffff",
-                      padding: "4px 8px",
-                      borderRadius: "16px",
-                      fontSize: "10.5px",
-                      fontWeight: 700,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "4px",
-                      backdropFilter: "blur(4px)",
-                    }}
-                  >
-                    <ZoomIn size={12} color="#facc15" />
-                    <span>Phóng to</span>
-                  </div>
+              {/* Left: Portal Description */}
+              <div
+                style={{
+                  backgroundColor: "#fffaf5",
+                  border: "1px solid #fed7aa",
+                  borderRadius: "10px",
+                  padding: "16px",
+                  fontSize: "13px",
+                  color: "#475569",
+                  lineHeight: 1.6,
+                }}
+              >
+                <div style={{ fontWeight: 800, color: "#ea580c", marginBottom: "6px" }}>
+                  Tài Khoản Admin Portal Đại Lý Riêng Biệt:
                 </div>
-                <div style={{ fontSize: "11.5px", color: "#888888", marginTop: "6px", textAlign: "center" }}>
-                  Mã Seri chuẩn: <strong>MT-0319227767-0001</strong> • Vùng phủ cào bảo mật nguyên seal
-                </div>
+                <div>• Cấp và xuất key bản quyền tự động tức thì cho khách hàng</div>
+                <div>• Theo dõi số lượng máy kích hoạt và UUID Mainboard</div>
+                <div>• Tính năng tự động cấp lại bản quyền miễn phí khi cài lại Win</div>
               </div>
 
-              {/* Right: 3 Tier Prices */}
+              {/* Right: Action */}
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "10px 14px",
-                    backgroundColor: "#ffffff",
-                    border: "1px solid #e5e5e5",
-                    borderRadius: "8px",
-                  }}
-                >
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#444444" }}>Từ 1 – 4 Tem</span>
-                  <span style={{ fontSize: "20px", fontWeight: 900, color: "#333333" }}>999.000đ<span style={{ fontSize: "12px", color: "#888", fontWeight: 600 }}>/cái</span></span>
-                </div>
-
                 <div
                   style={{
                     display: "flex",
@@ -352,30 +304,14 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
                   }}
                 >
                   <div>
-                    <span style={{ fontSize: "14px", fontWeight: 800, color: "#ff6f3d" }}>Từ 5 – 49 Tem</span>
-                    <span style={{ marginLeft: "8px", fontSize: "10px", background: "#ff6f3d", color: "#fff", padding: "1px 6px", borderRadius: "10px", fontWeight: 700 }}>ƯU ĐÃI</span>
+                    <span style={{ fontSize: "14px", fontWeight: 800, color: "#ff6f3d" }}>Portal Phân Phối Đại Lý</span>
                   </div>
-                  <span style={{ fontSize: "20px", fontWeight: 950, color: "#ff6f3d" }}>899.000đ<span style={{ fontSize: "12px", color: "#888", fontWeight: 600 }}>/cái</span></span>
-                </div>
-
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "10px 14px",
-                    backgroundColor: "#ffffff",
-                    border: "1px solid #e5e5e5",
-                    borderRadius: "8px",
-                  }}
-                >
-                  <span style={{ fontSize: "14px", fontWeight: 700, color: "#444444" }}>Từ 50 Tem Trở Lên</span>
-                  <span style={{ fontSize: "20px", fontWeight: 900, color: "#16a34a" }}>699.000đ<span style={{ fontSize: "12px", color: "#888", fontWeight: 600 }}>/cái</span></span>
+                  <span style={{ fontSize: "16px", fontWeight: 900, color: "#ea580c" }}>Tặng Kèm Trọn Đời</span>
                 </div>
 
                 <button
                   type="button"
-                  onClick={() => onOpenOrder("Tem Cào Hologram 7 Màu OnlyOffice")}
+                  onClick={() => onOpenOrder("Tài Khoản Portal Quản Trị Đại Lý 24/7")}
                   style={{
                     marginTop: "6px",
                     backgroundColor: "#ff6f3d",
@@ -394,7 +330,7 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
                   }}
                 >
                   <ShoppingCart size={16} />
-                  <span>Đặt Mua Tem Vật Lý</span>
+                  <span>Đăng Ký Tài Khoản Portal</span>
                 </button>
               </div>
             </div>
@@ -417,12 +353,6 @@ export default function RetailEnterpriseAddons({ onOpenOrder }: RetailEnterprise
           </div>
         </div>
       </div>
-
-      {/* Lightbox Zoom Modal for Sticker */}
-      <PricingStickerModal
-        isOpen={isStickerZoomOpen}
-        onClose={() => setIsStickerZoomOpen(false)}
-      />
     </section>
   );
 }

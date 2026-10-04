@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sparkles, FileText, Download, ShieldAlert } from "lucide-react";
+import { Sparkles, FileText, Download, ShieldAlert, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 
 export default function DemoHero() {
   const scrollTo = (id: string) => {
@@ -14,174 +14,295 @@ export default function DemoHero() {
   return (
     <section
       style={{
-        padding: "52px 20px 32px",
+        padding: "56px 20px 36px",
         textAlign: "center",
-        background: "linear-gradient(180deg, #fff7ed 0%, #fafafa 60%, #ffffff 100%)",
-        borderBottom: "1px solid #f0f0f0",
+        background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 111, 61, 0.12), transparent 70%), linear-gradient(180deg, #fffbf7 0%, #ffffff 100%)",
+        borderBottom: "1px solid #f1f5f9",
+        position: "relative",
+        overflow: "hidden",
       }}
     >
-      <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-        {/* Official Badge */}
+      <div style={{ maxWidth: "1140px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        {/* Official Distributor Badge */}
         <div
           style={{
             display: "inline-flex",
             alignItems: "center",
             gap: "8px",
-            padding: "6px 18px",
+            padding: "7px 20px",
             borderRadius: "9999px",
             backgroundColor: "#ffffff",
-            border: "1px solid #fed7aa",
-            marginBottom: "18px",
-            boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
+            border: "1.5px solid #fed7aa",
+            marginBottom: "20px",
+            boxShadow: "0 4px 14px rgba(234, 88, 12, 0.08)",
           }}
         >
-          <Sparkles size={14} color="#ea580c" />
+          <span
+            style={{
+              width: "8px",
+              height: "8px",
+              borderRadius: "50%",
+              backgroundColor: "#16a34a",
+              display: "inline-block",
+              boxShadow: "0 0 0 2px rgba(22, 163, 74, 0.2)",
+            }}
+          />
           <span
             style={{
               fontSize: "12px",
               fontWeight: 800,
               color: "#ea580c",
-              letterSpacing: "0.5px",
+              letterSpacing: "0.4px",
               textTransform: "uppercase",
             }}
           >
-            TRẢI NGHIỆM ĐÁM MÂY CHÍNH HÃNG — MERCY TECH
+            MERCY TECH — ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC ONLYOFFICE TẠI VIỆT NAM
           </span>
         </div>
 
         {/* Main Heading */}
         <h1
           style={{
-            fontSize: "40px",
+            fontSize: "clamp(32px, 5vw, 48px)",
             fontWeight: 800,
-            lineHeight: 1.25,
-            color: "#333333",
-            margin: "0 0 16px",
-            letterSpacing: "-0.02em",
+            lineHeight: 1.2,
+            color: "#0f172a",
+            margin: "0 0 18px",
+            letterSpacing: "-0.025em",
           }}
         >
-          Trải nghiệm Trực tuyến <span style={{ color: "#ff6f3d" }}>OnlyOffice</span>
+          Trải Nghiệm Trực Tuyến{" "}
+          <span
+            style={{
+              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+            }}
+          >
+            ONLYOFFICE Docs Enterprise
+          </span>
         </h1>
 
         {/* Subtitle */}
         <p
           style={{
-            fontSize: "16px",
-            lineHeight: 1.6,
-            color: "#666666",
-            maxWidth: "720px",
-            margin: "0 auto 28px",
+            fontSize: "clamp(15px, 2vw, 17px)",
+            lineHeight: 1.65,
+            color: "#475569",
+            maxWidth: "780px",
+            margin: "0 auto 32px",
+            fontWeight: 500,
           }}
         >
-          Hệ thống chạy trực tiếp chính hãng. Chọn các danh mục bên dưới để trải nghiệm ngay khả năng tương thích định dạng Microsoft Office xuất sắc và nhận bản quyền dùng thử 7 ngày.
+          Hệ sinh thái ứng dụng văn phòng số bảo mật cao cấp. Tương thích 100% định dạng Microsoft Office (.docx, .xlsx, .pptx) và chỉnh sửa biểu mẫu PDF chuyên nghiệp trực tiếp trên trình duyệt hoặc cài đặt On-Premise cho tổ chức.
         </p>
 
-        {/* 3 Quick Jump Links */}
+        {/* 3 Quick Jump Action Cards */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "14px",
+            maxWidth: "960px",
+            margin: "0 auto 36px",
+          }}
+        >
+          {/* Card 1: Cloud Suite Demo */}
+          <button
+            type="button"
+            onClick={() => scrollTo("demo-online")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "14px",
+              padding: "16px 20px",
+              borderRadius: "16px",
+              backgroundColor: "#ffffff",
+              border: "1.5px solid #e2e8f0",
+              cursor: "pointer",
+              boxShadow: "0 4px 16px rgba(15, 23, 42, 0.04)",
+              transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+              textAlign: "left",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#ff6f3d";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(255, 111, 61, 0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e2e8f0";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 16px rgba(15, 23, 42, 0.04)";
+            }}
+          >
+            <div
+              style={{
+                width: "44px",
+                height: "44px",
+                borderRadius: "12px",
+                backgroundColor: "#fff7ed",
+                border: "1px solid #fed7aa",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <FileText size={22} color="#ea580c" />
+            </div>
+            <div>
+              <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
+                1. Demo Đám Mây Trực Tiếp
+              </div>
+              <div style={{ fontSize: "12.5px", color: "#64748b" }}>
+                Word, Excel, PowerPoint, PDF
+              </div>
+            </div>
+          </button>
+
+          {/* Card 2: PC 7-day Trial */}
+          <button
+            type="button"
+            onClick={() => scrollTo("demo-pc")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "14px",
+              padding: "16px 20px",
+              borderRadius: "16px",
+              backgroundColor: "#ffffff",
+              border: "1.5px solid #e2e8f0",
+              cursor: "pointer",
+              boxShadow: "0 4px 16px rgba(15, 23, 42, 0.04)",
+              transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+              textAlign: "left",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#ff6f3d";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(255, 111, 61, 0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e2e8f0";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 16px rgba(15, 23, 42, 0.04)";
+            }}
+          >
+            <div
+              style={{
+                width: "44px",
+                height: "44px",
+                borderRadius: "12px",
+                backgroundColor: "#fff7ed",
+                border: "1px solid #fed7aa",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <Download size={22} color="#ea580c" />
+            </div>
+            <div>
+              <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
+                2. Dùng Thử 7 Ngày (PC)
+              </div>
+              <div style={{ fontSize: "12.5px", color: "#64748b" }}>
+                Kích hoạt 1-Click tự động (.BAT)
+              </div>
+            </div>
+          </button>
+
+          {/* Card 3: MercyCheck */}
+          <button
+            type="button"
+            onClick={() => scrollTo("mercy-check")}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "14px",
+              padding: "16px 20px",
+              borderRadius: "16px",
+              backgroundColor: "#ffffff",
+              border: "1.5px solid #e2e8f0",
+              cursor: "pointer",
+              boxShadow: "0 4px 16px rgba(15, 23, 42, 0.04)",
+              transition: "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+              textAlign: "left",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#dc2626";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 10px 24px rgba(220, 38, 38, 0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e2e8f0";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 16px rgba(15, 23, 42, 0.04)";
+            }}
+          >
+            <div
+              style={{
+                width: "44px",
+                height: "44px",
+                borderRadius: "12px",
+                backgroundColor: "#fef2f2",
+                border: "1px solid #fecaca",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <ShieldAlert size={22} color="#dc2626" />
+            </div>
+            <div>
+              <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
+                3. Quét Crack & Bản Quyền
+              </div>
+              <div style={{ fontSize: "12.5px", color: "#64748b" }}>
+                Công cụ kiểm tra MercyCheck v2.0
+              </div>
+            </div>
+          </button>
+        </div>
+
+        {/* Feature Guarantees Strip */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            gap: "12px",
             flexWrap: "wrap",
+            gap: "24px",
+            padding: "14px 20px",
+            borderRadius: "14px",
+            backgroundColor: "#f8fafc",
+            border: "1px solid #e2e8f0",
+            maxWidth: "960px",
+            margin: "0 auto",
+            fontSize: "13px",
+            color: "#475569",
+            fontWeight: 600,
           }}
         >
-          <button
-            type="button"
-            onClick={() => scrollTo("demo-online")}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "10px 20px",
-              borderRadius: "9999px",
-              backgroundColor: "#ffffff",
-              border: "1px solid #cbd5e1",
-              fontSize: "13px",
-              fontWeight: 700,
-              color: "#334155",
-              cursor: "pointer",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#ff6f3d";
-              e.currentTarget.style.color = "#ea580c";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#cbd5e1";
-              e.currentTarget.style.color = "#334155";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <FileText size={15} color="#ff6f3d" />
-            <span>Demo Trực Tuyến</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => scrollTo("demo-pc")}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "10px 20px",
-              borderRadius: "9999px",
-              backgroundColor: "#ffffff",
-              border: "1px solid #cbd5e1",
-              fontSize: "13px",
-              fontWeight: 700,
-              color: "#334155",
-              cursor: "pointer",
-              boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#ff6f3d";
-              e.currentTarget.style.color = "#ea580c";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#cbd5e1";
-              e.currentTarget.style.color = "#334155";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <Download size={15} color="#ff6f3d" />
-            <span>Kích Hoạt Dùng Thử 7 Ngày (PC)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => scrollTo("mercy-check")}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "10px 20px",
-              borderRadius: "9999px",
-              backgroundColor: "#fff7ed",
-              border: "1px solid #fed7aa",
-              fontSize: "13px",
-              fontWeight: 700,
-              color: "#ea580c",
-              cursor: "pointer",
-              boxShadow: "0 2px 6px rgba(234,88,12,0.1)",
-              transition: "all 0.2s ease",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#ffedd5";
-              e.currentTarget.style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#fff7ed";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <ShieldAlert size={15} color="#ea580c" />
-            <span>Quét Crack Hệ Thống (MercyCheck)</span>
-          </button>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+            <CheckCircle2 size={16} color="#16a34a" />
+            <span>100% Không Cần Đăng Ký Tài Khoản</span>
+          </div>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+            <CheckCircle2 size={16} color="#16a34a" />
+            <span>Tương Thích Chuẩn Định Dạng MS Office</span>
+          </div>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+            <ShieldCheck size={16} color="#ea580c" />
+            <span>Bảo Mật Chuẩn Doanh Nghiệp Quốc Tế</span>
+          </div>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+            <Zap size={16} color="#ea580c" />
+            <span>Tốc Độ Xử Lý Nhanh Trên Mọi Trình Duyệt</span>
+          </div>
         </div>
       </div>
     </section>

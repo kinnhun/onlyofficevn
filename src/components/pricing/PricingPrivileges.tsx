@@ -11,8 +11,8 @@ export default function PricingPrivileges() {
       desc: "Mộc đỏ • Đóng khung kính sang trọng",
       details: ["Gửi bưu phẩm tận nơi trên toàn quốc", "Treo trang trọng tại showroom / quầy thu ngân", "Khẳng định đại lý chính hãng, uy tín vượt trội"],
       icon: Stamp,
-      color: "#0284c7",
-      bgGradient: "linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)",
+      color: "#ea580c",
+      bgGradient: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
     },
     {
       num: "02",
@@ -20,8 +20,8 @@ export default function PricingPrivileges() {
       desc: "Nhúng Logo • Tên shop • Hotline riêng",
       details: ["Tùy biến màn hình khởi động phần mềm", "Khách mở app là thấy thông tin bảo hành shop", "Bảo vệ tuyệt đối 100% tệp khách của shop"],
       icon: MonitorCheck,
-      color: "#ea580c",
-      bgGradient: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
+      color: "#c2410c",
+      bgGradient: "linear-gradient(135deg, #fffaf5 0%, #fed7aa 100%)",
     },
     {
       num: "03",
@@ -29,8 +29,8 @@ export default function PricingPrivileges() {
       desc: "Nạp trực tiếp vào Portal đại lý",
       details: ["Thêm 03 Key Online vĩnh viễn miễn phí", "Bán lẻ thu ngay 1.5 – 2.4 triệu tiền mặt lập tức", "Dùng để kích hoạt demo cho khách trải nghiệm"],
       icon: Key,
-      color: "#16a34a",
-      bgGradient: "linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)",
+      color: "#ea580c",
+      bgGradient: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
     },
     {
       num: "04",
@@ -38,8 +38,8 @@ export default function PricingPrivileges() {
       desc: "Hình ảnh • Video • Content đăng bài",
       details: ["Banner thiết kế sẵn chuẩn Facebook, Messenger", "Video review, hướng dẫn cài đặt ngắn cho TikTok", "Bài viết chốt sale tối ưu cập nhật mới hàng tuần"],
       icon: Video,
-      color: "#7c3aed",
-      bgGradient: "linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%)",
+      color: "#c2410c",
+      bgGradient: "linear-gradient(135deg, #fffaf5 0%, #fed7aa 100%)",
     },
     {
       num: "05",
@@ -47,8 +47,8 @@ export default function PricingPrivileges() {
       desc: "Xuất chứng nhận đóng dấu đỏ cho từng khách",
       details: ["Đại lý tự xuất chứng chỉ điện tử cho từng máy", "Hiển thị Key - UUID phần cứng - Ngày kích hoạt", "Khách hàng yên tâm tuyệt đối khi bị thanh tra"],
       icon: FileText,
-      color: "#003b8e",
-      bgGradient: "linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)",
+      color: "#ea580c",
+      bgGradient: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
     },
   ];
 

@@ -157,7 +157,7 @@ export default function PricingProfitCalculator() {
                   Khoảng {paybackMonths} tháng
                 </div>
                 <p style={{ fontSize: "12px", color: "#14532d", margin: "6px 0 0", lineHeight: 1.4 }}>
-                  Sau khi thu hồi vốn 34.75 triệu, tất cả key và tem còn lại mang về <strong>100% dòng tiền thặng dư</strong> cho cửa hàng!
+                  Sau khi thu hồi vốn, tất cả key online còn lại mang về <strong>100% dòng tiền thặng dư</strong> cho cửa hàng!
                 </p>
               </div>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { FileText, FileSpreadsheet, Presentation, FileEdit } from "lucide-react";
+import { FileText, FileSpreadsheet, Presentation, FileEdit, Sparkles, Server, Check, ArrowRight } from "lucide-react";
 
 declare global {
   interface Window {
@@ -133,11 +133,53 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
   const editorsRef = useRef<Record<string, any>>({});
 
   const tabs = [
-    { id: "docx", label: "Soạn thảo Văn bản (Word)", icon: FileText },
-    { id: "xlsx", label: "Bảng tính & Số liệu (Excel)", icon: FileSpreadsheet },
-    { id: "pptx", label: "Trình chiếu & Bản trình bày (PowerPoint)", icon: Presentation },
-    { id: "pdf", label: "Biên tập & Chỉnh sửa (PDF)", icon: FileEdit },
+    {
+      id: "docx",
+      label: "Soạn Thảo Văn Bản",
+      ext: ".DOCX",
+      sub: "Tương thích 100% Word",
+      icon: FileText,
+      brandColor: "#2563eb",
+      activeBg: "#eff6ff",
+      activeBorder: "#93c5fd",
+      filename: "Hop-Dong-Kinh-Te-OnlyOffice-Mercy.docx",
+    },
+    {
+      id: "xlsx",
+      label: "Bảng Tính & Số Liệu",
+      ext: ".XLSX",
+      sub: "Đầy đủ hàm & công thức",
+      icon: FileSpreadsheet,
+      brandColor: "#16a34a",
+      activeBg: "#f0fdf4",
+      activeBorder: "#86efac",
+      filename: "Bang-Bao-Gia-Chi-Tiet-Doanh-Nghiep.xlsx",
+    },
+    {
+      id: "pptx",
+      label: "Trình Chiếu Slide",
+      ext: ".PPTX",
+      sub: "Hiệu ứng chuyển động mượt mà",
+      icon: Presentation,
+      brandColor: "#ea580c",
+      activeBg: "#fff7ed",
+      activeBorder: "#fed7aa",
+      filename: "Gioi-Thieu-Giai-Phap-OnlyOffice-Vietnam.pptx",
+    },
+    {
+      id: "pdf",
+      label: "Chỉnh Sửa Biểu Mẫu",
+      ext: ".PDF",
+      sub: "Điền form & ký số điện tử",
+      icon: FileEdit,
+      brandColor: "#dc2626",
+      activeBg: "#fef2f2",
+      activeBorder: "#fca5a5",
+      filename: "Bieu-Mau-Phap-Ly-AGPLv3.pdf",
+    },
   ] as const;
+
+  const currentTab = tabs.find((t) => t.id === activeTab) || tabs[0];
 
   useEffect(() => {
     setIsMounted(true);
@@ -220,16 +262,46 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
   }, []);
 
   return (
-    <section id="demo-online" style={{ padding: "20px 20px 30px" }}>
-      <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-        {/* Tab Selection */}
+    <section id="demo-online" style={{ padding: "30px 20px 48px", backgroundColor: "#ffffff" }}>
+      <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
+        {/* Section Heading & Subtitle */}
+        <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 28px" }}>
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "5px 16px",
+              borderRadius: "9999px",
+              backgroundColor: "#fff7ed",
+              border: "1px solid #fed7aa",
+              fontSize: "12px",
+              fontWeight: 800,
+              color: "#ea580c",
+              textTransform: "uppercase",
+              letterSpacing: "0.4px",
+              marginBottom: "12px",
+            }}
+          >
+            <Sparkles size={14} color="#ea580c" />
+            <span>TRÌNH SOẠN THẢO TRỰC TUYẾN ONLYOFFICE CHÍNH HÃNG</span>
+          </div>
+
+          <h2 style={{ fontSize: "clamp(24px, 3.5vw, 32px)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px", letterSpacing: "-0.02em" }}>
+            Trải Nghiệm Đầy Đủ 4 Ứng Dụng Văn Phòng Số
+          </h2>
+          <p style={{ fontSize: "15px", color: "#64748b", margin: 0, lineHeight: 1.6 }}>
+            Bấm chọn từng định dạng bên dưới. Bạn có thể gõ nội dung, chèn bảng biểu, định dạng phông chữ và tính toán số liệu trực tiếp ngay trên khung giao diện thời gian thực.
+          </p>
+        </div>
+
+        {/* 4 Professional Tab Selection Cards (Equal 4 Columns, No 3+1 Wrap) */}
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "12px",
-            marginBottom: "28px",
+            marginBottom: "20px",
           }}
         >
           {tabs.map((tab) => {
@@ -241,85 +313,205 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
                 style={{
-                  padding: "12px 22px",
-                  borderRadius: "9999px",
-                  border: isActive ? "1.5px solid #eab308" : "1px solid rgba(234, 179, 8, 0.25)",
-                  background: isActive
-                    ? "linear-gradient(135deg, #f8d26c 0%, #ffd75f 100%)"
-                    : "rgba(255, 255, 255, 0.75)",
-                  color: isActive ? "#3f2c00" : "#513b0d",
-                  fontSize: "13px",
-                  fontWeight: 800,
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
+                  padding: "14px 18px",
+                  borderRadius: "14px",
+                  border: isActive ? `2px solid ${tab.brandColor}` : "1.5px solid #e2e8f0",
+                  backgroundColor: isActive ? tab.activeBg : "#ffffff",
                   cursor: "pointer",
-                  boxShadow: isActive ? "0 8px 20px rgba(248, 185, 20, 0.25)" : "0 2px 6px rgba(0, 0, 0, 0.04)",
-                  transition: "all 0.25s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "14px",
+                  boxShadow: isActive ? `0 8px 20px ${tab.brandColor}25` : "0 2px 6px rgba(15, 23, 42, 0.04)",
+                  transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+                  textAlign: "left",
+                  position: "relative",
+                  overflow: "hidden",
                 }}
                 onMouseEnter={(e) => {
                   if (!isActive) {
-                    e.currentTarget.style.backgroundColor = "#ffffff";
-                    e.currentTarget.style.borderColor = "rgba(234, 179, 8, 0.5)";
+                    e.currentTarget.style.borderColor = "#cbd5e1";
+                    e.currentTarget.style.backgroundColor = "#f8fafc";
+                    e.currentTarget.style.transform = "translateY(-1px)";
                   }
                 }}
                 onMouseLeave={(e) => {
                   if (!isActive) {
-                    e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.75)";
-                    e.currentTarget.style.borderColor = "rgba(234, 179, 8, 0.25)";
+                    e.currentTarget.style.borderColor = "#e2e8f0";
+                    e.currentTarget.style.backgroundColor = "#ffffff";
+                    e.currentTarget.style.transform = "translateY(0)";
                   }
                 }}
               >
-                <Icon size={16} color={isActive ? "#3f2c00" : "#b45309"} style={{ flexShrink: 0 }} />
-                <span>{tab.label}</span>
+                {/* Icon Container */}
+                <div
+                  style={{
+                    width: "42px",
+                    height: "42px",
+                    borderRadius: "10px",
+                    backgroundColor: isActive ? "#ffffff" : "#f1f5f9",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    boxShadow: isActive ? `0 2px 8px ${tab.brandColor}30` : "none",
+                  }}
+                >
+                  <Icon size={22} color={tab.brandColor} />
+                </div>
+
+                {/* Text Content */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "2px" }}>
+                    <span style={{ fontSize: "14px", fontWeight: 700, color: isActive ? "#0f172a" : "#334155" }}>
+                      {tab.label}
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                    <span
+                      style={{
+                        fontSize: "11px",
+                        fontWeight: 800,
+                        padding: "2px 6px",
+                        borderRadius: "4px",
+                        backgroundColor: isActive ? tab.brandColor : "#e2e8f0",
+                        color: isActive ? "#ffffff" : "#64748b",
+                      }}
+                    >
+                      {tab.ext}
+                    </span>
+                    <span style={{ fontSize: "11.5px", color: "#64748b", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      {tab.sub}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Active Indicator Bar */}
+                {isActive && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      height: "3px",
+                      backgroundColor: tab.brandColor,
+                    }}
+                  />
+                )}
               </button>
             );
           })}
         </div>
 
-        {/* Live Real ONLYOFFICE Cloud Editor Container */}
+        {/* Live ONLYOFFICE Window Frame Mockup */}
         <div
           style={{
             position: "relative",
             width: "100%",
-            height: "720px",
-            borderRadius: "2.5rem",
+            borderRadius: "16px",
             overflow: "hidden",
-            border: "1.5px solid rgba(255, 255, 255, 0.8)",
-            boxShadow: "0 32px 80px rgba(91, 66, 17, 0.06)",
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-            backdropFilter: "blur(16px)",
+            border: "1.5px solid #cbd5e1",
+            boxShadow: "0 20px 45px -10px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.08)",
+            backgroundColor: "#ffffff",
             display: "flex",
             flexDirection: "column",
           }}
         >
-          {isMounted ? (
-            isDocsApiLoaded ? (
-              <div style={{ width: "100%", height: "100%", flexGrow: 1, position: "relative", backgroundColor: "#ffffff" }}>
-                {["docx", "xlsx", "pptx", "pdf"].map((tabKey) => {
-                  const isLoaded = loadedEditors[tabKey];
-                  const isTabActive = activeTab === tabKey;
-                  return (
-                    <div
-                      key={tabKey}
-                      id={`editor-container-${tabKey}`}
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        width: "100%",
-                        height: "100%",
-                        backgroundColor: "#ffffff",
-                        transition: "opacity 0.3s ease",
-                        opacity: isTabActive ? 1 : 0,
-                        zIndex: isTabActive ? 10 : 0,
-                        pointerEvents: isTabActive ? "auto" : "none",
-                      }}
-                    >
-                      {isLoaded ? (
-                        <div id={`editor-placeholder-${tabKey}`} style={{ width: "100%", height: "100%", flexGrow: 1 }}>
+          {/* Mac/Windows Chrome Header Bar */}
+          <div
+            style={{
+              height: "44px",
+              backgroundColor: "#f8fafc",
+              borderBottom: "1px solid #e2e8f0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "0 16px",
+              userSelect: "none",
+            }}
+          >
+            {/* Window control dots */}
+            <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
+              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#ef4444", display: "inline-block" }} />
+              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#f59e0b", display: "inline-block" }} />
+              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#10b981", display: "inline-block" }} />
+            </div>
+
+            {/* Document Title Tab in Header */}
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "4px 14px",
+                borderRadius: "8px",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
+                fontSize: "12.5px",
+                fontWeight: 600,
+                color: "#1e293b",
+                maxWidth: "60%",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <currentTab.icon size={15} color={currentTab.brandColor} />
+              <span>{currentTab.filename}</span>
+            </div>
+
+            {/* Live Server Indicator */}
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+              <span
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "50%",
+                  backgroundColor: "#16a34a",
+                  display: "inline-block",
+                  boxShadow: "0 0 0 2px rgba(22, 163, 74, 0.2)",
+                  animation: "pulse 2s infinite",
+                }}
+              />
+              <span style={{ fontSize: "12px", fontWeight: 700, color: "#16a34a" }}>
+                ONLYOFFICE Cloud • Online
+              </span>
+            </div>
+          </div>
+
+          {/* Real ONLYOFFICE Cloud Editor Canvas */}
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "750px",
+              backgroundColor: "#ffffff",
+            }}
+          >
+            {isMounted ? (
+              isDocsApiLoaded ? (
+                <div style={{ width: "100%", height: "100%", position: "relative" }}>
+                  {["docx", "xlsx", "pptx", "pdf"].map((tabKey) => {
+                    const isLoaded = loadedEditors[tabKey];
+                    const isTabActive = activeTab === tabKey;
+                    return (
+                      <div
+                        key={tabKey}
+                        id={`editor-container-${tabKey}`}
+                        style={{
+                          position: "absolute",
+                          top: 0,
+                          left: 0,
+                          width: "100%",
+                          height: "100%",
+                          visibility: isTabActive ? "visible" : "hidden",
+                          opacity: isTabActive ? 1 : 0,
+                          zIndex: isTabActive ? 10 : 0,
+                          pointerEvents: isTabActive ? "auto" : "none",
+                          transition: "opacity 0.2s ease-in-out",
+                        }}
+                      >
+                        {!isLoaded && (
                           <div
                             style={{
                               width: "100%",
@@ -328,116 +520,117 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
                               alignItems: "center",
                               justifyContent: "center",
                               fontSize: "13px",
-                              color: "#94a3b8",
-                              fontWeight: 600,
+                              color: "#64748b",
                             }}
                           >
-                            Đang tải tài liệu OnlyOffice...
+                            Đang kết nối tài liệu...
                           </div>
-                        </div>
-                      ) : (
-                        <div
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            fontSize: "13px",
-                            color: "#94a3b8",
-                            fontWeight: 600,
-                          }}
-                        >
-                          Đang chờ kích hoạt...
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "#f8fafc",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    gap: "14px",
+                    fontSize: "14px",
+                    color: "#64748b",
+                    fontWeight: 600,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "40px",
+                      height: "40px",
+                      border: "3.5px solid #fed7aa",
+                      borderTopColor: "#ea580c",
+                      borderRadius: "50%",
+                      animation: "spin 1s linear infinite",
+                    }}
+                  />
+                  <span>Đang kết nối trực tiếp đến máy chủ đám mây ONLYOFFICE...</span>
+                </div>
+              )
             ) : (
               <div
                 style={{
                   width: "100%",
                   height: "100%",
-                  flexGrow: 1,
                   backgroundColor: "#f8fafc",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  flexDirection: "column",
-                  gap: "12px",
-                  fontSize: "13.5px",
-                  color: "#64748b",
+                  fontSize: "13px",
+                  color: "#94a3b8",
                   fontWeight: 600,
                 }}
               >
-                <div
-                  style={{
-                    width: "36px",
-                    height: "36px",
-                    border: "3px solid #fed7aa",
-                    borderTopColor: "#ea580c",
-                    borderRadius: "50%",
-                    animation: "spin 1s linear infinite",
-                  }}
-                />
-                <span>Đang kết nối máy chủ OnlyOffice đám mây...</span>
+                Đang chuẩn bị giao diện demo...
               </div>
-            )
-          ) : (
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                flexGrow: 1,
-                backgroundColor: "#f8fafc",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "13px",
-                color: "#94a3b8",
-                fontWeight: 600,
-              }}
-            >
-              Đang chuẩn bị giao diện...
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
-        {/* Note below mirroring official demo */}
+        {/* Enterprise Private Cloud Consultation Bar */}
         <div
           style={{
-            textAlign: "center",
-            fontSize: "12px",
-            color: "rgba(117, 97, 59, 0.7)",
             marginTop: "20px",
-            marginBottom: "16px",
-            maxWidth: "700px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            lineHeight: 1.6,
-            fontWeight: 600,
+            padding: "16px 24px",
+            borderRadius: "14px",
+            backgroundColor: "#fff7ed",
+            border: "1.5px solid #fed7aa",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: "16px",
           }}
         >
-          Hệ thống chạy trực tiếp trên máy chủ đám mây của ONLYOFFICE. Để triển khai hệ thống lưu trữ và máy chủ riêng bảo mật On-Premise cho doanh nghiệp của bạn, vui lòng liên hệ{" "}
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <Server size={22} color="#ea580c" style={{ flexShrink: 0 }} />
+            <div style={{ fontSize: "13.5px", color: "#475569", lineHeight: 1.5 }}>
+              <strong style={{ color: "#0f172a" }}>Cần triển khai máy chủ On-Premise / Private Cloud riêng?</strong>{" "}
+              Mercy Tech cung cấp giải pháp máy chủ tài liệu nội bộ, bảo mật dữ liệu 100% trong mạng LAN công ty, tích hợp sẵn Nextcloud/Docker.
+            </div>
+          </div>
+
           <button
             type="button"
             onClick={onOpenQuote}
             style={{
-              background: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              backgroundColor: "#ea580c",
+              color: "#ffffff",
               border: "none",
-              color: "#ea580c",
-              fontWeight: 800,
-              textDecoration: "underline",
+              fontSize: "13px",
+              fontWeight: 700,
               cursor: "pointer",
-              padding: 0,
-              font: "inherit",
+              boxShadow: "0 2px 8px rgba(234, 88, 12, 0.3)",
+              whiteSpace: "nowrap",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#c2410c";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#ea580c";
             }}
           >
-            CÔNG TY TNHH CÔNG NGHỆ MERCY
+            <span>Tư Vấn Máy Chủ Riêng</span>
+            <ArrowRight size={15} />
           </button>
-          .
         </div>
       </div>
     </section>

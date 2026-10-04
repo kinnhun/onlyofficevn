@@ -6,36 +6,36 @@ import { TrendingUp, ShieldAlert, CheckCircle2, LockKeyhole } from "lucide-react
 export default function PartnerAdvantages() {
   const advantages = [
     {
-      icon: <TrendingUp size={24} color="#f59e0b" />,
+      icon: <TrendingUp size={24} color="#ff6f3d" />,
       tag: "LỢI NHUẬN CỰC KHỦNG",
       title: "Lợi Nhuận Vượt Trội",
       desc: "Chiết khấu sỉ cực cao dành cho Đại lý & Đối tác phân phối. Vui lòng liên hệ trực tiếp để nhận bảng giá sỉ bảo mật.",
-      color: "#f59e0b",
-      bg: "#fef3c7",
+      color: "#ea580c",
+      bg: "#fff7ed",
     },
     {
-      icon: <ShieldAlert size={24} color="#dc2626" />,
+      icon: <ShieldAlert size={24} color="#ea580c" />,
       tag: "PHÁP LÝ CHUẨN 100%",
       title: "Lá Chắn Pháp Lý Bản Quyền",
       desc: "Cung cấp đầy đủ Hợp đồng, Biên bản bàn giao & Chứng nhận nguồn gốc AGPLv3 đóng dấu mộc đỏ pháp lý của Công ty TNHH Công Nghệ Mercy để khách trình thanh tra miễn phạt.",
-      color: "#dc2626",
-      bg: "#fee2e2",
+      color: "#ea580c",
+      bg: "#fff7ed",
     },
     {
-      icon: <CheckCircle2 size={24} color="#2563eb" />,
+      icon: <CheckCircle2 size={24} color="#ff6f3d" />,
       tag: "TƯƠNG THÍCH HOÀN TOÀN",
       title: "Tương Thích Hoàn Hảo 100%",
       desc: "Tích hợp sẵn bộ phông chữ văn phòng Việt Nam (VNI, TCVN3, Arial, Times New Roman, Calibri...), mở file .docx, .xlsx, .pptx cũ mượt mà, hoàn toàn không bị lỗi vỡ dòng.",
-      color: "#2563eb",
-      bg: "#dbeafe",
+      color: "#ea580c",
+      bg: "#fff7ed",
     },
     {
-      icon: <LockKeyhole size={24} color="#16a34a" />,
+      icon: <LockKeyhole size={24} color="#ea580c" />,
       tag: "BẢO VỆ ĐẠI LÝ",
       title: "Bảo Mật Thông Tin Khách Hàng Tuyệt Đối",
       desc: "Cam kết bằng văn bản hợp đồng về việc bảo mật tuyệt đối dữ liệu và danh tính khách hàng của đại lý. Mercy Tech tuyệt đối không tiếp cận riêng hay thu hút khách của đại lý.",
-      color: "#16a34a",
-      bg: "#dcfce7",
+      color: "#ea580c",
+      bg: "#fff7ed",
     },
   ];
 

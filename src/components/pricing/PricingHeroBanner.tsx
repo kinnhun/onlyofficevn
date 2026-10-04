@@ -1,6 +1,7 @@
 "use client";
 
 import { ShieldCheck, FileText, CheckCircle2, PhoneCall, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PricingHeroBannerProps {
   onOpenQuote: () => void;
@@ -134,6 +135,7 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openMessengerChat}
             title="Liên hệ"
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -191,7 +193,7 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
             <span>Hợp Đồng & Biên Bản Mộc Đỏ</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: 700, color: "#333333" }}>
-            <ShieldCheck size={16} color="#2563eb" />
+            <ShieldCheck size={16} color="#ff6f3d" />
             <span>Bản Quyền Vĩnh Viễn Theo Main</span>
           </div>
         </div>

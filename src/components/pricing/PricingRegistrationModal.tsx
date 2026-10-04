@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { X, CheckCircle2, PhoneCall, ShieldCheck, ArrowRight } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface PricingRegistrationModalProps {
   isOpen: boolean;
@@ -110,6 +111,7 @@ export default function PricingRegistrationModal({ isOpen, onClose }: PricingReg
                 href="https://m.me/onlyoffice.official.vn"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 title="Liên hệ ngay"
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",

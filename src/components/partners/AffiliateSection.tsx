@@ -51,7 +51,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
           }}
         >
           <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "12px", fontWeight: 800, color: "#2563eb", textTransform: "uppercase", marginBottom: "8px" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "12px", fontWeight: 800, color: "#ea580c", textTransform: "uppercase", marginBottom: "8px" }}>
               <Share2 size={16} />
               <span>MÔ HÌNH 1</span>
             </div>
@@ -84,7 +84,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
                     <div style={{ fontWeight: 700, fontSize: "14px", color: "#1e293b" }}>{row.tier}</div>
                     <div style={{ fontSize: "12px", color: "#64748b" }}>{row.condition}</div>
                   </div>
-                  <span style={{ fontSize: "12.5px", fontWeight: 700, color: "#2563eb", display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                  <span style={{ fontSize: "12.5px", fontWeight: 700, color: "#ea580c", display: "inline-flex", alignItems: "center", gap: "4px" }}>
                     <Lock size={12} /> Liên hệ nhận chính sách
                   </span>
                 </div>
@@ -100,16 +100,17 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
               width: "100%",
               padding: "12px",
               borderRadius: "8px",
-              backgroundColor: "#2563eb",
+              backgroundColor: "#ff6f3d",
               color: "#ffffff",
               border: "none",
               fontWeight: 700,
               fontSize: "14px",
               cursor: "pointer",
+              boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
               transition: "background 0.2s ease",
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1d4ed8")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#2563eb")}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ea580c")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
           >
             Đăng Ký CTV Giới Thiệu
           </button>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Sparkles, X, ExternalLink } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 interface CertificateLightboxModalProps {
   isOpen: boolean;
@@ -127,6 +128,7 @@ export default function CertificateLightboxModal({
             href="https://m.me/onlyoffice.official.vn"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openMessengerChat}
             style={{
               color: "#ea580c",
               fontWeight: 700,
