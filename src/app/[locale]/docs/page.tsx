@@ -18,13 +18,52 @@ export async function generateMetadata({
   const { locale } = await params;
   const isVi = locale === "vi";
 
+  const title = isVi
+    ? "ONLYOFFICE Docs — Bộ Soạn Thảo Văn Phòng Toàn Diện"
+    : "ONLYOFFICE Docs — Comprehensive Office Suite";
+
+  const description = isVi
+    ? "ONLYOFFICE Docs tại Việt Nam — Bộ công cụ văn phòng bảo mật, tương thích 95%+ MS Office, hỗ trợ tiếng Việt, tối ưu chi phí bản quyền bởi Mercy Tech."
+    : "ONLYOFFICE Docs in Vietnam — Enterprise-grade office suite with 95%+ MS Office compatibility, multi-format editors, and private cloud deployment.";
+
+  const canonicalUrl = isVi ? "/docs" : "/en/docs";
+
   return {
-    title: isVi
-      ? "ONLYOFFICE Docs — Bộ Soạn Thảo Văn Phòng Toàn Diện | ONLYOFFICE Vietnam"
-      : "ONLYOFFICE Docs — Comprehensive Office Suite | ONLYOFFICE Vietnam",
-    description: isVi
-      ? "ONLYOFFICE Docs tại Việt Nam — Bộ công cụ văn phòng bảo mật, tương thích 95%+ MS Office, hỗ trợ tiếng Việt, tối ưu chi phí bản quyền bởi Mercy Tech."
-      : "ONLYOFFICE Docs in Vietnam — Enterprise-grade office suite with 95%+ MS Office compatibility, multi-format editors, and private cloud deployment.",
+    title,
+    description,
+    keywords: isVi
+      ? ["ONLYOFFICE Docs", "bộ soạn thảo văn phòng", "tài liệu trực tuyến", "DOCX XLSX PPTX", "biểu mẫu OFORM", "chỉnh sửa PDF", "Mercy Tech"]
+      : ["ONLYOFFICE Docs", "office suite", "online document editor", "DOCX XLSX PPTX", "fillable forms", "PDF editor", "Mercy Tech"],
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        "vi-VN": "/docs",
+        "en-US": "/en/docs",
+        "x-default": "/docs",
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://onlyoffice.vn${canonicalUrl}`,
+      siteName: "ONLYOFFICE Vietnam",
+      locale: isVi ? "vi_VN" : "en_US",
+      type: "website",
+      images: [
+        {
+          url: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg"],
+    },
   };
 }
 

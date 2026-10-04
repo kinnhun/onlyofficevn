@@ -75,7 +75,7 @@ export default function Header() {
         style={{
           maxWidth: "1440px",
           margin: "0 auto",
-          padding: "0 28px",
+          padding: "0 clamp(12px, 3vw, 28px)",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -83,88 +83,92 @@ export default function Header() {
           width: "100%",
           boxSizing: "border-box",
           flexWrap: "nowrap",
-          gap: "16px",
+          gap: "12px",
         }}
       >
-        {/* Mobile Hamburger Button (Strictly hidden on desktop via CSS) */}
-        <button
-          className="oo-header-hamburger en"
-          aria-label="Toggle navigation menu"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            padding: "6px",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          {mobileOpen ? <X size={22} color="#1e293b" /> : <Menu size={22} color="#1e293b" />}
-        </button>
-
-        {/* Logo & Mercy Tech Distributor Badge */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px", flexShrink: 0, whiteSpace: "nowrap" }}>
-          <Link
-            className="oo-header-logo en"
-            aria-label="Go to homepage"
-            href="/"
-            style={{ margin: 0, flexShrink: 0 }}
-          />
-          <div
+        {/* Left Side: Mobile Hamburger Button & Logo */}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
+          {/* Mobile Hamburger Button (Strictly hidden on desktop via CSS) */}
+          <button
+            className="oo-header-hamburger en"
+            aria-label="Toggle navigation menu"
+            onClick={() => setMobileOpen(!mobileOpen)}
             style={{
-              width: "1.5px",
-              height: "26px",
-              backgroundColor: "#e2e8f0",
-              flexShrink: 0,
-            }}
-          />
-          <div
-            className="mercy-header-badge"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1.5px",
-              flexShrink: 0,
-              whiteSpace: "nowrap",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              padding: "6px",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#1e293b",
             }}
           >
-            <span
+            {mobileOpen ? <X size={22} color="#1e293b" /> : <Menu size={22} color="#1e293b" />}
+          </button>
+
+          {/* Logo & Mercy Tech Distributor Badge */}
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexShrink: 0, whiteSpace: "nowrap" }}>
+            <Link
+              className="oo-header-logo en"
+              aria-label="Go to homepage"
+              href="/"
+              style={{ margin: 0, flexShrink: 0 }}
+            />
+            <div
+              className="mercy-header-divider"
               style={{
-                fontSize: "11px",
-                fontWeight: 700,
-                color: "#ea580c",
-                letterSpacing: "0.2px",
-                textTransform: "uppercase",
+                width: "1.5px",
+                height: "24px",
+                backgroundColor: "#e2e8f0",
+                flexShrink: 0,
+              }}
+            />
+            <div
+              className="mercy-header-badge"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.5px",
+                flexShrink: 0,
                 whiteSpace: "nowrap",
-                lineHeight: 1.2,
               }}
             >
-              {tBranding("distributor")}
-            </span>
-            <span
-              style={{
-                fontSize: "10.5px",
-                fontWeight: 600,
-                color: "#64748b",
-                whiteSpace: "nowrap",
-                lineHeight: 1.2,
-              }}
-            >
-              {tBranding("optimizedBy")}
-            </span>
+              <span
+                style={{
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#ea580c",
+                  letterSpacing: "0.2px",
+                  textTransform: "uppercase",
+                  whiteSpace: "nowrap",
+                  lineHeight: 1.2,
+                }}
+              >
+                {tBranding("distributor")}
+              </span>
+              <span
+                style={{
+                  fontSize: "10.5px",
+                  fontWeight: 600,
+                  color: "#64748b",
+                  whiteSpace: "nowrap",
+                  lineHeight: 1.2,
+                }}
+              >
+                {tBranding("optimizedBy")}
+              </span>
+            </div>
           </div>
         </div>
 
         {/* Desktop 4 Direct Pages Navigation */}
         <nav
-          className="oo-header-nav en"
+          className="desktop-header-nav"
           style={{
-            display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             flex: 1,
-            marginLeft: "24px",
+            marginLeft: "20px",
             minWidth: 0,
             flexWrap: "nowrap",
           }}
