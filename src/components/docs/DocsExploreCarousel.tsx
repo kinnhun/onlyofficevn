@@ -296,7 +296,7 @@ export default function DocsExploreCarousel() {
           </Link>
 
           <a
-            href="https://m.me/onlyoffice.official.vn"
+            href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
             onClick={openMessengerChat}

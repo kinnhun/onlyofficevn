@@ -284,7 +284,7 @@ export default function HeaderMobileDrawer({
                   DOCS ENTERPRISE
                 </div>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -296,7 +296,7 @@ export default function HeaderMobileDrawer({
                   • {locale === "vi" ? "Tại sao chọn Docs Enterprise" : "Why Docs Enterprise"}
                 </a>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -308,7 +308,7 @@ export default function HeaderMobileDrawer({
                   • {locale === "vi" ? "Bảng giá bản quyền" : "Pricing"}
                 </a>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -324,7 +324,7 @@ export default function HeaderMobileDrawer({
                   DOCSPACE ENTERPRISE
                 </div>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -336,7 +336,7 @@ export default function HeaderMobileDrawer({
                   • {locale === "vi" ? "Tại sao chọn DocSpace Enterprise" : "Why DocSpace Enterprise"}
                 </a>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -348,7 +348,7 @@ export default function HeaderMobileDrawer({
                   • {locale === "vi" ? "Bảng giá DocSpace" : "Pricing"}
                 </a>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => {
@@ -362,7 +362,7 @@ export default function HeaderMobileDrawer({
 
                 <div style={{ borderTop: "1px solid #fed7aa", paddingTop: "8px", marginTop: "6px", display: "flex", flexDirection: "column", gap: "6px" }}>
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => {
@@ -375,7 +375,7 @@ export default function HeaderMobileDrawer({
                     <span>{locale === "vi" ? "Liên hệ tư vấn (Contact sales)" : "Contact sales"}</span>
                   </a>
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => {
@@ -444,7 +444,7 @@ export default function HeaderMobileDrawer({
           </Link>
 
           <a
-            href="https://m.me/onlyoffice.official.vn"
+            href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => {

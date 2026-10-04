@@ -228,7 +228,7 @@ export default function DocsFeatureDetailPage({ data, currentSlug }: Props) {
                 </Link>
 
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={openMessengerChat}
@@ -630,7 +630,7 @@ export default function DocsFeatureDetailPage({ data, currentSlug }: Props) {
               {isVi ? "Dùng Thử Web Demo Miễn Phí" : "Try Free Web Demo"}
             </Link>
             <a
-              href="https://m.me/onlyoffice.official.vn"
+              href="https://www.messenger.com/t/286163107904324"
               target="_blank"
               rel="noopener noreferrer"
               onClick={openMessengerChat}

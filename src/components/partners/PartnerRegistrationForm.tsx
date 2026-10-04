@@ -80,7 +80,7 @@ export default function PartnerRegistrationForm() {
               Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ gửi bảng giá sỉ bảo mật và liên hệ qua điện thoại/tin nhắn <strong>{formData.phone}</strong> ngay trong ít phút.
             </p>
             <a
-              href="https://m.me/onlyoffice.official.vn"
+              href="https://www.messenger.com/t/286163107904324"
               target="_blank"
               rel="noopener noreferrer"
               onClick={openMessengerChat}

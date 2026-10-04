@@ -125,7 +125,7 @@ export default function CertificateLightboxModal({
             <strong>Đơn vị ủy quyền:</strong> CÔNG TY TNHH CÔNG NGHỆ MERCY • MST: 0319227767
           </span>
           <a
-            href="https://m.me/onlyoffice.official.vn"
+            href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
             onClick={openMessengerChat}

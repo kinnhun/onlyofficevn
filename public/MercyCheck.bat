@@ -33,7 +33,7 @@ echo.
 echo ========================================================================
 echo  Kiem tra hoan tat!
 echo  Hotline ho tro ky thuat: 0763.068.614 (Mr. Hung)
-echo  Messenger: https://m.me/onlyoffice.official.vn
+echo  Messenger: https://www.messenger.com/t/286163107904324
 echo ========================================================================
 echo.
 pause

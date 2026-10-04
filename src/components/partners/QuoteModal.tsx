@@ -150,7 +150,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
 
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={openMessengerChat}
@@ -331,7 +331,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                 }}
               >
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={openMessengerChat}

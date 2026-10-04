@@ -117,7 +117,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   {/* Item 1: Why Docs Enterprise */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -142,7 +142,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
 
                   {/* Item 2: Pricing */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -167,7 +167,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
 
                   {/* Item 3: Get it now */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -217,7 +217,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
                 <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                   {/* Item 1: Why DocSpace Enterprise with tabs+star icon */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -254,7 +254,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
 
                   {/* Item 2: Pricing with circled 1 icon */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -287,7 +287,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
 
                   {/* Item 3: Get it now with download tray icon */}
                   <a
-                    href="https://m.me/onlyoffice.official.vn"
+                    href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={handleClickItem}
@@ -333,7 +333,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
             >
               {/* Contact sales */}
               <a
-                href="https://m.me/onlyoffice.official.vn"
+                href="https://www.messenger.com/t/286163107904324"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClickItem}
@@ -366,7 +366,7 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
 
               {/* Request demo */}
               <a
-                href="https://m.me/onlyoffice.official.vn"
+                href="https://www.messenger.com/t/286163107904324"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClickItem}

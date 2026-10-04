@@ -1388,7 +1388,7 @@ export default function BlogPage() {
                   <Phone size={14} /> 0763.068.614
                 </a>
                 <a
-                  href="https://m.me/onlyoffice.official.vn"
+                  href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={openMessengerChat}

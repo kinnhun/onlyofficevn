@@ -17,7 +17,7 @@ export default function JsonLd({ locale }: { locale: string }) {
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        url: "https://m.me/onlyoffice.official.vn",
+        url: "https://www.messenger.com/t/286163107904324",
         availableLanguage: ["Vietnamese", "English"],
       },
       {

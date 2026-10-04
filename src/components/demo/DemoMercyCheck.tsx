@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ShieldAlert, Download, Copy, Check, Terminal, Eye, CheckCircle2, AlertTriangle, ShieldCheck, Zap, Lock } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function DemoMercyCheck() {
   const [copiedLink, setCopiedLink] = useState(false);
@@ -428,9 +429,10 @@ export default function DemoMercyCheck() {
           </div>
 
           <a
-            href="https://m.me/onlyoffice.official.vn"
+            href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={openMessengerChat}
             style={{
               display: "inline-flex",
               alignItems: "center",

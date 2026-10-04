@@ -2,21 +2,21 @@
  * Utility to handle opening Facebook Messenger chat directly.
  * 
  * Facebook Page ID for OnlyOffice Việt Nam: 286163107904324
- * Official Web URL: https://m.me/onlyoffice.official.vn
+ * Direct Thread URL: https://www.messenger.com/t/286163107904324
  */
 
 export const ONLYOFFICE_PAGE_ID = "286163107904324";
-export const ONLYOFFICE_MESSENGER_URL = "https://m.me/onlyoffice.official.vn";
-export const ONLYOFFICE_DEEP_LINK = `fb-messenger://user-thread/${ONLYOFFICE_PAGE_ID}`;
+export const ONLYOFFICE_MESSENGER_URL = "https://www.messenger.com/t/286163107904324";
+export const ONLYOFFICE_DEEP_LINK_IOS = `fb-messenger://user-thread/${ONLYOFFICE_PAGE_ID}`;
+export const ONLYOFFICE_INTENT_ANDROID = `intent://user-thread/${ONLYOFFICE_PAGE_ID}#Intent;scheme=fb-messenger;package=com.facebook.orca;S.browser_fallback_url=https%3A%2F%2Fwww.messenger.com%2Ft%2F${ONLYOFFICE_PAGE_ID};end`;
 
 /**
  * Opens Messenger chat directly.
- * On mobile devices (iOS & Android), it invokes the native Messenger app scheme
- * (fb-messenger://user-thread/286163107904324) so that the user jumps straight
- * into the chat conversation instead of getting stuck on Facebook's mobile landing
- * page ("Tải ứng dụng Messenger / Mở bằng Messenger").
- * 
- * On desktop browsers, it opens the web version in a new tab.
+ * - On Android: Uses Chrome/Android intent to launch Messenger app immediately,
+ *   falling back to https://www.messenger.com/t/286163107904324 if not installed.
+ * - On iOS: Uses fb-messenger://user-thread/286163107904324 directly.
+ *   If user doesn't switch to app within 2.5s, falls back to direct thread web URL.
+ * - On Desktop: Opens https://www.messenger.com/t/286163107904324 in a new tab.
  */
 export function openMessengerChat(e?: React.MouseEvent | React.FormEvent | MouseEvent) {
   if (e && typeof e.preventDefault === "function") {
@@ -32,19 +32,36 @@ export function openMessengerChat(e?: React.MouseEvent | React.FormEvent | Mouse
   const isAndroid = /Android/i.test(ua);
   const isMobile = isIOS || isAndroid || /Mobi|Mobile/i.test(ua);
 
-  if (isMobile) {
+  if (isAndroid) {
+    // Android Chrome Intent: Opens Messenger app instantly, zero interstitial page!
+    window.location.href = ONLYOFFICE_INTENT_ANDROID;
+  } else if (isIOS) {
+    // iOS Safari: Open native Messenger app
     const start = Date.now();
-    // Trigger deep link directly
-    window.location.href = ONLYOFFICE_DEEP_LINK;
+    let appOpened = false;
 
-    // Fallback to web link if Messenger app is not installed
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        appOpened = true;
+      }
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange, { once: true });
+
+    window.location.href = ONLYOFFICE_DEEP_LINK_IOS;
+
+    // Fallback only if app wasn't opened and page remains visible after 2.5s
     setTimeout(() => {
-      if (!document.hidden && Date.now() - start < 2500) {
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      if (!appOpened && !document.hidden && Date.now() - start < 3500) {
         window.location.href = ONLYOFFICE_MESSENGER_URL;
       }
-    }, 1500);
+    }, 2500);
+  } else if (isMobile) {
+    // Other mobile: direct thread URL
+    window.location.href = ONLYOFFICE_MESSENGER_URL;
   } else {
-    // Desktop: Open web messenger in a new tab
+    // Desktop: Open direct thread in a new tab
     window.open(ONLYOFFICE_MESSENGER_URL, "_blank", "noopener,noreferrer");
   }
 }
+

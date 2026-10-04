@@ -1,12 +1,16 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
+import { ShieldCheck, MessageCircle } from "lucide-react";
+import { openMessengerChat } from "@/lib/messenger";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
   const tBranding = useTranslations("branding");
+  const locale = useLocale();
+  const isVi = locale === "vi";
+  const contactText = isVi ? "Liên hệ ngay để trải nghiệm" : "Contact Now for Live Demo";
 
   return (
     <section
@@ -35,7 +39,7 @@ export default function HeroSection() {
           {/* Official Distributor & Optimization Badge */}
           <div className="home-hero-badge">
             <div style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <span style={{ fontSize: "14px" }}>🇻🇳</span>
+              <ShieldCheck size={14} color="#ea580c" style={{ flexShrink: 0 }} />
               <span
                 style={{
                   fontSize: "12.5px",
@@ -95,52 +99,36 @@ export default function HeroSection() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "16px",
             }}
           >
-            <Link
-              id="hero-get-it-now"
+            <a
+              id="hero-contact-demo"
               className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-primary home-hero-btn"
-              href="/download?from=default#docs-enterprise"
+              href="https://www.messenger.com/t/286163107904324"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={openMessengerChat}
               style={{
-                backgroundColor: "#ff6f3d",
+                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                 color: "#ffffff",
                 minHeight: "54px",
-                padding: "15px 32px",
-                borderRadius: "9px",
-                fontWeight: 600,
-                fontSize: "16px",
+                padding: "16px 36px",
+                borderRadius: "10px",
+                fontWeight: 700,
+                fontSize: "16.5px",
                 textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
+                boxShadow: "0 6px 20px rgba(255, 111, 61, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
                 display: "inline-flex",
                 alignItems: "center",
                 justifyContent: "center",
+                gap: "10px",
+                cursor: "pointer",
+                transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
               }}
             >
-              {t("btnGetItNow")}
-            </Link>
-
-            <Link
-              id="hero-see-it-in-action"
-              className="Button-module-scss-module__VLzsWq__button Button-module-scss-module__VLzsWq__variant-secondary home-hero-btn"
-              href="/docspace-registration?from=default"
-              style={{
-                backgroundColor: "#444444",
-                color: "#ffffff",
-                minHeight: "54px",
-                padding: "15px 32px",
-                borderRadius: "9px",
-                fontWeight: 600,
-                fontSize: "16px",
-                textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(0, 0, 0, 0.15)",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <span style={{ color: "#ffffff", fontWeight: 600 }}>{t("btnSeeInAction")}</span>
-            </Link>
+              <MessageCircle size={19} />
+              <span>{contactText}</span>
+            </a>
           </div>
         </div>
 

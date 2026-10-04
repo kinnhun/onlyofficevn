@@ -1580,10 +1580,11 @@ html, body {
 @media screen and (max-width: 640px) {
   .home-hero-badge {
     flex-direction: column;
-    gap: 4px;
-    padding: 10px 18px;
-    border-radius: 14px;
-    max-width: 95%;
+    gap: 3px;
+    padding: 8px 18px;
+    border-radius: 12px;
+    max-width: 90%;
+    text-align: center;
   }
   .home-hero-badge-divider {
     display: none;

@@ -108,7 +108,7 @@ export default function PricingRegistrationModal({ isOpen, onClose }: PricingReg
             </p>
             <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
               <a
-                href="https://m.me/onlyoffice.official.vn"
+                href="https://www.messenger.com/t/286163107904324"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={openMessengerChat}
