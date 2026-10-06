@@ -392,7 +392,7 @@ export default function HeaderMobileDrawer({
             )}
           </div>
 
-          {/* 3. Bảng Giá, Đăng ký đối tác, Blog */}
+          {/* 3. Bảng Giá, Hợp Tác Phân Phối, Blog */}
           {navItems.slice(1).map((item) => (
             <Link
               key={item.key}

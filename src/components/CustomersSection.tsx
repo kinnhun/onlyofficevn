@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export default function CustomersSection() {
+  const locale = useLocale();
+  const isVi = locale === "vi";
+
   const logos = [
     { name: "Unesko", src: "https://static-site.onlyoffice.com/public/images/templates/main/customers/logo/unesko.svg", height: 42 },
     { name: "Fujitsu", src: "https://static-site.onlyoffice.com/public/images/templates/main/customers/logo/fujitsu.svg", height: 36 },
@@ -16,34 +19,40 @@ export default function CustomersSection() {
 
   const stories = [
     {
-      title: "How Kinderhaus Berlin shares and collaborates on sensitive files with ONLYOFFICE DocSpace",
+      title: isVi
+        ? "Cách Kinderhaus Berlin chia sẻ và cộng tác trên các tệp tin bảo mật với ONLYOFFICE DocSpace"
+        : "How Kinderhaus Berlin shares and collaborates on sensitive files with ONLYOFFICE DocSpace",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/kinderhaus.jpg",
-      href: "https://www.onlyoffice.com/blog/2023/11/how-kinderhaus-berlin-is-using-onlyoffice-docspace",
     },
     {
-      title: "Why the Guará Linux team chooses ONLYOFFICE Desktop Editors as the default office suite for 22.000 employees of the Military Police of Minas Gerais",
+      title: isVi
+        ? "Lý do đội ngũ Guará Linux chọn ONLYOFFICE Desktop Editors cho 22.000 cán bộ cảnh sát Minas Gerais"
+        : "Why the Guará Linux team chooses ONLYOFFICE Desktop Editors as the default office suite for 22.000 employees of the Military Police of Minas Gerais",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/guara-linux.jpg",
-      href: "https://www.onlyoffice.com/blog/2024/07/onlyoffice-desktop-editors-on-guara-linux",
     },
     {
-      title: "How Czech TV replaced Google Docs and MS Office with ONLYOFFICE and ownCloud",
+      title: isVi
+        ? "Cách Đài truyền hình Séc (Czech TV) thay thế Google Docs và MS Office bằng ONLYOFFICE và ownCloud"
+        : "How Czech TV replaced Google Docs and MS Office with ONLYOFFICE and ownCloud",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/czech-tv.jpg",
-      href: "https://www.onlyoffice.com/blog/2021/04/how-czech-tv-replaced-google-docs-and-ms-office-with-onlyoffice-and-owncloud",
     },
     {
-      title: "How SWITCH integrated ONLYOFFICE into SWITCHdrive to create a complete alternative to Office 365",
+      title: isVi
+        ? "Cách SWITCH tích hợp ONLYOFFICE vào SWITCHdrive để tạo giải pháp thay thế hoàn hảo cho Office 365"
+        : "How SWITCH integrated ONLYOFFICE into SWITCHdrive to create a complete alternative to Office 365",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/switch.jpg",
-      href: "https://www.onlyoffice.com/blog/2021/02/how-switch-integrated-onlyoffice-into-switchdrive-to-create-a-complete-alternative-to-office-365",
     },
     {
-      title: "The City of Hopewell, Virginia: enabling remote work for 500 government employees with ONLYOFFICE",
+      title: isVi
+        ? "Thành phố Hopewell, Virginia: Hỗ trợ làm việc từ xa an toàn cho 500 cán bộ chính quyền với ONLYOFFICE"
+        : "The City of Hopewell, Virginia: enabling remote work for 500 government employees with ONLYOFFICE",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/hopewell.jpg",
-      href: "https://www.onlyoffice.com/blog/2020/06/onlyoffice-in-the-city-of-hopewell",
     },
     {
-      title: "How Calar Alto Observatory implements ONLYOFFICE for secure & location-independent collaboration",
+      title: isVi
+        ? "Cách Đài thiên văn Calar Alto ứng dụng ONLYOFFICE để cộng tác an toàn và linh hoạt từ mọi khoảng cách"
+        : "How Calar Alto Observatory implements ONLYOFFICE for secure & location-independent collaboration",
       image: "https://static-site.onlyoffice.com/public/images/templates/main/customers/success-stories/calar-alto-observatory.jpg",
-      href: "https://www.onlyoffice.com/blog/2022/06/how-calar-alto-observatory-implements-onlyoffice",
     },
   ];
 
@@ -75,7 +84,9 @@ export default function CustomersSection() {
             margin: "0 0 36px",
           }}
         >
-          Trusted by more than 21 million users worldwide
+          {isVi
+            ? "Được tin cậy bởi hơn 21 triệu người dùng trên toàn cầu"
+            : "Trusted by more than 21 million users worldwide"}
         </h2>
 
         {/* Partner Logos */}
@@ -86,7 +97,7 @@ export default function CustomersSection() {
             justifyContent: "center",
             gap: "36px",
             flexWrap: "wrap",
-            marginBottom: "20px",
+            marginBottom: "52px",
           }}
         >
           {logos.map((logo) => (
@@ -97,43 +108,23 @@ export default function CustomersSection() {
           ))}
         </div>
 
-        <div style={{ textAlign: "center", marginBottom: "48px" }}>
-          <Link
-            id="more-customers"
-            href="/customers?from=default"
-            style={{
-              color: "#ff6f3d",
-              fontSize: "13px",
-              fontWeight: 600,
-              textDecoration: "underline",
-            }}
-          >
-            More customers
-          </Link>
-        </div>
-
-        {/* Customer Stories Cards Grid - 2 Column Horizontal Cards */}
+        {/* Customer Stories Cards Grid - Pure Static Display (No Links) */}
         <div
           className="customer-stories-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
             gap: "28px 36px",
-            marginBottom: "36px",
           }}
         >
           {stories.map((story, i) => (
-            <a
+            <div
               key={i}
-              href={story.href}
-              target="_blank"
-              rel="noopener noreferrer"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: "20px",
-                textDecoration: "none",
-                transition: "opacity 0.2s ease",
+                cursor: "default",
               }}
             >
               <div
@@ -193,26 +184,10 @@ export default function CustomersSection() {
                   {story.title}
                 </h3>
               </div>
-            </a>
+            </div>
           ))}
-        </div>
-
-        <div style={{ textAlign: "center" }}>
-          <Link
-            id="more-success-stories"
-            href="/customers?from=default"
-            style={{
-              color: "#ff6f3d",
-              fontSize: "13px",
-              fontWeight: 600,
-              textDecoration: "underline",
-            }}
-          >
-            More success stories
-          </Link>
         </div>
       </div>
     </section>
   );
 }
-

@@ -40,7 +40,7 @@ export default function PartnerAdvantages() {
   ];
 
   return (
-    <section style={{ maxWidth: "1248px", margin: "64px auto 0", padding: "0 20px" }}>
+    <section className="oo-partner-section">
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
         <span
           style={{
@@ -53,10 +53,10 @@ export default function PartnerAdvantages() {
         >
           ƯU THẾ ĐẮC ĐỊA
         </span>
-        <h2 style={{ fontSize: "32px", fontWeight: 800, color: "#1e293b", marginTop: "8px" }}>
+        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           Tại Sao Nên Hợp Tác Cùng Mercy Tech?
         </h2>
-        <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "680px", margin: "10px auto 0" }}>
+        <p className="oo-partner-subheading" style={{ maxWidth: "680px", margin: "10px auto 0" }}>
           Nền tảng bảo chứng vững chắc từ pháp lý, kỹ thuật đến cơ chế bảo vệ khách hàng độc quyền cho mọi đối tác
         </p>
       </div>
@@ -64,8 +64,8 @@ export default function PartnerAdvantages() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+          gap: "20px",
         }}
       >
         {advantages.map((item, idx) => (

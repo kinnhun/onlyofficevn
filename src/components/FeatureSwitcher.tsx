@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { openMessengerChat } from "@/lib/messenger";
 
 export interface FeatureItem {
   id: string;
@@ -196,21 +197,43 @@ export default function FeatureSwitcher({
         </div>
 
         <div style={{ textAlign: "center", marginTop: "44px" }}>
-          <Link
-            href={learnMoreHref}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              color: "#ff6f3d",
-              fontSize: "16px",
-              fontWeight: 600,
-              textDecoration: "underline",
-              transition: "opacity 0.2s",
-            }}
-          >
-            {learnMoreText}
-          </Link>
+          {learnMoreHref.startsWith("http") ? (
+            <a
+              href={learnMoreHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={openMessengerChat}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                color: "#ff6f3d",
+                fontSize: "16px",
+                fontWeight: 600,
+                textDecoration: "underline",
+                transition: "opacity 0.2s",
+                cursor: "pointer",
+              }}
+            >
+              {learnMoreText}
+            </a>
+          ) : (
+            <Link
+              href={learnMoreHref}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "6px",
+                color: "#ff6f3d",
+                fontSize: "16px",
+                fontWeight: 600,
+                textDecoration: "underline",
+                transition: "opacity 0.2s",
+              }}
+            >
+              {learnMoreText}
+            </Link>
+          )}
         </div>
       </div>
     </section>

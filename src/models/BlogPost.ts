@@ -37,6 +37,8 @@ export interface IBlogPostDocument extends Document {
   id: string;
   slug?: string;
   image: string;
+  image_vi?: string;
+  image_en?: string;
   title_vi: string;
   title_en: string;
   category: string;
@@ -106,6 +108,8 @@ const BlogPostSchema = new Schema<IBlogPostDocument>(
     id: { type: String, required: true, unique: true, index: true },
     slug: { type: String, index: true },
     image: { type: String, default: "" },
+    image_vi: { type: String, default: "" },
+    image_en: { type: String, default: "" },
     title_vi: { type: String, required: true },
     title_en: { type: String, default: "" },
     category: {

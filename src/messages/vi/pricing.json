@@ -1,0 +1,71 @@
+{
+  "pricingPage": {
+    "badge": "ĐƠN VỊ PHÂN PHỐI TẠI VIỆT NAM — TỐI ƯU BỞI MERCY TECH",
+    "title": "Bảng Giá Bản Quyền ONLYOFFICE",
+    "subtitle": "Giải pháp văn phòng bảo mật tuyệt đối cho máy chủ riêng hoặc đám mây. Bản quyền vĩnh viễn hoặc thuê bao linh hoạt theo nhu cầu.",
+    "billingYearly": "Gói Hàng Năm",
+    "billingLifetime": "Bản Quyền Vĩnh Viễn",
+    "savePercent": "Tiết kiệm 20%",
+    "popularBadge": "KHUYÊN DÙNG",
+    "plans": {
+      "community": {
+        "name": "Bản Cộng Đồng",
+        "tag": "Cá nhân & Nhóm nhỏ",
+        "price": "Miễn Phí",
+        "period": "trọn đời",
+        "desc": "Bộ soạn thảo trực tuyến mạnh mẽ cho văn bản, bảng tính, trình chiếu và PDF.",
+        "btn": "Dùng Thử Miễn Phí"
+      },
+      "enterprise": {
+        "name": "Docs Enterprise",
+        "tag": "Doanh nghiệp & Tổ chức",
+        "price": "1.250.000 ₫",
+        "period": "/ server / tháng",
+        "desc": "Bảo mật cao cấp, mở rộng không giới hạn cho máy chủ riêng với hỗ trợ kỹ thuật 24/7 từ Mercy Tech.",
+        "btn": "Tải Bản Dùng Thử 7 Ngày"
+      },
+      "developer": {
+        "name": "Developer Edition",
+        "tag": "Nhà phát triển & ISV",
+        "price": "Liên hệ",
+        "period": "báo giá riêng",
+        "desc": "Nhúng bộ ứng dụng văn phòng vào nền tảng Web / SaaS của bạn với toàn quyền điều khiển API.",
+        "btn": "Tư Vấn & Dùng Thử API"
+      }
+    },
+    "comparisonTitle": "So Sánh Chi Tiết Các Tính Năng",
+    "faqTitle": "Câu Hỏi Thường Gặp Về Bản Quyền",
+    "ctaTitle": "Cần tư vấn giải pháp bản quyền cho doanh nghiệp của bạn?",
+    "ctaDesc": "Đội ngũ chuyên viên Mercy Technology luôn sẵn sàng khảo sát nhu cầu, demo trực tiếp và gửi báo giá tối ưu nhất.",
+    "ctaBtn": "Liên Hệ Messenger / Hotline: 0763.068.614"
+  },
+  "pricingQuoteModal": {
+    "badge": "BẢO MẬT & CHIẾT KHẤU TỐI ĐA",
+    "title": "Yêu Cầu Nhận Báo Giá Ưu Đãi",
+    "successTitle": "GỬI YÊU CẦU THÀNH CÔNG!",
+    "successDesc": "Hệ thống đang mở kết nối liên hệ với chuyên viên tư vấn Mercy Tech (Hotline: 0763.068.614) để gửi bảng giá chiết khấu chi tiết cho quý khách.",
+    "closeBtn": "Đóng cửa sổ",
+    "productLabel": "1. Sản phẩm quan tâm:",
+    "products": {
+      "keyOnline": "🔑 OnlyOffice Key Online (Vĩnh viễn theo Mainboard)",
+      "portal": "⚡ Tài Khoản Portal Quản Trị Đại Lý 24/7 (Xuất Key Tức Thì)",
+      "enterprise": "🏢 OnlyOffice Docs Enterprise (Máy chủ riêng / On-premise)",
+      "reseller": "💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng máy tính"
+    },
+    "quantityLabel": "2. Số lượng dự kiến:",
+    "quantities": {
+      "tier1": "Từ 1 – 4 thiết bị (Cá nhân / Máy lẻ)",
+      "tier2": "Từ 5 – 49 thiết bị (Doanh nghiệp vừa & nhỏ)",
+      "tier3": "Từ 50 thiết bị trở lên (Dự án / Số lượng lớn)",
+      "tier4": "Số lượng sỉ định kỳ cho cửa hàng máy tính"
+    },
+    "fullNameLabel": "Họ và tên *:",
+    "fullNamePlaceholder": "Nguyễn Văn A",
+    "phoneLabel": "Số điện thoại liên hệ *:",
+    "phonePlaceholder": "09xx xxx xxx",
+    "companyLabel": "Tên Công ty / Cửa hàng máy tính:",
+    "companyPlaceholder": "Công ty ABC / Vi tính XYZ (nếu có)",
+    "vatCheckbox": "Doanh nghiệp có nhu cầu xuất Hóa đơn điện tử VAT",
+    "submitBtn": "Gửi Yêu Cầu & Liên Hệ Báo Giá"
+  }
+}

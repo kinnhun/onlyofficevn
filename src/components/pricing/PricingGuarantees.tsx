@@ -33,76 +33,24 @@ export default function PricingGuarantees() {
   ];
 
   return (
-    <section style={{ padding: "0 20px 40px" }}>
+    <section className="pricing-guarantees-section">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
-            gap: "16px",
-          }}
-          className="retail-guarantees-grid"
-        >
+        <div className="retail-guarantees-grid">
           {guarantees.map((item, idx) => (
-            <div
-              key={idx}
-              style={{
-                backgroundColor: "#ffffff",
-                border: "1px solid #e5e5e5",
-                borderRadius: "12px",
-                padding: "20px 16px",
-                textAlign: "center",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.03)",
-                transition: "transform 0.2s ease, box-shadow 0.2s ease",
-              }}
-            >
+            <div key={idx} className="retail-guarantee-card">
               {/* Icon Bubble */}
-              <div
-                style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "50%",
-                  backgroundColor: "#fff7ed",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "12px",
-                }}
-              >
+              <div className="retail-guarantee-icon">
                 {item.icon}
               </div>
 
-              {/* Title */}
-              <div
-                style={{
-                  fontSize: "12.5px",
-                  fontWeight: 800,
-                  color: "#333333",
-                  lineHeight: 1.35,
-                  marginBottom: "6px",
-                  minHeight: "34px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                {item.title}
-              </div>
-
-              {/* Description */}
-              <div
-                style={{
-                  fontSize: "12px",
-                  color: "#666666",
-                  lineHeight: 1.45,
-                  marginTop: "auto",
-                }}
-              >
-                {item.desc}
+              {/* Text Info */}
+              <div className="retail-guarantee-content">
+                <div className="retail-guarantee-title">
+                  {item.title}
+                </div>
+                <div className="retail-guarantee-desc">
+                  {item.desc}
+                </div>
               </div>
             </div>
           ))}

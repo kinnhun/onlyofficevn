@@ -9,7 +9,7 @@ interface AffiliateSectionProps {
 
 export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps) {
   return (
-    <section style={{ maxWidth: "1248px", margin: "72px auto 0", padding: "0 20px" }}>
+    <section className="oo-partner-section">
       <div style={{ textAlign: "center", marginBottom: "36px" }}>
         <span
           style={{
@@ -22,10 +22,10 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
         >
           MỤC 3. MÔ HÌNH HỢP TÁC LINH HOẠT
         </span>
-        <h2 style={{ fontSize: "32px", fontWeight: 800, color: "#1e293b", marginTop: "8px" }}>
+        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           3. Chương Trình Cộng Tác Viên (CTV)
         </h2>
-        <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "650px", margin: "10px auto 0" }}>
+        <p className="oo-partner-subheading" style={{ maxWidth: "650px", margin: "10px auto 0" }}>
           Giới thiệu nhận hoa hồng — <strong>Không cần vốn & Không tự cài đặt kỹ thuật</strong>
         </p>
       </div>
@@ -33,8 +33,8 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+          gap: "20px",
         }}
       >
         {/* Model 1: CTV Giới thiệu */}
@@ -42,7 +42,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "32px",
+            padding: "24px 20px",
             border: "1px solid #e2e8f0",
             boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
             display: "flex",
@@ -55,7 +55,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
               <Share2 size={16} />
               <span>MÔ HÌNH 1</span>
             </div>
-            <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
+            <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
               Cộng Tác Viên Giới Thiệu
             </h3>
             <p style={{ fontSize: "14px", color: "#64748b", marginBottom: "20px", lineHeight: 1.5 }}>
@@ -121,7 +121,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "32px",
+            padding: "24px 20px",
             border: "1px solid #e2e8f0",
             boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
             display: "flex",
@@ -134,7 +134,7 @@ export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps)
               <Briefcase size={16} />
               <span>MÔ HÌNH 2</span>
             </div>
-            <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
+            <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
               Cộng Tác Viên Bán Hàng
             </h3>
             <p style={{ fontSize: "14px", color: "#64748b", marginBottom: "20px", lineHeight: 1.5 }}>

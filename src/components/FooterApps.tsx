@@ -60,49 +60,28 @@ export const appPills = [
 
 export default function FooterApps({ title }: { title: string }) {
   return (
-    <div style={{ marginBottom: "50px" }}>
-      <div
-        style={{
-          fontSize: "12px",
-          fontWeight: 700,
-          letterSpacing: "0.06em",
-          textTransform: "uppercase",
-          color: "#666666",
-          marginBottom: "16px",
-        }}
-      >
+    <div className="oo-footer-apps-container">
+      <div className="oo-footer-apps-header">
         {title}
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+      <div className="oo-footer-apps-list">
         {appPills.map((pill) => (
           <Link
             key={pill.name}
             href={pill.href}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              padding: "6px 14px 6px 8px",
-              backgroundColor: "#ffffff",
-              border: "1px solid #e2e8f0",
-              borderRadius: "20px",
-              textDecoration: "none",
-              color: "#333333",
-              fontSize: "13px",
-              fontWeight: 500,
-              boxShadow: "0 1px 2px rgba(0,0,0,0.05)",
-            }}
+            className="oo-footer-app-pill"
           >
             <div
               style={{
-                width: "28px",
-                height: "28px",
+                width: "24px",
+                height: "24px",
                 borderRadius: "50%",
                 backgroundColor: pill.bg,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                flexShrink: 0,
               }}
             >
               {pill.icon}

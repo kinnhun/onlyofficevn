@@ -1,16 +1,16 @@
 import { getRequestConfig } from "next-intl/server";
-import { routing } from "./routing";
+import { routing } from "./config";
+import { getMessages } from "./get-messages";
 
 export default getRequestConfig(async ({ requestLocale }) => {
   let locale = await requestLocale;
 
-  if (!locale || !routing.locales.includes(locale as "vi" | "en")) {
+  if (!locale || !routing.locales.includes(locale as any)) {
     locale = routing.defaultLocale;
   }
 
   return {
     locale,
-    // Reloads updated locale JSON definitions
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    messages: await getMessages(locale),
   };
 });

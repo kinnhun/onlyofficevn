@@ -14,6 +14,7 @@ export default function PartnerOfficialHeader() {
       }}
     >
       <div
+        className="oo-partner-official-strip"
         style={{
           maxWidth: "1280px",
           margin: "0 auto",
@@ -24,7 +25,7 @@ export default function PartnerOfficialHeader() {
           gap: "12px",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
           <div
             style={{
               background: "rgba(255, 255, 255, 0.22)",
@@ -44,23 +45,26 @@ export default function PartnerOfficialHeader() {
             <FileCheck size={14} />
             <span>VĂN BẢN CHÍNH THỨC</span>
           </div>
-          <span style={{ fontSize: "13px", color: "#ffffff", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "6px" }}>
+          <span style={{ fontSize: "12.5px", color: "#ffffff", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "6px" }}>
             <Shield size={14} color="#fef08a" />
             HIỆU LỰC TOÀN QUỐC
           </span>
         </div>
 
-        <div style={{ fontSize: "12.5px", color: "#ffffff", display: "flex", alignItems: "center", gap: "16px", flexWrap: "wrap" }}>
+        <div
+          className="oo-partner-official-meta"
+          style={{ fontSize: "12.5px", color: "#ffffff", display: "flex", alignItems: "center", gap: "14px", flexWrap: "wrap" }}
+        >
           <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
             <Building2 size={14} color="#fef08a" />
             <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY</strong>
           </span>
-          <span style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
+          <span className="oo-partner-official-sep" style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
           <span>MST: <strong style={{ color: "#fef08a" }}>0319227767</strong></span>
-          <span style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
+          <span className="oo-partner-official-sep" style={{ color: "rgba(255, 255, 255, 0.5)" }}>•</span>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
             <Calendar size={14} color="#fef08a" />
-            Văn bản cập nhật: <strong>2026</strong>
+            Năm: <strong>2026</strong>
           </span>
         </div>
       </div>

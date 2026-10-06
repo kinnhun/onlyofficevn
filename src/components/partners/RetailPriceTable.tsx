@@ -9,18 +9,9 @@ interface RetailPriceTableProps {
 
 export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps) {
   return (
-    <section style={{ maxWidth: "1248px", margin: "64px auto 0", padding: "0 20px" }}>
-      <div
-        style={{
-          background: "#ffffff",
-          borderRadius: "24px",
-          padding: "48px 36px",
-          color: "#1e293b",
-          border: "2px solid #e2e8f0",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
-        }}
-      >
-        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+    <section className="oo-partner-section">
+      <div className="oo-partner-card">
+        <div style={{ textAlign: "center", marginBottom: "36px" }}>
           <div
             style={{
               display: "inline-block",
@@ -37,10 +28,10 @@ export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps)
           >
             MỤC 1. BẢNG GIÁ NIÊM YẾT THAM CHIẾU
           </div>
-          <h2 style={{ fontSize: "32px", fontWeight: 800, margin: "0 0 10px", color: "#1e293b" }}>
+          <h2 className="oo-partner-heading" style={{ margin: "0 0 10px" }}>
             1. Bảng Giá Bán Lẻ Niêm Yết Tham Chiếu
           </h2>
-          <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", margin: "0 auto" }}>
+          <p className="oo-partner-subheading" style={{ maxWidth: "700px", margin: "0 auto" }}>
             Khung giá chính thức của Mercy Tech làm căn cứ chào giá cho khách hàng doanh nghiệp & dự án (Vui lòng liên hệ để nhận chính sách chiết khấu tốt nhất)
           </p>
         </div>
@@ -48,8 +39,8 @@ export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps)
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "24px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+            gap: "20px",
           }}
         >
           {/* Plan 1: Cá nhân */}
@@ -58,7 +49,7 @@ export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps)
               background: "#f8fafc",
               border: "1px solid #e2e8f0",
               borderRadius: "16px",
-              padding: "32px 28px",
+              padding: "26px 20px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
@@ -131,7 +122,7 @@ export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps)
               background: "#ffffff",
               border: "2px solid #ff6f3d",
               borderRadius: "16px",
-              padding: "32px 28px",
+              padding: "26px 20px",
               position: "relative",
               display: "flex",
               flexDirection: "column",
@@ -226,7 +217,7 @@ export default function RetailPriceTable({ onOpenModal }: RetailPriceTableProps)
               background: "#f8fafc",
               border: "1px solid #e2e8f0",
               borderRadius: "16px",
-              padding: "32px 28px",
+              padding: "26px 20px",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",

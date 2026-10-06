@@ -2,10 +2,11 @@
 
 import React, { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { Link, useRouter, usePathname } from "@/i18n/routing";
+import { Link, useRouter, usePathname } from "@/i18n/config";
 import { Download, Menu, X, MessageCircle } from "lucide-react";
 import { FlagVi, FlagEn } from "@/components/HeaderFlags";
 import HeaderMobileDrawer from "@/components/HeaderMobileDrawer";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import HeaderRightActions from "@/components/HeaderRightActions";
 import HeaderEnterpriseDropdown from "@/components/HeaderEnterpriseDropdown";
 import { openMessengerChat } from "@/lib/messenger";
@@ -23,7 +24,7 @@ export default function Header() {
   // Exactly 4 navigation pages requested by user:
   // 1. Trang chủ (/)
   // 2. Bảng Giá (/pricing)
-  // 3. Đăng ký đối tác (/partners)
+  // 3. Hợp Tác Phân Phối (/partners)
   // 4. Blog (/blog)
   const navItems = [
     {
@@ -212,7 +213,7 @@ export default function Header() {
             {/* 2. Enterprise Dropdown (Click goes directly to Messenger) */}
             <HeaderEnterpriseDropdown locale={locale} />
 
-            {/* 3. Bảng Giá, Đăng ký đối tác, Blog */}
+            {/* 3. Bảng Giá, Hợp Tác Phân Phối, Blog */}
             {navItems.slice(1).map((item) => (
               <Link
                 key={item.key}
@@ -338,12 +339,8 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Right Icon Actions (Language Selector only) */}
-        <HeaderRightActions
-          locale={locale}
-          onSwitchLocale={switchLocale}
-          tCommon={tCommon}
-        />
+        {/* Right Icon Actions (Language Switcher) */}
+        <LanguageSwitcher variant="header" />
       </div>
 
       {/* Mobile Drawer */}

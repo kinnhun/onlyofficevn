@@ -47,18 +47,9 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
   ];
 
   return (
-    <section id="partner-policy" style={{ maxWidth: "1248px", margin: "72px auto 0", padding: "0 20px" }}>
+    <section id="partner-policy" className="oo-partner-section">
       {/* Container with bright, clean styling (NO black background) */}
-      <div
-        style={{
-          background: "#ffffff",
-          borderRadius: "24px",
-          border: "2px solid #e2e8f0",
-          boxShadow: "0 12px 36px rgba(37, 99, 235, 0.06)",
-          padding: "48px 36px",
-          position: "relative",
-        }}
-      >
+      <div className="oo-partner-card">
         {/* Official Document Legal Ribbon */}
         <div style={{ textAlign: "center", marginBottom: "36px" }}>
           <div
@@ -82,34 +73,18 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <span>QUY CHẾ VẬN HÀNH PHÁP LÝ & KINH DOANH</span>
           </div>
 
-          <h2
-            style={{
-              fontSize: "32px",
-              fontWeight: 800,
-              color: "#1e293b",
-              lineHeight: 1.3,
-              margin: "0 0 14px",
-              letterSpacing: "-0.01em",
-            }}
-          >
+          <h2 className="oo-partner-heading" style={{ margin: "0 0 14px" }}>
             Chính Sách Đại Lý Phân Phối OnlyOffice Chính Hãng
           </h2>
 
-          <p
-            style={{
-              fontSize: "15.5px",
-              color: "#475569",
-              lineHeight: 1.65,
-              maxWidth: "880px",
-              margin: "0 auto",
-            }}
-          >
+          <p className="oo-partner-subheading" style={{ maxWidth: "880px", margin: "0 auto" }}>
             <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY (MERCY TECH)</strong> xây dựng chương trình hợp tác đại lý phân phối nhằm mở rộng mạng lưới cung cấp giải pháp văn phòng số, máy chủ và license bản quyền OnlyOffice chính hãng tới khách hàng trên toàn quốc. Trang này công bố chi tiết quyền lợi, điều kiện tham gia, cơ chế chiết khấu và quy trình đăng ký trở thành đại lý chính thức.
           </p>
         </div>
 
         {/* Quick Jump Bar */}
         <div
+          className="oo-partner-jump-bar"
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -119,13 +94,14 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             backgroundColor: "#fffaf5",
             borderRadius: "14px",
             border: "1px solid #fed7aa",
-            marginBottom: "40px",
+            marginBottom: "36px",
           }}
         >
           {articlePills.map((pill) => (
             <a
               key={pill.id}
               href={`#dieu-${pill.id}`}
+              className="oo-partner-jump-pill"
               style={{
                 fontSize: "12.5px",
                 fontWeight: 700,
@@ -875,16 +851,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
         </div>
 
         {/* Official Sign-off & Contact Info Card (Unified Orange Brand Card) */}
-        <div
-          style={{
-            marginTop: "40px",
-            background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-            borderRadius: "20px",
-            padding: "36px 32px",
-            color: "#ffffff",
-            boxShadow: "0 12px 30px rgba(234, 88, 12, 0.22)",
-          }}
-        >
+        <div className="oo-partner-signoff-card">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "24px" }}>
             <div style={{ maxWidth: "680px" }}>
               <div
@@ -903,7 +870,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
               >
                 <span>🏢 ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC</span>
               </div>
-              <h3 style={{ fontSize: "24px", fontWeight: 800, margin: "0 0 12px", color: "#ffffff" }}>
+              <h3 style={{ fontSize: "22px", fontWeight: 800, margin: "0 0 12px", color: "#ffffff" }}>
                 CÔNG TY TNHH CÔNG NGHỆ MERCY
               </h3>
               <div style={{ fontSize: "14px", color: "#ffedd5", lineHeight: 1.7, display: "flex", flexDirection: "column", gap: "6px" }}>
@@ -914,21 +881,23 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
               </div>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <div className="oo-partner-hero-btns" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               <button
                 type="button"
+                className="oo-partner-hero-btn"
                 onClick={() => onOpenModal("Đăng Ký Đại Lý Chính Thức")}
                 style={{
                   backgroundColor: "#ffffff",
                   color: "#ea580c",
                   border: "none",
                   borderRadius: "10px",
-                  padding: "14px 28px",
-                  fontSize: "15px",
+                  padding: "14px 24px",
+                  fontSize: "14px",
                   fontWeight: 800,
                   cursor: "pointer",
                   display: "inline-flex",
                   alignItems: "center",
+                  justifyContent: "center",
                   gap: "8px",
                   boxShadow: "0 4px 14px rgba(0, 0, 0, 0.12)",
                 }}
@@ -943,13 +912,14 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                 rel="noopener noreferrer"
                 onClick={openMessengerChat}
                 title="Tư vấn nhanh qua Messenger"
+                className="oo-partner-hero-btn"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.18)",
                   color: "#ffffff",
                   border: "1px solid rgba(255, 255, 255, 0.4)",
                   borderRadius: "10px",
-                  padding: "14px 28px",
-                  fontSize: "15px",
+                  padding: "14px 24px",
+                  fontSize: "14px",
                   fontWeight: 800,
                   textDecoration: "none",
                   display: "inline-flex",

@@ -47,9 +47,24 @@ export function formatBlogPost(doc: any, isVi: boolean): BlogPost {
     return formattedSec;
   });
 
+  let selectedImage = doc.image || "";
+  if (isVi) {
+    if (doc.image_vi) {
+      selectedImage = doc.image_vi;
+    } else if (doc.id === "trial-guide" || selectedImage.includes("trial-guide")) {
+      selectedImage = "/blog/trial/vn.png";
+    }
+  } else {
+    if (doc.image_en) {
+      selectedImage = doc.image_en;
+    } else if (doc.id === "trial-guide" || selectedImage.includes("trial-guide")) {
+      selectedImage = "/blog/trial/en.png";
+    }
+  }
+
   return {
     id: doc.id,
-    image: doc.image || "",
+    image: selectedImage,
     title: isVi ? doc.title_vi : (doc.title_en || doc.title_vi),
     category: doc.category,
     categoryName: isVi ? doc.categoryName_vi : (doc.categoryName_en || doc.categoryName_vi),
@@ -134,6 +149,8 @@ export async function seedBlogDatabase(force = false) {
       id: vi.id,
       slug: vi.id,
       image: vi.image || "",
+      image_vi: vi.image || "",
+      image_en: en.image || vi.image || "",
       title_vi: vi.title,
       title_en: en.title,
       category: vi.category,

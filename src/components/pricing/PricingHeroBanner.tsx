@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { ShieldCheck, FileText, CheckCircle2, PhoneCall, MessageCircle } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
@@ -9,191 +10,70 @@ interface PricingHeroBannerProps {
 
 export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProps) {
   return (
-    <section
-      style={{
-        padding: "56px 24px 36px",
-        background: "linear-gradient(180deg, #fff7ed 0%, #fafafa 60%, #ffffff 100%)",
-        borderBottom: "1px solid #f0f0f0",
-        textAlign: "center",
-      }}
-    >
+    <section className="pricing-hero-section">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         {/* Official Distributor Badge */}
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            padding: "6px 18px",
-            borderRadius: "9999px",
-            backgroundColor: "#ffffff",
-            border: "1px solid #fed7aa",
-            marginBottom: "20px",
-            boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
-          }}
-        >
+        <div className="pricing-hero-badge">
           <span style={{ fontSize: "14px" }}>🇻🇳</span>
-          <span
-            style={{
-              fontSize: "12.5px",
-              fontWeight: 800,
-              color: "#ea580c",
-              letterSpacing: "0.4px",
-              textTransform: "uppercase",
-            }}
-          >
+          <span className="pricing-hero-badge-title">
             ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC TẠI VIỆT NAM
           </span>
-          <span style={{ color: "#cbd5e1", fontSize: "14px" }}>•</span>
-          <span
-            style={{
-              fontSize: "12.5px",
-              fontWeight: 700,
-              color: "#475569",
-            }}
-          >
+          <span className="pricing-hero-badge-dot">•</span>
+          <span className="pricing-hero-badge-company">
             CÔNG TY TNHH CÔNG NGHỆ MERCY
           </span>
         </div>
 
         {/* Main Heading */}
-        <h1
-          style={{
-            fontSize: "44px",
-            fontWeight: 800,
-            lineHeight: 1.25,
-            color: "#333333",
-            margin: "0 0 16px",
-            letterSpacing: "-0.02em",
-          }}
-        >
+        <h1 className="pricing-hero-title">
           Bảng Giá & Chính Sách Bản Quyền{" "}
           <span style={{ color: "#ff6f3d" }}>ONLYOFFICE</span>
         </h1>
 
         {/* Subtitle */}
-        <p
-          style={{
-            fontSize: "17px",
-            lineHeight: 1.6,
-            color: "#666666",
-            maxWidth: "800px",
-            margin: "0 auto 28px",
-          }}
-        >
+        <p className="pricing-hero-subtitle">
           Chính sách giá ưu đãi bảo mật theo quy mô thiết bị và đối tác. Cấp phép vĩnh viễn theo Mainboard máy tính, đầy đủ hóa đơn điện tử VAT, hợp đồng kinh tế và chứng nhận nguồn gốc mộc đỏ của Công ty TNHH Công Nghệ Mercy.
         </p>
 
-        {/* Dual CTA Buttons: Quote Form + Messenger Direct */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "14px",
-            flexWrap: "wrap",
-            marginBottom: "32px",
-          }}
-        >
-          {/* Button 1: Open Confidential Quote Form Modal */}
+        {/* Dual CTA Buttons */}
+        <div className="pricing-hero-ctas">
+          {/* Button 1: Open Quote Form Modal */}
           <button
             type="button"
             onClick={onOpenQuote}
+            className="pricing-hero-btn pricing-hero-btn-primary"
             title="Nhập form nhận báo giá ưu đãi chính hãng"
-            style={{
-              backgroundColor: "#ff6f3d",
-              color: "#ffffff",
-              border: "none",
-              borderRadius: "10px",
-              padding: "14px 28px",
-              fontSize: "15.5px",
-              fontWeight: 700,
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "9px",
-              boxShadow: "0 4px 14px rgba(255, 111, 61, 0.35)",
-              transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "#f25626";
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(255, 111, 61, 0.45)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#ff6f3d";
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 4px 14px rgba(255, 111, 61, 0.35)";
-            }}
           >
             <PhoneCall size={18} style={{ flexShrink: 0 }} />
             <span>Liên Hệ Nhận Báo Giá Ưu Đãi</span>
           </button>
 
-          {/* Button 2: Direct Contact */}
+          {/* Button 2: Direct Messenger Contact */}
           <a
             href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
             onClick={openMessengerChat}
-            title="Liên hệ"
-            style={{
-              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-              color: "#ffffff",
-              border: "none",
-              borderRadius: "10px",
-              padding: "14px 28px",
-              fontSize: "15.5px",
-              fontWeight: 700,
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "9px",
-              boxShadow: "0 4px 14px rgba(234, 88, 12, 0.35)",
-              transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
-              e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(234, 88, 12, 0.45)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.35)";
-            }}
+            className="pricing-hero-btn pricing-hero-btn-secondary"
+            title="Liên hệ tư vấn Messenger"
           >
             <MessageCircle size={19} color="#ffffff" style={{ flexShrink: 0 }} />
-            <span>Liên hệ</span>
+            <span>Liên hệ tư vấn</span>
           </a>
         </div>
 
         {/* 3 Core Trust Badges */}
-        <div
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "24px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            padding: "12px 24px",
-            backgroundColor: "#ffffff",
-            borderRadius: "12px",
-            border: "1px solid #e5e5e5",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: 700, color: "#333333" }}>
-            <CheckCircle2 size={16} color="#16a34a" />
+        <div className="pricing-hero-trust-container">
+          <div className="pricing-hero-trust-item">
+            <CheckCircle2 size={16} color="#16a34a" style={{ flexShrink: 0 }} />
             <span>Xuất Hóa Đơn VAT Điện Tử</span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: 700, color: "#333333" }}>
-            <FileText size={16} color="#ff6f3d" />
+          <div className="pricing-hero-trust-item">
+            <FileText size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
             <span>Hợp Đồng & Biên Bản Mộc Đỏ</span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", fontWeight: 700, color: "#333333" }}>
-            <ShieldCheck size={16} color="#ff6f3d" />
+          <div className="pricing-hero-trust-item">
+            <ShieldCheck size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
             <span>Bản Quyền Vĩnh Viễn Theo Main</span>
           </div>
         </div>

@@ -10,44 +10,32 @@ interface StandardPackageCardProps {
 export default function StandardPackageCard({ onOpenModal }: StandardPackageCardProps) {
   return (
     <div
+      className="oo-partner-pkg-card"
       style={{
         background: "#ffffff",
-        borderRadius: "24px",
         border: "2px solid #fed7aa",
         boxShadow: "0 12px 36px rgba(234, 88, 12, 0.08)",
-        padding: "36px",
         position: "relative",
       }}
     >
       {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "16px",
-          borderBottom: "1px solid #fed7aa",
-          paddingBottom: "20px",
-          marginBottom: "28px",
-        }}
-      >
+      <div className="oo-partner-pkg-header">
         <div>
           <div style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c", textTransform: "uppercase", letterSpacing: "0.06em" }}>
             CHƯƠNG TRÌNH ĐỐI TÁC & ĐẠI LÝ
           </div>
-          <h3 style={{ fontSize: "30px", fontWeight: 900, color: "#1e293b", margin: "6px 0 4px" }}>
+          <h3 style={{ fontSize: "clamp(22px, 5vw, 30px)", fontWeight: 900, color: "#1e293b", margin: "6px 0 4px" }}>
             GÓI ĐẠI LÝ TIÊU CHUẨN
           </h3>
-          <div style={{ fontSize: "18px", fontWeight: 700, color: "#ea580c" }}>
+          <div style={{ fontSize: "17px", fontWeight: 700, color: "#ea580c" }}>
             200 Key Online Bản Quyền Vĩnh Viễn
           </div>
-          <div style={{ fontSize: "14px", color: "#64748b", marginTop: "4px" }}>
+          <div style={{ fontSize: "13.5px", color: "#64748b", marginTop: "4px", lineHeight: 1.5 }}>
             Dành cho cửa hàng máy tính & thợ IT khởi động kinh doanh bản quyền bài bản tại khu vực
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+        <div className="oo-partner-pkg-badges">
           <span style={{ background: "#fff7ed", color: "#ea580c", border: "1px solid #fed7aa", padding: "6px 12px", borderRadius: "20px", fontSize: "12px", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
             <ShieldCheck size={14} color="#ff6f3d" /> SẢN PHẨM CHÍNH HÃNG
           </span>
@@ -61,8 +49,8 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+          gap: "20px",
           marginBottom: "28px",
         }}
       >
@@ -71,13 +59,13 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #fed7aa",
             boxShadow: "0 4px 12px rgba(234, 88, 12, 0.04)",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
-            <div style={{ fontSize: "17px", fontWeight: 800, color: "#ea580c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <div style={{ fontSize: "16px", fontWeight: 800, color: "#ea580c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
               <Key size={18} color="#ff6f3d" />
               <span>200 KEY ONLINE VĨNH VIỄN</span>
             </div>
@@ -85,17 +73,16 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
               PORTAL 24/7
             </span>
           </div>
-          <div style={{ fontSize: "13px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
+          <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
             ONLYOFFICE | KEY ONLINE VĨNH VIỄN THEO MAINBOARD
           </div>
 
           <div
+            className="oo-partner-mono-box"
             style={{
               background: "#fffaf5",
               border: "1px dashed #fed7aa",
               borderRadius: "8px",
-              padding: "12px",
-              fontSize: "12px",
               marginBottom: "16px",
               fontFamily: "monospace",
             }}
@@ -109,9 +96,9 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Kích hoạt nhanh chóng trong 30 giây trên máy khách</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Bản quyền trọn đời không phát sinh phí gia hạn hàng năm</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Tương thích hoàn toàn Word, Excel, PowerPoint 100%</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Kích hoạt nhanh chóng trong 30 giây trên máy khách</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Bản quyền trọn đời không phát sinh phí gia hạn hàng năm</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Tương thích hoàn toàn Word, Excel, PowerPoint 100%</span></div>
           </div>
 
           <div
@@ -138,13 +125,13 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #fed7aa",
             boxShadow: "0 4px 12px rgba(234, 88, 12, 0.04)",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
-            <div style={{ fontSize: "17px", fontWeight: 800, color: "#ea580c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <div style={{ fontSize: "16px", fontWeight: 800, color: "#ea580c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
               <ShieldCheck size={18} color="#ff6f3d" />
               <span>PORTAL QUẢN TRỊ 24/7</span>
             </div>
@@ -152,7 +139,7 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
               ADMIN RIÊNG
             </span>
           </div>
-          <div style={{ fontSize: "13px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
+          <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
             HỆ THỐNG XUẤT KEY CHỦ ĐỘNG & BẢO HÀNH TỰ ĐỘNG
           </div>
 
@@ -176,9 +163,9 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Tự động xuất key 24/7 không cần chờ duyệt</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Quản lý danh sách máy khách & UUID Mainboard</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" /> Cấp lại key miễn phí trọn đời khi máy cài lại Win</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Tự động xuất key 24/7 không cần chờ duyệt</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Quản lý danh sách máy khách & UUID Mainboard</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Cấp lại key miễn phí trọn đời khi máy cài lại Win</span></div>
           </div>
 
           <div
@@ -203,22 +190,15 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
 
       {/* Financial Strip - Primary Orange Gradient */}
       <div
+        className="oo-partner-financial-strip"
         style={{
           background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-          borderRadius: "16px",
-          padding: "24px 28px",
-          color: "#ffffff",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-          alignItems: "center",
-          marginBottom: "28px",
           boxShadow: "0 6px 20px rgba(234, 88, 12, 0.25)",
         }}
       >
         <div>
           <div style={{ fontSize: "11px", color: "#ffedd5", fontWeight: 700, textTransform: "uppercase" }}>TỔNG ĐẦU TƯ GÓI</div>
-          <div style={{ fontSize: "18px", fontWeight: 800, color: "#fef08a", marginTop: "4px" }}>
+          <div style={{ fontSize: "17px", fontWeight: 800, color: "#fef08a", marginTop: "4px" }}>
             Liên hệ để lấy chính sách
           </div>
         </div>
@@ -268,12 +248,12 @@ export default function StandardPackageCard({ onOpenModal }: StandardPackageCard
       </div>
 
       {/* 5 Đặc Quyền */}
-      <div style={{ background: "#ffffff", borderRadius: "16px", padding: "20px 24px", border: "1px solid #fed7aa" }}>
-        <div style={{ fontSize: "15px", fontWeight: 800, color: "#7c2d12", marginBottom: "14px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+      <div style={{ background: "#ffffff", borderRadius: "16px", padding: "18px 16px", border: "1px solid #fed7aa" }}>
+        <div style={{ fontSize: "14px", fontWeight: 800, color: "#7c2d12", marginBottom: "14px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
           <Gift size={18} color="#ff6f3d" />
           <span>ĐẦU TƯ 1 GÓI — NHẬN TRỌN BỘ 5 ĐẶC QUYỀN ĐẠI LÝ:</span>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 150px), 1fr))", gap: "10px" }}>
           {[
             { num: "01", title: "Chứng Nhận Đại Lý", desc: "Mộc đỏ • Đóng khung kính • Gửi bưu phẩm tận nơi" },
             { num: "02", title: "Bộ Cài White-Label", desc: "Tích hợp Logo • Tên shop • Bảo vệ tệp khách" },

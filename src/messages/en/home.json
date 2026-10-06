@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "titlePrefix": "Run your private office with",
+    "titleBrand": "ONLYOFFICE",
+    "subtitle": "— now driven by AI-powered virtual assistants and smart agents",
+    "btnContactToExperience": "Contact Now for Live Demo",
+    "btnGetItNow": "Contact Now for Live Demo",
+    "btnSeeInAction": "See it in action"
+  },
+  "docsSection": {
+    "titlePrefix": "ONLYOFFICE Docs",
+    "titleSuffix": ", the most complete office suite",
+    "learnMore": "Learn more about ONLYOFFICE Docs features",
+    "items": {
+      "action": "View, edit, and collaborate on docs, sheets, slides",
+      "forms": "Build fillable PDF forms and fill them in online",
+      "pdf": "Read and edit PDFs, export/import to/from PDF",
+      "convert": "Convert docs to Markdown and HTML",
+      "ebook": "Turn your textbooks into e-books",
+      "diagram": "View and navigate diagrams with ease"
+    }
+  },
+  "collabSection": {
+    "titlePrefix": "Designed to make",
+    "titleHighlight": "collaboration",
+    "titleSuffix": "seamless",
+    "learnMore": "Learn more about ONLYOFFICE collaboration features",
+    "items": {
+      "share": "Share your docs for viewing, editing, reviewing, commenting, or filling forms",
+      "coediting": "Make use of character- and paragraph-level co-editing modes",
+      "review": "Compare and review docs and track changes",
+      "comments": "Leave comments and mentions",
+      "chat": "Communicate via built-in chat or Telegram",
+      "calls": "Make audio and video calls with Jitsi or Rainbow"
+    }
+  },
+  "aiSection": {
+    "titlePrefix": "Enhanced with",
+    "titleHighlight": "AI assistants and smart agents",
+    "learnMore": "Learn more about AI in ONLYOFFICE",
+    "items": {
+      "generate": "Generate docs, sheets, slides, PDF forms in seconds",
+      "code": "Create text, images, and even build code effortlessly",
+      "answers": "Get instant answers and quickly find the information you need",
+      "translate": "Translate, rewrite, and check spelling or grammar with ease",
+      "ocr": "Extract text from scanned PDFs — and much more",
+      "models": "Connect any AI model, even a fully local one",
+      "tasks": "Assign different AI models to different tasks for maximum efficiency"
+    }
+  },
+  "securitySection": {
+    "titleHighlight": "Security",
+    "titleSuffix": "first",
+    "learnMore": "Learn more about ONLYOFFICE security features",
+    "features": [
+      "Open source code available on GitHub",
+      "Compliance with international security standards",
+      "Three levels of encryption: at rest, in transit, end-to-end",
+      "Secure access and monitoring tools",
+      "Extra document permissions",
+      "Support for secure, local AI models"
+    ]
+  },
+  "solutionsSection": {
+    "title": "Get started and choose where to work",
+    "items": {
+      "docspace": {
+        "title": "In ONLYOFFICE DocSpace",
+        "desc": "Create rooms within your secure DocSpace, invite people, view, edit, and collaborate on all kinds of documents from any desktop or mobile device.",
+        "btn": "Start with your free account"
+      },
+      "platform": {
+        "title": "In the platform you use",
+        "desc": "Connect Docs to edit documents directly from your app. 40+ ready integrations: Box, Moodle, Nextcloud, Odoo, Wordpress, etc.",
+        "btn": "Get Docs now"
+      },
+      "developers": {
+        "title": "In the platform you build",
+        "desc": "Integrate Docs into your service to provide powerful document-editing and building capabilities to your customers under your brand.",
+        "btn": "Learn more"
+      },
+      "pc": {
+        "title": "From your PC",
+        "desc": "Edit docs offline with free office apps for Windows, Linux, and macOS",
+        "btn": "Download now"
+      },
+      "mobile": {
+        "title": "From your mobile devices",
+        "desc": "Work on documents on the go with free apps for iOS and Android devices",
+        "btn": "Install now"
+      }
+    }
+  },
+  "customersSection": {
+    "heading": "Over 15,000,000 users worldwide",
+    "subheading": "ONLYOFFICE has proven to be a reliable partner for business, education, research, and non-profit organizations."
+  },
+  "ratingsSection": {
+    "heading": "Recognized by industry leaders and users alike",
+    "subheading": "See what customers say about ONLYOFFICE across global review platforms."
+  },
+  "newsSection": {
+    "heading": "Latest news and insights",
+    "viewAll": "View all articles"
+  },
+  "faqSection": {
+    "title": "Frequently Asked Questions",
+    "faqs": [
+      {
+        "q": "Is ONLYOFFICE really free?",
+        "a": "Yes, it is. The source code of ONLYOFFICE solutions is available on GitHub under the GNU AGPL v3 license. We offer a completely free community version of ONLYOFFICE Docs for up to 20 concurrent connections, free desktop applications for Windows, Linux, and macOS, and free mobile apps for iOS and Android. Additionally, ONLYOFFICE DocSpace provides a free Startup cloud plan for teams."
+      },
+      {
+        "q": "What is ONLYOFFICE used for?",
+        "a": "ONLYOFFICE provides a full range of tools to create, edit and collaborate on text documents, spreadsheets, presentations, PDF forms and regular PDF files on web, desktop and mobile platforms. You can use the online editors within the ONLYOFFICE collaborative rooms — DocSpace, or integrate Docs into your existing cloud platform (Nextcloud, ownCloud, Jira, WordPress, etc.)."
+      },
+      {
+        "q": "Is ONLYOFFICE safe to use?",
+        "a": "Yes, security is our top priority. ONLYOFFICE complies with international standards, including GDPR and HIPAA. It offers multiple levels of security: at rest and in transit encryption (HTTPS, JWT), Private Rooms with end-to-end encryption, flexible access rights (read-only, review, commenting, filtering, form filling), activity tracking, and self-hosted on-premises deployment ensuring full data sovereignty."
+      },
+      {
+        "q": "Can I use ONLYOFFICE offline?",
+        "a": "Yes, ONLYOFFICE Desktop Editors allows you to create, view, and edit documents completely offline on your PC or laptop without an internet connection. It is 100% free and supports Windows, Linux, and macOS."
+      },
+      {
+        "q": "Does ONLYOFFICE have ads?",
+        "a": "No, ONLYOFFICE does not contain any advertisements, third-party tracking, or monetization through user data in any of its desktop, mobile, or cloud solutions."
+      },
+      {
+        "q": "Who owns ONLYOFFICE?",
+        "a": "ONLYOFFICE is owned and developed by Ascensio System SIA, an international IT company founded in 2009 with headquarters in Riga, Latvia, and offices worldwide."
+      },
+      {
+        "q": "Who is the CEO of ONLYOFFICE?",
+        "a": "Lev Bannov is the founder and CEO of ONLYOFFICE."
+      }
+    ]
+  }
+}

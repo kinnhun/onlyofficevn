@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import { FileText, FileSpreadsheet, Presentation, FileEdit, Sparkles, Server, Check, ArrowRight } from "lucide-react";
 
 declare global {
@@ -126,6 +127,8 @@ const ONLYOFFICE_CONFIGS: Record<string, { token: string; config: any }> = {
 };
 
 export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
+  const t = useTranslations("demo.onlineSuite");
+
   const [activeTab, setActiveTab] = useState<"docx" | "xlsx" | "pptx" | "pdf">("docx");
   const [isDocsApiLoaded, setIsDocsApiLoaded] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -135,47 +138,47 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
   const tabs = [
     {
       id: "docx",
-      label: "Soạn Thảo Văn Bản",
+      label: t("tabs.docx.label"),
       ext: ".DOCX",
-      sub: "Tương thích 100% Word",
+      sub: t("tabs.docx.sub"),
       icon: FileText,
       brandColor: "#2563eb",
       activeBg: "#eff6ff",
       activeBorder: "#93c5fd",
-      filename: "Hop-Dong-Kinh-Te-OnlyOffice-Mercy.docx",
+      filename: t("tabs.docx.filename"),
     },
     {
       id: "xlsx",
-      label: "Bảng Tính & Số Liệu",
+      label: t("tabs.xlsx.label"),
       ext: ".XLSX",
-      sub: "Đầy đủ hàm & công thức",
+      sub: t("tabs.xlsx.sub"),
       icon: FileSpreadsheet,
       brandColor: "#16a34a",
       activeBg: "#f0fdf4",
       activeBorder: "#86efac",
-      filename: "Bang-Bao-Gia-Chi-Tiet-Doanh-Nghiep.xlsx",
+      filename: t("tabs.xlsx.filename"),
     },
     {
       id: "pptx",
-      label: "Trình Chiếu Slide",
+      label: t("tabs.pptx.label"),
       ext: ".PPTX",
-      sub: "Hiệu ứng chuyển động mượt mà",
+      sub: t("tabs.pptx.sub"),
       icon: Presentation,
       brandColor: "#ea580c",
       activeBg: "#fff7ed",
       activeBorder: "#fed7aa",
-      filename: "Gioi-Thieu-Giai-Phap-OnlyOffice-Vietnam.pptx",
+      filename: t("tabs.pptx.filename"),
     },
     {
       id: "pdf",
-      label: "Chỉnh Sửa Biểu Mẫu",
+      label: t("tabs.pdf.label"),
       ext: ".PDF",
-      sub: "Điền form & ký số điện tử",
+      sub: t("tabs.pdf.sub"),
       icon: FileEdit,
       brandColor: "#dc2626",
       activeBg: "#fef2f2",
       activeBorder: "#fca5a5",
-      filename: "Bieu-Mau-Phap-Ly-AGPLv3.pdf",
+      filename: t("tabs.pdf.filename"),
     },
   ] as const;
 
@@ -284,263 +287,193 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
             }}
           >
             <Sparkles size={14} color="#ea580c" />
-            <span>TRÌNH SOẠN THẢO TRỰC TUYẾN ONLYOFFICE CHÍNH HÃNG</span>
+            <span>{t("badge")}</span>
           </div>
 
           <h2 style={{ fontSize: "clamp(24px, 3.5vw, 32px)", fontWeight: 800, color: "#0f172a", margin: "0 0 10px", letterSpacing: "-0.02em" }}>
-            Trải Nghiệm Đầy Đủ 4 Ứng Dụng Văn Phòng Số
+            {t("title")}
           </h2>
           <p style={{ fontSize: "15px", color: "#64748b", margin: 0, lineHeight: 1.6 }}>
-            Bấm chọn từng định dạng bên dưới. Bạn có thể gõ nội dung, chèn bảng biểu, định dạng phông chữ và tính toán số liệu trực tiếp ngay trên khung giao diện thời gian thực.
+            {t("subtitle")}
           </p>
         </div>
 
-        {/* 4 Professional Tab Selection Cards (Equal 4 Columns, No 3+1 Wrap) */}
+        {/* 4 Application Tab Switcher */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "12px",
-            marginBottom: "20px",
+            marginBottom: "16px",
           }}
         >
           {tabs.map((tab) => {
-            const Icon = tab.icon;
             const isActive = activeTab === tab.id;
+            const Icon = tab.icon;
+
             return (
               <button
                 key={tab.id}
                 type="button"
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => setActiveTab(tab.id as any)}
                 style={{
-                  padding: "14px 18px",
-                  borderRadius: "14px",
-                  border: isActive ? `2px solid ${tab.brandColor}` : "1.5px solid #e2e8f0",
-                  backgroundColor: isActive ? tab.activeBg : "#ffffff",
-                  cursor: "pointer",
                   display: "flex",
                   alignItems: "center",
-                  gap: "14px",
-                  boxShadow: isActive ? `0 8px 20px ${tab.brandColor}25` : "0 2px 6px rgba(15, 23, 42, 0.04)",
-                  transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+                  gap: "12px",
+                  padding: "12px 16px",
+                  borderRadius: "14px",
+                  backgroundColor: isActive ? tab.activeBg : "#ffffff",
+                  border: `2px solid ${isActive ? tab.brandColor : "#e2e8f0"}`,
+                  cursor: "pointer",
                   textAlign: "left",
-                  position: "relative",
-                  overflow: "hidden",
-                }}
-                onMouseEnter={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.borderColor = "#cbd5e1";
-                    e.currentTarget.style.backgroundColor = "#f8fafc";
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                  }
-                }}
-                onMouseLeave={(e) => {
-                  if (!isActive) {
-                    e.currentTarget.style.borderColor = "#e2e8f0";
-                    e.currentTarget.style.backgroundColor = "#ffffff";
-                    e.currentTarget.style.transform = "translateY(0)";
-                  }
+                  transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+                  boxShadow: isActive ? `0 6px 16px ${tab.brandColor}22` : "0 2px 6px rgba(0,0,0,0.02)",
                 }}
               >
-                {/* Icon Container */}
                 <div
                   style={{
-                    width: "42px",
-                    height: "42px",
+                    width: "38px",
+                    height: "38px",
                     borderRadius: "10px",
-                    backgroundColor: isActive ? "#ffffff" : "#f1f5f9",
+                    backgroundColor: isActive ? tab.brandColor : "#f1f5f9",
+                    color: isActive ? "#ffffff" : "#64748b",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     flexShrink: 0,
-                    boxShadow: isActive ? `0 2px 8px ${tab.brandColor}30` : "none",
+                    transition: "all 0.2s ease",
                   }}
                 >
-                  <Icon size={22} color={tab.brandColor} />
+                  <Icon size={20} />
                 </div>
-
-                {/* Text Content */}
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "2px" }}>
-                    <span style={{ fontSize: "14px", fontWeight: 700, color: isActive ? "#0f172a" : "#334155" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                    <span style={{ fontSize: "14px", fontWeight: 800, color: isActive ? "#0f172a" : "#334155" }}>
                       {tab.label}
                     </span>
-                  </div>
-                  <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                     <span
                       style={{
                         fontSize: "11px",
-                        fontWeight: 800,
-                        padding: "2px 6px",
+                        fontWeight: 700,
+                        color: tab.brandColor,
+                        backgroundColor: `${tab.brandColor}18`,
+                        padding: "1px 6px",
                         borderRadius: "4px",
-                        backgroundColor: isActive ? tab.brandColor : "#e2e8f0",
-                        color: isActive ? "#ffffff" : "#64748b",
                       }}
                     >
                       {tab.ext}
                     </span>
-                    <span style={{ fontSize: "11.5px", color: "#64748b", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                      {tab.sub}
-                    </span>
+                  </div>
+                  <div style={{ fontSize: "12px", color: "#64748b", marginTop: "1px", textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}>
+                    {tab.sub}
                   </div>
                 </div>
-
-                {/* Active Indicator Bar */}
-                {isActive && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      height: "3px",
-                      backgroundColor: tab.brandColor,
-                    }}
-                  />
-                )}
               </button>
             );
           })}
         </div>
 
-        {/* Live ONLYOFFICE Window Frame Mockup */}
+        {/* Live Workspace Container Frame */}
         <div
           style={{
-            position: "relative",
-            width: "100%",
-            borderRadius: "16px",
-            overflow: "hidden",
+            borderRadius: "18px",
             border: "1.5px solid #cbd5e1",
-            boxShadow: "0 20px 45px -10px rgba(15, 23, 42, 0.12), 0 8px 16px -6px rgba(15, 23, 42, 0.08)",
-            backgroundColor: "#ffffff",
+            backgroundColor: "#f8fafc",
+            overflow: "hidden",
+            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.08)",
             display: "flex",
             flexDirection: "column",
+            height: "720px",
           }}
         >
-          {/* Mac/Windows Chrome Header Bar */}
+          {/* Editor Header Bar */}
           <div
             style={{
-              height: "44px",
-              backgroundColor: "#f8fafc",
-              borderBottom: "1px solid #e2e8f0",
+              padding: "10px 18px",
+              backgroundColor: "#ffffff",
+              borderBottom: "1.5px solid #e2e8f0",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              padding: "0 16px",
-              userSelect: "none",
+              gap: "12px",
             }}
           >
-            {/* Window control dots */}
-            <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
-              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#ef4444", display: "inline-block" }} />
-              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#f59e0b", display: "inline-block" }} />
-              <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#10b981", display: "inline-block" }} />
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <div
+                style={{
+                  width: "28px",
+                  height: "28px",
+                  borderRadius: "7px",
+                  backgroundColor: currentTab.brandColor,
+                  color: "#ffffff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <currentTab.icon size={15} />
+              </div>
+              <div>
+                <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#0f172a" }}>
+                  {currentTab.filename}
+                </span>
+                <span style={{ fontSize: "11px", color: "#16a34a", fontWeight: 600, marginLeft: "8px" }}>
+                  ● Live Cloud Workspace
+                </span>
+              </div>
             </div>
 
-            {/* Document Title Tab in Header */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "4px 14px",
-                borderRadius: "8px",
-                backgroundColor: "#ffffff",
-                border: "1px solid #e2e8f0",
-                fontSize: "12.5px",
-                fontWeight: 600,
-                color: "#1e293b",
-                maxWidth: "60%",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-              }}
-            >
-              <currentTab.icon size={15} color={currentTab.brandColor} />
-              <span>{currentTab.filename}</span>
-            </div>
-
-            {/* Live Server Indicator */}
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <span
                 style={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: "#16a34a",
-                  display: "inline-block",
-                  boxShadow: "0 0 0 2px rgba(22, 163, 74, 0.2)",
-                  animation: "pulse 2s infinite",
+                  fontSize: "11.5px",
+                  fontWeight: 700,
+                  color: "#475569",
+                  backgroundColor: "#f1f5f9",
+                  padding: "4px 10px",
+                  borderRadius: "6px",
+                  border: "1px solid #e2e8f0",
                 }}
-              />
-              <span style={{ fontSize: "12px", fontWeight: 700, color: "#16a34a" }}>
-                ONLYOFFICE Cloud • Online
+              >
+                Docs API v8.2
               </span>
             </div>
           </div>
 
-          {/* Real ONLYOFFICE Cloud Editor Canvas */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-              height: "750px",
-              backgroundColor: "#ffffff",
-            }}
-          >
-            {isMounted ? (
-              isDocsApiLoaded ? (
-                <div style={{ width: "100%", height: "100%", position: "relative" }}>
-                  {["docx", "xlsx", "pptx", "pdf"].map((tabKey) => {
-                    const isLoaded = loadedEditors[tabKey];
-                    const isTabActive = activeTab === tabKey;
-                    return (
-                      <div
-                        key={tabKey}
-                        id={`editor-container-${tabKey}`}
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                          visibility: isTabActive ? "visible" : "hidden",
-                          opacity: isTabActive ? 1 : 0,
-                          zIndex: isTabActive ? 10 : 0,
-                          pointerEvents: isTabActive ? "auto" : "none",
-                          transition: "opacity 0.2s ease-in-out",
-                        }}
-                      >
-                        {!isLoaded && (
-                          <div
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                              fontSize: "13px",
-                              color: "#64748b",
-                            }}
-                          >
-                            Đang kết nối tài liệu...
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
+          {/* Editor Viewports */}
+          <div style={{ flex: 1, position: "relative", backgroundColor: "#ffffff" }}>
+            {tabs.map((tab) => (
+              <div
+                key={tab.id}
+                id={`editor-container-${tab.id}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  display: activeTab === tab.id ? "block" : "none",
+                }}
+              />
+            ))}
+
+            {/* Loading state indicator */}
+            {!isMounted || !isDocsApiLoaded ? (
+              (
                 <div
                   style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
                     width: "100%",
                     height: "100%",
-                    backgroundColor: "#f8fafc",
+                    backgroundColor: "#ffffff",
                     display: "flex",
+                    flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    flexDirection: "column",
-                    gap: "14px",
+                    gap: "12px",
+                    zIndex: 2,
                     fontSize: "14px",
                     color: "#64748b",
                     fontWeight: 600,
@@ -548,15 +481,17 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
                 >
                   <div
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      border: "3.5px solid #fed7aa",
+                      width: "36px",
+                      height: "36px",
+                      border: "3px solid #fed7aa",
                       borderTopColor: "#ea580c",
                       borderRadius: "50%",
                       animation: "spin 1s linear infinite",
                     }}
                   />
-                  <span>Đang kết nối trực tiếp đến máy chủ đám mây ONLYOFFICE...</span>
+                  <span>
+                    {t("loading")}
+                  </span>
                 </div>
               )
             ) : (
@@ -573,7 +508,7 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
                   fontWeight: 600,
                 }}
               >
-                Đang chuẩn bị giao diện demo...
+                {t("preparing")}
               </div>
             )}
           </div>
@@ -597,8 +532,10 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <Server size={22} color="#ea580c" style={{ flexShrink: 0 }} />
             <div style={{ fontSize: "13.5px", color: "#475569", lineHeight: 1.5 }}>
-              <strong style={{ color: "#0f172a" }}>Cần triển khai máy chủ On-Premise / Private Cloud riêng?</strong>{" "}
-              Mercy Tech cung cấp giải pháp máy chủ tài liệu nội bộ, bảo mật dữ liệu 100% trong mạng LAN công ty, tích hợp sẵn Nextcloud/Docker.
+              <strong style={{ color: "#0f172a" }}>
+                {t("serverPrompt")}
+              </strong>{" "}
+              {t("serverDesc")}
             </div>
           </div>
 
@@ -628,7 +565,7 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
               e.currentTarget.style.backgroundColor = "#ea580c";
             }}
           >
-            <span>Tư Vấn Máy Chủ Riêng</span>
+            <span>{t("serverBtn")}</span>
             <ArrowRight size={15} />
           </button>
         </div>

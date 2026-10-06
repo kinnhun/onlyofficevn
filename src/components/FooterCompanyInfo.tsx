@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Building2, MapPin, Phone, Mail, ShieldCheck, ArrowRight, MessageCircle } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
+import { FlagVi } from "@/components/HeaderFlags";
 
 export default function FooterCompanyInfo() {
   const tBranding = useTranslations("branding");
@@ -34,50 +35,17 @@ export default function FooterCompanyInfo() {
   );
 
   return (
-    <div
-      style={{
-        marginTop: "48px",
-        marginBottom: "32px",
-        padding: "24px 28px",
-        borderRadius: "14px",
-        backgroundColor: "#fffaf5",
-        border: "1px solid #fed7aa",
-        boxShadow: "0 4px 20px -2px rgba(234, 88, 12, 0.06)",
-        boxSizing: "border-box",
-      }}
-    >
+    <div className="oo-footer-company-card">
       {/* Top Tagline / Authority Bar */}
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "12px",
-          paddingBottom: "16px",
-          marginBottom: "20px",
-          borderBottom: "1px solid #ffedd5",
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
-          <span style={{ fontSize: "20px" }}>🇻🇳</span>
-          <span
-            style={{
-              fontSize: "12px",
-              fontWeight: 800,
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-              color: "#c2410c",
-              backgroundColor: "#ffedd5",
-              padding: "4px 10px",
-              borderRadius: "6px",
-            }}
-          >
+      <div className="oo-footer-company-top">
+        <div className="oo-footer-company-badge">
+          <FlagVi width={20} height={14} />
+          <span className="oo-footer-company-badge-text">
             {distributor} • {optimizedBy}
           </span>
         </div>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "12px", color: "#78350f" }}>
+        <div className="oo-footer-company-verify">
           <span style={{ display: "inline-flex", alignItems: "center", gap: "4px", fontWeight: 700 }}>
             <ShieldCheck size={15} style={{ color: "#ea580c" }} />
             {mst}
@@ -88,16 +56,9 @@ export default function FooterCompanyInfo() {
       </div>
 
       {/* Main Content Grid: Company Mission (Left) & Contact Details (Right) */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "24px",
-          alignItems: "start",
-        }}
-      >
+      <div className="oo-footer-company-grid">
         {/* Left Column: Company & Mission */}
-        <div>
+        <div className="oo-footer-company-left">
           <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
             <Building2 size={20} style={{ color: "#ea580c", flexShrink: 0 }} />
             <h3
@@ -138,17 +99,7 @@ export default function FooterCompanyInfo() {
         </div>
 
         {/* Right Column: Detailed Contact Card */}
-        <div
-          style={{
-            backgroundColor: "#ffffff",
-            borderRadius: "10px",
-            border: "1px solid #fed7aa",
-            padding: "16px 20px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "12px",
-          }}
-        >
+        <div className="oo-footer-company-right">
           {/* Address */}
           <div style={{ display: "flex", alignItems: "flex-start", gap: "10px" }}>
             <MapPin size={16} style={{ color: "#ea580c", marginTop: "2px", flexShrink: 0 }} />
@@ -196,36 +147,13 @@ export default function FooterCompanyInfo() {
           </div>
 
           {/* Action CTAs */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              marginTop: "4px",
-              paddingTop: "12px",
-              borderTop: "1px dashed #fed7aa",
-              flexWrap: "wrap",
-            }}
-          >
+          <div className="oo-footer-company-actions">
             <Link
               href="/partners"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
-                fontSize: "12px",
-                fontWeight: 700,
-                color: "#ea580c",
-                padding: "8px 14px",
-                borderRadius: "6px",
-                backgroundColor: "#fff7ed",
-                border: "1px solid #fdba74",
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-              }}
+              className="oo-footer-btn-partner"
             >
               <span>Hợp tác phân phối</span>
-              <ArrowRight size={13} />
+              <ArrowRight size={13} style={{ flexShrink: 0 }} />
             </Link>
 
             <a
@@ -233,21 +161,9 @@ export default function FooterCompanyInfo() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={openMessengerChat}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
-                fontSize: "12px",
-                fontWeight: 700,
-                color: "#ffffff",
-                padding: "8px 14px",
-                borderRadius: "6px",
-                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-                textDecoration: "none",
-                boxShadow: "0 2px 10px rgba(234, 88, 12, 0.35)",
-              }}
+              className="oo-footer-btn-contact"
             >
-              <MessageCircle size={14} />
+              <MessageCircle size={14} style={{ flexShrink: 0 }} />
               <span>Liên hệ</span>
             </a>
           </div>

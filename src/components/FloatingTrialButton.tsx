@@ -10,6 +10,26 @@ export default function FloatingTrialButton() {
   const isVi = locale === "vi";
   const [modalOpen, setModalOpen] = useState(false);
   const [downloadCount, setDownloadCount] = useState(0);
+  const [footerInView, setFooterInView] = useState(false);
+
+  useEffect(() => {
+    // Only on mobile / small screens, hide floating CTA when bottom bar is visible
+    const bottomBar = document.querySelector(".oo-footer-bottom-bar");
+    if (!bottomBar) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setFooterInView(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.05,
+      }
+    );
+
+    observer.observe(bottomBar);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (modalOpen) {
@@ -42,7 +62,7 @@ export default function FloatingTrialButton() {
     <>
       {/* Floating CTA Button at Bottom-Right */}
       <div
-        className="oo-floating-trial-container"
+        className={`oo-floating-trial-container ${footerInView ? "footer-visible" : ""}`}
         style={{
           position: "fixed",
           bottom: "28px",
@@ -52,6 +72,7 @@ export default function FloatingTrialButton() {
           flexDirection: "column",
           alignItems: "flex-end",
           gap: "8px",
+          transition: "opacity 0.3s ease, transform 0.3s ease",
         }}
       >
         {/* Floating Contact Button */}

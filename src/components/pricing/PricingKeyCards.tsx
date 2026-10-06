@@ -9,26 +9,12 @@ interface PricingKeyCardsProps {
 
 export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
   return (
-    <section style={{ padding: "36px 20px" }}>
+    <section className="pricing-key-section">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         {/* Top Showcase: Brand + Laptop Mockup */}
-        <div
-          style={{
-            backgroundColor: "#ffffff",
-            borderRadius: "16px",
-            border: "1px solid #e5e5e5",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.04)",
-            padding: "36px 32px",
-            marginBottom: "36px",
-            display: "grid",
-            gridTemplateColumns: "1.1fr 0.9fr",
-            gap: "36px",
-            alignItems: "center",
-          }}
-          className="retail-top-banner"
-        >
+        <div className="retail-top-banner">
           {/* Left: Branding & Value */}
-          <div>
+          <div className="retail-top-info">
             <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "12px" }}>
               <span
                 style={{
@@ -49,62 +35,37 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               </span>
             </div>
 
-            <h2
-              style={{
-                fontSize: "30px",
-                fontWeight: 800,
-                color: "#333333",
-                lineHeight: 1.25,
-                margin: "0 0 12px",
-              }}
-            >
+            <h2 className="retail-top-title">
               ONLYOFFICE Key Online{" "}
               <span style={{ color: "#ff6f3d" }}>Tối Ưu Bởi Mercy Tech</span>
             </h2>
 
-            <p style={{ fontSize: "15px", color: "#666666", lineHeight: 1.6, margin: "0 0 20px" }}>
+            <p className="retail-top-desc">
               Giải pháp bản quyền trọn đời không lo gia hạn hàng năm. Kích hoạt trực tiếp qua mã bản quyền hoặc script tự động trong 30 giây. Reset win hay cài lại máy vẫn giữ nguyên bản quyền chính hãng.
             </p>
 
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", fontSize: "13px", color: "#444444" }}>
+            <div className="retail-top-features">
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Check size={16} color="#16a34a" />
+                <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
                 <span>Cấp phép theo UUID Main</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Check size={16} color="#16a34a" />
+                <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
                 <span>Xuất Hóa đơn điện tử VAT</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-                <Check size={16} color="#16a34a" />
+                <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
                 <span>Chứng nhận AGPLv3 mộc đỏ</span>
               </div>
             </div>
           </div>
 
           {/* Right: Laptop Portal Preview */}
-          <div>
-            <div
-              style={{
-                backgroundColor: "#e2e8f0",
-                border: "1.5px solid #cbd5e1",
-                borderRadius: "12px 12px 4px 4px",
-                padding: "10px 10px 4px",
-                boxShadow: "0 16px 36px rgba(15, 23, 42, 0.08)",
-                maxWidth: "460px",
-                margin: "0 auto",
-              }}
-            >
-              <div
-                style={{
-                  backgroundColor: "#ffffff",
-                  borderRadius: "6px",
-                  padding: "12px",
-                  fontSize: "11px",
-                }}
-              >
+          <div className="retail-top-laptop-wrap">
+            <div className="retail-laptop-frame">
+              <div className="retail-laptop-screen">
                 {/* Top Bar */}
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #f0f0f0", paddingBottom: "6px", marginBottom: "8px" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #f0f0f0", paddingBottom: "6px", marginBottom: "8px", flexWrap: "wrap", gap: "4px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 700, color: "#333333" }}>
                     <Laptop size={13} color="#ff6f3d" />
                     <span>ONLYOFFICE Key Management</span>
@@ -115,7 +76,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 </div>
 
                 {/* 4 Stats */}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", textAlign: "center", marginBottom: "8px" }}>
+                <div className="retail-laptop-stats">
                   <div style={{ backgroundColor: "#f9f9f9", padding: "4px 2px", borderRadius: "4px" }}>
                     <div style={{ fontSize: "13px", fontWeight: 800, color: "#333333" }}>320</div>
                     <div style={{ fontSize: "9px", color: "#888888" }}>Tổng key</div>
@@ -162,16 +123,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               </div>
 
               {/* Laptop Base Lip */}
-              <div
-                style={{
-                  height: "6px",
-                  backgroundColor: "#cbd5e1",
-                  borderRadius: "0 0 8px 8px",
-                  marginTop: "3px",
-                  width: "104%",
-                  marginLeft: "-2%",
-                }}
-              />
+              <div className="retail-laptop-base" />
             </div>
           </div>
         </div>
@@ -179,36 +131,17 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
         {/* 3 Package Cards (Confidential Quote) */}
         <div>
           <div style={{ textAlign: "center", marginBottom: "28px" }}>
-            <h3 style={{ fontSize: "26px", fontWeight: 800, color: "#333333", margin: "0 0 8px" }}>
+            <h3 className="retail-packages-title">
               Các Gói Bản Quyền Key Online Theo Số Lượng
             </h3>
-            <p style={{ fontSize: "14px", color: "#666666", margin: 0 }}>
+            <p className="retail-packages-subtitle">
               Chính sách chiết khấu theo số lượng thiết bị • Vui lòng liên hệ để nhận bảng giá ưu đãi mới nhất
             </p>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "24px",
-              alignItems: "stretch",
-            }}
-            className="retail-cards-grid"
-          >
+          <div className="retail-cards-grid">
             {/* Card 1: 1 - 4 Key */}
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "14px",
-                border: "1px solid #e5e5e5",
-                boxShadow: "0 2px 12px rgba(0, 0, 0, 0.04)",
-                padding: "28px 24px",
-                display: "flex",
-                flexDirection: "column",
-                transition: "transform 0.2s ease, box-shadow 0.2s ease",
-              }}
-            >
+            <div className="retail-card">
               <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#888888", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                 CÁ NHÂN & MÁY LẺ
               </div>
@@ -250,22 +183,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <button
                 type="button"
                 onClick={() => onOpenQuote("Gói Mua Lẻ 1 - 4 Key")}
-                style={{
-                  width: "100%",
-                  backgroundColor: "#ffffff",
-                  color: "#333333",
-                  border: "1.5px solid #cccccc",
-                  borderRadius: "8px",
-                  padding: "12px",
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "6px",
-                  transition: "all 0.2s ease",
-                }}
+                className="retail-card-btn retail-card-btn-outline"
               >
                 <PhoneCall size={15} color="#ea580c" />
                 <span>Nhận Báo Giá Gói 1 – 4 Key</span>
@@ -273,36 +191,8 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
             </div>
 
             {/* Card 2: 5 - 49 Key (POPULAR / HIGHLIGHT CARD) */}
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "14px",
-                border: "2px solid #ff6f3d",
-                boxShadow: "0 10px 30px rgba(255, 111, 61, 0.12)",
-                padding: "28px 24px",
-                display: "flex",
-                flexDirection: "column",
-                position: "relative",
-              }}
-            >
-              <span
-                style={{
-                  position: "absolute",
-                  top: "-13px",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  backgroundColor: "#ff6f3d",
-                  color: "#ffffff",
-                  fontSize: "11px",
-                  fontWeight: 800,
-                  padding: "3px 14px",
-                  borderRadius: "20px",
-                  letterSpacing: "0.5px",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "4px",
-                }}
-              >
+            <div className="retail-card retail-card-popular">
+              <span className="retail-card-badge">
                 <Sparkles size={12} /> DOANH NGHIỆP PHỔ BIẾN
               </span>
 
@@ -347,22 +237,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <button
                 type="button"
                 onClick={() => onOpenQuote("Gói Doanh Nghiệp 5 - 49 Key")}
-                style={{
-                  width: "100%",
-                  backgroundColor: "#ff6f3d",
-                  color: "#ffffff",
-                  border: "none",
-                  borderRadius: "8px",
-                  padding: "13px",
-                  fontSize: "14.5px",
-                  fontWeight: 800,
-                  cursor: "pointer",
-                  boxShadow: "0 4px 14px rgba(255, 111, 61, 0.25)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                }}
+                className="retail-card-btn retail-card-btn-primary"
               >
                 <PhoneCall size={16} />
                 <span>Nhận Báo Giá Gói 5 – 49 Key</span>
@@ -370,17 +245,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
             </div>
 
             {/* Card 3: 50+ Key */}
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "14px",
-                border: "1px solid #e5e5e5",
-                boxShadow: "0 2px 12px rgba(0, 0, 0, 0.04)",
-                padding: "28px 24px",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
+            <div className="retail-card">
               <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#888888", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                 TỔ CHỨC & TẬP ĐOÀN
               </div>
@@ -422,21 +287,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <button
                 type="button"
                 onClick={() => onOpenQuote("Gói Dự Án Từ 50 Key Trở Lên")}
-                style={{
-                  width: "100%",
-                  backgroundColor: "#ffffff",
-                  color: "#333333",
-                  border: "1.5px solid #cccccc",
-                  borderRadius: "8px",
-                  padding: "12px",
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "6px",
-                }}
+                className="retail-card-btn retail-card-btn-outline"
               >
                 <PhoneCall size={15} color="#ea580c" />
                 <span>Liên Hệ Báo Giá Từ 50 Key</span>
@@ -444,15 +295,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
             </div>
           </div>
 
-          <div
-            style={{
-              marginTop: "20px",
-              textAlign: "center",
-              fontSize: "13px",
-              color: "#666666",
-              fontWeight: 600,
-            }}
-          >
+          <div className="retail-packages-note">
             ★ <strong style={{ color: "#ff6f3d" }}>Lưu ý:</strong> Từ 50 key trở lên hỗ trợ khảo sát và triển khai giải pháp kỹ thuật riêng cho hạ tầng nội bộ của doanh nghiệp.
           </div>
         </div>

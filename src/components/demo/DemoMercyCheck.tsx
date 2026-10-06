@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import { ShieldAlert, Download, Copy, Check, Terminal, Eye, CheckCircle2, AlertTriangle, ShieldCheck, Zap, Lock } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
 export default function DemoMercyCheck() {
+  const t = useTranslations("demo.mercyCheck");
+
   const [copiedLink, setCopiedLink] = useState(false);
   const [copiedPs, setCopiedPs] = useState(false);
-  const [showKey, setShowKey] = useState(false);
   const [filterTab, setFilterTab] = useState<"all" | "crack" | "license" | "security">("all");
 
   const psCommand = "$ irm 'https://onlyoffice.mercytechglobal.com/MercyCheck.bat' | iex";
@@ -51,15 +53,15 @@ export default function DemoMercyCheck() {
             }}
           >
             <ShieldAlert size={15} color="#dc2626" />
-            <span>CÔNG CỤ BẢO MẬT & RÀ SOÁT BẢN QUYỀN ĐỘC QUYỀN MERCY TECH</span>
+            <span>{t("badge")}</span>
           </div>
 
           <h2 style={{ fontSize: "clamp(26px, 4vw, 36px)", fontWeight: 800, color: "#0f172a", margin: "0 0 14px", letterSpacing: "-0.02em" }}>
-            MercyCheck v2.0 — Rà Soát Bản Quyền &amp; Phát Hiện Crack Ngầm
+            {t("title")}
           </h2>
 
           <p style={{ fontSize: "15px", color: "#64748b", lineHeight: 1.65, margin: 0 }}>
-            Công cụ 1-Click độc quyền từ <strong>Mercy Tech</strong>. Tự động kiểm tra bản quyền Windows, MS Office, phát hiện các công cụ crack nguy hiểm tiềm ẩn ransomware (AutoKMS, sppc.dll Ohook, Adobe GenP, IDM, WinRAR...) và chẩn đoán sức khỏe hệ thống chỉ trong 15 giây.
+            {t("desc")}
           </p>
         </div>
 
@@ -90,18 +92,18 @@ export default function DemoMercyCheck() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <span style={{ width: "8px", height: "8px", borderRadius: "50%", backgroundColor: "#16a34a", display: "inline-block" }} />
                   <span style={{ fontSize: "12px", fontWeight: 800, color: "#16a34a", textTransform: "uppercase" }}>
-                    Phiên bản mới nhất v2.0
+                    {t("version")}
                   </span>
                 </div>
-                <span style={{ fontSize: "11.5px", color: "#64748b", fontWeight: 600 }}>Portable • Zero-Install</span>
+                <span style={{ fontSize: "11.5px", color: "#64748b", fontWeight: 600 }}>{t("portable")}</span>
               </div>
 
               <h3 style={{ fontSize: "21px", fontWeight: 800, color: "#0f172a", margin: "0 0 8px" }}>
-                Tải Về &amp; Quét Ngay Trên Máy Tính
+                {t("downloadCardTitle")}
               </h3>
 
               <p style={{ fontSize: "13.5px", color: "#64748b", margin: "0 0 22px", lineHeight: 1.6 }}>
-                Công cụ dạng <strong>Single-File Portable</strong> (~44 KB), không cần cài đặt, không tạo rác hệ thống và hoạt động 100% offline bảo mật dữ liệu tuyệt đối.
+                {t("downloadCardDesc")}
               </p>
 
               {/* Main Download BAT */}
@@ -135,7 +137,7 @@ export default function DemoMercyCheck() {
               >
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <Download size={20} />
-                  <span>TẢI MERCYCHECK.BAT</span>
+                  <span>{t("downloadBtn")}</span>
                 </div>
                 <span style={{ fontSize: "11px", backgroundColor: "rgba(0,0,0,0.2)", padding: "3px 9px", borderRadius: "8px", fontWeight: 700 }}>
                   1-Click • ~44 KB
@@ -173,7 +175,7 @@ export default function DemoMercyCheck() {
                   }}
                 >
                   <Download size={14} color="#dc2626" />
-                  <span>Tải Bản .ZIP</span>
+                  <span>{t("zipBtn")}</span>
                 </a>
 
                 <button
@@ -204,7 +206,7 @@ export default function DemoMercyCheck() {
                   }}
                 >
                   {copiedLink ? <Check size={14} color="#16a34a" /> : <Copy size={14} color="#dc2626" />}
-                  <span>{copiedLink ? "Đã copy link" : "Copy link tải"}</span>
+                  <span>{copiedLink ? t("copiedLink") : t("copyLink")}</span>
                 </button>
               </div>
 
@@ -212,19 +214,27 @@ export default function DemoMercyCheck() {
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px", color: "#475569", borderTop: "1px solid #f1f5f9", paddingTop: "18px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
                   <AlertTriangle size={16} color="#dc2626" style={{ flexShrink: 0 }} />
-                  <span><strong>Phát hiện 15+ loại crack:</strong> AutoKMS, sppc.dll, GenP, IDM, WinRAR...</span>
+                  <span>
+                    <strong>{t("features.f1Title")}</strong> {t("features.f1Desc")}
+                  </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
                   <CheckCircle2 size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-                  <span><strong>Xác thực License:</strong> Phân loại Digital, Retail, OEM vs KMS lậu</span>
+                  <span>
+                    <strong>{t("features.f2Title")}</strong> {t("features.f2Desc")}
+                  </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
                   <Lock size={16} color="#ea580c" style={{ flexShrink: 0 }} />
-                  <span><strong>An toàn bảo mật:</strong> Defender, Firewall, Hosts, Port backdoor</span>
+                  <span>
+                    <strong>{t("features.f3Title")}</strong> {t("features.f3Desc")}
+                  </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
                   <Zap size={16} color="#ea580c" style={{ flexShrink: 0 }} />
-                  <span><strong>Sức khỏe phần cứng:</strong> SMART ổ cứng, chai pin, CPU &amp; RAM</span>
+                  <span>
+                    <strong>{t("features.f4Title")}</strong> {t("features.f4Desc")}
+                  </span>
                 </div>
               </div>
             </div>
@@ -233,7 +243,7 @@ export default function DemoMercyCheck() {
             <div style={{ marginTop: "20px", paddingTop: "14px", borderTop: "1px solid #f1f5f9" }}>
               <div style={{ fontSize: "11.5px", fontWeight: 700, color: "#64748b", marginBottom: "6px", display: "flex", alignItems: "center", gap: "6px" }}>
                 <Terminal size={13} color="#ea580c" />
-                <span>Chạy nhanh qua PowerShell (Dành cho Quản trị viên IT):</span>
+                <span>{t("psLabel")}</span>
               </div>
               <div
                 onClick={handleCopyPs}
@@ -250,13 +260,13 @@ export default function DemoMercyCheck() {
                   color: "#0f172a",
                   border: "1.5px solid #cbd5e1",
                 }}
-                title="Bấm để sao chép lệnh PowerShell"
+                title={t("psTitle")}
               >
                 <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   <strong style={{ color: "#ea580c" }}>PS&gt; </strong>{psCommand}
                 </span>
                 <span style={{ marginLeft: "8px", backgroundColor: "#ffffff", border: "1px solid #cbd5e1", padding: "3px 8px", borderRadius: "5px", fontSize: "10.5px", color: copiedPs ? "#16a34a" : "#475569", flexShrink: 0, fontWeight: 700 }}>
-                  {copiedPs ? "ĐÃ COPY" : "COPY"}
+                  {copiedPs ? t("copiedLink") : "COPY"}
                 </span>
               </div>
             </div>
@@ -291,7 +301,7 @@ export default function DemoMercyCheck() {
                 <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#f59e0b", display: "inline-block" }} />
                 <span style={{ width: "11px", height: "11px", borderRadius: "50%", backgroundColor: "#10b981", display: "inline-block" }} />
                 <span style={{ fontSize: "12px", fontFamily: "monospace", color: "#334155", marginLeft: "8px", fontWeight: 700 }}>
-                  cmd.exe — MercyCheck v2.0 (Admin Console)
+                  {t("consoleTitle")}
                 </span>
               </div>
 
@@ -314,10 +324,7 @@ export default function DemoMercyCheck() {
                       transition: "all 0.15s ease",
                     }}
                   >
-                    {tab === "all" && "Tất cả"}
-                    {tab === "crack" && "Phát hiện Crack"}
-                    {tab === "license" && "Bản quyền"}
-                    {tab === "security" && "Bảo mật"}
+                    {t(`filterTabs.${tab}`)}
                   </button>
                 ))}
               </div>
@@ -341,8 +348,8 @@ export default function DemoMercyCheck() {
               {(filterTab === "all" || filterTab === "crack") && (
                 <div style={{ color: "#ea580c", marginBottom: "14px", whiteSpace: "pre", fontSize: "10.5px", lineHeight: 1.25, fontWeight: 700 }}>
 {`========================================================================
-  MERCY CHECK v2.0 - KIEM TRA BAN QUYEN & CANH BAO MA DOC
-  Cung cap boi Cong Ty TNHH Cong Nghe Mercy | Hotline: 0763.068.614
+  MERCY CHECK v2.0 - AUDIT REPORT & MALWARE SCANNER
+  Provided by Mercy Technology Co., Ltd. | Hotline: 0763.068.614
 ========================================================================`}
                 </div>
               )}
@@ -350,12 +357,14 @@ export default function DemoMercyCheck() {
               {/* Section I: Hardware */}
               {filterTab === "all" && (
                 <div style={{ marginBottom: "14px" }}>
-                  <div style={{ color: "#0369a1", fontWeight: 800 }}>[I. THONG TIN PHAN CUNG]</div>
+                  <div style={{ color: "#0369a1", fontWeight: 800 }}>
+                    [I. SYSTEM HARDWARE OVERVIEW]
+                  </div>
                   <div style={{ paddingLeft: "12px", color: "#475569" }}>
                     <div>• Mainboard   : ASUS PRIME B760M-A D4 (LGA1700)</div>
                     <div>• CPU         : 13th Gen Intel(R) Core(TM) i5-13400 (10 cores, 16 threads)</div>
                     <div>• RAM         : 16.0 GB (3200 MHz, 2 slots)</div>
-                    <div>• Luu tru     : KINGSTON NVMe PCIe 4.0 1024 GB (Suc khoe SMART: 99% - Tot)</div>
+                    <div>• Storage     : KINGSTON NVMe PCIe 4.0 1024 GB (SMART Health: 99% - Good)</div>
                   </div>
                 </div>
               )}
@@ -363,12 +372,29 @@ export default function DemoMercyCheck() {
               {/* Section II: License */}
               {(filterTab === "all" || filterTab === "license") && (
                 <div style={{ marginBottom: "14px", borderTop: "1px solid #e2e8f0", paddingTop: "10px" }}>
-                  <div style={{ color: "#0369a1", fontWeight: 800 }}>[II. BAN QUYEN HE THONG &amp; OFFICE]</div>
+                  <div style={{ color: "#0369a1", fontWeight: 800 }}>
+                    [II. SYSTEM & OFFICE LICENSING]
+                  </div>
                   <div style={{ paddingLeft: "12px" }}>
-                    <div>• Windows     : Windows 11 Pro 64-bit — <span style={{ color: "#16a34a", fontWeight: 800 }}>✓ Da kich hoat (Digital License Hop Phap)</span></div>
+                    <div>
+                      • Windows     : Windows 11 Pro 64-bit —{" "}
+                      <span style={{ color: "#16a34a", fontWeight: 800 }}>
+                        ✓ Activated (Genuine Digital License)
+                      </span>
+                    </div>
                     <div>• Product Key : XXXXX-XXXXX-XXXXX-XXXXX-3V66T</div>
-                    <div>• MS Office   : <span style={{ color: "#dc2626", fontWeight: 800, backgroundColor: "#fee2e2", padding: "1px 6px", borderRadius: "4px" }}>Office LTSC Pro Plus 2021 — KMS 127.0.0.1 (CRACK LẬU NGUY HIỂM)</span></div>
-                    <div>• ONLYOFFICE  : <span style={{ color: "#16a34a", fontWeight: 800 }}>✓ Da kich hoat (Mercy Tech Certified - Vinh Vien)</span></div>
+                    <div>
+                      • MS Office   :{" "}
+                      <span style={{ color: "#dc2626", fontWeight: 800, backgroundColor: "#fee2e2", padding: "1px 6px", borderRadius: "4px" }}>
+                        Office LTSC Pro Plus 2021 — KMS 127.0.0.1 (HIGH-RISK ILLEGAL CRACK)
+                      </span>
+                    </div>
+                    <div>
+                      • ONLYOFFICE  :{" "}
+                      <span style={{ color: "#16a34a", fontWeight: 800 }}>
+                        ✓ Activated (Mercy Tech Certified - Lifetime)
+                      </span>
+                    </div>
                   </div>
                 </div>
               )}
@@ -376,12 +402,22 @@ export default function DemoMercyCheck() {
               {/* Section III: Crack Detection */}
               {(filterTab === "all" || filterTab === "crack") && (
                 <div style={{ marginBottom: "14px", borderTop: "1px solid #e2e8f0", paddingTop: "10px" }}>
-                  <div style={{ color: "#dc2626", fontWeight: 800 }}>[III. PHAT HIEN CONG CU CRACK &amp; MA DOC NGUY HIEM]</div>
+                  <div style={{ color: "#dc2626", fontWeight: 800 }}>
+                    [III. CRACK & MALWARE DETECTION REPORT]
+                  </div>
                   <div style={{ paddingLeft: "12px", backgroundColor: "#fef2f2", border: "1px solid #fecaca", borderRadius: "8px", padding: "10px", marginTop: "6px" }}>
-                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>[!] PHAT HIEN TIEN TRINH: AutoKMS.exe dang chay ngam tai C:\Windows\AutoKMS\</div>
-                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>[!] PHAT HIEN FILE DLL: sppc.dll (Ohook hook vao bo nho he thong)</div>
-                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>[!] HOSTS FILE BI SUA: 127.0.0.1 kms8.msguides.com bi redirect</div>
-                    <div style={{ color: "#ea580c", marginTop: "4px", fontWeight: 800 }}>=&gt; CANH BAO: He thong co nguy co cao bi ransomware va vi pham ban quyen SHTT!</div>
+                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>
+                      [!] PROCESS DETECTED: AutoKMS.exe running silently at C:\Windows\AutoKMS\
+                    </div>
+                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>
+                      [!] DLL INJECTION DETECTED: sppc.dll (Ohook memory hook in active process)
+                    </div>
+                    <div style={{ color: "#b91c1c", fontWeight: 700 }}>
+                      [!] HOSTS FILE MODIFIED: 127.0.0.1 kms8.msguides.com redirected
+                    </div>
+                    <div style={{ color: "#ea580c", marginTop: "4px", fontWeight: 800 }}>
+                      =&gt; WARNING: High vulnerability to ransomware & intellectual property violation!
+                    </div>
                   </div>
                 </div>
               )}
@@ -389,11 +425,22 @@ export default function DemoMercyCheck() {
               {/* Section IV: Security */}
               {(filterTab === "all" || filterTab === "security") && (
                 <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "10px" }}>
-                  <div style={{ color: "#0369a1", fontWeight: 800 }}>[IV. AN TOAN THONG TIN &amp; DEFENDER]</div>
+                  <div style={{ color: "#0369a1", fontWeight: 800 }}>
+                    [IV. CYBERSECURITY & DEFENDER POSTURE]
+                  </div>
                   <div style={{ paddingLeft: "12px", color: "#475569" }}>
-                    <div>• Windows Defender : <span style={{ color: "#dc2626", fontWeight: 700 }}>Bi tat Real-time Protection boi AutoKMS</span></div>
-                    <div>• Windows Firewall : Bat (Dang hoat dong)</div>
-                    <div>• Port 135/445     : Canh bao: Co the bi khai thac qua mang LAN</div>
+                    <div>
+                      • Windows Defender :{" "}
+                      <span style={{ color: "#dc2626", fontWeight: 700 }}>
+                        Real-time Protection disabled by AutoKMS
+                      </span>
+                    </div>
+                    <div>
+                      • Windows Firewall : Enabled (Active)
+                    </div>
+                    <div>
+                      • Port 135/445     : Warning: Vulnerable to lateral traversal across LAN
+                    </div>
                   </div>
                 </div>
               )}
@@ -420,10 +467,10 @@ export default function DemoMercyCheck() {
             <ShieldCheck size={28} color="#ea580c" style={{ flexShrink: 0 }} />
             <div>
               <div style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "3px" }}>
-                Chuẩn bị đón đoàn thanh tra bản quyền phần mềm liên ngành?
+                {t("legalBanner.title")}
               </div>
               <div style={{ fontSize: "13px", color: "#475569", lineHeight: 1.5 }}>
-                Mercy Tech cung cấp giải pháp chuyển đổi toàn diện sang <strong>OnlyOffice bản quyền hợp pháp 100%</strong>, kèm Hợp đồng kinh tế, Hóa đơn VAT và Chứng nhận nguồn gốc AGPLv3 đóng dấu mộc đỏ.
+                {t("legalBanner.desc")}
               </div>
             </div>
           </div>
@@ -448,7 +495,7 @@ export default function DemoMercyCheck() {
               whiteSpace: "nowrap",
             }}
           >
-            <span>Tư Vấn Miễn Trừ Pháp Lý</span>
+            <span>{t("legalBanner.btn")}</span>
           </a>
         </div>
       </div>

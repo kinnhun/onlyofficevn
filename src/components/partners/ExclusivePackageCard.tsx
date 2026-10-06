@@ -10,44 +10,32 @@ interface ExclusivePackageCardProps {
 export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCardProps) {
   return (
     <div
+      className="oo-partner-pkg-card"
       style={{
         background: "linear-gradient(145deg, #ffffff 0%, #fff7ed 100%)",
-        borderRadius: "24px",
         border: "2px solid #ea580c",
         boxShadow: "0 12px 36px rgba(234, 88, 12, 0.12)",
-        padding: "36px",
         position: "relative",
       }}
     >
       {/* Header */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "16px",
-          borderBottom: "1px solid #fed7aa",
-          paddingBottom: "20px",
-          marginBottom: "28px",
-        }}
-      >
+      <div className="oo-partner-pkg-header">
         <div>
           <div style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c", textTransform: "uppercase", letterSpacing: "0.06em" }}>
             CHƯƠNG TRÌNH ĐỐI TÁC CAO CẤP
           </div>
-          <h3 style={{ fontSize: "30px", fontWeight: 900, color: "#9a3412", margin: "6px 0 4px" }}>
+          <h3 style={{ fontSize: "clamp(22px, 5vw, 30px)", fontWeight: 900, color: "#9a3412", margin: "6px 0 4px" }}>
             GÓI KHỞI NGHIỆP ĐỘC QUYỀN TUYẾN
           </h3>
-          <div style={{ fontSize: "18px", fontWeight: 700, color: "#ea580c" }}>
+          <div style={{ fontSize: "17px", fontWeight: 700, color: "#ea580c" }}>
             200 Key Online Vĩnh Viễn + Đặc Quyền Tuyến 1 Năm
           </div>
-          <div style={{ fontSize: "14px", color: "#64748b", marginTop: "4px" }}>
+          <div style={{ fontSize: "13.5px", color: "#64748b", marginTop: "4px", lineHeight: 1.5 }}>
             Dành cho đại lý muốn triển khai kinh doanh ONLYOFFICE bài bản tại khu vực độc quyền riêng
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+        <div className="oo-partner-pkg-badges">
           <span style={{ background: "#fed7aa", color: "#9a3412", padding: "6px 12px", borderRadius: "20px", fontSize: "12px", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
             <Sparkles size={14} /> ĐỘC QUYỀN TUYẾN 1 NĂM
           </span>
@@ -61,8 +49,8 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+          gap: "20px",
           marginBottom: "28px",
         }}
       >
@@ -71,13 +59,13 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #fed7aa",
             boxShadow: "0 4px 12px rgba(234, 88, 12, 0.05)",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
-            <div style={{ fontSize: "17px", fontWeight: 800, color: "#c2410c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <div style={{ fontSize: "16px", fontWeight: 800, color: "#c2410c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
               <Key size={18} />
               <span>200 KEY ONLINE VĨNH VIỄN</span>
             </div>
@@ -85,14 +73,14 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
               THEO THIẾT BỊ
             </span>
           </div>
-          <div style={{ fontSize: "13px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
+          <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
             KÍCH HOẠT NHANH TRÊN PORTAL ĐẠI LÝ
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Key bản quyền vĩnh viễn theo UUID Mainboard máy tính</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Kích hoạt nhanh chóng trên Portal Đại Lý tự động 24/7</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Dễ dàng cập nhật và phân quyền nhân viên kỹ thuật IT</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Key bản quyền vĩnh viễn theo UUID Mainboard máy tính</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Kích hoạt nhanh chóng trên Portal Đại Lý tự động 24/7</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Dễ dàng cập nhật và phân quyền nhân viên kỹ thuật IT</span></div>
           </div>
 
           <div
@@ -118,13 +106,13 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           style={{
             background: "#ffffff",
             borderRadius: "16px",
-            padding: "24px",
+            padding: "20px",
             border: "1px solid #fed7aa",
             boxShadow: "0 4px 12px rgba(234, 88, 12, 0.05)",
           }}
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
-            <div style={{ fontSize: "17px", fontWeight: 800, color: "#c2410c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <div style={{ fontSize: "16px", fontWeight: 800, color: "#c2410c", display: "inline-flex", alignItems: "center", gap: "6px" }}>
               <Globe size={18} />
               <span>HẠ TẦNG SỐ & ĐẶC QUYỀN ĐỊA BÀN</span>
             </div>
@@ -132,7 +120,7 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
               ĐỘC QUYỀN 100%
             </span>
           </div>
-          <div style={{ fontSize: "13px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
+          <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#475569", marginBottom: "14px" }}>
             HỢP ĐỒNG MỘC ĐỎ & BẢN QUYỀN KHU VỰC
           </div>
 
@@ -156,9 +144,9 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13px", color: "#334155" }}>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Hợp đồng độc quyền phân phối 1 năm mộc đỏ pháp lý</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Tặng website bán lẻ gắn Domain riêng .COM + Hosting 10GB</div>
-            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" /> Chuyển giao 100% data khách hàng lẻ phát sinh trong khu vực</div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Hợp đồng độc quyền phân phối 1 năm mộc đỏ pháp lý</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Tặng website bán lẻ gắn Domain riêng .COM + Hosting 10GB</span></div>
+            <div style={{ display: "flex", gap: "6px" }}><CheckCircle2 size={16} color="#ea580c" style={{ flexShrink: 0, marginTop: "2px" }} /> <span>Chuyển giao 100% data khách hàng lẻ phát sinh trong khu vực</span></div>
           </div>
 
           <div
@@ -182,21 +170,14 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
 
       {/* Financial Strip */}
       <div
+        className="oo-partner-financial-strip"
         style={{
           background: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
-          borderRadius: "16px",
-          padding: "24px 28px",
-          color: "#ffffff",
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-          alignItems: "center",
-          marginBottom: "28px",
         }}
       >
         <div>
           <div style={{ fontSize: "11px", color: "#ffedd5", fontWeight: 700, textTransform: "uppercase" }}>TỔNG ĐẦU TƯ GÓI</div>
-          <div style={{ fontSize: "18px", fontWeight: 800, color: "#fef08a", marginTop: "4px" }}>
+          <div style={{ fontSize: "17px", fontWeight: 800, color: "#fef08a", marginTop: "4px" }}>
             Liên hệ để lấy chính sách
           </div>
         </div>
@@ -243,12 +224,12 @@ export default function ExclusivePackageCard({ onOpenModal }: ExclusivePackageCa
       </div>
 
       {/* 8 Đặc Quyền VIP */}
-      <div style={{ background: "#ffffff", borderRadius: "16px", padding: "20px 24px", border: "1px solid #fed7aa" }}>
-        <div style={{ fontSize: "15px", fontWeight: 800, color: "#9a3412", marginBottom: "14px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+      <div style={{ background: "#ffffff", borderRadius: "16px", padding: "18px 16px", border: "1px solid #fed7aa" }}>
+        <div style={{ fontSize: "14px", fontWeight: 800, color: "#9a3412", marginBottom: "14px", display: "inline-flex", alignItems: "center", gap: "6px" }}>
           <Gift size={18} color="#ea580c" />
           <span>ĐẦU TƯ 1 GÓI — NHẬN TRỌN BỘ 8 ĐẶC QUYỀN ĐẠI LÝ VIP:</span>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 150px), 1fr))", gap: "10px" }}>
           {[
             { num: "01", title: "Độc Quyền Tuyến 1 Năm", desc: "Hợp đồng mộc đỏ • Không cấp đại lý thứ 2 cùng tuyến" },
             { num: "02", title: "Website + Domain + Hosting", desc: "Tặng .COM + Hosting 10GB năm đầu (Trị giá 10.8tr)" },

@@ -1,0 +1,71 @@
+{
+  "pricingPage": {
+    "badge": "OFFICIAL DISTRIBUTOR IN VIETNAM — OPTIMIZED BY MERCY TECH",
+    "title": "ONLYOFFICE Licensing & Pricing",
+    "subtitle": "High-security office solutions for your private server or cloud. Flexible lifetime licenses or periodic subscriptions.",
+    "billingYearly": "Yearly Plan",
+    "billingLifetime": "Lifetime License",
+    "savePercent": "Save 20%",
+    "popularBadge": "RECOMMENDED",
+    "plans": {
+      "community": {
+        "name": "Community Edition",
+        "tag": "Individuals & Small Teams",
+        "price": "Free",
+        "period": "forever",
+        "desc": "Powerful online office suite for documents, spreadsheets, presentations, and PDFs.",
+        "btn": "Try For Free"
+      },
+      "enterprise": {
+        "name": "Docs Enterprise",
+        "tag": "Enterprises & Organizations",
+        "price": "1,250,000 ₫",
+        "period": "/ server / mo",
+        "desc": "High security, scalable office suite for private servers with 24/7 technical support from Mercy Tech.",
+        "btn": "Download 7-Day Trial"
+      },
+      "developer": {
+        "name": "Developer Edition",
+        "tag": "Developers & ISVs",
+        "price": "Contact us",
+        "period": "custom quote",
+        "desc": "Embed office suite into your SaaS platform with full API and white-label control.",
+        "btn": "Consult & Try API"
+      }
+    },
+    "comparisonTitle": "Detailed Feature Comparison",
+    "faqTitle": "Licensing Frequently Asked Questions",
+    "ctaTitle": "Need a customized licensing plan for your business?",
+    "ctaDesc": "The Mercy Technology specialist team is ready to analyze your workflow, run live demos, and offer competitive pricing.",
+    "ctaBtn": "Contact Messenger / Hotline: 0763.068.614"
+  },
+  "pricingQuoteModal": {
+    "badge": "SECURE & MAXIMUM VOLUME DISCOUNT",
+    "title": "Request Special Quotation",
+    "successTitle": "REQUEST SUBMITTED SUCCESSFULLY!",
+    "successDesc": "Connecting you with a Mercy Tech enterprise specialist (Hotline: 0763.068.614) to deliver your customized volume discount quote.",
+    "closeBtn": "Close Window",
+    "productLabel": "1. Interested product:",
+    "products": {
+      "keyOnline": "🔑 OnlyOffice Online Key (Perpetual per Mainboard)",
+      "portal": "⚡ Reseller Admin Portal Account 24/7 (Instant Key Issue)",
+      "enterprise": "🏢 OnlyOffice Docs Enterprise (Dedicated / On-Premise Server)",
+      "reseller": "💼 Bulk Reseller / IT Partner Package"
+    },
+    "quantityLabel": "2. Estimated quantity:",
+    "quantities": {
+      "tier1": "1 – 4 devices (Individual / Small setup)",
+      "tier2": "5 – 49 devices (SMB / Medium team)",
+      "tier3": "50+ devices (Enterprise / Bulk volume)",
+      "tier4": "Periodic recurring bulk for computer stores"
+    },
+    "fullNameLabel": "Full Name *:",
+    "fullNamePlaceholder": "John Smith",
+    "phoneLabel": "Phone number *:",
+    "phonePlaceholder": "+84...",
+    "companyLabel": "Company / Organization:",
+    "companyPlaceholder": "Company ABC (optional)",
+    "vatCheckbox": "Request official electronic VAT e-invoice",
+    "submitBtn": "Submit & Request Quote"
+  }
+}

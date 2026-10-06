@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import { ShieldCheck, Server, Headphones, FileText, ArrowRight, DollarSign, MessageCircle, Phone, Sparkles } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
@@ -9,6 +10,8 @@ interface DemoEnterpriseCtaProps {
 }
 
 export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProps) {
+  const t = useTranslations("demo.enterpriseCta");
+
   return (
     <section style={{ padding: "40px 20px 80px", backgroundColor: "#ffffff" }}>
       <div
@@ -60,7 +63,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
             }}
           >
             <Sparkles size={14} color="#ea580c" />
-            <span>GIẢI PHÁP VĂN PHÒNG SỐ CHUẨN DOANH NGHIỆP — MERCY TECH</span>
+            <span>{t("badge")}</span>
           </div>
 
           {/* Heading */}
@@ -74,7 +77,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               letterSpacing: "-0.02em",
             }}
           >
-            Chuyển Đổi Sang ONLYOFFICE —{" "}
+            {t("titlePrefix")}
             <span
               style={{
                 background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -83,7 +86,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
                 display: "inline-block",
               }}
             >
-              Hợp Pháp Hóa 100% &amp; Tiết Kiệm 70% Chi Phí
+              {t("titleHighlight")}
             </span>
           </h2>
 
@@ -97,10 +100,10 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               fontWeight: 500,
             }}
           >
-            Xóa bỏ hoàn toàn nỗi lo bị thanh tra xử phạt bản quyền phần mềm và nguy cơ lây nhiễm mã độc ransomware từ các bản crack lậu. Mercy Tech đồng hành tư vấn lộ trình triển khai bản quyền trọn gói, bảo mật và tiết kiệm nhất cho doanh nghiệp.
+            {t("subtitle")}
           </p>
 
-          {/* 4 Value Pillars Grid (Bright & Clean) */}
+          {/* 4 Value Pillars Grid */}
           <div
             style={{
               display: "grid",
@@ -136,10 +139,10 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
                 <ShieldCheck size={24} color="#ea580c" />
               </div>
               <div style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "6px" }}>
-                100% Hợp Pháp &amp; Có VAT
+                {t("pillars.p1Title")}
               </div>
               <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.55 }}>
-                Đầy đủ hợp đồng kinh tế, hóa đơn VAT điện tử và chứng nhận nguồn gốc AGPLv3 mộc đỏ pháp lý.
+                {t("pillars.p1Desc")}
               </div>
             </div>
 
@@ -169,10 +172,10 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
                 <Server size={24} color="#2563eb" />
               </div>
               <div style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "6px" }}>
-                On-Premise Riêng Biệt
+                {t("pillars.p2Title")}
               </div>
               <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.55 }}>
-                Tự chủ 100% máy chủ tài liệu nội bộ, tương thích sâu với Docker, Nextcloud, OwnCloud.
+                {t("pillars.p2Desc")}
               </div>
             </div>
 
@@ -202,10 +205,10 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
                 <DollarSign size={24} color="#16a34a" />
               </div>
               <div style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "6px" }}>
-                Tiết Kiệm Đến 70%
+                {t("pillars.p3Title")}
               </div>
               <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.55 }}>
-                Cấp phép vĩnh viễn theo thiết bị hoặc cụm máy chủ, không phụ thuộc chi phí thuê bao đắt đỏ.
+                {t("pillars.p3Desc")}
               </div>
             </div>
 
@@ -235,10 +238,10 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
                 <Headphones size={24} color="#db2777" />
               </div>
               <div style={{ fontSize: "15px", fontWeight: 800, color: "#0f172a", marginBottom: "6px" }}>
-                Kỹ Sư Hỗ Trợ 24/7
+                {t("pillars.p4Title")}
               </div>
               <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.55 }}>
-                Đội ngũ kỹ thuật Mercy Tech trực tiếp cài đặt, đào tạo chuyển giao và bảo hành kỹ thuật trọn đời.
+                {t("pillars.p4Desc")}
               </div>
             </div>
           </div>
@@ -282,7 +285,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               }}
             >
               <FileText size={18} />
-              <span>Nhận Báo Giá Doanh Nghiệp</span>
+              <span>{t("quoteBtn")}</span>
               <ArrowRight size={17} />
             </button>
 
@@ -320,7 +323,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               }}
             >
               <MessageCircle size={18} color="#ea580c" />
-              <span>Chat Tư Vấn Ngay</span>
+              <span>{t("chatBtn")}</span>
             </a>
 
             {/* Direct Hotline */}
@@ -338,7 +341,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
               }}
             >
               <Phone size={15} color="#ea580c" />
-              <span>Hotline: 0763.068.614</span>
+              <span>{t("hotline")}</span>
             </a>
           </div>
         </div>

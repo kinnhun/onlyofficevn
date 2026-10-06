@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Download, HelpCircle, X, CheckCircle2, ShieldCheck, Terminal, Copy, Check, Sparkles, Laptop, FileCheck } from "lucide-react";
 
 export default function DemoPcActivation() {
+  const t = useTranslations("demo.pcActivation");
+
   const [guideOpen, setGuideOpen] = useState(false);
   const [copiedPs, setCopiedPs] = useState(false);
 
@@ -76,7 +79,7 @@ export default function DemoPcActivation() {
                 }}
               >
                 <Sparkles size={14} color="#ea580c" />
-                <span>BẢN QUYỀN TRẢI NGHIỆM ĐẦY ĐỦ CHO DOANH NGHIỆP</span>
+                <span>{t("badge")}</span>
               </div>
 
               <h2
@@ -89,8 +92,8 @@ export default function DemoPcActivation() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Tải Công Cụ Kích Hoạt Dùng Thử 7 Ngày{" "}
-                <span style={{ color: "#ea580c" }}>(Tự Động 1-Click .BAT)</span>
+                {t("title")}
+                <span style={{ color: "#ea580c" }}>{t("titleHighlight")}</span>
               </h2>
 
               <p
@@ -101,22 +104,22 @@ export default function DemoPcActivation() {
                   margin: "0 0 24px",
                 }}
               >
-                Script thông minh từ <strong>Mercy Tech</strong> tự động nhận diện cấu hình Windows (x64 / ARM64), tải bản cài đặt OnlyOffice chính hãng mới nhất (nếu máy chưa có) và tiêm license dùng thử 7 ngày đầy đủ tính năng Enterprise kèm trọn bộ 3 Plugin AI &amp; dịch thuật.
+                {t("desc")}
               </p>
 
               {/* 3 Value Points */}
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "20px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13.5px", color: "#334155", fontWeight: 600 }}>
                   <CheckCircle2 size={17} color="#16a34a" style={{ flexShrink: 0 }} />
-                  <span>Kích hoạt đầy đủ tính năng Enterprise: Document Server, PDF Editor, AI Assistant</span>
+                  <span>{t("points.p1")}</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13.5px", color: "#334155", fontWeight: 600 }}>
                   <CheckCircle2 size={17} color="#16a34a" style={{ flexShrink: 0 }} />
-                  <span>An toàn tuyệt đối 100%, mã nguồn mở minh bạch, không crack, không can thiệp hệ thống</span>
+                  <span>{t("points.p2")}</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13.5px", color: "#334155", fontWeight: 600 }}>
                   <CheckCircle2 size={17} color="#16a34a" style={{ flexShrink: 0 }} />
-                  <span>Hỗ trợ kỹ thuật cài đặt từ xa qua Ultraview / Teamviewer bởi kỹ sư Mercy Tech</span>
+                  <span>{t("points.p3")}</span>
                 </div>
               </div>
             </div>
@@ -138,7 +141,7 @@ export default function DemoPcActivation() {
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <Laptop size={18} color="#ea580c" />
                   <span style={{ fontSize: "14px", fontWeight: 800, color: "#0f172a" }}>
-                    Phiên bản Windows 10 / 11
+                    {t("platform")}
                   </span>
                 </div>
                 <span
@@ -152,7 +155,7 @@ export default function DemoPcActivation() {
                     border: "1px solid #bbf7d0",
                   }}
                 >
-                  ✓ Đã kiểm định an toàn
+                  {t("verified")}
                 </span>
               </div>
 
@@ -185,10 +188,10 @@ export default function DemoPcActivation() {
                   e.currentTarget.style.transform = "translateY(0)";
                   e.currentTarget.style.boxShadow = "0 6px 20px rgba(234, 88, 12, 0.35)";
                 }}
-                title="Tải trực tiếp file .bat (Tự động 1-Click không cần giải nén)"
+                title={t("downloadBtn")}
               >
                 <Download size={20} strokeWidth={2.5} />
-                <span>TẢI CÔNG CỤ 1-CLICK (.BAT)</span>
+                <span>{t("downloadBtn")}</span>
                 <span
                   style={{
                     fontSize: "11px",
@@ -234,7 +237,7 @@ export default function DemoPcActivation() {
                   }}
                 >
                   <Download size={15} color="#ea580c" />
-                  <span>Tải Dự Phòng</span>
+                  <span>{t("mirrorBtn")}</span>
                 </a>
 
                 <button
@@ -267,7 +270,7 @@ export default function DemoPcActivation() {
                   }}
                 >
                   <HelpCircle size={15} color="#ea580c" />
-                  <span>Xem Hướng Dẫn</span>
+                  <span>{t("guideBtn")}</span>
                 </button>
               </div>
 
@@ -311,7 +314,7 @@ export default function DemoPcActivation() {
                   }}
                 >
                   {copiedPs ? <Check size={12} color="#16a34a" /> : <Copy size={12} color="#ea580c" />}
-                  <span>{copiedPs ? "Đã chép" : "Copy"}</span>
+                  <span>{copiedPs ? t("copied") : t("copy")}</span>
                 </button>
               </div>
             </div>
@@ -355,7 +358,7 @@ export default function DemoPcActivation() {
                   <Download size={20} color="#ea580c" />
                 </div>
                 <h3 style={{ fontSize: "19px", fontWeight: 800, color: "#0f172a", margin: 0 }}>
-                  Hướng Dẫn Kích Hoạt 1-Click
+                  {t("guide.title")}
                 </h3>
               </div>
               <button
@@ -381,26 +384,26 @@ export default function DemoPcActivation() {
               <div style={{ display: "flex", gap: "12px", padding: "12px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
                 <span style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#ea580c", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, flexShrink: 0, fontSize: "12px" }}>1</span>
                 <div>
-                  <strong style={{ color: "#0f172a" }}>Tải file .BAT về máy tính:</strong> Bấm nút <em>"TẢI CÔNG CỤ 1-CLICK"</em> để lưu file <code>Kich-Hoat-Demo-OnlyOffice-Mercy.bat</code>.
+                  <strong style={{ color: "#0f172a" }}>{t("guide.step1Title")}</strong> {t("guide.step1Desc")}
                 </div>
               </div>
 
               <div style={{ display: "flex", gap: "12px", padding: "12px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
                 <span style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#ea580c", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, flexShrink: 0, fontSize: "12px" }}>2</span>
                 <div>
-                  <strong style={{ color: "#0f172a" }}>Khởi chạy quyền Administrator:</strong> Nhấp đúp vào file (hoặc click chuột phải chọn <em>Run as administrator</em>).
+                  <strong style={{ color: "#0f172a" }}>{t("guide.step2Title")}</strong> {t("guide.step2Desc")}
                 </div>
               </div>
 
               <div style={{ display: "flex", gap: "12px", padding: "12px", borderRadius: "10px", backgroundColor: "#f8fafc", border: "1px solid #e2e8f0" }}>
                 <span style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#ea580c", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, flexShrink: 0, fontSize: "12px" }}>3</span>
                 <div>
-                  <strong style={{ color: "#0f172a" }}>Tự động hoàn tất:</strong> Bấm <strong>Yes</strong> khi Windows hỏi quyền UAC. Script tự động cài đặt OnlyOffice và kích hoạt 7 ngày dùng thử đầy đủ tính năng!
+                  <strong style={{ color: "#0f172a" }}>{t("guide.step3Title")}</strong> {t("guide.step3Desc")}
                 </div>
               </div>
 
               <div style={{ padding: "14px", background: "#f0fdf4", border: "1.5px solid #bbf7d0", borderRadius: "10px", fontSize: "13px", color: "#166534", lineHeight: 1.5 }}>
-                ✓ An toàn tuyệt đối 100%, không chứa mã độc. Kỹ sư <strong>Mercy Tech</strong> sẵn sàng hỗ trợ trực tiếp qua Hotline: <strong>0763.068.614</strong> (24/7).
+                {t("guide.supportNote")}
               </div>
             </div>
 
@@ -421,7 +424,7 @@ export default function DemoPcActivation() {
                 boxShadow: "0 4px 12px rgba(234, 88, 12, 0.3)",
               }}
             >
-              Đã hiểu, đóng cửa sổ
+              {t("guide.closeBtn")}
             </button>
           </div>
         </div>

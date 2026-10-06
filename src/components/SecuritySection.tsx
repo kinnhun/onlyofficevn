@@ -2,7 +2,9 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { ONLYOFFICE_MESSENGER_URL, openMessengerChat } from "@/lib/messenger";
+
+const MESSENGER_URL = ONLYOFFICE_MESSENGER_URL || "https://www.messenger.com/t/286163107904324";
 
 export default function SecuritySection() {
   const t = useTranslations("securitySection");
@@ -112,19 +114,23 @@ export default function SecuritySection() {
             </ul>
 
             <div style={{ marginBottom: "32px" }}>
-              <Link
+              <a
                 id="security-first-learn-more"
-                href="/security"
+                href={MESSENGER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   color: "#ff6f3d",
                   fontSize: "16px",
                   fontWeight: 600,
                   textDecoration: "underline",
                   transition: "opacity 0.2s",
+                  cursor: "pointer",
                 }}
               >
                 {t("learnMore")}
-              </Link>
+              </a>
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>

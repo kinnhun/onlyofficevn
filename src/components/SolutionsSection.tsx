@@ -2,7 +2,9 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
+import { ONLYOFFICE_MESSENGER_URL, openMessengerChat } from "@/lib/messenger";
+
+const MESSENGER_URL = ONLYOFFICE_MESSENGER_URL || "https://www.messenger.com/t/286163107904324";
 
 export default function SolutionsSection() {
   const t = useTranslations("solutionsSection");
@@ -12,21 +14,18 @@ export default function SolutionsSection() {
       title: t("items.docspace.title"),
       desc: t("items.docspace.desc"),
       linkText: t("items.docspace.btn"),
-      linkHref: "/docspace-registration",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/docspace.svg",
     },
     {
       title: t("items.platform.title"),
       desc: t("items.platform.desc"),
       linkText: t("items.platform.btn"),
-      linkHref: "/download#docs-enterprise",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/connectors.svg",
     },
     {
       title: t("items.developers.title"),
       desc: t("items.developers.desc"),
       linkText: t("items.developers.btn"),
-      linkHref: "/developer-edition",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/developers.svg",
     },
   ];
@@ -36,14 +35,12 @@ export default function SolutionsSection() {
       title: t("items.pc.title"),
       desc: t("items.pc.desc"),
       linkText: t("items.pc.btn"),
-      linkHref: "/download-desktop",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/from-pc.svg",
     },
     {
       title: t("items.mobile.title"),
       desc: t("items.mobile.desc"),
       linkText: t("items.mobile.btn"),
-      linkHref: "/download-desktop#mobile",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/get-started/from-mobile.svg",
     },
   ];
@@ -93,6 +90,7 @@ export default function SolutionsSection() {
           {topSolutions.map((item, i) => (
             <div
               key={i}
+              onClick={openMessengerChat}
               style={{
                 backgroundColor: "#f8fafc",
                 border: "1px solid #e2e8f0",
@@ -105,6 +103,17 @@ export default function SolutionsSection() {
                 justifyContent: "space-between",
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.03)",
                 transition: "all 0.25s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 12px 24px rgba(234, 88, 12, 0.08)";
+                e.currentTarget.style.borderColor = "#fed7aa";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.03)";
+                e.currentTarget.style.borderColor = "#e2e8f0";
               }}
             >
               <div>
@@ -146,17 +155,21 @@ export default function SolutionsSection() {
                 </p>
               </div>
 
-              <Link
-                href={item.linkHref}
+              <a
+                href={MESSENGER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   color: "#ff6f3d",
                   fontWeight: 600,
                   fontSize: "14px",
                   textDecoration: "underline",
+                  cursor: "pointer",
                 }}
               >
                 {item.linkText}
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -175,6 +188,7 @@ export default function SolutionsSection() {
           {bottomSolutions.map((item, i) => (
             <div
               key={i}
+              onClick={openMessengerChat}
               style={{
                 backgroundColor: "#f8fafc",
                 border: "1px solid #e2e8f0",
@@ -187,6 +201,17 @@ export default function SolutionsSection() {
                 justifyContent: "space-between",
                 boxShadow: "0 4px 16px rgba(0, 0, 0, 0.03)",
                 transition: "all 0.25s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px)";
+                e.currentTarget.style.boxShadow = "0 12px 24px rgba(234, 88, 12, 0.08)";
+                e.currentTarget.style.borderColor = "#fed7aa";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 0, 0, 0.03)";
+                e.currentTarget.style.borderColor = "#e2e8f0";
               }}
             >
               <div>
@@ -228,17 +253,21 @@ export default function SolutionsSection() {
                 </p>
               </div>
 
-              <Link
-                href={item.linkHref}
+              <a
+                href={MESSENGER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={openMessengerChat}
                 style={{
                   color: "#ff6f3d",
                   fontWeight: 600,
                   fontSize: "14px",
                   textDecoration: "underline",
+                  cursor: "pointer",
                 }}
               >
                 {item.linkText}
-              </Link>
+              </a>
             </div>
           ))}
         </div>

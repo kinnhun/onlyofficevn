@@ -157,7 +157,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir="ltr" className={openSans.variable} suppressHydrationWarning>
-      <head>
+      <head suppressHydrationWarning>
         <JsonLd locale={locale} />
       </head>
       <body className={openSans.className} suppressHydrationWarning>

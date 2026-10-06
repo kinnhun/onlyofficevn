@@ -94,7 +94,7 @@ export default async function Home({
         <SolutionsSection />
         <CustomersSection />
         <RatingsSection />
-        <LatestNewsSection />
+        {/* <LatestNewsSection /> */}
         <FaqSection />
       </main>
       <Footer />

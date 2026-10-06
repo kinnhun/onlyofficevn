@@ -3,6 +3,9 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import FeatureSwitcher, { FeatureItem } from "./FeatureSwitcher";
+import { ONLYOFFICE_MESSENGER_URL } from "@/lib/messenger";
+
+const MESSENGER_URL = ONLYOFFICE_MESSENGER_URL || "https://www.messenger.com/t/286163107904324";
 
 export default function AIAssistantsSection() {
   const t = useTranslations("aiSection");
@@ -63,7 +66,7 @@ export default function AIAssistantsSection() {
         </>
       }
       learnMoreText={t("learnMore")}
-      learnMoreHref="/ai-assistants"
+      learnMoreHref={MESSENGER_URL}
       items={aiItems}
       imagePosition="left"
       backgroundColor="transparent"

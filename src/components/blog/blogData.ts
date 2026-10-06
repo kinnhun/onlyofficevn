@@ -47,7 +47,7 @@ export function getBlogPosts(isVi: boolean): BlogPost[] {
   return [
     {
       id: "trial-guide",
-      image: "/blog/trial-guide.jpg",
+      image: isVi ? "/blog/trial/vn.png" : "/blog/trial/en.png",
       title: isVi
         ? "Hướng dẫn kích hoạt bản quyền dùng thử 7 ngày ONLYOFFICE Enterprise cùng Mercy Tech"
         : "How to activate 7-day free trial of ONLYOFFICE Enterprise with Mercy Tech",

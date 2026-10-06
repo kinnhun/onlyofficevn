@@ -75,7 +75,7 @@ export default function OperationsWorkflow() {
   ];
 
   return (
-    <section style={{ maxWidth: "1248px", margin: "72px auto 0", padding: "0 20px" }}>
+    <section className="oo-partner-section">
       {/* 4 Steps Section */}
       <div style={{ textAlign: "center", marginBottom: "36px" }}>
         <span
@@ -89,10 +89,10 @@ export default function OperationsWorkflow() {
         >
           MỤC 4. VẬN HÀNH BÀI BẢN
         </span>
-        <h2 style={{ fontSize: "32px", fontWeight: 800, color: "#1e293b", marginTop: "8px" }}>
+        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           4. Quy Trình 4 Bước Đăng Ký, Đào Tạo & Vận Hành
         </h2>
-        <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", margin: "10px auto 0" }}>
+        <p className="oo-partner-subheading" style={{ maxWidth: "700px", margin: "10px auto 0" }}>
           Chủ động 100% tài khoản Admin xuất Key 24/7 và xác thực trực tuyến với Server bản quyền
         </p>
       </div>
@@ -100,7 +100,7 @@ export default function OperationsWorkflow() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 250px), 1fr))",
           gap: "20px",
           marginBottom: "48px",
         }}
@@ -111,7 +111,7 @@ export default function OperationsWorkflow() {
             style={{
               background: "#ffffff",
               borderRadius: "16px",
-              padding: "28px 24px",
+              padding: "24px 20px",
               border: "1px solid #e2e8f0",
               boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
               position: "relative",
@@ -134,17 +134,7 @@ export default function OperationsWorkflow() {
       </div>
 
       {/* Embedded YouTube Video Container */}
-      <div
-        style={{
-          background: "#ffffff",
-          borderRadius: "20px",
-          padding: "36px",
-          border: "1px solid #e2e8f0",
-          boxShadow: "0 12px 32px rgba(0,0,0,0.05)",
-          textAlign: "center",
-          marginBottom: "64px",
-        }}
-      >
+      <div className="oo-partner-video-card">
         <div
           style={{
             display: "inline-flex",
@@ -162,10 +152,10 @@ export default function OperationsWorkflow() {
           <Video size={14} />
           <span>VIDEO HƯỚNG DẪN KÍCH HOẠT</span>
         </div>
-        <h3 style={{ fontSize: "24px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
+        <h3 style={{ fontSize: "22px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px" }}>
           Video Hướng Dẫn Kích Hoạt Key Cho Đại Lý
         </h3>
-        <p style={{ color: "#64748b", fontSize: "15px", marginBottom: "24px" }}>
+        <p style={{ color: "#64748b", fontSize: "14.5px", marginBottom: "24px" }}>
           Xem hướng dẫn từng bước kích hoạt Key OnlyOffice - Mercy Tech Global
         </p>
 
@@ -233,10 +223,10 @@ export default function OperationsWorkflow() {
           >
             QUY CHUẨN KỸ THUẬT DOANH NGHIỆP
           </span>
-          <h3 style={{ fontSize: "28px", fontWeight: 800, color: "#1e293b", marginTop: "8px" }}>
+          <h3 className="oo-partner-heading" style={{ marginTop: "8px" }}>
             Quy Trình 5 Bước Chuẩn Hóa Cấu Hình Trên Máy Trạm
           </h3>
-          <p style={{ color: "#64748b", fontSize: "15px", maxWidth: "680px", margin: "8px auto 0" }}>
+          <p className="oo-partner-subheading" style={{ maxWidth: "680px", margin: "8px auto 0" }}>
             Được chuẩn hóa độc quyền bởi Mercy Tech giúp máy tính vận hành mượt mà, triệt tiêu lỗi font và tương thích tuyệt đối
           </p>
         </div>
@@ -244,7 +234,7 @@ export default function OperationsWorkflow() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 200px), 1fr))",
             gap: "18px",
           }}
         >

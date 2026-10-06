@@ -40,7 +40,7 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
   ];
 
   return (
-    <section style={{ maxWidth: "1248px", margin: "72px auto 0", padding: "0 20px" }}>
+    <section className="oo-partner-section">
       <div style={{ textAlign: "center", marginBottom: "36px" }}>
         <span
           style={{
@@ -53,10 +53,10 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
         >
           MỤC 2. NẠP SLOTS LINH HOẠT
         </span>
-        <h2 style={{ fontSize: "32px", fontWeight: 800, color: "#1e293b", marginTop: "8px" }}>
+        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           2. Chương Trình Đại Lý Sỉ (Pre-Paid Slots)
         </h2>
-        <p style={{ color: "#64748b", fontSize: "16px", maxWidth: "700px", margin: "10px auto 0" }}>
+        <p className="oo-partner-subheading" style={{ maxWidth: "700px", margin: "10px auto 0" }}>
           Cấp tài khoản Admin 24/7 tự quản lý & kích hoạt key — Báo giá sỉ bảo mật dành riêng cho Đối tác
         </p>
       </div>
@@ -64,8 +64,8 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          gap: "24px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+          gap: "20px",
           marginBottom: "36px",
         }}
       >
@@ -75,7 +75,7 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
             style={{
               background: "#ffffff",
               borderRadius: "16px",
-              padding: "32px 28px",
+              padding: "24px 20px",
               border: "1px solid #e2e8f0",
               boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
               display: "flex",
@@ -153,8 +153,9 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
           background: "linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%)",
           border: "2px dashed #fdba74",
           borderRadius: "16px",
-          padding: "32px",
+          padding: "24px 18px",
           textAlign: "center",
+          boxSizing: "border-box",
         }}
       >
         <div style={{ display: "inline-flex", padding: "10px", background: "#fed7aa", borderRadius: "50%", marginBottom: "10px" }}>
@@ -163,12 +164,13 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
         <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#9a3412", margin: "0 0 8px" }}>
           BẢO MẬT GIÁ SỈ CHO ĐẠI LÝ
         </h3>
-        <p style={{ color: "#7c2d12", fontSize: "15px", maxWidth: "680px", margin: "0 auto 20px", lineHeight: 1.6 }}>
+        <p style={{ color: "#7c2d12", fontSize: "14.5px", maxWidth: "680px", margin: "0 auto 20px", lineHeight: 1.6 }}>
           Để bảo vệ quyền lợi Đại lý & Khách hàng, bảng giá sỉ không hiển thị công khai trên website. Vui lòng bấm vào nút bên dưới để liên hệ Mercy Tech nhận file Báo Giá Sỉ Chi Tiết & Chính Sách Chiết Khấu Đại Lý tốt nhất.
         </p>
-        <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+        <div className="oo-partner-hero-btns" style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
           <button
             type="button"
+            className="oo-partner-hero-btn"
             onClick={() => onOpenModal("Báo Giá Sỉ Đại Lý Pre-Paid")}
             style={{
               backgroundColor: "#ea580c",
@@ -189,6 +191,7 @@ export default function PrePaidSlotsSection({ onOpenModal }: PrePaidSlotsSection
             rel="noopener noreferrer"
             onClick={openMessengerChat}
             title="Liên hệ"
+            className="oo-partner-hero-btn"
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",

@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import { Sparkles, FileText, Download, ShieldAlert, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { FileText, Download, ShieldAlert, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 
 export default function DemoHero() {
+  const t = useTranslations("demo.hero");
+
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -16,7 +19,8 @@ export default function DemoHero() {
       style={{
         padding: "56px 20px 36px",
         textAlign: "center",
-        background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 111, 61, 0.12), transparent 70%), linear-gradient(180deg, #fffbf7 0%, #ffffff 100%)",
+        background:
+          "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 111, 61, 0.12), transparent 70%), linear-gradient(180deg, #fffbf7 0%, #ffffff 100%)",
         borderBottom: "1px solid #f1f5f9",
         position: "relative",
         overflow: "hidden",
@@ -56,7 +60,7 @@ export default function DemoHero() {
               textTransform: "uppercase",
             }}
           >
-            MERCY TECH — ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC ONLYOFFICE TẠI VIỆT NAM
+            {t("distributorBadge")}
           </span>
         </div>
 
@@ -71,7 +75,7 @@ export default function DemoHero() {
             letterSpacing: "-0.025em",
           }}
         >
-          Trải Nghiệm Trực Tuyến{" "}
+          {t("title")}
           <span
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -80,7 +84,7 @@ export default function DemoHero() {
               display: "inline-block",
             }}
           >
-            ONLYOFFICE Docs Enterprise
+            {t("titleHighlight")}
           </span>
         </h1>
 
@@ -95,7 +99,7 @@ export default function DemoHero() {
             fontWeight: 500,
           }}
         >
-          Hệ sinh thái ứng dụng văn phòng số bảo mật cao cấp. Tương thích 100% định dạng Microsoft Office (.docx, .xlsx, .pptx) và chỉnh sửa biểu mẫu PDF chuyên nghiệp trực tiếp trên trình duyệt hoặc cài đặt On-Premise cho tổ chức.
+          {t("subtitle")}
         </p>
 
         {/* 3 Quick Jump Action Cards */}
@@ -153,10 +157,10 @@ export default function DemoHero() {
             </div>
             <div>
               <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
-                1. Demo Đám Mây Trực Tiếp
+                {t("card1Title")}
               </div>
               <div style={{ fontSize: "12.5px", color: "#64748b" }}>
-                Word, Excel, PowerPoint, PDF
+                {t("card1Sub")}
               </div>
             </div>
           </button>
@@ -206,10 +210,10 @@ export default function DemoHero() {
             </div>
             <div>
               <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
-                2. Dùng Thử 7 Ngày (PC)
+                {t("card2Title")}
               </div>
               <div style={{ fontSize: "12.5px", color: "#64748b" }}>
-                Kích hoạt 1-Click tự động (.BAT)
+                {t("card2Sub")}
               </div>
             </div>
           </button>
@@ -259,10 +263,10 @@ export default function DemoHero() {
             </div>
             <div>
               <div style={{ fontSize: "14.5px", fontWeight: 700, color: "#0f172a", marginBottom: "2px" }}>
-                3. Quét Crack & Bản Quyền
+                {t("card3Title")}
               </div>
               <div style={{ fontSize: "12.5px", color: "#64748b" }}>
-                Công cụ kiểm tra MercyCheck v2.0
+                {t("card3Sub")}
               </div>
             </div>
           </button>
@@ -289,19 +293,19 @@ export default function DemoHero() {
         >
           <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
             <CheckCircle2 size={16} color="#16a34a" />
-            <span>100% Không Cần Đăng Ký Tài Khoản</span>
+            <span>{t("noAccount")}</span>
           </div>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
             <CheckCircle2 size={16} color="#16a34a" />
-            <span>Tương Thích Chuẩn Định Dạng MS Office</span>
+            <span>{t("msCompat")}</span>
           </div>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
             <ShieldCheck size={16} color="#ea580c" />
-            <span>Bảo Mật Chuẩn Doanh Nghiệp Quốc Tế</span>
+            <span>{t("security")}</span>
           </div>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
             <Zap size={16} color="#ea580c" />
-            <span>Tốc Độ Xử Lý Nhanh Trên Mọi Trình Duyệt</span>
+            <span>{t("speed")}</span>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import React from "react";
 import { ShieldCheck, Award, Users, Lock, MessageCircle, FileText } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
+import { FlagVi } from "@/components/HeaderFlags";
 
 interface PartnerHeroProps {
   onOpenModal: (pkgName?: string) => void;
@@ -10,14 +11,7 @@ interface PartnerHeroProps {
 
 export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
   return (
-    <section
-      style={{
-        background: "linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)",
-        padding: "56px 20px 48px",
-        textAlign: "center",
-        borderBottom: "1px solid #e2e8f0",
-      }}
-    >
+    <section className="oo-partner-hero-section">
       <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
         <div
           style={{
@@ -34,34 +28,21 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             letterSpacing: "0.06em",
             marginBottom: "20px",
             boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
+            maxWidth: "100%",
+            boxSizing: "border-box",
+            textAlign: "center",
+            lineHeight: 1.4,
           }}
         >
-          <span style={{ fontSize: "14px" }}>🇻🇳</span>
+          <FlagVi width={18} height={13} />
           <span>CHƯƠNG TRÌNH ĐỐI TÁC & ĐẠI LÝ ONLYOFFICE CHÍNH HÃNG TẠI VIỆT NAM</span>
         </div>
 
-        <h1
-          style={{
-            fontSize: "40px",
-            fontWeight: 800,
-            color: "#1e293b",
-            lineHeight: 1.25,
-            margin: "0 0 18px",
-            letterSpacing: "-0.02em",
-          }}
-        >
+        <h1 className="oo-partner-hero-title">
           Chương Trình Đối Tác & Đại Lý OnlyOffice
         </h1>
 
-        <p
-          style={{
-            fontSize: "18px",
-            color: "#475569",
-            maxWidth: "880px",
-            margin: "0 auto 32px",
-            lineHeight: 1.6,
-          }}
-        >
+        <p className="oo-partner-hero-desc">
           Giải pháp tối ưu hóa pháp lý & kỹ thuật phần mềm văn phòng <strong>OnlyOffice bản quyền tại Việt Nam</strong> — 
           Phương án thay thế <strong>Microsoft Office crack lậu tối ưu</strong>, tiết kiệm đến <strong>90% chi phí</strong> cho doanh nghiệp.
         </p>
@@ -71,7 +52,7 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
           style={{
             display: "flex",
             justifyContent: "center",
-            gap: "14px",
+            gap: "10px",
             flexWrap: "wrap",
             marginBottom: "36px",
           }}
@@ -105,24 +86,16 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
         </div>
 
         {/* Main Action Buttons */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
+        <div className="oo-partner-hero-btns">
           <button
             type="button"
+            className="oo-partner-hero-btn"
             onClick={() => onOpenModal("Đăng Ký Tư Vấn Đại Lý Sỉ")}
             style={{
               backgroundColor: "#ff6f3d",
               color: "#ffffff",
               border: "none",
-              padding: "15px 32px",
-              borderRadius: "8px",
-              fontWeight: 700,
-              fontSize: "15px",
-              cursor: "pointer",
               boxShadow: "0 4px 16px rgba(255, 111, 61, 0.35)",
-              transition: "background-color 0.2s ease",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ea580c")}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
@@ -137,17 +110,10 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             rel="noopener noreferrer"
             onClick={openMessengerChat}
             title="Liên hệ"
+            className="oo-partner-hero-btn"
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",
-              textDecoration: "none",
-              padding: "15px 28px",
-              borderRadius: "8px",
-              fontWeight: 700,
-              fontSize: "15px",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
               boxShadow: "0 4px 14px rgba(234, 88, 12, 0.35)",
             }}
           >
