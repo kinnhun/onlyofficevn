@@ -27,8 +27,9 @@ export default function PartnerRegistrationForm() {
   };
 
   return (
-    <section id="register-form" style={{ maxWidth: "860px", margin: "72px auto 0", padding: "0 20px" }}>
+    <section id="register-form" className="oo-partner-section" style={{ maxWidth: "860px", margin: "72px auto 0", padding: "0 20px" }}>
       <div
+        className="oo-partner-card"
         style={{
           background: "#ffffff",
           borderRadius: "24px",
@@ -52,10 +53,10 @@ export default function PartnerRegistrationForm() {
           >
             HỢP TÁC CÙNG MERCY TECH
           </div>
-          <h2 style={{ fontSize: "28px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
+          <h2 className="oo-partner-heading" style={{ fontSize: "28px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
             Đăng Ký Tham Gia Mạng Lưới Đối Tác & Đại Lý
           </h2>
-          <p style={{ fontSize: "15px", color: "#64748b", marginTop: "8px" }}>
+          <p className="oo-partner-subheading" style={{ fontSize: "15px", color: "#64748b", marginTop: "8px" }}>
             Vui lòng điền thông tin bên dưới để nhận <strong>Bộ Hợp Đồng Đại Lý & File Báo Giá Sỉ Chi Tiết</strong> trong vòng 15 phút.
           </p>
         </div>
@@ -105,7 +106,7 @@ export default function PartnerRegistrationForm() {
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "18px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "18px" }}>
+            <div className="oo-partner-form-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "18px" }}>
               <div>
                 <label style={{ display: "block", fontSize: "13px", fontWeight: 700, color: "#334155", marginBottom: "6px" }}>
                   Họ và tên người liên hệ <span style={{ color: "#ef4444" }}>*</span>
@@ -135,7 +136,7 @@ export default function PartnerRegistrationForm() {
               </div>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "18px" }}>
+            <div className="oo-partner-form-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "18px" }}>
               <div>
                 <label style={{ display: "block", fontSize: "13px", fontWeight: 700, color: "#334155", marginBottom: "6px" }}>
                   Tên cửa hàng máy tính / Công ty IT <span style={{ color: "#ef4444" }}>*</span>
@@ -200,6 +201,7 @@ export default function PartnerRegistrationForm() {
             <button
               type="submit"
               disabled={loading}
+              className="oo-partner-hero-btn"
               style={{
                 backgroundColor: "#ff6f3d",
                 color: "#ffffff",
@@ -234,7 +236,7 @@ const inputStyle: React.CSSProperties = {
   padding: "12px 14px",
   borderRadius: "8px",
   border: "1px solid #cbd5e1",
-  fontSize: "14px",
+  fontSize: "15px",
   outline: "none",
   boxSizing: "border-box",
   backgroundColor: "#f8fafc",

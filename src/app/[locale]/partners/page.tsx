@@ -39,7 +39,7 @@ export default function PartnersPage() {
       {/* <AnnouncementBar /> */}
       <Header />
 
-      <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc", color: "#1e293b", paddingBottom: "100px" }}>
+      <main style={{ minHeight: "100vh", backgroundColor: "#f8fafc", color: "#1e293b", paddingBottom: "100px", overflowX: "hidden" }}>
         {/* Official Document Legal Strip */}
         <PartnerOfficialHeader />
 

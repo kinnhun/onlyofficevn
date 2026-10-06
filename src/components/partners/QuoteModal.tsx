@@ -44,6 +44,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
       role="dialog"
       aria-modal="true"
       onClick={onClose}
+      className="oo-partner-modal-overlay"
       style={{
         position: "fixed",
         top: 0,
@@ -61,6 +62,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
     >
       <div
         onClick={(e) => e.stopPropagation()}
+        className="oo-partner-modal-box"
         style={{
           backgroundColor: "#ffffff",
           borderRadius: "20px",
@@ -135,7 +137,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
         </div>
 
         {/* Modal Body */}
-        <div style={{ padding: "26px" }}>
+        <div className="oo-partner-modal-body" style={{ padding: "26px" }}>
           {formSubmitted ? (
             <div style={{ textAlign: "center", padding: "16px 0" }}>
               <div style={{ display: "inline-flex", padding: "12px", background: "#dcfce7", borderRadius: "50%", marginBottom: "14px" }}>
@@ -243,7 +245,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                   />
                 </div>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
+                <div className="oo-partner-form-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
                   <div>
                     <label style={{ display: "block", fontSize: "12.5px", fontWeight: 700, color: "#334155", marginBottom: "4px" }}>
                       Tên shop / Công ty IT
@@ -292,6 +294,7 @@ export default function QuoteModal({ isOpen, onClose, selectedPackage }: QuoteMo
                 <button
                   type="submit"
                   disabled={loading}
+                  className="oo-partner-hero-btn"
                   style={{
                     backgroundColor: "#ff6f3d",
                     color: "#ffffff",
@@ -378,7 +381,7 @@ const modalInputStyle: React.CSSProperties = {
   padding: "10px 12px",
   borderRadius: "8px",
   border: "1px solid #cbd5e1",
-  fontSize: "13.5px",
+  fontSize: "15px",
   outline: "none",
   boxSizing: "border-box",
   backgroundColor: "#f8fafc",

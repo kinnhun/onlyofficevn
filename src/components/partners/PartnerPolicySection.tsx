@@ -136,16 +136,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
         <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
 
           {/* Điều 1 */}
-          <div
-            id="dieu-1"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-1" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -174,7 +165,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
                 gap: "14px",
               }}
             >
@@ -206,16 +197,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 2 */}
-          <div
-            id="dieu-2"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-2" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -272,16 +254,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 3 */}
-          <div
-            id="dieu-3"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-3" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -311,7 +284,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
                 gap: "20px",
               }}
             >
@@ -481,16 +454,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 4 */}
-          <div
-            id="dieu-4"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-4" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -519,7 +483,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
                 gap: "12px",
               }}
             >
@@ -550,16 +514,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 5 */}
-          <div
-            id="dieu-5"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-5" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -612,16 +567,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 6 */}
-          <div
-            id="dieu-6"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-6" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -650,7 +596,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 180px), 1fr))",
                 gap: "14px",
               }}
             >
@@ -686,16 +632,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 7 */}
-          <div
-            id="dieu-7"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-7" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -721,7 +658,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
             <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
               Mercy Tech đầu tư mạnh vào năng lực kỹ thuật và bán hàng của đại lý đối tác:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "14px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "14px" }}>
               {[
                 { title: "Khóa đào tạo cơ bản 100% miễn phí", desc: "Hướng dẫn cài đặt, kích hoạt key online, xử lý chuyển key khi reset win và sử dụng Portal quản trị." },
                 { title: "Quy chuẩn 5 bước tối ưu hóa máy trạm", desc: "Chuyển giao bộ script chuẩn hóa: gỡ sạch Office lậu, import font tiếng Việt không vỡ, mặc định lưu đuôi Microsoft và cấu hình AutoSave 1 phút." },
@@ -747,16 +684,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 8 */}
-          <div
-            id="dieu-8"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-8" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{
@@ -793,16 +721,7 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
           </div>
 
           {/* Điều 9 */}
-          <div
-            id="dieu-9"
-            style={{
-              padding: "28px",
-              borderRadius: "16px",
-              backgroundColor: "#ffffff",
-              border: "1.5px solid #e2e8f0",
-              boxShadow: "0 2px 10px rgba(0,0,0,0.02)",
-            }}
-          >
+          <div id="dieu-9" className="oo-partner-policy-card">
             <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
               <div
                 style={{

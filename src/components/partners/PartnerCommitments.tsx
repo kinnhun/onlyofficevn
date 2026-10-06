@@ -13,8 +13,9 @@ export default function PartnerCommitments() {
   ];
 
   return (
-    <section style={{ maxWidth: "1248px", margin: "64px auto 0", padding: "0 20px" }}>
+    <section className="oo-partner-section" style={{ maxWidth: "1248px", margin: "64px auto 0", padding: "0 20px" }}>
       <div
+        className="oo-partner-commitments-grid"
         style={{
           background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
           borderRadius: "20px",
