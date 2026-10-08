@@ -41,7 +41,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Soạn thảo và định dạng văn bản chuyên nghiệp với khả năng tương thích hoàn hảo mọi định dạng như DOCX hay PDF. Tích hợp AI mạnh mẽ hỗ trợ dịch thuật, xử lý tài liệu thông minh, mượt mà và liền mạch ngay trên một giao diện."
         : "Professional document editing with 100% seamless MS Word compatibility. Integrated AI powers smart translation, content drafting, and effortless teamwork.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
       href: "/document-editor",
       badge: "DOCX • Word",
       badgeColor: "#2563eb",
@@ -57,7 +57,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Phân tích, xử lý dữ liệu tối ưu với hơn 400 hàm tính toán phức tạp, bảng Pivot và tự động hóa quy trình bằng Macro. Chế độ Personal Sheet Views cho phép lọc số liệu mà không làm gián đoạn màn hình của đồng nghiệp."
         : "Analyze and organize data with over 400 formulas, Pivot Tables, and automated JavaScript macros. Personal Sheet Views allow custom filtering without disturbing colleagues.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bang-tinh.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bang-tinh.jpg",
       href: "/spreadsheet-editor",
       badge: "XLSX • Excel",
       badgeColor: "#059669",
@@ -73,7 +73,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Thu hút mọi ánh nhìn với công cụ thiết kế trực quan, kho hiệu ứng chuyển động phong phú và chế độ Presenter View chuyên nghiệp. Tự do chèn đa phương tiện, phát GIF trực tiếp và đồng chỉnh sửa theo thời gian thực."
         : "Captivate your audience with dynamic slide animations, rich media embeds, direct GIF playback, and professional Presenter View. Collaborate in real time without lag.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
       href: "/presentation-editor",
       badge: "PPTX • PowerPoint",
       badgeColor: "#ea580c",
@@ -89,7 +89,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Biến bất kỳ tài liệu Word nào thành biểu mẫu PDF tương tác với đa dạng trường điền (checkbox, dropdown, ngày tháng). Hỗ trợ điền trực tuyến đa thiết bị và xác thực bằng chữ ký số đảm bảo tính pháp lý và bảo mật cao."
         : "Turn standard documents into interactive fillable PDF forms with checkboxes, dropdowns, and date pickers. Compliant digital signatures built in.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bieu-mau.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bieu-mau.jpg",
       href: "/form-creator",
       badge: "OFORM • Form PDF",
       badgeColor: "#7c3aed",
@@ -105,7 +105,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Chỉnh sửa trực tiếp nội dung văn bản, hình ảnh trong tệp PDF dễ dàng như đang thao tác trên Word. Chuyển đổi hai chiều PDF sang DOCX nhanh chóng đáp ứng mọi nhu cầu xử lý tài liệu khắt khe nhất."
         : "Directly edit text and imagery in PDF files just like in a Word document. Convert two-way between PDF and DOCX in seconds with zero formatting loss.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-pdf.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-pdf.jpg",
       href: "/pdf-editor",
       badge: "PDF • Converter",
       badgeColor: "#dc2626",
@@ -121,7 +121,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Đọc và truy xuất chi tiết các tệp sơ đồ phức tạp (định dạng VSDX) với tốc độ tải cực nhanh mà không cần cài đặt phần mềm bên thứ ba. Trải nghiệm xem mượt mà và đồng nhất trên mọi nền tảng."
         : "Open and inspect complex Microsoft Visio (VSDX) diagrams natively in your browser with lightning-fast rendering and zero third-party software needed.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
       href: "/diagram-viewer",
       badge: "VSDX • Visio",
       badgeColor: "#0284c7",
@@ -143,7 +143,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Cả đội cùng viết, sửa văn bản và tính toán bảng biểu theo thời gian thực. Tích hợp sẵn khung chat, để lại bình luận trực tiếp ngay trên tài liệu để đẩy nhanh tiến độ dự án."
         : "Real-time co-authoring, Track Changes, live chat, and inline commenting for agile team workflows.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/collaboration_rooms.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/collaboration_rooms.jpg",
       icon: Users,
       features: isVi
         ? ["Đồng soạn thảo đa người dùng", "Bình luận & Chat trực tiếp", "Lịch sử phiên bản rõ ràng"]
@@ -158,7 +158,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Mời đối tác bên ngoài xem hoặc chỉnh sửa tài liệu qua liên kết nhanh mà không phải đăng ký tài khoản. Dễ dàng nhúng phòng này trực tiếp vào website của doanh nghiệp."
         : "Share files with external partners via password-protected links without requiring account sign-up. Easily embeddable.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/public_rooms.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/public_rooms.jpg",
       icon: Share2,
       features: isVi
         ? ["Không bắt buộc đăng ký tài khoản", "Nhúng trực tiếp vào website", "Bảo vệ liên kết bằng mật khẩu"]
@@ -173,7 +173,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Tự động hóa quy trình thu thập thông tin bằng cách gửi biểu mẫu PDF trực tuyến cho đối tác. Toàn bộ dữ liệu sẽ tự động tập hợp và phân tích vào một bảng tính duy nhất."
         : "Automate surveys and contract approvals. Collected submissions automatically consolidate into a central spreadsheet.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/form_fill_rooms.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/form_fill_rooms.jpg",
       icon: ClipboardList,
       features: isVi
         ? ["Thu thập dữ liệu tự động", "Tổng hợp về 1 bảng tính", "Tiết kiệm 80% thời gian xử lý"]
@@ -188,7 +188,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Bảo vệ tuyệt đối các tài liệu tài chính, pháp lý nhạy cảm. Hệ thống tự động đóng dấu watermark động, cài đặt thời hạn file và chặn hoàn toàn quyền tải xuống, sao chép hoặc in ấn."
         : "Bank-grade digital vault with automatic dynamic watermarks, time-limited access, and copy/download restrictions.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/virtual_data_rooms.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/virtual_data_rooms.jpg",
       icon: Lock,
       features: isVi
         ? ["Watermark động chống chụp ảnh", "Chặn copy, in & tải xuống", "Cài đặt thời hạn tự hủy file"]
@@ -203,7 +203,7 @@ export default function EcosystemSection() {
       desc: isVi
         ? "Linh hoạt tùy chỉnh quyền truy cập chuyên sâu phù hợp với mọi phòng ban. Có thể phân quyền xem, bình luận, chỉnh sửa cho người khác với độ chi tiết cấp độ quản trị viên."
         : "Tailored granular permission tiers (Viewer, Reviewer, Commenter, Editor, Administrator) adapted for any enterprise structure.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/custom_rooms.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docspace-page/custom_rooms.jpg",
       icon: SlidersHorizontal,
       features: isVi
         ? ["Phân quyền 6 cấp độ chi tiết", "Phù hợp mọi mô hình phòng ban", "Nhật ký kiểm toán minh bạch"]

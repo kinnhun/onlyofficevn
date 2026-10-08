@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const isVi = locale === "vi";
 
-  const baseUrl = "https://onlyoffice.vn";
+  const baseUrl = "https://onlyofficevietnam.com";
   const currentPath = isVi ? "/blog" : "/en/blog";
 
   return {

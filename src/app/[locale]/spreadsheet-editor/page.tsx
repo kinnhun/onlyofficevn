@@ -20,11 +20,11 @@ export async function generateMetadata({
     openGraph: {
       title: meta.ogTitle,
       description: meta.ogDescription,
-      url: `https://onlyoffice.vn${meta.canonical}`,
+      url: `https://onlyofficevietnam.com${meta.canonical}`,
       type: "website",
       images: [
         {
-          url: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
+          url: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
           width: 1200,
           height: 630,
           alt: meta.ogTitle,

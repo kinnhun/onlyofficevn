@@ -184,7 +184,7 @@ export default function DocsSecuritySection() {
               }}
             >
               <img
-                src="https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/secure.png"
+                src="https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/secure.png"
                 alt="ONLYOFFICE Docs Security Architecture"
                 loading="lazy"
                 style={{ width: "100%", height: "auto", display: "block" }}

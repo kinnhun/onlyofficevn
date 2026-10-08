@@ -38,7 +38,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "Native ISO/IEC 29500 OOXML engine ensuring zero layout breakage across 50+ document standards.",
     desc: "Thao tác mượt mà và tương thích đa dạng file DOCX, DOC, DOCM, DOTX, DjVu, EPUB, FB2, HTML, ODT, OTT, PDF, PDF/A, RTF, TXT, XML, XPS, HWP, HWPX, Pages...",
     enDesc: "Seamlessly work with DOCX, DOC, XLSX, PPTX, PDF, EPUB, ODF, RTF without layout breaking.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-tuong-thich.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-tuong-thich.jpg",
     stats: [
       { value: "99.8%", label: "Tương thích Microsoft Word & Excel" },
       { value: "50+", label: "Định dạng file văn phòng được hỗ trợ" },
@@ -122,7 +122,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "6-in-1 workspace engine consolidating text, data, slides, PDFs, forms, and diagrams into a single seamless tab.",
     desc: "Đủ bộ soạn thảo văn bản, bảng tính, thuyết trình tích hợp thêm biểu mẫu, PDF, Ebook và trình xem sơ đồ.",
     enDesc: "Complete document ecosystem: word, sheet, slide, PDF, forms, diagrams.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-xu-ly-tron-bo.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-xu-ly-tron-bo.jpg",
     stats: [
       { value: "6 Trong 1", label: "Ứng dụng văn phòng cốt lõi hợp nhất" },
       { value: "Tiết kiệm 70%", label: "Chi phí bản quyền phần mềm rời rạc" },
@@ -192,7 +192,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "Real-time or paragraph-locking collaboration with integrated audio/video meetings and Track Changes.",
     desc: "Cùng chỉnh sửa, bình luận, chat và gọi video trực tiếp qua plugin trong quá trình làm việc.",
     enDesc: "Co-authoring, comments, chat, and in-document video conferencing calls.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-cong-tac.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-cong-tac.jpg",
     stats: [
       { value: "0ms", label: "Độ trễ đồng bộ con trỏ thời gian thực" },
       { value: "2 Chế Độ", label: "Fast Mode & Strict Mode độc quyền" },
@@ -263,7 +263,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "7 permission tiers, dynamic watermarks, end-to-end encryption, and full compliance with Decree 13/2023.",
     desc: "Giới hạn truy cập/sao chép/in ấn, đóng dấu bản quyền, chữ ký số, đặt mật khẩu và mã hóa đầu cuối chặt chẽ.",
     enDesc: "Strict document restrictions: deny copy/download/print, digital signatures, and end-to-end encryption.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-phan-quyen.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-phan-quyen.jpg",
     stats: [
       { value: "AES-256", label: "Chuẩn mã hóa cấp quân sự" },
       { value: "7 Cấp Độ", label: "Phân quyền truy cập chi tiết" },
@@ -333,7 +333,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "Native multi-LLM integration empowering instant summarization, translation, rewriting, and automated spreadsheet logic.",
     desc: "Kết nối linh hoạt với mọi trợ lý AI để tóm tắt, dịch, viết email và tạo nội dung ngay trong tài liệu.",
     enDesc: "Seamless integration with OpenAI, Claude, DeepSeek, and private local LLMs.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-ai.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-ai.jpg",
     stats: [
       { value: "x5 Lần", label: "Tốc độ soạn thảo và xử lý văn bản" },
       { value: "100+ Ngôn Ngữ", label: "Dịch thuật tức thì chuẩn ngữ cảnh" },
@@ -405,7 +405,7 @@ export const featureDetailMap: Record<string, FeatureDetail> = {
     enSubtitle: "Omnichannel workspace syncing web cloud, native desktop editors, and mobile apps with 100% offline capability.",
     desc: "Truy cập và xử lý tài liệu trên web, máy tính Windows/Mac/Linux và điện thoại.",
     enDesc: "Work seamlessly across Web browsers, Windows, macOS, Linux, and iOS/Android.",
-    img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-moi-noi.jpg",
+    img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-moi-noi.jpg",
     stats: [
       { value: "100%", label: "Khả năng làm việc Offline trên Desktop" },
       { value: "4 Hệ Điều Hành", label: "Windows, macOS, Linux, Mobile" },

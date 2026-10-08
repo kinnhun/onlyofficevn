@@ -180,7 +180,7 @@ export default function DocsLegalSection() {
                 }}
               >
                 <img
-                  src="https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/nghi-dinh.png"
+                  src="https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/nghi-dinh.png"
                   alt="Nghị định 341/2025/NĐ-CP về bản quyền phần mềm"
                   loading="lazy"
                   style={{ width: "100%", height: "auto", borderRadius: "12px", display: "block" }}
@@ -203,7 +203,7 @@ export default function DocsLegalSection() {
       >
         <div style={{ maxWidth: "860px", margin: "0 auto" }}>
           <img
-            src="https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/logo.svg"
+            src="https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/logo.svg"
             alt="ONLYOFFICE"
             style={{ height: "36px", margin: "0 auto 24px", display: "block" }}
           />

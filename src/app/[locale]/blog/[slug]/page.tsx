@@ -38,7 +38,7 @@ export async function generateMetadata({
     };
   }
 
-  const baseUrl = "https://onlyoffice.vn";
+  const baseUrl = "https://onlyofficevietnam.com";
   const currentPath = isVi ? `/blog/${slug}` : `/en/blog/${slug}`;
 
   return {
@@ -98,7 +98,7 @@ export default async function BlogPostDetailPage({
     .filter((p) => p.id !== post.id && (p.category === post.category || p.featured))
     .slice(0, 3);
 
-  const baseUrl = "https://onlyoffice.vn";
+  const baseUrl = "https://onlyofficevietnam.com";
   const currentUrl = `${baseUrl}${isVi ? "" : "/en"}/blog/${slug}`;
 
   const articleJsonLd = {
@@ -118,7 +118,7 @@ export default async function BlogPostDetailPage({
       url: baseUrl,
       logo: {
         "@type": "ImageObject",
-        url: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg",
+        url: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg",
       },
     },
     mainEntityOfPage: {

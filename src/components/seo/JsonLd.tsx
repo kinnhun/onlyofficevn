@@ -8,8 +8,8 @@ export default function JsonLd({ locale }: { locale: string }) {
     "@type": "Organization",
     name: "ONLYOFFICE Vietnam",
     alternateName: "ONLYOFFICE",
-    url: "https://onlyoffice.vn",
-    logo: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg",
+    url: "https://onlyofficevietnam.com",
+    logo: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg",
     description: isVi
       ? "Nhà cung cấp giải pháp văn phòng trực tuyến và ngoại tuyến bảo mật toàn diện cho doanh nghiệp tại Việt Nam."
       : "Provider of secure cloud and on-premise office productivity suites for modern enterprises.",
@@ -23,7 +23,7 @@ export default function JsonLd({ locale }: { locale: string }) {
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        url: "https://onlyoffice.vn/pricing",
+        url: "https://onlyofficevietnam.com/pricing",
         availableLanguage: ["Vietnamese", "English"],
       },
     ],
@@ -40,13 +40,13 @@ export default function JsonLd({ locale }: { locale: string }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "ONLYOFFICE Vietnam",
-    url: "https://onlyoffice.vn",
+    url: "https://onlyofficevietnam.com",
     inLanguage: isVi ? "vi-VN" : "en-US",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://onlyoffice.vn/blog?q={search_term_string}",
+        urlTemplate: "https://onlyofficevietnam.com/blog?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

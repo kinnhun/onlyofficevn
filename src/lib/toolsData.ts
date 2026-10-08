@@ -141,7 +141,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE Document Editor",
         msCompatLabel: isVi ? "Tương thích 99.9% DOCX / Word" : "100% DOCX Compatibility",
         formatList: ["DOCX", "DOC", "DOCM", "DOTX", "ODT", "OTT", "RTF", "TXT", "HTML", "PDF", "EPUB", "FB2"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-processor-hero.png",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-processor-hero.png",
         videoEmbedUrl: "https://www.youtube.com/embed/HqRMneSGHk0?autoplay=1&mute=1&loop=1&playlist=HqRMneSGHk0",
         overviewText: isVi
           ? "Soạn thảo, định dạng văn bản chuyên nghiệp với đầy đủ công cụ học thuật, đánh số trang, tạo mục lục tự động và kiểm tra chính tả đa ngôn ngữ."
@@ -165,7 +165,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Open, edit, and save DOCX files while preserving fonts, formulas, tables, and page layouts.",
                   "Full support for Track Changes, inline comments, footnotes, and embedded objects without layout breaks.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-tuong-thich-microsoft.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-tuong-thich-microsoft.png",
           },
           {
             id: "ft-doc-2",
@@ -181,7 +181,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Connect directly to ChatGPT, Claude, Gemini, or private self-hosted enterprise LLMs.",
                   "Draft content, summarize long briefs, translate across 50+ languages, and fix syntax right inside the editor.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-ai-soan-thao.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-ai-soan-thao.png",
           },
           {
             id: "ft-doc-3",
@@ -197,7 +197,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Two collaboration modes: Fast (live typing view) and Strict (paragraph locking to prevent collision).",
                   "Comprehensive version history with color-coded diff tracking and 1-click restore.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-cong-tac.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-cong-tac.png",
           },
         ],
         bonusCards: [
@@ -284,7 +284,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE Spreadsheet Editor",
         msCompatLabel: isVi ? "Tương thích 100% XLSX / Excel" : "100% XLSX Compatibility",
         formatList: ["XLSX", "XLS", "XLSM", "XLTX", "ODS", "OTS", "CSV", "TSV", "PDF"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
         videoEmbedUrl: "https://www.youtube.com/embed/HqRMneSGHk0?autoplay=1&mute=1&loop=1&playlist=HqRMneSGHk0",
         overviewText: isVi
           ? "Phân tích, xử lý dữ liệu tài chính, kế toán và kinh doanh với hơn 400 hàm toán học, thống kê, tài chính và tự động hóa quy trình bằng Macro JavaScript."
@@ -308,7 +308,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Seamlessly open and calculate XLSX, XLS, and CSV workbooks with zero formula calculation errors.",
                   "Full support for over 400 formulas including XLOOKUP, INDEX-MATCH, VLOOKUP, SUMIFS, and financial functions.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-ham-tinh-toan.png",
           },
           {
             id: "ft-sheet-2",
@@ -324,7 +324,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Transform raw tables into clear visual insights with 20+ chart types (bar, combo, radar, waterfall, scatter).",
                   "Conditional Formatting with color scales and data bars highlights outliers and revenue trends automatically.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-bieu-do.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-bieu-do.png",
           },
           {
             id: "ft-sheet-3",
@@ -340,7 +340,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Create individual filter views that only affect your own screen while teammates work on the same sheet.",
                   "Save and name custom view configurations for recurring quarterly audits and reviews.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-cong-tac.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/sheets/sheet-cong-tac.png",
           },
         ],
         bonusCards: [
@@ -427,7 +427,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE Presentation Editor",
         msCompatLabel: isVi ? "Tương thích 100% PowerPoint (.pptx)" : "100% PPTX Compatibility",
         formatList: ["PPTX", "PPT", "PPSX", "POTX", "ODP", "OTP", "PDF"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
         videoEmbedUrl: "https://www.youtube.com/embed/kxMwSea5Nw4?autoplay=1&mute=1&loop=1&playlist=kxMwSea5Nw4",
         heroLayout: "centered",
         overviewText: isVi
@@ -454,7 +454,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Open and edit PPTX, PPT, and PPSX files flawlessly with dozens of entrance, exit, and transition animations.",
                   "Preserves 100% of slide geometry, fonts, speaker notes, and embedded charts when sharing with Microsoft 365 users.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-animation.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-animation.png",
           },
           {
             id: "ft-tt-2",
@@ -470,7 +470,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Access a curated library of business pitch decks, investor templates, vector icons, and stock graphics.",
                   "Includes SmartArt diagrams, shapes, and charts synchronized directly with spreadsheet data.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-master-slide.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-master-slide.png",
           },
           {
             id: "ft-tt-3",
@@ -486,7 +486,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Co-author slides in real-time, leave targeted comments, tag colleagues, and restore previous versions effortlessly.",
                   "Slide and element locking guarantees zero edit conflicts during fast-paced deadline crunches.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-cong-tac.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/slides/slide-cong-tac.png",
           },
         ],
         bonusCards: [
@@ -573,7 +573,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE PDF Editor",
         msCompatLabel: isVi ? "Chuẩn Adobe Acrobat & ISO PDF" : "Adobe Acrobat & ISO PDF Standard",
         formatList: ["PDF", "PDF/A", "DJVU", "FB2", "EPUB", "DOCX", "XLSX", "PPTX"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chinh-sua-noi-dung.png",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chinh-sua-noi-dung.png",
         videoEmbedUrl: "https://www.youtube.com/embed/HqRMneSGHk0?autoplay=1&mute=1&loop=1&playlist=HqRMneSGHk0",
         overviewText: isVi
           ? "Chỉnh sửa văn bản, hình ảnh, sắp xếp trang, điền biểu mẫu PDF tương tác, gạch chú thích và ký số bảo mật mà không cần mua thêm phần mềm Adobe Acrobat đắt đỏ."
@@ -599,7 +599,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Modify text, replace images, and reposition vector elements directly inside the PDF without converting back to Word.",
                   "Delete, rotate, split, merge, and reorder PDF pages with intuitive drag-and-drop actions.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chinh-sua-noi-dung.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chinh-sua-noi-dung.png",
           },
           {
             id: "ft-pdf-2",
@@ -615,7 +615,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Fill text inputs, checkboxes, radio groups, dropdown selectors, date pickers, and signature blocks.",
                   "Auto-calculate arithmetic fields and validate tax codes, email addresses, and phone numbers.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
           },
           {
             id: "ft-pdf-3",
@@ -631,7 +631,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Convert PDFs into editable Word (.docx) files while preserving tables, columns, and layout headers.",
                   "Export Word, Excel, and PowerPoint files to ISO-compliant PDF/A format for long-term archiving.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
           },
         ],
         bonusCards: [
@@ -718,7 +718,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE Form Creator",
         msCompatLabel: isVi ? "Chuẩn Fillable PDF / OFORM" : "Fillable PDF & OFORM Standard",
         formatList: ["OFORM", "DOCXF", "PDF", "DOCX"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
         videoEmbedUrl: "https://www.youtube.com/embed/HqRMneSGHk0?autoplay=1&mute=1&loop=1&playlist=HqRMneSGHk0",
         overviewText: isVi
           ? "Số hóa hoàn toàn quy trình giấy tờ thủ công. Tạo các mẫu đơn xin nghỉ phép, hợp đồng lao động, bản khảo sát khách hàng hay hồ sơ nhân sự với các trường nhập liệu tự động hóa."
@@ -746,7 +746,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Drag and drop text boxes, checkboxes, radio groups, combo dropdowns, date pickers, and signature blocks.",
                   "Apply input masks for phone numbers, national IDs, tax numbers, and postal codes.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-dien-form.png",
           },
           {
             id: "ft-form-2",
@@ -762,7 +762,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Mark required fields and lock non-editable legal terms to prevent unauthorized tampering.",
                   "Auto-calculate sub-totals, sales taxes, and invoice balances using custom formulas.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-sang-tao-bieu-do.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-sang-tao-bieu-do.png",
           },
           {
             id: "ft-form-3",
@@ -778,7 +778,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Export to standard fillable PDF format compatible with Acrobat, browsers, and mobile devices.",
                   "Leverage open OFORM architecture to ensure strict data sovereignty within your private cloud.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
           },
         ],
         bonusCards: [
@@ -865,7 +865,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
         badge: "ONLYOFFICE Diagram Viewer",
         msCompatLabel: isVi ? "Tương thích Microsoft Visio (.vsdx)" : "100% Microsoft Visio (VSDX) Compatibility",
         formatList: ["VSDX", "VSD", "SVG", "PDF", "PNG"],
-        heroImage: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
+        heroImage: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
         videoEmbedUrl: "https://www.youtube.com/embed/HqRMneSGHk0?autoplay=1&mute=1&loop=1&playlist=HqRMneSGHk0",
         overviewText: isVi
           ? "Giải quyết bài toán mở file sơ đồ hệ thống công nghệ thông tin, bản vẽ kiến trúc mạng hay lưu đồ quy trình kinh doanh. ONLYOFFICE hiển thị chuẩn xác từng chi tiết mà không đòi hỏi chi phí đắt đỏ của Microsoft Visio."
@@ -893,7 +893,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Natively open VSDX and VSD files created by any version of Microsoft Visio without distortion.",
                   "Maintains razor-sharp resolution for all vector symbols and connectors even at extreme zoom levels.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
           },
           {
             id: "ft-diagram-2",
@@ -909,7 +909,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Fluid pan-and-zoom navigation with fast text search across schematics with thousands of interconnected nodes.",
                   "Seamlessly switch between multiple drawing tabs and layers within complex multi-page files.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-sang-tao-bieu-do.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/word-processor/word-sang-tao-bieu-do.png",
           },
           {
             id: "ft-diagram-3",
@@ -925,7 +925,7 @@ export function getToolDetailData(slug: string, locale: string): ToolDetailData 
                   "Export diagrams directly to crisp vector PDFs or high-DPI PNGs for presentations and project reports.",
                   "Share password-protected View-Only links preventing unauthorized extraction or printing.",
                 ],
-            image: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
+            image: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/pdf-editor/pdf-chuyen-doi-dinh-dang.png",
           },
         ],
         bonusCards: [

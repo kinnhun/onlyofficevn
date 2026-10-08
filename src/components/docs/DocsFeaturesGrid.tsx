@@ -19,7 +19,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Thao tác mượt mà và tương thích đa dạng file DOCX, DOC, DOCM, DOTX, DjVu, EPUB, FB2, HTML, ODT, OTT, PDF, PDF/A, RTF, TXT, XML, XPS, HWP, HWPX, Pages..."
         : "Seamlessly work with DOCX, DOC, XLSX, PPTX, PDF, EPUB, ODF, RTF, and dozens of legacy or specialized enterprise formats without layout breaking.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-tuong-thich.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-tuong-thich.jpg",
       icon: FileSpreadsheet,
     },
     {
@@ -30,7 +30,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Đủ bộ soạn thảo văn bản, bảng tính, thuyết trình tích hợp thêm biểu mẫu, PDF, Ebook và trình xem sơ đồ."
         : "A complete unified ecosystem: word processor, advanced spreadsheet, presentation maker, fillable form designer, and native diagram viewer.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-xu-ly-tron-bo.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-xu-ly-tron-bo.jpg",
       icon: Layers,
     },
     {
@@ -41,7 +41,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Cùng chỉnh sửa, bình luận, chat và gọi video trực tiếp qua plugin trong quá trình làm việc."
         : "Real-time or paragraph-locking collaboration modes, Track Changes, live chat, audio/video conferencing calls, and mention notifications.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-cong-tac.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-cong-tac.jpg",
       icon: Sparkles,
     },
     {
@@ -52,7 +52,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Giới hạn truy cập/sao chép/in ấn, đóng dấu bản quyền, chữ ký số, đặt mật khẩu và mã hóa đầu cuối chặt chẽ."
         : "Strict document restrictions: deny copy/download/print, digital signature verification, watermarks, and end-to-end client encryption.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-phan-quyen.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-phan-quyen.jpg",
       icon: Shield,
     },
     {
@@ -63,7 +63,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Kết nối linh hoạt với mọi trợ lý AI để tóm tắt, dịch, viết email và tạo nội dung ngay trong tài liệu."
         : "Directly integrate OpenAI, Claude, DeepSeek, or private local LLMs to generate text, translate languages, build tables, and summarize notes.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-ai.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-ai.jpg",
       icon: Cpu,
     },
     {
@@ -74,7 +74,7 @@ export default function DocsFeaturesGrid() {
       desc: isVi
         ? "Truy cập và xử lý tài liệu trên web, máy tính Windows/Mac/Linux và điện thoại."
         : "Seamless synchronization across Web cloud browsers, Windows/macOS/Linux desktops, and Android/iOS smartphones and tablets.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-moi-noi.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/qt-moi-noi.jpg",
       icon: MonitorSmartphone,
     },
   ];

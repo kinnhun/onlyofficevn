@@ -20,7 +20,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Soạn thảo và định dạng văn bản chuyên nghiệp với khả năng tương thích hoàn hảo mọi định dạng lỗi như DOCX hay PDF. Tích hợp AI mạnh mẽ hỗ trợ dịch thuật, xử lý tài liệu thông minh, mượt mà và liền mạch ngay trên một giao diện."
         : "Full-featured word processor with perfect DOCX compatibility, complex formatting, academic referencing, and native AI integration.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
       href: "/document-editor",
     },
     {
@@ -29,7 +29,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Phân tích, xử lý dữ liệu tối ưu với hơn 400 hàm tính toán phức tạp, bảng Pivot và tự động hóa quy trình bằng Macro. Chế độ Personal Sheet Views cho phép lọc số liệu mà không làm gián đoạn màn hình của đồng nghiệp."
         : "Fast calculations with 400+ math, financial, and statistical formulas. Support for Pivot Tables, conditional formatting, and custom Sheet Views.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bang-tinh.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bang-tinh.jpg",
       href: "/spreadsheet-editor",
     },
     {
@@ -38,7 +38,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Thu hút mọi ánh nhìn với công cụ thiết kế trực quan, kho hiệu ứng chuyển động phong phú và chế độ Presenter View chuyên nghiệp. Tự do chèn đa phương tiện và đồng chỉnh sửa theo thời gian thực."
         : "Create interactive slides with rich multimedia, smooth slide animations, speaker notes, and real-time presenter controls.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-ppt.jpg",
       href: "/presentation-editor",
     },
     {
@@ -47,7 +47,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Biến bất kỳ tài liệu Word nào thành biểu mẫu PDF tương tác với đa dạng trường điền (checkbox, dropdown, ngày tháng). Hỗ trợ điền trực tuyến đa thiết bị và xác thực bằng chữ ký số đảm bảo tính pháp lý và bảo mật cao."
         : "Design digital fillable PDF forms with validation, dropdown selectors, date pickers, and electronic signatures.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bieu-mau.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-bieu-mau.jpg",
       href: "/form-creator",
     },
     {
@@ -56,7 +56,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Chỉnh sửa trực tiếp nội dung văn bản, hình ảnh trong tệp PDF dễ dàng như đang thao tác trên Word. Chuyển đổi ngược PDF sang DOCX nhanh chóng đáp ứng mọi nhu cầu xử lý tài liệu khắt khe nhất."
         : "Edit text, insert images, annotate, draw, and convert PDFs directly to editable Word documents with one click.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-pdf.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-pdf.jpg",
       href: "/pdf-editor",
     },
     {
@@ -65,7 +65,7 @@ export default function DocsExploreCarousel() {
       desc: isVi
         ? "Đọc và truy xuất chi tiết các tệp sơ đồ phức tạp (định dạng VSDX) với tốc độ tải cực nhanh mà không cần cài đặt phần mềm bên thứ ba. Trải nghiệm xem mượt mà và đồng nhất trên mọi nền tảng."
         : "Inspect complex system architectures and diagrams (VSDX format) with crisp vector rendering on any browser.",
-      img: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
+      img: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-xem-so-do.jpg",
       href: "/diagram-viewer",
     },
   ];

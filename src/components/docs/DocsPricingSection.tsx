@@ -263,7 +263,7 @@ export default function DocsPricingSection() {
       >
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
           <img
-            src="https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/logo.svg"
+            src="https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/logo.svg"
             alt="ONLYOFFICE"
             style={{ height: "30px", margin: "0 auto 20px", display: "block" }}
           />

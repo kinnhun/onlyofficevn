@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: isVi
         ? "Chia sẻ, đồng chỉnh sửa thời gian thực, bình luận và họp video ngay trong tài liệu với ONLYOFFICE."
         : "Share, co-author and communicate in real time to get work done faster on all kinds of office documents.",
-      url: "https://onlyoffice.vn/seamless-collaboration",
+      url: "https://onlyofficevietnam.com/seamless-collaboration",
       type: "website",
       images: [
         {

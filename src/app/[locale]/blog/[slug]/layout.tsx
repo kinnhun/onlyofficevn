@@ -24,8 +24,8 @@ export async function generateMetadata({
   const imageUrl = post.image?.startsWith("http")
     ? post.image
     : post.image
-    ? `https://onlyoffice.vn${post.image}`
-    : "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg";
+    ? `https://onlyofficevietnam.com${post.image}`
+    : "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg";
 
   return {
     title,
@@ -42,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `https://onlyoffice.vn${canonicalUrl}`,
+      url: `https://onlyofficevietnam.com${canonicalUrl}`,
       siteName: "ONLYOFFICE Vietnam",
       locale: isVi ? "vi_VN" : "en_US",
       type: "article",

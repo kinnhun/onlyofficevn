@@ -68,7 +68,7 @@ export async function generateMetadata({
   const canonicalUrl = isVi ? "/" : "/en";
 
   return {
-    metadataBase: new URL("https://onlyoffice.vn"),
+    metadataBase: new URL("https://onlyofficevietnam.com"),
     title: {
       default: siteTitleDefault,
       template: "%s | ONLYOFFICE Vietnam",
@@ -99,13 +99,13 @@ export async function generateMetadata({
       type: "website",
       locale: isVi ? "vi_VN" : "en_US",
       alternateLocale: [isVi ? "en_US" : "vi_VN"],
-      url: `https://onlyoffice.vn${canonicalUrl}`,
+      url: `https://onlyofficevietnam.com${canonicalUrl}`,
       siteName: "ONLYOFFICE Vietnam",
       title: siteTitleDefault,
       description: siteDescription,
       images: [
         {
-          url: "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
+          url: "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
           width: 1200,
           height: 630,
           alt: "ONLYOFFICE Vietnam — Bộ Ứng Dụng Văn Phòng Bảo Mật",
@@ -119,7 +119,7 @@ export async function generateMetadata({
       title: siteTitleDefault,
       description: siteDescription,
       images: [
-        "https://onlyoffice.vn/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
+        "https://onlyofficevietnam.com/wp-content/themes/onlyoffice-vn/assets/images/docs-page/tool-document.jpg",
       ],
     },
     robots: {

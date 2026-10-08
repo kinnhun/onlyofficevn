@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getBlogPosts } from "@/components/blog/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://onlyoffice.vn";
+  const baseUrl = "https://onlyofficevietnam.com";
   const now = new Date();
 
   // Primary static routes with their priority & update frequency
@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemapEntries: MetadataRoute.Sitemap = [];
 
   for (const page of pages) {
-    // Vietnamese default route (e.g. https://onlyoffice.vn/document-editor)
+    // Vietnamese default route (e.g. https://onlyofficevietnam.com/document-editor)
     sitemapEntries.push({
       url: `${baseUrl}${page.path}`,
       lastModified: now,
@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     });
 
-    // English route (e.g. https://onlyoffice.vn/en/document-editor)
+    // English route (e.g. https://onlyofficevietnam.com/en/document-editor)
     sitemapEntries.push({
       url: `${baseUrl}/en${page.path}`,
       lastModified: now,

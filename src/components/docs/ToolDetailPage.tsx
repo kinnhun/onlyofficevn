@@ -54,7 +54,7 @@ export interface ToolDetailData {
   formatList: string[];
   heroImage: string;
   videoEmbedUrl?: string; // e.g. "https://www.youtube.com/embed/kxMwSea5Nw4?autoplay=1&mute=1&loop=1&playlist=kxMwSea5Nw4"
-  heroLayout?: "split" | "centered"; // "centered" matches onlyoffice.vn/thuyet-trinh/
+  heroLayout?: "split" | "centered"; // "centered" matches onlyofficevietnam.com/thuyet-trinh/
   msCompatLabel: string;
   overviewText: string;
   interactiveTabs?: InteractiveTabItem[];
@@ -133,7 +133,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
               <span style={{ color: "#ea580c", fontWeight: 700 }}>{data.name}</span>
             </div>
 
-            {/* IF CENTERED HERO (like https://onlyoffice.vn/thuyet-trinh/) */}
+            {/* IF CENTERED HERO (like https://onlyofficevietnam.com/thuyet-trinh/) */}
             {isCentered ? (
               <div style={{ maxWidth: "1040px", margin: "0 auto", textAlign: "center" }}>
                 {/* Badges */}
@@ -665,7 +665,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
           </div>
         </section>
 
-        {/* SECTION 2: INTERACTIVE TABS (Exact match to onlyoffice.vn/thuyet-trinh/ feature tabs) */}
+        {/* SECTION 2: INTERACTIVE TABS (Exact match to onlyofficevietnam.com/thuyet-trinh/ feature tabs) */}
         {data.interactiveTabs && data.interactiveTabs.length > 0 && (
           <section
             style={{
@@ -793,7 +793,7 @@ export default function ToolDetailPage({ data }: { data: ToolDetailData }) {
           </section>
         )}
 
-        {/* SECTION 3: BONUS CARDS (Exact match to onlyoffice.vn/thuyet-trinh/ 3-column features) */}
+        {/* SECTION 3: BONUS CARDS (Exact match to onlyofficevietnam.com/thuyet-trinh/ 3-column features) */}
         {data.bonusCards && data.bonusCards.length > 0 && (
           <section
             style={{
