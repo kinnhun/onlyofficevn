@@ -6,53 +6,37 @@ import { TrendingUp, ShieldAlert, CheckCircle2, LockKeyhole } from "lucide-react
 export default function PartnerAdvantages() {
   const advantages = [
     {
-      icon: <TrendingUp size={24} color="#ff6f3d" />,
-      tag: "LỢI NHUẬN CỰC KHỦNG",
+      icon: <TrendingUp size={22} color="#ff6f3d" />,
+      tag: "CHIẾT KHẤU CAO",
       title: "Lợi Nhuận Vượt Trội",
-      desc: "Chiết khấu sỉ cực cao dành cho Đại lý & Đối tác phân phối. Vui lòng liên hệ trực tiếp để nhận bảng giá sỉ bảo mật.",
-      color: "#ea580c",
-      bg: "#fff7ed",
+      desc: "Chính sách chiết khấu sỉ trực tiếp từ đại diện phân phối, tối ưu biên lợi nhuận cho cửa hàng và đại lý trên từng license.",
     },
     {
-      icon: <ShieldAlert size={24} color="#ea580c" />,
-      tag: "PHÁP LÝ CHUẨN 100%",
-      title: "Lá Chắn Pháp Lý Bản Quyền",
-      desc: "Cung cấp đầy đủ Hợp đồng, Biên bản bàn giao & Chứng nhận nguồn gốc AGPLv3 đóng dấu mộc đỏ pháp lý của Công ty TNHH Công Nghệ Mercy để khách trình thanh tra miễn phạt.",
-      color: "#ea580c",
-      bg: "#fff7ed",
+      icon: <ShieldAlert size={22} color="#ff6f3d" />,
+      tag: "CHUẨN PHÁP LÝ",
+      title: "Hợp Pháp Hóa Bản Quyền",
+      desc: "Cung cấp đầy đủ Hợp đồng, Biên bản nghiệm thu và Hóa đơn VAT điện tử, bảo đảm an toàn pháp lý cho khách hàng doanh nghiệp.",
     },
     {
-      icon: <CheckCircle2 size={24} color="#ff6f3d" />,
-      tag: "TƯƠNG THÍCH HOÀN TOÀN",
-      title: "Tương Thích Hoàn Hảo 100%",
-      desc: "Tích hợp sẵn bộ phông chữ văn phòng Việt Nam (VNI, TCVN3, Arial, Times New Roman, Calibri...), mở file .docx, .xlsx, .pptx cũ mượt mà, hoàn toàn không bị lỗi vỡ dòng.",
-      color: "#ea580c",
-      bg: "#fff7ed",
+      icon: <CheckCircle2 size={22} color="#ff6f3d" />,
+      tag: "TƯƠNG THÍCH 100%",
+      title: "Đầy Đủ Font Tiếng Việt",
+      desc: "Tích hợp sẵn bộ font văn phòng chuẩn Việt Nam (VNI, TCVN3, Arial, Times New Roman, Calibri...), mở file .docx, .xlsx mượt mà.",
     },
     {
-      icon: <LockKeyhole size={24} color="#ea580c" />,
-      tag: "BẢO VỆ ĐẠI LÝ",
-      title: "Bảo Mật Thông Tin Khách Hàng Tuyệt Đối",
-      desc: "Cam kết bằng văn bản hợp đồng về việc bảo mật tuyệt đối dữ liệu và danh tính khách hàng của đại lý. Mercy Tech tuyệt đối không tiếp cận riêng hay thu hút khách của đại lý.",
-      color: "#ea580c",
-      bg: "#fff7ed",
+      icon: <LockKeyhole size={22} color="#ff6f3d" />,
+      tag: "BẢO HỘ THỊ TRƯỜNG",
+      title: "Bảo Vệ Tệp Khách Hàng",
+      desc: "Cam kết bằng văn bản hợp đồng: Mercy Tech tuyệt đối không tiếp cận riêng hay khai thác tệp khách hàng thuộc quyền của đại lý.",
     },
   ];
 
   return (
     <section className="oo-partner-section">
       <div style={{ textAlign: "center", marginBottom: "40px" }}>
-        <span
-          style={{
-            color: "#ea580c",
-            fontSize: "12px",
-            fontWeight: 800,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
+        <div className="oo-partner-kicker">
           ƯU THẾ ĐẮC ĐỊA
-        </span>
+        </div>
         <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           Tại Sao Nên Hợp Tác Cùng Mercy Tech?
         </h2>
@@ -74,22 +58,22 @@ export default function PartnerAdvantages() {
             style={{
               background: "#ffffff",
               borderRadius: "16px",
-              padding: "32px 26px",
+              padding: "28px 24px",
               border: "1px solid #e2e8f0",
-              boxShadow: "0 4px 16px rgba(0, 0, 0, 0.04)",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.02)",
               display: "flex",
               flexDirection: "column",
-              gap: "14px",
-              transition: "transform 0.2s ease, box-shadow 0.2s ease",
+              gap: "12px",
             }}
           >
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div
                 style={{
-                  width: "48px",
-                  height: "48px",
-                  borderRadius: "12px",
-                  backgroundColor: item.bg,
+                  width: "44px",
+                  height: "44px",
+                  borderRadius: "10px",
+                  backgroundColor: "#f8fafc",
+                  border: "1px solid #e2e8f0",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -99,11 +83,12 @@ export default function PartnerAdvantages() {
               </div>
               <span
                 style={{
-                  fontSize: "10.5px",
-                  fontWeight: 800,
-                  color: item.color,
-                  backgroundColor: item.bg,
-                  padding: "4px 10px",
+                  fontSize: "11px",
+                  fontWeight: 700,
+                  color: "#475569",
+                  backgroundColor: "#f1f5f9",
+                  border: "1px solid #e2e8f0",
+                  padding: "3px 9px",
                   borderRadius: "20px",
                   letterSpacing: "0.04em",
                 }}
@@ -112,10 +97,10 @@ export default function PartnerAdvantages() {
               </span>
             </div>
 
-            <h3 style={{ fontSize: "18px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
+            <h3 style={{ fontSize: "17px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
               {item.title}
             </h3>
-            <p style={{ fontSize: "14.5px", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+            <p style={{ fontSize: "14px", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
               {item.desc}
             </p>
           </div>

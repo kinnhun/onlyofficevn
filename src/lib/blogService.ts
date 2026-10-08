@@ -64,6 +64,7 @@ export function formatBlogPost(doc: any, isVi: boolean): BlogPost {
 
   return {
     id: doc.id,
+    slug: doc.slug || doc.id,
     image: selectedImage,
     title: isVi ? doc.title_vi : (doc.title_en || doc.title_vi),
     category: doc.category,
@@ -74,10 +75,11 @@ export function formatBlogPost(doc: any, isVi: boolean): BlogPost {
     author: doc.author || "Mercy Tech Team",
     authorRole: isVi ? doc.authorRole_vi : (doc.authorRole_en || doc.authorRole_vi),
     featured: Boolean(doc.featured),
+    isMainFeatured: Boolean(doc.isMainFeatured || doc.slug === "accessibility-conformance" || doc.id === "accessibility-conformance"),
     tags: doc.tags || [],
     summary: isVi ? doc.summary_vi : (doc.summary_en || doc.summary_vi),
     content: isVi ? (doc.content_vi || []) : (doc.content_en?.length ? doc.content_en : doc.content_vi || []),
-    contentHtml: doc.contentHtml || "",
+    contentHtml: isVi ? (doc.contentHtml_vi || doc.contentHtml || "") : (doc.contentHtml_en || doc.contentHtml || ""),
     sourceUrl: doc.sourceUrl || "",
     sections,
   };
@@ -92,6 +94,10 @@ export async function seedBlogDatabase(force = false) {
   const count = await BlogPostModel.countDocuments();
   if (count > 0 && !force) {
     return { seeded: false, count, message: "Database already contains articles" };
+  }
+
+  if (force) {
+    await BlogPostModel.deleteMany({});
   }
 
   const postsVi = getBlogPosts(true);

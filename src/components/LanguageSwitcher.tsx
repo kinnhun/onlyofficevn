@@ -65,6 +65,12 @@ export default function LanguageSwitcher({
 
   const handleSelectLocale = (newLocale: Locale) => {
     if (newLocale !== currentLocale) {
+      try {
+        localStorage.setItem("NEXT_LOCALE", newLocale);
+        document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=31536000;SameSite=Lax`;
+      } catch {
+        // ignore localStorage errors
+      }
       router.replace(pathname, { locale: newLocale });
       onLocaleChange?.(newLocale);
     }

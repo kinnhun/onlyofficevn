@@ -1,52 +1,40 @@
-"use client";
+import React from "react";
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import PricingClientView from "@/components/pricing/PricingClientView";
 
-import React, { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isVi = locale === "vi";
 
-import PricingHeroBanner from "@/components/pricing/PricingHeroBanner";
-import PricingKeyCards from "@/components/pricing/PricingKeyCards";
-import PricingGuarantees from "@/components/pricing/PricingGuarantees";
-import PricingAddonsCatalog from "@/components/pricing/PricingAddonsCatalog";
-import PricingQuoteModal from "@/components/pricing/PricingQuoteModal";
-
-export default function PricingPage() {
-  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<string>("OnlyOffice Key Online");
-
-  const handleOpenQuote = (productName?: string) => {
-    if (productName) setSelectedProduct(productName);
-    setQuoteModalOpen(true);
+  return {
+    title: isVi
+      ? "Bảng Giá Bản Quyền ONLYOFFICE — Key Online & Tem Vật Lý Chính Hãng"
+      : "ONLYOFFICE Official Pricing & Licensing in Vietnam",
+    description: isVi
+      ? "Bảng giá bản quyền ONLYOFFICE vĩnh viễn theo máy (Key Online) và tem vật lý bảo hành chính hãng từ Công ty TNHH Công Nghệ Mercy."
+      : "Explore ONLYOFFICE perpetual and subscription licensing packages with official support from Mercy Tech.",
+    alternates: {
+      canonical: isVi ? "/pricing" : "/en/pricing",
+      languages: {
+        "vi-VN": "/pricing",
+        "en-US": "/en/pricing",
+      },
+    },
   };
+}
 
-  return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", backgroundColor: "#ffffff" }}>
-      {/* Header (4 items, no search, no call icon) */}
-      <Header />
+export default async function PricingPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-      <main style={{ flex: 1, backgroundColor: "#ffffff" }}>
-        {/* 1. Hero Banner: Homepage Palette, Distributor Badge, Quick Contact */}
-        <PricingHeroBanner onOpenQuote={() => handleOpenQuote("Tư Vấn Báo Giá Chung")} />
-
-        {/* 2. Key Online Packages: Laptop Portal Preview + 3 Confidential Quote Tiers */}
-        <PricingKeyCards onOpenQuote={handleOpenQuote} />
-
-        {/* 3. 5 Core Guarantees: Main UUID, Machine Swap, Force Majeure, Key Portal, AGPLv3 Certificate */}
-        <PricingGuarantees />
-
-        {/* 4. OnlyOffice Physical License & Wholesale Program: Hologram Sticker & Dealer Club */}
-        <PricingAddonsCatalog onOpenQuote={handleOpenQuote} />
-      </main>
-
-      {/* Footer */}
-      <Footer />
-
-      {/* Confidential Price Quote Request Modal */}
-      <PricingQuoteModal
-        isOpen={quoteModalOpen}
-        onClose={() => setQuoteModalOpen(false)}
-        defaultProduct={selectedProduct}
-      />
-    </div>
-  );
+  return <PricingClientView />;
 }

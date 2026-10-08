@@ -18,16 +18,16 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             display: "inline-flex",
             alignItems: "center",
             gap: "8px",
-            background: "#fff7ed",
-            color: "#ea580c",
-            border: "1px solid #fed7aa",
-            padding: "8px 20px",
+            background: "#f1f5f9",
+            color: "#334155",
+            border: "1px solid #e2e8f0",
+            padding: "7px 18px",
             borderRadius: "30px",
             fontSize: "12px",
-            fontWeight: 800,
-            letterSpacing: "0.06em",
+            fontWeight: 700,
+            letterSpacing: "0.04em",
             marginBottom: "20px",
-            boxShadow: "0 2px 8px rgba(234, 88, 12, 0.08)",
+            boxShadow: "0 1px 3px rgba(0, 0, 0, 0.02)",
             maxWidth: "100%",
             boxSizing: "border-box",
             textAlign: "center",
@@ -35,7 +35,7 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
           }}
         >
           <FlagVi width={18} height={13} />
-          <span>CHƯƠNG TRÌNH ĐỐI TÁC & ĐẠI LÝ ONLYOFFICE CHÍNH HÃNG TẠI VIỆT NAM</span>
+          <span>CHƯƠNG TRÌNH ĐỐI TÁC & ĐẠI LÝ ONLYOFFICE TẠI VIỆT NAM</span>
         </div>
 
         <h1 className="oo-partner-hero-title">
@@ -54,29 +54,29 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             justifyContent: "center",
             gap: "10px",
             flexWrap: "wrap",
-            marginBottom: "36px",
+            marginBottom: "32px",
           }}
         >
           {[
-            { icon: <ShieldCheck size={16} color="#ff6f3d" />, text: "SẢN PHẨM CHÍNH HÃNG" },
-            { icon: <Award size={16} color="#ea580c" />, text: "BẢO HÀNH VĨNH VIỄN" },
-            { icon: <Users size={16} color="#d97706" />, text: "ĐỒNG HÀNH LÂU DÀI" },
-            { icon: <Lock size={16} color="#c2410c" />, text: "GIÁ SỈ BẢO MẬT ĐẠI LÝ" },
+            { icon: <ShieldCheck size={16} color="#ff6f3d" />, text: "Sản Phẩm Chính Hãng" },
+            { icon: <Award size={16} color="#ff6f3d" />, text: "Bảo Hành Vĩnh Viễn" },
+            { icon: <Users size={16} color="#ff6f3d" />, text: "Hỗ Trợ Kỹ Thuật 24/7" },
+            { icon: <Lock size={16} color="#ff6f3d" />, text: "Bảo Hộ Biên Lợi Nhuận" },
           ].map((item, idx) => (
             <div
               key={idx}
               style={{
                 background: "#ffffff",
-                border: "1px solid #cbd5e1",
+                border: "1px solid #e2e8f0",
                 borderRadius: "20px",
                 padding: "6px 14px",
-                fontSize: "12px",
-                fontWeight: 700,
+                fontSize: "12.5px",
+                fontWeight: 600,
                 color: "#334155",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "6px",
-                boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.03)",
               }}
             >
               {item.icon}
@@ -95,13 +95,14 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
               backgroundColor: "#ff6f3d",
               color: "#ffffff",
               border: "none",
-              boxShadow: "0 4px 16px rgba(255, 111, 61, 0.35)",
+              boxShadow: "0 4px 14px rgba(255, 111, 61, 0.3)",
+              fontWeight: 700,
             }}
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ea580c")}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ff6f3d")}
           >
             <Lock size={18} />
-            <span>Nhận Báo Giá Sỉ & Chính Sách Bảo Mật</span>
+            <span>Nhận Báo Giá Sỉ & Chính Sách</span>
           </button>
 
           <a
@@ -109,16 +110,20 @@ export default function PartnerHero({ onOpenModal }: PartnerHeroProps) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={openMessengerChat}
-            title="Liên hệ"
+            title="Liên hệ tư vấn"
             className="oo-partner-hero-btn"
             style={{
-              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-              color: "#ffffff",
-              boxShadow: "0 4px 14px rgba(234, 88, 12, 0.35)",
+              backgroundColor: "#ffffff",
+              color: "#0f172a",
+              border: "1.5px solid #cbd5e1",
+              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.05)",
+              fontWeight: 600,
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f8fafc")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
           >
-            <MessageCircle size={18} />
-            <span>Liên hệ</span>
+            <MessageCircle size={18} color="#ff6f3d" />
+            <span>Tư Vấn Trực Tuyến</span>
           </a>
         </div>
       </div>

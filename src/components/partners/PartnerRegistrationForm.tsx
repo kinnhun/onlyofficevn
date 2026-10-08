@@ -39,18 +39,7 @@ export default function PartnerRegistrationForm() {
         }}
       >
         <div style={{ textAlign: "center", marginBottom: "32px" }}>
-          <div
-            style={{
-              display: "inline-block",
-              backgroundColor: "#fff7ed",
-              color: "#ea580c",
-              padding: "4px 14px",
-              borderRadius: "20px",
-              fontSize: "12px",
-              fontWeight: 800,
-              marginBottom: "8px",
-            }}
-          >
+          <div className="oo-partner-kicker">
             HỢP TÁC CÙNG MERCY TECH
           </div>
           <h2 className="oo-partner-heading" style={{ fontSize: "28px", fontWeight: 800, color: "#1e293b", margin: 0 }}>

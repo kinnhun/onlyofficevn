@@ -61,6 +61,9 @@ jobs:
             echo "📦 Installing dependencies..."
             npm ci --production=false
 
+            echo "🗄️ Seeding / Updating MongoDB Database..."
+            node scripts/seed_database.js || echo "⚠️ Database seed finished or skipped if standalone."
+
             echo "🏗️ Building production..."
             npm run build
 

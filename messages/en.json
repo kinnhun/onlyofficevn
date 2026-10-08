@@ -14,21 +14,6 @@
     "usCanada": "US & Canada",
     "language": "Language"
   },
-  "announcement": {
-    "textDesktop": "• Official enterprise deployment & technical support nationwide",
-    "textMobile": "Official Distributor in Vietnam — Optimized by Mercy Tech"
-  },
-  "branding": {
-    "distributor": "Official Distributor in Vietnam",
-    "optimizedBy": "Optimized by Mercy Tech",
-    "company": "MERCY TECHNOLOGY CO., LTD",
-    "mst": "Tax ID: 0319227767",
-    "hotline": "Hotline / Messenger: 0763.068.614",
-    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
-    "email": "contact@mercytechglobal.com",
-    "address": "175/3 Nguyen Thi Be Street, Hamlet 33, Dong Thanh Commune, Ho Chi Minh City, Vietnam",
-    "mission": "Pioneering standardized OnlyOffice digital workspace solutions in Vietnam. Legalizing software licenses and optimizing 90% long-term IT costs."
-  },
   "header": {
     "home": "Home",
     "pricing": "Pricing",
@@ -169,6 +154,34 @@
       }
     }
   },
+  "footer": {
+    "getFreeApps": "Get Free Apps",
+    "rights": "All rights reserved.",
+    "columns": {
+      "solutions": "Solutions",
+      "features": "Features",
+      "byIndustry": "By Industry",
+      "resources": "Resources",
+      "compare": "Comparison",
+      "support": "Support",
+      "company": "Company"
+    }
+  },
+  "branding": {
+    "distributor": "Official Distributor in Vietnam",
+    "optimizedBy": "Optimized by Mercy Tech",
+    "company": "MERCY TECHNOLOGY CO., LTD",
+    "mst": "Tax ID: 0319227767",
+    "hotline": "Hotline / Messenger: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
+    "email": "contact@mercytechglobal.com",
+    "address": "175/3 Nguyen Thi Be Street, Hamlet 33, Dong Thanh Commune, Ho Chi Minh City, Vietnam",
+    "mission": "Pioneering standardized OnlyOffice digital workspace solutions in Vietnam. Legalizing software licenses and optimizing 90% long-term IT costs."
+  },
+  "announcement": {
+    "textDesktop": "• Official enterprise deployment & technical support nationwide",
+    "textMobile": "Official Distributor in Vietnam — Optimized by Mercy Tech"
+  },
   "hero": {
     "titlePrefix": "Run your private office with",
     "titleBrand": "ONLYOFFICE",
@@ -306,19 +319,6 @@
       }
     ]
   },
-  "footer": {
-    "getFreeApps": "Get Free Apps",
-    "rights": "All rights reserved.",
-    "columns": {
-      "solutions": "Solutions",
-      "features": "Features",
-      "byIndustry": "By Industry",
-      "resources": "Resources",
-      "compare": "Comparison",
-      "support": "Support",
-      "company": "Company"
-    }
-  },
   "pricingPage": {
     "badge": "OFFICIAL DISTRIBUTOR IN VIETNAM — OPTIMIZED BY MERCY TECH",
     "title": "ONLYOFFICE Licensing & Pricing",
@@ -359,206 +359,34 @@
     "ctaDesc": "The Mercy Technology specialist team is ready to analyze your workflow, run live demos, and offer competitive pricing.",
     "ctaBtn": "Contact Messenger / Hotline: 0763.068.614"
   },
-  "partnersPage": {
-    "badge": "PARTNER NETWORK IN VIETNAM — OPTIMIZED & COORDINATED BY MERCY TECH",
-    "title": "Become an ONLYOFFICE Partner in Vietnam",
-    "subtitle": "Join forces with Mercy Technology Co., Ltd to deliver secure, cost-effective office productivity to thousands of businesses.",
-    "benefitsTitle": "Partner Advantages",
-    "tiersTitle": "Partnership Categories",
-    "formTitle": "Register for the Partner Program",
-    "formDesc": "Please submit your company details below. Our partner representative will contact you within 24 business hours.",
-    "form": {
-      "fullName": "Contact Full Name",
-      "company": "Company / Organization Name",
-      "taxId": "Tax Identification Number",
-      "email": "Work Email",
-      "phone": "Contact Phone Number",
-      "city": "Province / City",
-      "partnerType": "Desired Partnership Model",
-      "message": "Project requirements or additional notes",
-      "submit": "Submit Partner Application",
-      "successTitle": "Application Submitted!",
-      "successDesc": "Thank you for your interest. The Mercy Tech team will reach out shortly with our discount tiers and partner kit."
-    }
-  },
-  "blogPage": {
-    "badge": "MERCY TECH INSIGHTS",
-    "title": "ONLYOFFICE Blog & Guides",
-    "subtitle": "Discover latest updates, technical tutorials, and enterprise productivity insights.",
-    "searchPlaceholder": "Search articles, tutorials, Docker, DOCX...",
-    "quickTopics": "Quick Topics:",
-    "allArticles": "All Articles",
-    "savedArticles": "Bookmarks",
-    "savedCount": "Saved",
-    "sortBy": "Sort By",
-    "sortNewest": "Newest First",
-    "sortOldest": "Oldest First",
-    "sortQuickRead": "Quick Read (< 5 mins)",
-    "sortDeepDive": "Deep Dive (> 5 mins)",
-    "sortAlpha": "Title (A → Z)",
-    "viewGrid": "Grid View",
-    "viewList": "List View",
-    "liveDb": "Live MongoDB Database",
-    "totalArticles": "Articles",
-    "totalHours": "Hours of Reading",
-    "showingArticles": "Showing",
-    "forKeyword": "for",
-    "withTag": "with tag",
-    "resetFilters": "Reset Filters",
-    "readMore": "Read Article",
-    "readTime": "min read",
-    "featured": "FEATURED SPOTLIGHT",
-    "downloadTrial": "Download 7-Day Trial .BAT",
-    "saveArticle": "Bookmark",
-    "removeBookmark": "Remove Bookmark",
-    "noArticlesFound": "No articles match your criteria",
-    "noArticlesDesc": "Try adjusting your search terms or clearing selected tags.",
-    "clearAll": "View all articles",
-    "previous": "Previous",
-    "next": "Next",
-    "page": "Page",
-    "of": "of",
-    "trialCardTitle": "ONLYOFFICE Docs Enterprise",
-    "trialCardSubtitle": "Instant 7-day full license activation",
-    "trialBadge": "100% FREE TRIAL",
-    "trialBenefit1": "Unlock all Enterprise On-Premises features",
-    "trialBenefit2": "Safe .BAT script, zero registry alterations",
-    "trialBenefit3": "Direct 1-on-1 support from Mercy Tech engineers",
-    "trialBenefit4": "No credit card or payment information required",
-    "hotlineLabel": "Engineering Hotline:",
-    "newsletterTitle": "Enterprise Tech Digest",
-    "newsletterSubtitle": "Get weekly updates on on-premises security, new releases, and exclusive Mercy Tech licensing promos.",
-    "newsletterPlaceholder": "Enter your work email address...",
-    "newsletterBtn": "Subscribe",
-    "newsletterSuccess": "Subscribed! Check your inbox soon."
-  },
-  "seamlessCollaboration": {
-    "breadcrumb": {
-      "home": "Home",
-      "docs": "ONLYOFFICE Docs",
-      "current": "Seamless Collaboration"
+  "pricingQuoteModal": {
+    "badge": "SECURE & MAXIMUM VOLUME DISCOUNT",
+    "title": "Request Special Quotation",
+    "successTitle": "REQUEST SUBMITTED SUCCESSFULLY!",
+    "successDesc": "Connecting you with a Mercy Tech enterprise specialist (Hotline: 0763.068.614) to deliver your customized volume discount quote.",
+    "closeBtn": "Close Window",
+    "productLabel": "1. Interested product:",
+    "products": {
+      "keyOnline": "🔑 OnlyOffice Online Key (Perpetual per Mainboard)",
+      "portal": "⚡ Reseller Admin Portal Account 24/7 (Instant Key Issue)",
+      "enterprise": "🏢 OnlyOffice Docs Enterprise (Dedicated / On-Premise Server)",
+      "reseller": "💼 Bulk Reseller / IT Partner Package"
     },
-    "hero": {
-      "badge": "REAL-TIME COLLABORATION",
-      "titlePrefix": "Collaborate",
-      "titleHighlight": "effectively",
-      "titleSuffix": "on all kinds of office documents",
-      "subtitle": "Share, co-author and communicate in real time to get work done faster across documents, spreadsheets, presentations, and PDFs.",
-      "startFree": "Create now",
-      "contactSales": "Talk to an expert",
-      "trustSync": "0ms latency sync",
-      "trustLock": "Paragraph locking mode",
-      "trustVideo": "In-doc Jitsi & Zoom calls",
-      "alt": "ONLYOFFICE Collaboration Header"
+    "quantityLabel": "2. Estimated quantity:",
+    "quantities": {
+      "tier1": "1 – 4 devices (Individual / Small setup)",
+      "tier2": "5 – 49 devices (SMB / Medium team)",
+      "tier3": "50+ devices (Enterprise / Bulk volume)",
+      "tier4": "Periodic recurring bulk for computer stores"
     },
-    "tabs": {
-      "share": "Share",
-      "coedit": "Co-edit",
-      "comment": "Comment",
-      "communicate": "Communicate",
-      "trackChanges": "Track changes",
-      "compareCombine": "Compare & combine",
-      "manageVersions": "Manage versions"
-    },
-    "features": {
-      "share": {
-        "badge": "01. ACCESS PERMISSIONS",
-        "title": "Share Docs Providing Flexible Permissions",
-        "desc": "Share text documents, spreadsheets, presentations, and PDF files for viewing or editing, enable commenting or reviewing. Create ready-to-fill-out forms and let other users fill them in. Set permission for custom filtering to let collaborators filter data independently. Share links to the selected range so that other co-authors can quickly find necessary data even in large workbooks. Restrict the copy, download, and print options. Public sharing is also available.",
-        "points": [
-          "6 granular permission levels: Full Access, Read Only, Reviewing, Commenting, Form Filling, and Custom Filtering.",
-          "Direct link sharing to specific cell ranges within massive enterprise workbooks.",
-          "Strict restrictions on copying, downloading, and printing to protect confidential enterprise data."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "coedit": {
-        "badge": "02. REAL-TIME CO-AUTHORING",
-        "title": "Co-edit Without Stress",
-        "desc": "Co-author documents online in real-time, use the Fast mode to display all changes right after input. Enable the Strict mode to lock the paragraph you edit and work on it privately without interruptions.",
-        "points": [
-          "Fast Mode: Displays co-authors' colored cursors and live keystrokes with 0ms real-time sync.",
-          "Strict Mode: Exclusively locks your active paragraph until you choose to save and broadcast.",
-          "Eliminates version divergence and overwrite conflicts among simultaneous collaborators."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "comment": {
-        "badge": "03. COMMENTS & MENTIONS",
-        "title": "Comment & Mention",
-        "desc": "Leave comments to discuss questions and issues. Mention users in comments to invite them to collaborate and instantly share the file with them. Manage comments, sort them by author or date.",
-        "points": [
-          "Tag colleagues with @mention to trigger instant notifications and grant immediate file access.",
-          "Smart comment filtering and sorting by author, timestamp, or resolved status.",
-          "Mark discussions as Resolved once feedback is handled to keep documents tidy."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "communicate": {
-        "badge": "04. IN-DOCUMENT COMMUNICATION",
-        "title": "Communicate in Real Time",
-        "desc": "Chat with co-authors right in your documents. Enable the Jitsi or Rainbow plugins to make audio calls and organize video meetings directly within the editor.",
-        "points": [
-          "Integrated sidebar team chat keeps discussions preserved alongside the document itself.",
-          "Host high-definition voice and video calls directly through Jitsi, Rainbow, or Zoom plugins.",
-          "Eliminate tab-switching fatigue and maintain 100% focus on collaborative deliverables."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "trackChanges": {
-        "badge": "05. REVIEW & TRACK CHANGES",
-        "title": "Track Changes with Total Control",
-        "desc": "Enable Track Changes to highlight your contributions and review changes made by other editors. Accept or reject changes one-by-one or all at once. Choose a way to display the changes you made.",
-        "points": [
-          "Each editor is allocated an exclusive color tag to cleanly attribute every insertion and deletion.",
-          "Flexible preview modes: Full Markup view, Original draft, or Final clean version.",
-          "Granular one-click Accept or Reject controls for lead reviewers and project managers."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "compareCombine": {
-        "badge": "06. COMPARE & COMBINE",
-        "title": "Compare & Combine Documents",
-        "desc": "Quickly compare and find differences between two documents. Navigate between changes, accept or reject them. Combine two docs together into a unified authoritative master file.",
-        "points": [
-          "Automated side-by-side discrepancy detection across text, formulas, styling, and tables.",
-          "Intuitive navigation pane to step sequentially through all identified differences in seconds.",
-          "Safely merge multiple departmental drafts into a single cohesive master document."
-        ],
-        "tryNow": "Try this feature now"
-      },
-      "manageVersions": {
-        "badge": "07. VERSION MANAGEMENT",
-        "title": "Manage Versions & Instant Recovery",
-        "desc": "Access the version history of your document, check who created each version and when, what changes they made. View and recover previous versions if needed, including the deleted text.",
-        "points": [
-          "Comprehensive audit trail recording author names, timestamps, and line-by-line delta changes.",
-          "Instant one-click rollback to any historical snapshot without losing active modifications.",
-          "Assign custom labels (Named Versions) to bookmark contractual agreements and official releases."
-        ],
-        "tryNow": "Try this feature now"
-      }
-    },
-    "matrix": {
-      "badge": "ENTERPRISE ADVANTAGES",
-      "title": "Why Enterprises Choose ONLYOFFICE Collaboration?",
-      "subtitle": "The optimal balance between real-time teamwork velocity and strict on-premises data sovereignty.",
-      "card1Title": "Dual Co-authoring Modes",
-      "card1Desc": "Seamlessly switch between Fast Mode (millisecond live edits) and Strict Mode (private paragraph locking). No other suite provides this dual flexibility.",
-      "card2Title": "100% Self-Hosted Privacy",
-      "card2Desc": "Deploy directly on your enterprise servers or private cloud. Documents, team chats, and video calls never leak to external third-party hosts.",
-      "card3Title": "Native OOXML Engine",
-      "card3Desc": "Native ISO/IEC 29500 OOXML engine ensuring zero formatting loss, font distortion, or formula breakage when collaborating across platforms.",
-      "card4Title": "Built-in Video Conferencing",
-      "card4Desc": "Pre-integrated with Jitsi, Rainbow, and Zoom plugins. Spin up voice or video huddles right in the doc without supplementary conferencing subscriptions."
-    },
-    "cta": {
-      "badge": "MERCY TECH — AUTHORIZED ONLYOFFICE PARTNER",
-      "title": "Ready to Transform Team Productivity with ONLYOFFICE?",
-      "subtitle": "Start a free ONLYOFFICE Enterprise trial or receive on-premises deployment consultation from certified Mercy Tech engineers.",
-      "buttonTrial": "Start your free trial",
-      "buttonConsult": "Talk to an expert"
-    }
+    "fullNameLabel": "Full Name *:",
+    "fullNamePlaceholder": "John Smith",
+    "phoneLabel": "Phone number *:",
+    "phonePlaceholder": "+84...",
+    "companyLabel": "Company / Organization:",
+    "companyPlaceholder": "Company ABC (optional)",
+    "vatCheckbox": "Request official electronic VAT e-invoice",
+    "submitBtn": "Submit & Request Quote"
   },
   "demo": {
     "hero": {
@@ -695,33 +523,273 @@
       "hotline": "Hotline: 0763.068.614"
     }
   },
-  "pricingQuoteModal": {
-    "badge": "SECURE & MAXIMUM VOLUME DISCOUNT",
-    "title": "Request Special Quotation",
-    "successTitle": "REQUEST SUBMITTED SUCCESSFULLY!",
-    "successDesc": "Connecting you with a Mercy Tech enterprise specialist (Hotline: 0763.068.614) to deliver your customized volume discount quote.",
-    "closeBtn": "Close Window",
-    "productLabel": "1. Interested product:",
-    "products": {
-      "keyOnline": "🔑 OnlyOffice Online Key (Perpetual per Mainboard)",
-      "portal": "⚡ Reseller Admin Portal Account 24/7 (Instant Key Issue)",
-      "enterprise": "🏢 OnlyOffice Docs Enterprise (Dedicated / On-Premise Server)",
-      "reseller": "💼 Bulk Reseller / IT Partner Package"
+  "seamlessCollaboration": {
+    "breadcrumb": {
+      "home": "Home",
+      "docs": "ONLYOFFICE Docs",
+      "current": "Seamless Collaboration"
     },
-    "quantityLabel": "2. Estimated quantity:",
-    "quantities": {
-      "tier1": "1 – 4 devices (Individual / Small setup)",
-      "tier2": "5 – 49 devices (SMB / Medium team)",
-      "tier3": "50+ devices (Enterprise / Bulk volume)",
-      "tier4": "Periodic recurring bulk for computer stores"
+    "hero": {
+      "badge": "REAL-TIME COLLABORATION",
+      "titlePrefix": "Collaborate",
+      "titleHighlight": "effectively",
+      "titleSuffix": "on all kinds of office documents",
+      "subtitle": "Share, co-author and communicate in real time to get work done faster across documents, spreadsheets, presentations, and PDFs.",
+      "startFree": "Create now",
+      "contactSales": "Talk to an expert",
+      "trustSync": "0ms latency sync",
+      "trustLock": "Paragraph locking mode",
+      "trustVideo": "In-doc Jitsi & Zoom calls",
+      "alt": "ONLYOFFICE Collaboration Header"
     },
-    "fullNameLabel": "Full Name *:",
-    "fullNamePlaceholder": "John Smith",
-    "phoneLabel": "Phone number *:",
-    "phonePlaceholder": "+84...",
-    "companyLabel": "Company / Organization:",
-    "companyPlaceholder": "Company ABC (optional)",
-    "vatCheckbox": "Request official electronic VAT e-invoice",
-    "submitBtn": "Submit & Request Quote"
+    "tabs": {
+      "share": "Share",
+      "coedit": "Co-edit",
+      "comment": "Comment",
+      "communicate": "Communicate",
+      "trackChanges": "Track changes",
+      "compareCombine": "Compare & combine",
+      "manageVersions": "Manage versions"
+    },
+    "features": {
+      "share": {
+        "badge": "01. ACCESS PERMISSIONS",
+        "title": "Share Docs Providing Flexible Permissions",
+        "desc": "Share text documents, spreadsheets, presentations, and PDF files for viewing or editing, enable commenting or reviewing. Create ready-to-fill-out forms and let other users fill them in. Set permission for custom filtering to let collaborators filter data independently. Share links to the selected range so that other co-authors can quickly find necessary data even in large workbooks. Restrict the copy, download, and print options. Public sharing is also available.",
+        "points": [
+          "6 granular permission levels: Full Access, Read Only, Reviewing, Commenting, Form Filling, and Custom Filtering.",
+          "Direct link sharing to specific cell ranges within massive enterprise workbooks.",
+          "Strict restrictions on copying, downloading, and printing to protect confidential enterprise data."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "coedit": {
+        "badge": "02. REAL-TIME CO-AUTHORING",
+        "title": "Co-edit Without Stress",
+        "desc": "Co-author documents online in real-time, use the Fast mode to display all changes right after input. Enable the Strict mode to lock the paragraph you edit and work on it privately without interruptions.",
+        "points": [
+          "Fast Mode: Displays co-authors' colored cursors and live keystrokes with 0ms real-time sync.",
+          "Strict Mode: Exclusively locks your active paragraph until you choose to save and broadcast.",
+          "Eliminates version divergence and overwrite conflicts among simultaneous collaborators."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "comment": {
+        "badge": "03. COMMENTS & MENTIONS",
+        "title": "Comment & Mention",
+        "desc": "Leave comments to discuss questions and issues. Mention users in comments to invite them to collaborate and instantly share the file with them. Manage comments, sort them by author or date.",
+        "points": [
+          "Tag colleagues with @mention to trigger instant notifications and grant immediate file access.",
+          "Smart comment filtering and sorting by author, timestamp, or resolved status.",
+          "Mark discussions as Resolved once feedback is handled to keep documents tidy."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "communicate": {
+        "badge": "04. IN-DOCUMENT COMMUNICATION",
+        "title": "Communicate in Real Time",
+        "desc": "Chat with co-authors right in your documents. Enable the Jitsi or Rainbow plugins to make audio calls and organize video meetings directly within the editor.",
+        "points": [
+          "Integrated sidebar team chat keeps discussions preserved alongside the document itself.",
+          "Host high-definition voice and video calls directly through Jitsi, Rainbow, or Zoom plugins.",
+          "Eliminate tab-switching fatigue and maintain 100% focus on collaborative deliverables."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "trackChanges": {
+        "badge": "05. REVIEW & TRACK CHANGES",
+        "title": "Track Changes with Total Control",
+        "desc": "Enable Track Changes to highlight your contributions and review changes made by other editors. Accept or reject changes one-by-one or all at once. Choose a way to display the changes you made.",
+        "points": [
+          "Each editor is allocated an exclusive color tag to cleanly attribute every insertion and deletion.",
+          "Flexible preview modes: Full Markup view, Original draft, or Final clean version.",
+          "Granular one-click Accept or Reject controls for lead reviewers and project managers."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "compareCombine": {
+        "badge": "06. COMPARE & COMBINE",
+        "title": "Compare & Combine Documents",
+        "desc": "Quickly compare and find differences between two documents. Navigate between changes, accept or reject them. Combine two docs together into a unified authoritative master file.",
+        "points": [
+          "Automated side-by-side discrepancy detection across text, formulas, styling, and tables.",
+          "Intuitive navigation pane to step sequentially through all identified differences in seconds.",
+          "Safely merge multiple departmental drafts into a single cohesive master document."
+        ],
+        "tryNow": "Try this feature now"
+      },
+      "manageVersions": {
+        "badge": "07. VERSION MANAGEMENT",
+        "title": "Manage Versions & Instant Recovery",
+        "desc": "Access the version history of your document, check who created each version and when, what changes they made. View and recover previous versions if needed, including the deleted text.",
+        "points": [
+          "Comprehensive audit trail recording author names, timestamps, and line-by-line delta changes.",
+          "Instant one-click rollback to any historical snapshot without losing active modifications.",
+          "Assign custom labels (Named Versions) to bookmark contractual agreements and official releases."
+        ],
+        "tryNow": "Try this feature now"
+      }
+    },
+    "matrix": {
+      "badge": "ENTERPRISE ADVANTAGES",
+      "title": "Why Enterprises Choose ONLYOFFICE Collaboration?",
+      "subtitle": "The optimal balance between real-time teamwork velocity and strict on-premises data sovereignty.",
+      "card1Title": "Dual Co-authoring Modes",
+      "card1Desc": "Seamlessly switch between Fast Mode (millisecond live edits) and Strict Mode (private paragraph locking). No other suite provides this dual flexibility.",
+      "card2Title": "100% Self-Hosted Privacy",
+      "card2Desc": "Deploy directly on your enterprise servers or private cloud. Documents, team chats, and video calls never leak to external third-party hosts.",
+      "card3Title": "Native OOXML Engine",
+      "card3Desc": "Native ISO/IEC 29500 OOXML engine ensuring zero formatting loss, font distortion, or formula breakage when collaborating across platforms.",
+      "card4Title": "Built-in Video Conferencing",
+      "card4Desc": "Pre-integrated with Jitsi, Rainbow, and Zoom plugins. Spin up voice or video huddles right in the doc without supplementary conferencing subscriptions."
+    },
+    "cta": {
+      "badge": "MERCY TECH — AUTHORIZED ONLYOFFICE PARTNER",
+      "title": "Ready to Transform Team Productivity with ONLYOFFICE?",
+      "subtitle": "Start a free ONLYOFFICE Enterprise trial or receive on-premises deployment consultation from certified Mercy Tech engineers.",
+      "buttonTrial": "Start your free trial",
+      "buttonConsult": "Talk to an expert"
+    }
+  },
+  "partnersPage": {
+    "badge": "PARTNER NETWORK IN VIETNAM — OPTIMIZED & COORDINATED BY MERCY TECH",
+    "title": "Become an ONLYOFFICE Partner in Vietnam",
+    "subtitle": "Join forces with Mercy Technology Co., Ltd to deliver secure, cost-effective office productivity to thousands of businesses.",
+    "benefitsTitle": "Partner Advantages",
+    "tiersTitle": "Partnership Categories",
+    "formTitle": "Register for the Partner Program",
+    "formDesc": "Please submit your company details below. Our partner representative will contact you within 24 business hours.",
+    "form": {
+      "fullName": "Contact Full Name",
+      "company": "Company / Organization Name",
+      "taxId": "Tax Identification Number",
+      "email": "Work Email",
+      "phone": "Contact Phone Number",
+      "city": "Province / City",
+      "partnerType": "Desired Partnership Model",
+      "message": "Project requirements or additional notes",
+      "submit": "Submit Partner Application",
+      "successTitle": "Application Submitted!",
+      "successDesc": "Thank you for your interest. The Mercy Tech team will reach out shortly with our discount tiers and partner kit."
+    }
+  },
+  "blogPage": {
+    "badge": "MERCY TECH INSIGHTS",
+    "title": "ONLYOFFICE Blog & Guides",
+    "subtitle": "Discover latest updates, technical tutorials, and enterprise productivity insights.",
+    "searchPlaceholder": "Search articles, tutorials, Docker, DOCX...",
+    "quickTopics": "Quick Topics:",
+    "allArticles": "All Articles",
+    "savedArticles": "Bookmarks",
+    "savedCount": "Saved",
+    "sortBy": "Sort By",
+    "sortNewest": "Newest First",
+    "sortOldest": "Oldest First",
+    "sortQuickRead": "Quick Read (< 5 mins)",
+    "sortDeepDive": "Deep Dive (> 5 mins)",
+    "sortAlpha": "Title (A → Z)",
+    "viewGrid": "Grid View",
+    "viewList": "List View",
+    "liveDb": "Live MongoDB Database",
+    "totalArticles": "Articles",
+    "totalHours": "Hours of Reading",
+    "showingArticles": "Showing",
+    "forKeyword": "for",
+    "withTag": "with tag",
+    "resetFilters": "Reset Filters",
+    "readMore": "Read Article",
+    "readTime": "min read",
+    "featured": "FEATURED SPOTLIGHT",
+    "downloadTrial": "Download 7-Day Trial .BAT",
+    "saveArticle": "Bookmark",
+    "removeBookmark": "Remove Bookmark",
+    "noArticlesFound": "No articles match your criteria",
+    "noArticlesDesc": "Try adjusting your search terms or clearing selected tags.",
+    "clearAll": "View all articles",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of",
+    "trialCardTitle": "ONLYOFFICE Docs Enterprise",
+    "trialCardSubtitle": "Instant 7-day full license activation",
+    "trialBadge": "100% FREE TRIAL",
+    "trialBenefit1": "Unlock all Enterprise On-Premises features",
+    "trialBenefit2": "Safe .BAT script, zero registry alterations",
+    "trialBenefit3": "Direct 1-on-1 support from Mercy Tech engineers",
+    "trialBenefit4": "No credit card or payment information required",
+    "hotlineLabel": "Engineering Hotline:",
+    "newsletterTitle": "Enterprise Tech Digest",
+    "newsletterSubtitle": "Get weekly updates on on-premises security, new releases, and exclusive Mercy Tech licensing promos.",
+    "newsletterPlaceholder": "Enter your work email address...",
+    "newsletterBtn": "Subscribe",
+    "newsletterSuccess": "Subscribed! Check your inbox soon."
+  },
+  "pricingGuarantees": {
+    "g1Title": "KEY TIED TO MOTHERBOARD UUID",
+    "g1Desc": "Lifetime per machine; reinstalling OS retains your activated license key",
+    "g2Title": "NEW KEY REQUIRED ON MACHINE SWAP",
+    "g2Desc": "Damaged motherboard or replaced hardware requires a new license key",
+    "g3Title": "FORCE MAJEURE SUPPORT",
+    "g3Desc": "Special assistance & risk-sharing policies for hardware disasters",
+    "g4Title": "CENTRALIZED KEY PORTAL",
+    "g4Desc": "Professional 24/7 key management, tracking, and instant re-issuance",
+    "g5Title": "PER-MACHINE AUTHENTICITY CERTIFICATE",
+    "g5Desc": "Official certificate verifying genuine license for each individual device"
+  },
+  "pricingWholesale": {
+    "badge": "AUTHORIZED DEALER & COMPUTER STORE PROGRAM",
+    "title": "Wholesale OnlyOffice Distribution with Mercy Tech",
+    "desc": "Substantial wholesale profit margins tailored for Resellers & IT Technicians. Dedicated White-label installer, weekly Marketing assets, signed contracts, and direct technical support.",
+    "btn": "Get Wholesale Reseller Pricing"
+  },
+  "pricingKeyCards": {
+    "badge": "LIFETIME LICENSE PER MOTHERBOARD",
+    "titlePrefix": "ONLYOFFICE Online Key",
+    "titleHighlight": "Optimized by Mercy Tech",
+    "desc": "Perpetual lifetime licensing with no annual renewals. Activate in 30 seconds via license code or automated script. Reinstalling Windows preserves genuine license status.",
+    "featUuid": "Licensed per Motherboard UUID",
+    "featVat": "Official Electronic VAT Invoices",
+    "featAgpl": "Official AGPLv3 Legal Certification",
+    "tier1Badge": "STANDARD",
+    "tier1Title": "Personal Online Key",
+    "tier1Desc": "Ideal for independent professionals, freelancers, or personal work laptops.",
+    "tier1Price": "Contact for Quote",
+    "tier2Badge": "ENTERPRISE",
+    "tier2Title": "Corporate Online Key",
+    "tier2Desc": "Designed for SMB teams requiring centralized management and VAT invoices.",
+    "tier2Price": "Volume Discount",
+    "tier3Badge": "RESELLER & IT",
+    "tier3Title": "Reseller Admin Portal",
+    "tier3Desc": "Tailored for computer stores and IT managers handling 50 to 500+ PCs.",
+    "tier3Price": "Wholesale Discount",
+    "btnQuote": "Request Confidential Quote"
+  },
+  "blogPage": {
+    "title": "ONLYOFFICE Blog",
+    "subtitle": "Official news, tips, product updates and stories from ONLYOFFICE users",
+    "eventBarText": "Back to school with ONLYOFFICE! Discover our special offers and inspiring stories",
+    "eventBarLink": "Learn more",
+    "searchPlaceholder": "Search our blog...",
+    "categoryTopics": "Category Topics",
+    "inThePress": "ONLYOFFICE IN THE PRESS",
+    "viewAllPosts": "View all posts",
+    "createAccountTitle": "Create your free ONLYOFFICE account",
+    "createAccountDesc": "Get complete online office suite and cloud collaboration platform",
+    "emailPlaceholder": "Your email address",
+    "createNow": "CREATE NOW",
+    "newsletterTitle": "Newsletter",
+    "firstNamePlaceholder": "First name",
+    "subscribe": "SUBSCRIBE",
+    "newsletterDisclaimer": "By subscribing, you agree to receive news and product updates from ONLYOFFICE.",
+    "loadMorePosts": "LOAD MORE POSTS",
+    "noArticlesFound": "No articles found matching your query",
+    "clearSearch": "Clear search",
+    "searchResultsFor": "Search results for",
+    "allArticles": "All articles",
+    "by": "By",
+    "minRead": "min read",
+    "readMore": "Read more",
+    "totalArticles": "articles",
+    "resetFilters": "Reset filters"
   }
 }

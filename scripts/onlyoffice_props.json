@@ -1,0 +1,1752 @@
+{
+  "_nextI18Next": {
+    "initialI18nStore": {
+      "en": {
+        "common": {
+          "NewsletterSubscribeText": "By clicking \"Subscribe\", you agree to the",
+          "NewsletterSubscribeLink": "rules for using the service and processing personal data.",
+          "Create your": "Create your <span>free</span> ONLYOFFICE account",
+          "XSocialLink": "https://x.com/ONLY_OFFICE",
+          "TikTokSocialLink": "https://www.tiktok.com/@only_office",
+          "LinkedInSocialLink": "https://www.linkedin.com/company/ascensio-system-sia/",
+          "TelegramSocialLink": "https://t.me/onlyofficeofficial",
+          "WhatToKnow": "What To Know",
+          "Summary": "Summary",
+          "ByAuthor": "By {{authorName}}",
+          "HarmonyInYourCookies": "Harmony in your cookies",
+          "CookieText": "Our website uses cookies to provide you with a tailored experience. Cookies help us run the site, improve your browsing, and enable targeted marketing and ads. You can fully consent to our use of cookies or manage your preferences. <0>Learn more</0>",
+          "Deny": "Deny",
+          "Customize": "Customize",
+          "AcceptAll": "Accept All",
+          "CookieSettings": "Cookie settings",
+          "ConfirmMyChoices": "Confirm my choices",
+          "Technical": "Technical (required)",
+          "TechnicalDescription": "These cookies are necessary for displaying our website correctly. They ensure its proper functioning.",
+          "Analytical": "Analytical",
+          "AnalyticalDescription": "The purpose of analytical cookies is to discover how users use our website as well as to track their visits. These functions allow us to improve the quality and content of our website.",
+          "Marketing": "Marketing",
+          "MarketingDescription": "These cookies are used for marketing purposes and the collection of information to better tailor advertising to the interests of the users of our website.",
+          "AiChatTitle": "Ask AI",
+          "AiChatWelcome": "Hi! Ask a question and I'll find the answer in the ONLYOFFICE blog articles.",
+          "AiChatPlaceholder": "Ask about our articles...",
+          "AiChatNoResults": "Sorry, I couldn't find any articles matching your query.",
+          "AiChatError": "An error occurred. Please try again.",
+          "AiChatSources": "Sources:",
+          "AiChatExpand": "Expand",
+          "AiChatCollapse": "Collapse",
+          "AiChatClose": "Close",
+          "AiChatRateLimit": "Too many requests. Please try again in {{seconds}} seconds.",
+          "AiChatTooShort": "Your question is too short. Please use at least {{min}} characters.",
+          "AiChatTooLong": "Your question is too long. Please keep it under {{max}} characters.",
+          "AiChatDisclaimer": "Answers are generated with AI which can make mistakes.",
+          "AiChatCategoryBlog": "Blog",
+          "AiChatCategoryDocs": "Docs",
+          "AiChatCategoryNews": "News",
+          "AiChatBlogTitle": "How can I help?",
+          "AiChatBlogSubtitle": "I've pored over hundreds of articles on our blog and can quickly find instructions, productivity tips, and update news for you.",
+          "AiChatDocsTitle": "Search the docs",
+          "AiChatDocsSubtitle": "I can search every page of the ONLYOFFICE documentation and bring you step-by-step answers in seconds.",
+          "AiChatNewsTitle": "What's new?",
+          "AiChatNewsSubtitle": "I follow every release, changelog and roadmap update, ask me what shipped, what's next."
+        }
+      }
+    },
+    "initialLocale": "en",
+    "ns": [
+      "common"
+    ],
+    "userConfig": {
+      "i18n": {
+        "defaultLocale": "en",
+        "locales": [
+          "en",
+          "fr",
+          "de",
+          "es",
+          "pt-br",
+          "it",
+          "cs",
+          "ja",
+          "zh-hans",
+          "el",
+          "hi",
+          "ar",
+          "sr",
+          "hy"
+        ],
+        "localeDetection": false
+      },
+      "lowerCaseLng": true,
+      "showSupportNotice": false,
+      "default": {
+        "i18n": {
+          "defaultLocale": "en",
+          "locales": [
+            "en",
+            "fr",
+            "de",
+            "es",
+            "pt-br",
+            "it",
+            "cs",
+            "ja",
+            "zh-hans",
+            "el",
+            "hi",
+            "ar",
+            "sr",
+            "hy"
+          ],
+          "localeDetection": false
+        },
+        "lowerCaseLng": true,
+        "showSupportNotice": false
+      }
+    }
+  },
+  "locale": "en",
+  "allPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTcwMTk=",
+          "title": "Accessibility and document editing: what the European Accessibility Act means for software and how ONLYOFFICE is approaching it",
+          "slug": "accessibility-conformance",
+          "uri": "/2026/10/accessibility-conformance/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/10/01164202/IMG_6017.png",
+          "date": "2026-10-06T15:41:44",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/10/01164202/IMG_6017-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Elena",
+              "slug": "lena"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTc2Njk=",
+          "title": "How to export Notion pages to Word (DOCX) and keep collaborating afterward",
+          "slug": "how-to-export-notion-pages-to-word-docx-and-keep-collaborating-afterward",
+          "uri": "/2026/10/how-to-export-notion-pages-to-word-docx-and-keep-collaborating-afterward/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/10/02132136/notion.jpg",
+          "date": "2026-10-02T15:39:28",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/10/02132136/notion-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTY3Mjk=",
+          "title": "Get started with document editing in your web app using ONLYOFFICE Create App",
+          "slug": "get-started-with-document-editing-in-your-web-app-using-onlyoffice-create-app",
+          "uri": "/2026/09/get-started-with-document-editing-in-your-web-app-using-onlyoffice-create-app/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/30103044/IMG_6023.png",
+          "date": "2026-09-30T11:05:34",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/30103044/IMG_6023-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Serge",
+              "slug": "serge"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTY0NDI=",
+          "title": "How to make a resume without Microsoft Word",
+          "slug": "how-to-make-a-resume-without-microsoft-word",
+          "uri": "/2026/09/how-to-make-a-resume-without-microsoft-word/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25164447/cvword.png",
+          "date": "2026-09-25T17:23:59",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25164447/cvword-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTYyMTU=",
+          "title": "20 best cloud-based productivity apps for teams",
+          "slug": "cloud-based-productivity-apps",
+          "uri": "/2026/09/cloud-based-productivity-apps/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25105153/cloud-based-productivity-apps.png",
+          "date": "2026-09-25T12:25:24",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25105153/cloud-based-productivity-apps-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sara Bogavac",
+              "slug": "sara"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTYwNDk=",
+          "title": "Hanging indent explained",
+          "slug": "hanging-indent-explained",
+          "uri": "/2026/09/hanging-indent-explained/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/24153821/indent.png",
+          "date": "2026-09-24T16:42:03",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/24153821/indent-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU4OTU=",
+          "title": "Fleurdelix OS chooses ONLYOFFICE as its default office suite",
+          "slug": "fleurdelix-os-chooses-onlyoffice",
+          "uri": "/2026/09/fleurdelix-os-chooses-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/22105940/IMG_5964-1024x522.png",
+          "date": "2026-09-22T11:51:28",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/22105940/IMG_5964-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU3MzA=",
+          "title": "Collaboration software: A short guide",
+          "slug": "collaboration-software",
+          "uri": "/2026/09/collaboration-software/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/18121321/collab.png",
+          "date": "2026-09-18T13:23:14",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/18121321/collab-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU1ODI=",
+          "title": "ONLYOFFICE Desktop Editors is the default office suite on Liya Linux",
+          "slug": "onlyoffice-desktop-editors-and-liya-linux",
+          "uri": "/2026/09/onlyoffice-desktop-editors-and-liya-linux/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/15144909/Liya-Linux-and-ONLYOFFICE.png",
+          "date": "2026-09-15T14:51:36",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/15144909/Liya-Linux-and-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTUzMzg=",
+          "title": "9 best free online writing tools in 2026",
+          "slug": "best-free-online-writing-tools",
+          "uri": "/2026/09/best-free-online-writing-tools/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/11134319/free-online-writing-tools.png",
+          "date": "2026-09-11T15:23:06",
+          "featuredImage": null,
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTQyODg=",
+          "title": "How to write and type a letter on a computer (with templates)",
+          "slug": "how-to-write-a-letter",
+          "uri": "/2026/09/how-to-write-a-letter/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/03172525/How-to-type-a-letter-title.png",
+          "date": "2026-09-11T10:41:18",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/03172525/How-to-type-a-letter-title-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sara Bogavac",
+              "slug": "sara"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTQ5NDU=",
+          "title": "ONLYOFFICE 10.0 is coming this autumn: here’s what to look forward to",
+          "slug": "onlyoffice-10-is-coming",
+          "uri": "/2026/09/onlyoffice-10-is-coming/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/10102108/ONLYOFFICE-10.0.png",
+          "date": "2026-09-10T12:15:16",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/10102108/ONLYOFFICE-10.0-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTQ4MDg=",
+          "title": "Starting a career before graduation: Abouba’s story at ONLYOFFICE",
+          "slug": "abouba-s-story-at-onlyoffice",
+          "uri": "/2026/09/abouba-s-story-at-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/09105157/IMG_5848-1024x512.png",
+          "date": "2026-09-09T12:34:42",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/09105157/IMG_5848-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTQ2MTk=",
+          "title": "ONLYOFFICE Desktop Editors is the default office suite on Winux",
+          "slug": "onlyoffice-desktop-editors-and-winux",
+          "uri": "/2026/09/onlyoffice-desktop-editors-and-winux/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/07163223/Winux-use-case.png",
+          "date": "2026-09-08T10:43:14",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/07163223/Winux-use-case-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTQwNjk=",
+          "title": "How to export Airtable to Excel and keep editing from there",
+          "slug": "export-airtable-to-excel",
+          "uri": "/2026/09/export-airtable-to-excel/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/03122020/airtable.png",
+          "date": "2026-09-04T12:38:06",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/03122020/airtable-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM5MDk=",
+          "title": "Collaboration without borders: ONLYOFFICE partners with Cloud Systems Asia",
+          "slug": "onlyoffice-cloud-systems-asia",
+          "uri": "/2026/09/onlyoffice-cloud-systems-asia/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02210250/Cloud-Systems-Asia.png",
+          "date": "2026-09-03T13:34:53",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02210250/Cloud-Systems-Asia-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM4NDE=",
+          "title": "From university to full-time developer: Aleksandr shares his student journey at ONLYOFFICE",
+          "slug": "from-university-to-full-time-developer",
+          "uri": "/2026/09/from-university-to-full-time-developer/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02142010/IMG_5801-1024x512.png",
+          "date": "2026-09-02T15:08:01",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02142010/IMG_5801-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM2MDQ=",
+          "title": "New Antidote plugin for ONLYOFFICE: check and improve your texts in English and French",
+          "slug": "antidote-plugin-for-onlyoffice",
+          "uri": "/2026/09/antidote-plugin-for-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-1024x522.png",
+          "date": "2026-09-01T12:30:41",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTMwNDE=",
+          "title": "How to migrate from Quip before its 2027 retirement",
+          "slug": "how-to-migrate-from-quip-before-its-2027-retirement",
+          "uri": "/2026/08/how-to-migrate-from-quip-before-its-2027-retirement/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/24144621/quip.jpg",
+          "date": "2026-08-28T12:26:30",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/24144621/quip-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTMxMDU=",
+          "title": "ONLYOFFICE Desktop Editors comes preinstalled with TN365 Waydroid",
+          "slug": "desktop-editors-preinstalled-tn365-waydroid",
+          "uri": "/2026/08/desktop-editors-preinstalled-tn365-waydroid/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/25104050/IMG_5735-1024x522.png",
+          "date": "2026-08-26T12:40:44",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/25104050/IMG_5735-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTMxMjU=",
+          "title": "From software development to technical writing: Raisha’s internship story at ONLYOFFICE",
+          "slug": "raisha-internship-story-at-onlyoffice",
+          "uri": "/2026/08/raisha-internship-story-at-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/25145524/raisha-story-1024x512.png",
+          "date": "2026-08-25T15:30:09",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/25145524/raisha-story-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTI4NDA=",
+          "title": "How to add Mendeley plugin to a Word document",
+          "slug": "mendeley-word-plugin",
+          "uri": "/2026/08/mendeley-word-plugin/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/21163053/mendeley.png",
+          "date": "2026-08-21T17:19:26",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/21163053/mendeley-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE5MzY=",
+          "title": "Wrap cell text with dashes using an ONLYOFFICE macro",
+          "slug": "wrap-cell-text-with-dashes-using-an-onlyoffice-macro",
+          "uri": "/2026/08/wrap-cell-text-with-dashes-using-an-onlyoffice-macro/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/20104824/photo_2024-07-10_16-39-30.jpg",
+          "date": "2026-08-20T10:49:47",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/20104824/photo_2024-07-10_16-39-30-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Igor",
+              "slug": "igor"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTI1NTc=",
+          "title": "From content to data: Chandika Wagle shares her internship experience at ONLYOFFICE",
+          "slug": "chandika-wagle-internship-experience",
+          "uri": "/2026/08/chandika-wagle-internship-experience/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/19104158/IMG_5738-1024x512.png",
+          "date": "2026-08-19T11:32:07",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/19104158/IMG_5738-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTI0MzA=",
+          "title": "ONLYOFFICE connector v2.1.0 for Confluence Cloud released: new supported formats, dedicated space page, improved file browsing and more",
+          "slug": "onlyoffice-connector-v2-1-0-for-confluence-cloud-released",
+          "uri": "/2026/08/onlyoffice-connector-v2-1-0-for-confluence-cloud-released/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/18155621/Confluence-Cloud-2.1.0.png",
+          "date": "2026-08-18T17:43:47",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/18155621/Confluence-Cloud-2.1.0-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTIwMzU=",
+          "title": "How to import data from Salesforce objects and reports into ONLYOFFICE spreadsheets",
+          "slug": "import-data-from-salesforce-into-spreadsheets",
+          "uri": "/2026/08/import-data-from-salesforce-into-spreadsheets/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/17103907/main-1024x522.png",
+          "date": "2026-08-17T12:03:06",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/17103907/main-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE4NDg=",
+          "title": "How to move on from Microsoft 365 without a full migration",
+          "slug": "migrate-from-microsoft-365",
+          "uri": "/2026/08/migrate-from-microsoft-365/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/14124107/migration-webinar.png",
+          "date": "2026-08-14T13:32:31",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/14124107/migration-webinar-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE2NTI=",
+          "title": "How a Hamburg volleyball club keeps its teams in sync with ONLYOFFICE",
+          "slug": "hamburg-volleyball-club",
+          "uri": "/2026/08/hamburg-volleyball-club/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/13140932/How-a-Hamburg-volleyball-club-keeps-its-teams-in-sync-with-ONLYOFFICE.png",
+          "date": "2026-08-13T14:51:20",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/13140932/How-a-Hamburg-volleyball-club-keeps-its-teams-in-sync-with-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE0NjY=",
+          "title": "From finance to open source: Shashank Jha shares his internship experience at ONLYOFFICE",
+          "slug": "shashank-internship-experience-at-onlyoffice",
+          "uri": "/2026/08/shashank-internship-experience-at-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/13111407/IMG_5690-1024x512.png",
+          "date": "2026-08-13T12:03:37",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/13111407/IMG_5690-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE0MDk=",
+          "title": "Back to school 2026: ONLYOFFICE discounts and free solutions for education",
+          "slug": "onlyoffice-discounts-and-free-solutions-for-education-2026",
+          "uri": "/2026/08/onlyoffice-discounts-and-free-solutions-for-education-2026/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/12113233/back-to-school.png",
+          "date": "2026-08-12T11:34:31",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/12113233/back-to-school-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTExODg=",
+          "title": "Back to school: why ONLYOFFICE is the right choice for educational institutions in Brazil",
+          "slug": "onlyoffice-for-educational-institutions-in-brazil",
+          "uri": "/2026/08/onlyoffice-for-educational-institutions-in-brazil/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/10151411/ONLYOFFICE-for-education-in-Brazil.png",
+          "date": "2026-08-10T18:07:59",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/10151411/ONLYOFFICE-for-education-in-Brazil-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTEwNzQ=",
+          "title": "Back to school 2026: How ONLYOFFICE supports modern digital learning in Europe",
+          "slug": "back-to-school-europe",
+          "uri": "/2026/08/back-to-school-europe/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/10153051/Back-to-school-2026-with-ONLYOFFICE.png",
+          "date": "2026-08-10T15:32:48",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/10153051/Back-to-school-2026-with-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTA4MDY=",
+          "title": "How to add Zotero to a Word document with a plugin",
+          "slug": "zotero-word-plugin",
+          "uri": "/2026/08/zotero-word-plugin/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/07175644/zot.png",
+          "date": "2026-08-07T17:57:53",
+          "featuredImage": null,
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTA0ODE=",
+          "title": "PDF workflows without Adobe: Everything you can do in ONLYOFFICE",
+          "slug": "pdf-workflows-without-adobe-in-onlyoffice",
+          "uri": "/2026/08/pdf-workflows-without-adobe-in-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/06113549/PDF-workflows-without-Adobe-a-complete-guide.png",
+          "date": "2026-08-06T12:16:25",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/06113549/PDF-workflows-without-Adobe-a-complete-guide-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTAyNTM=",
+          "title": "Helping ONLYOFFICE speak Arabic: Moncif Meftah shares his internship experience",
+          "slug": "moncif-meftah-internship-experience",
+          "uri": "/2026/08/moncif-meftah-internship-experience/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/05112342/IMG_5648-1024x512.png",
+          "date": "2026-08-05T11:45:42",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/05112342/IMG_5648-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTAxMjE=",
+          "title": "ONLYOFFICE Desktop Editors is now the preinstalled office suite on OpenOS/bNode",
+          "slug": "onlyoffice-desktop-editors-and-openos-bnode",
+          "uri": "/2026/08/onlyoffice-desktop-editors-and-openos-bnode/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/03204009/OpenOS-bNode.png",
+          "date": "2026-08-04T12:56:09",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/03204009/OpenOS-bNode-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDk4NjU=",
+          "title": "8 Best self-hosted office suites in 2026",
+          "slug": "best-self-hosted-office-suites",
+          "uri": "/2026/07/best-self-hosted-office-suites/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/31120306/self-hosted.png",
+          "date": "2026-07-31T14:23:18",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/31120306/self-hosted-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDk1Mjk=",
+          "title": "Back to school with ONLYOFFICE: join our free course on creating PDF forms",
+          "slug": "free-course-on-creating-pdf-forms",
+          "uri": "/2026/07/free-course-on-creating-pdf-forms/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/30150924/back-to-school-forms-1024x514.png",
+          "date": "2026-07-30T15:20:38",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/30150924/back-to-school-forms-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDU4MjU=",
+          "title": "How LAG Jugend & Film Niedersachsen streamlines collaboration with ONLYOFFICE",
+          "slug": "lag-jugend-film-niedersachsen",
+          "uri": "/2026/07/lag-jugend-film-niedersachsen/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/30161412/LAG-Jugend-Film-Niedersachsen.png",
+          "date": "2026-07-30T10:39:11",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/30161412/LAG-Jugend-Film-Niedersachsen-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDkzMjU=",
+          "title": "9 AI document generators to watch in 2026",
+          "slug": "ai-document-generators-to-watch",
+          "uri": "/2026/07/ai-document-generators-to-watch/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/29114423/aibest.png",
+          "date": "2026-07-29T12:05:07",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/29114423/aibest-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Alice",
+              "slug": "alice"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDg5NDc=",
+          "title": "Celebrating 16 years of ONLYOFFICE: 16 questions answered (FAQ)",
+          "slug": "16-questions-answered-faq",
+          "uri": "/2026/07/16-questions-answered-faq/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/24145550/16-questions-FAQ-.png",
+          "date": "2026-07-24T16:41:30",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/24145550/16-questions-FAQ--634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDQwNTI=",
+          "title": "How BidFix embedded ONLYOFFICE Docs to power faster, compliant tender responses",
+          "slug": "bidfix-ai-onlyoffice-docs",
+          "uri": "/2026/07/bidfix-ai-onlyoffice-docs/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/23101204/BidFix-and-ONLYOFFICE.png",
+          "date": "2026-07-23T10:37:35",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/23101204/BidFix-and-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDc4OTU=",
+          "title": "What we’re building for the next 16 years",
+          "slug": "plans-for-the-next-16-years",
+          "uri": "/2026/07/plans-for-the-next-16-years/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/17164349/main-1024x522.jpg",
+          "date": "2026-07-22T10:43:26",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/17164349/main-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDg0NjQ=",
+          "title": "What’s new in the ONLYOFFICE connectors for Odoo: opening PDFs from preview mode, creating documents from form templates and the enhanced Templates module",
+          "slug": "what-s-new-in-the-onlyoffice-connectors-for-odoo-opening-pdfs-from-preview-mode",
+          "uri": "/2026/07/what-s-new-in-the-onlyoffice-connectors-for-odoo-opening-pdfs-from-preview-mode/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/21131741/Odoo-updates.jpg",
+          "date": "2026-07-21T17:17:25",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/21131741/Odoo-updates-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDU2Nzk=",
+          "title": "The customers we didn’t expect",
+          "slug": "the-customers-we-didn-t-expect",
+          "uri": "/2026/07/the-customers-we-didn-t-expect/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/08175322/The-customer-we-didn-t-expect.png",
+          "date": "2026-07-20T12:15:37",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/08175322/The-customer-we-didn-t-expect-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDMzOTU=",
+          "title": "Is AI your real assistant? How ONLYOFFICE made friends with artificial intelligence",
+          "slug": "onlyoffice-made-friends-with-ai",
+          "uri": "/2026/07/onlyoffice-made-friends-with-ai/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/11160621/IMG_5210.png",
+          "date": "2026-07-17T11:01:38",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/11160621/IMG_5210-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Elena",
+              "slug": "lena"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDM3MTI=",
+          "title": "How FILMZ e.V. keeps film culture running with ONLYOFFICE",
+          "slug": "filmz-ev-onlyoffice",
+          "uri": "/2026/07/filmz-ev-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/30150512/Filmz-Mainz-e.V.case.png",
+          "date": "2026-07-16T11:28:03",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/30150512/Filmz-Mainz-e.V.case-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDc0NDM=",
+          "title": "16 ways to contribute to ONLYOFFICE: making the best office suite together",
+          "slug": "16-ways-to-contribute-to-onlyoffice",
+          "uri": "/2026/07/16-ways-to-contribute-to-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/15133806/Contributing-to-ONLYOFFICE.png",
+          "date": "2026-07-15T15:58:07",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/15133806/Contributing-to-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDYxODc=",
+          "title": "Enhance your documents: Introducing the Chinese Converter and Chinese Formatter plugins",
+          "slug": "enhance-your-documents-introducing-the-chinese-converter-and-chinese-formatter-plugins",
+          "uri": "/2026/07/enhance-your-documents-introducing-the-chinese-converter-and-chinese-formatter-plugins/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/14102507/photo_2026-07-14_11-31-54.jpg",
+          "date": "2026-07-14T11:52:02",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/14102507/photo_2026-07-14_11-31-54-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Serge",
+              "slug": "serge"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDQ4MjA=",
+          "title": "8 things we got wrong (and how they made ONLYOFFICE better)",
+          "slug": "things-we-got-wrong",
+          "uri": "/2026/07/things-we-got-wrong/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/06162710/Things-we-got-wrong.png",
+          "date": "2026-07-13T11:24:50",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/06162710/Things-we-got-wrong-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDYxOTE=",
+          "title": "Born in 2009, still independent: what that means for your office in 2026",
+          "slug": "independent-office-in-2026",
+          "uri": "/2026/07/independent-office-in-2026/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/10100622/Born-in-2009-still-independent-1.png",
+          "date": "2026-07-10T10:36:34",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/10100622/Born-in-2009-still-independent-1-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDU4NzE=",
+          "title": "16+ countries, one team",
+          "slug": "16-countries-one-team",
+          "uri": "/2026/07/16-countries-one-team/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/09101825/16-countries-one-team-1024x522.jpg",
+          "date": "2026-07-09T11:11:41",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/09101825/16-countries-one-team-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDUyMDM=",
+          "title": "From requests to reality: the features that shaped ONLYOFFICE",
+          "slug": "features-that-shaped-onlyoffice",
+          "uri": "/2026/07/features-that-shaped-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/07175229/features-shaped-onlyoffice-1024x522.jpg",
+          "date": "2026-07-08T11:13:03",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/07175229/features-shaped-onlyoffice-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDQzMTk=",
+          "title": "Sweet 16: Happy birthday, ONLYOFFICE! 16 things to share on this special day",
+          "slug": "16-birthday-onlyoffice",
+          "uri": "/2026/07/16-birthday-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/02174015/Sweet-16.png",
+          "date": "2026-07-07T11:00:16",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/02174015/Sweet-16-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDM4ODc=",
+          "title": "Partners who scaled with us",
+          "slug": "partners-who-scaled-with-us",
+          "uri": "/2026/07/partners-who-scaled-with-us/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/06130043/IMG_5273.png",
+          "date": "2026-07-06T13:29:58",
+          "featuredImage": null,
+          "author": {
+            "node": {
+              "name": "Elena",
+              "slug": "lena"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDI0MzY=",
+          "title": "The integration ecosystem story: how ONLYOFFICE went from one connector to the infrastructure of 40+ integrations and 50+ plugins",
+          "slug": "integration-ecosystem",
+          "uri": "/2026/07/integration-ecosystem/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/02100754/IMG_5267.png",
+          "date": "2026-07-03T12:09:02",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/02100754/IMG_5267-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Elena",
+              "slug": "lena"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDA4NTY=",
+          "title": "ONLYOFFICE DocSpace 3.7: Self-hosted builds are here with a lightweight install, ARM Docker, AI and license update",
+          "slug": "onlyoffice-docspace-3-7-server",
+          "uri": "/2026/07/onlyoffice-docspace-3-7-server/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/02103018/DocSpace-3.7-on-premise.png",
+          "date": "2026-07-02T11:59:58",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/02103018/DocSpace-3.7-on-premise-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDM2NDQ=",
+          "title": "Digital learning and what ONLYOFFICE has to do with it",
+          "slug": "digital-learning-and-what-onlyoffice-has-to-do-with-it",
+          "uri": "/2026/07/digital-learning-and-what-onlyoffice-has-to-do-with-it/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/30145156/Digital-learning-and-ONLYOFFICE.png",
+          "date": "2026-07-01T11:57:18",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/30145156/Digital-learning-and-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Suman",
+              "slug": "suman"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDM1ODQ=",
+          "title": "Automate ONLYOFFICE DocSpace with n8n: build document workflows without writing a line of code",
+          "slug": "docspace-n8n",
+          "uri": "/2026/06/docspace-n8n/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/30122755/DocSpace-n8n-Nodes-1.png",
+          "date": "2026-06-30T14:09:53",
+          "featuredImage": null,
+          "author": {
+            "node": {
+              "name": "Denis",
+              "slug": "denis"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDMxMjI=",
+          "title": "The year we went open source",
+          "slug": "the-year-we-went-open-source",
+          "uri": "/2026/06/the-year-we-went-open-source/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/29123008/IMG_5218-2--1024x522.png",
+          "date": "2026-06-29T15:15:41",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/06/29123008/IMG_5218-2--634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMwMzEyMg=="
+    }
+  },
+  "backToSchoolPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTQ4MDg=",
+          "title": "Starting a career before graduation: Abouba’s story at ONLYOFFICE",
+          "slug": "abouba-s-story-at-onlyoffice",
+          "uri": "/2026/09/abouba-s-story-at-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/09105157/IMG_5848-1024x512.png",
+          "date": "2026-09-09T12:34:42",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/09105157/IMG_5848-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM4NDE=",
+          "title": "From university to full-time developer: Aleksandr shares his student journey at ONLYOFFICE",
+          "slug": "from-university-to-full-time-developer",
+          "uri": "/2026/09/from-university-to-full-time-developer/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02142010/IMG_5801-1024x512.png",
+          "date": "2026-09-02T15:08:01",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02142010/IMG_5801-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM2MDQ=",
+          "title": "New Antidote plugin for ONLYOFFICE: check and improve your texts in English and French",
+          "slug": "antidote-plugin-for-onlyoffice",
+          "uri": "/2026/09/antidote-plugin-for-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-1024x522.png",
+          "date": "2026-09-01T12:30:41",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMxMzYwNA=="
+    }
+  },
+  "OO16thAnniversaryPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMDg5NDc=",
+          "title": "Celebrating 16 years of ONLYOFFICE: 16 questions answered (FAQ)",
+          "slug": "16-questions-answered-faq",
+          "uri": "/2026/07/16-questions-answered-faq/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/24145550/16-questions-FAQ-.png",
+          "date": "2026-07-24T16:41:30",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/24145550/16-questions-FAQ--634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDc4OTU=",
+          "title": "What we’re building for the next 16 years",
+          "slug": "plans-for-the-next-16-years",
+          "uri": "/2026/07/plans-for-the-next-16-years/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/17164349/main-1024x522.jpg",
+          "date": "2026-07-22T10:43:26",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/17164349/main-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDU2Nzk=",
+          "title": "The customers we didn’t expect",
+          "slug": "the-customers-we-didn-t-expect",
+          "uri": "/2026/07/the-customers-we-didn-t-expect/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/08175322/The-customer-we-didn-t-expect.png",
+          "date": "2026-07-20T12:15:37",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/08175322/The-customer-we-didn-t-expect-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMwNTY3OQ=="
+    }
+  },
+  "productReleasesPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTM2MDQ=",
+          "title": "New Antidote plugin for ONLYOFFICE: check and improve your texts in English and French",
+          "slug": "antidote-plugin-for-onlyoffice",
+          "uri": "/2026/09/antidote-plugin-for-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-1024x522.png",
+          "date": "2026-09-01T12:30:41",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/01103432/IMG_5796-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTI0MzA=",
+          "title": "ONLYOFFICE connector v2.1.0 for Confluence Cloud released: new supported formats, dedicated space page, improved file browsing and more",
+          "slug": "onlyoffice-connector-v2-1-0-for-confluence-cloud-released",
+          "uri": "/2026/08/onlyoffice-connector-v2-1-0-for-confluence-cloud-released/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/18155621/Confluence-Cloud-2.1.0.png",
+          "date": "2026-08-18T17:43:47",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/18155621/Confluence-Cloud-2.1.0-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMDg0NjQ=",
+          "title": "What’s new in the ONLYOFFICE connectors for Odoo: opening PDFs from preview mode, creating documents from form templates and the enhanced Templates module",
+          "slug": "what-s-new-in-the-onlyoffice-connectors-for-odoo-opening-pdfs-from-preview-mode",
+          "uri": "/2026/07/what-s-new-in-the-onlyoffice-connectors-for-odoo-opening-pdfs-from-preview-mode/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/21131741/Odoo-updates.jpg",
+          "date": "2026-07-21T17:17:25",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/07/21131741/Odoo-updates-634x320.jpg"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMwODQ2NA=="
+    }
+  },
+  "forDevelopersPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTY3Mjk=",
+          "title": "Get started with document editing in your web app using ONLYOFFICE Create App",
+          "slug": "get-started-with-document-editing-in-your-web-app-using-onlyoffice-create-app",
+          "uri": "/2026/09/get-started-with-document-editing-in-your-web-app-using-onlyoffice-create-app/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/30103044/IMG_6023.png",
+          "date": "2026-09-30T11:05:34",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/30103044/IMG_6023-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Serge",
+              "slug": "serge"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU4OTU=",
+          "title": "Fleurdelix OS chooses ONLYOFFICE as its default office suite",
+          "slug": "fleurdelix-os-chooses-onlyoffice",
+          "uri": "/2026/09/fleurdelix-os-chooses-onlyoffice/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/22105940/IMG_5964-1024x522.png",
+          "date": "2026-09-22T11:51:28",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/22105940/IMG_5964-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Dasha",
+              "slug": "dasha"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU1ODI=",
+          "title": "ONLYOFFICE Desktop Editors is the default office suite on Liya Linux",
+          "slug": "onlyoffice-desktop-editors-and-liya-linux",
+          "uri": "/2026/09/onlyoffice-desktop-editors-and-liya-linux/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/15144909/Liya-Linux-and-ONLYOFFICE.png",
+          "date": "2026-09-15T14:51:36",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/15144909/Liya-Linux-and-ONLYOFFICE-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sergey",
+              "slug": "sergey"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMxNTU4Mg=="
+    }
+  },
+  "forBusinessPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTYyMTU=",
+          "title": "20 best cloud-based productivity apps for teams",
+          "slug": "cloud-based-productivity-apps",
+          "uri": "/2026/09/cloud-based-productivity-apps/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25105153/cloud-based-productivity-apps.png",
+          "date": "2026-09-25T12:25:24",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/25105153/cloud-based-productivity-apps-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Sara Bogavac",
+              "slug": "sara"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTM5MDk=",
+          "title": "Collaboration without borders: ONLYOFFICE partners with Cloud Systems Asia",
+          "slug": "onlyoffice-cloud-systems-asia",
+          "uri": "/2026/09/onlyoffice-cloud-systems-asia/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02210250/Cloud-Systems-Asia.png",
+          "date": "2026-09-03T13:34:53",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/09/02210250/Cloud-Systems-Asia-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTE4NDg=",
+          "title": "How to move on from Microsoft 365 without a full migration",
+          "slug": "migrate-from-microsoft-365",
+          "uri": "/2026/08/migrate-from-microsoft-365/",
+          "firstImgPost": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/14124107/migration-webinar.png",
+          "date": "2026-08-14T13:32:31",
+          "featuredImage": {
+            "node": {
+              "sourceUrl": "https://static-blog.onlyoffice.com/wp-content/uploads/2026/08/14124107/migration-webinar-634x320.png"
+            }
+          },
+          "author": {
+            "node": {
+              "name": "Ksenija",
+              "slug": "ksenija"
+            }
+          }
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMxMTg0OA=="
+    }
+  },
+  "inThePressPosts": {
+    "edges": [
+      {
+        "node": {
+          "id": "cG9zdDozMTU1MDM=",
+          "title": "ONLYOFFICE Docs Developer review: an embedded office suite for your app",
+          "dateNews": "20260901",
+          "excerpt": "Let’s discover what ONLYOFFICE Docs Developer is and why it’s a good choice for anyone looking to embed an office suite into their software.",
+          "url": "https://www.krowdbase.com/post/onlyoffice-docs-developer-review",
+          "shortUrl": "www.krowdbase.com"
+        }
+      },
+      {
+        "node": {
+          "id": "cG9zdDozMTU1MDU=",
+          "title": "I replaced Excel with this open-source alternative for a week—I wasn’t ready for the difference",
+          "dateNews": "20260828",
+          "excerpt": "There's a generally accepted rule when it comes to Excel alternatives: if you need to do something complicated, you need Excel, but if you're only doing basic spreadsheet work, a free, open-source alternative should be...",
+          "url": "https://www.howtogeek.com/microsoft-excel-replaced-with-onlyoffice-spreadsheet/",
+          "shortUrl": "www.howtogeek.com"
+        }
+      }
+    ],
+    "pageInfo": {
+      "hasNextPage": true,
+      "endCursor": "YXJyYXljb25uZWN0aW9uOjMxNTUwNQ=="
+    }
+  },
+  "mainPostExcerpt": {
+    "edges": [
+      {
+        "node": {
+          "moreTextExcerpt": "Accessibility requirements for digital products are becoming increasingly important across Europe. For organizations choosing software, accessibility is no longer simply an additional product feature. It can be part of procurement requirements, institutional policies and, depending..."
+        }
+      }
+    ]
+  }
+}

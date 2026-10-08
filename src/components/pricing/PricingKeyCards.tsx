@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { Key, Check, Sparkles, Laptop, Lock, PhoneCall } from "lucide-react";
 
 interface PricingKeyCardsProps {
@@ -8,6 +9,10 @@ interface PricingKeyCardsProps {
 }
 
 export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
+  const t = useTranslations("pricingKeyCards");
+  const locale = useLocale();
+  const isVi = locale === "vi";
+
   return (
     <section className="pricing-key-section">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -31,31 +36,31 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 }}
               >
                 <Key size={13} color="#ff6f3d" />
-                <span>BẢN QUYỀN VĨNH VIỄN THEO MAINBOARD</span>
+                <span>{t("badge")}</span>
               </span>
             </div>
 
             <h2 className="retail-top-title">
-              ONLYOFFICE Key Online{" "}
-              <span style={{ color: "#ff6f3d" }}>Tối Ưu Bởi Mercy Tech</span>
+              {t("titlePrefix")}{" "}
+              <span style={{ color: "#ff6f3d" }}>{t("titleHighlight")}</span>
             </h2>
 
             <p className="retail-top-desc">
-              Giải pháp bản quyền trọn đời không lo gia hạn hàng năm. Kích hoạt trực tiếp qua mã bản quyền hoặc script tự động trong 30 giây. Reset win hay cài lại máy vẫn giữ nguyên bản quyền chính hãng.
+              {t("desc")}
             </p>
 
             <div className="retail-top-features">
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-                <span>Cấp phép theo UUID Main</span>
+                <span>{t("featUuid")}</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-                <span>Xuất Hóa đơn điện tử VAT</span>
+                <span>{t("featVat")}</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                 <Check size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-                <span>Chứng nhận AGPLv3 mộc đỏ</span>
+                <span>{t("featAgpl")}</span>
               </div>
             </div>
           </div>
@@ -71,7 +76,7 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                     <span>ONLYOFFICE Key Management</span>
                   </div>
                   <span style={{ fontSize: "9.5px", color: "#ff6f3d", backgroundColor: "#fff7ed", padding: "1px 6px", borderRadius: "3px", fontWeight: 700 }}>
-                    Hệ Thống Quản Lý
+                    {isVi ? "Hệ Thống Quản Lý" : "Management Portal"}
                   </span>
                 </div>
 
@@ -79,51 +84,39 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 <div className="retail-laptop-stats">
                   <div style={{ backgroundColor: "#f9f9f9", padding: "4px 2px", borderRadius: "4px" }}>
                     <div style={{ fontSize: "13px", fontWeight: 800, color: "#333333" }}>320</div>
-                    <div style={{ fontSize: "9px", color: "#888888" }}>Tổng key</div>
+                    <div style={{ fontSize: "9px", color: "#888888" }}>{isVi ? "Tổng key" : "Total Keys"}</div>
                   </div>
                   <div style={{ backgroundColor: "#f0fdf4", padding: "4px 2px", borderRadius: "4px" }}>
                     <div style={{ fontSize: "13px", fontWeight: 800, color: "#16a34a" }}>298</div>
-                    <div style={{ fontSize: "9px", color: "#16a34a" }}>Kích hoạt</div>
+                    <div style={{ fontSize: "9px", color: "#16a34a" }}>{isVi ? "Kích hoạt" : "Activated"}</div>
                   </div>
                   <div style={{ backgroundColor: "#fffbeb", padding: "4px 2px", borderRadius: "4px" }}>
                     <div style={{ fontSize: "13px", fontWeight: 800, color: "#d97706" }}>22</div>
-                    <div style={{ fontSize: "9px", color: "#d97706" }}>Đang chờ</div>
+                    <div style={{ fontSize: "9px", color: "#d97706" }}>{isVi ? "Đang chờ" : "Pending"}</div>
                   </div>
                   <div style={{ backgroundColor: "#fef2f2", padding: "4px 2px", borderRadius: "4px" }}>
                     <div style={{ fontSize: "13px", fontWeight: 800, color: "#dc2626" }}>0</div>
-                    <div style={{ fontSize: "9px", color: "#dc2626" }}>Hết hạn</div>
+                    <div style={{ fontSize: "9px", color: "#dc2626" }}>{isVi ? "Hết hạn" : "Expired"}</div>
                   </div>
                 </div>
 
                 {/* Sample Device Rows */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
                   {[
-                    { uuid: "081C3004-6E30C", comp: "CÔNG TY ABC" },
-                    { uuid: "433BBDB-091BC", comp: "CÔNG TY ABC" },
-                    { uuid: "D6-A000801", comp: "CÔNG TY ABC" },
-                  ].map((row, idx) => (
-                    <div
-                      key={idx}
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                        backgroundColor: idx % 2 === 0 ? "#fafafa" : "#ffffff",
-                        padding: "3px 6px",
-                        borderRadius: "4px",
-                        fontSize: "9.5px",
-                      }}
-                    >
-                      <span style={{ fontFamily: "monospace", color: "#555" }}>{row.uuid}</span>
-                      <span style={{ color: "#777" }}>{row.comp}</span>
-                      <span style={{ color: "#16a34a", fontWeight: 700 }}>✓ Đã kích hoạt</span>
+                    { name: "Dell Latitude 5520", id: "UUID-4F9A-8B2E", status: isVi ? "Hoạt động" : "Active" },
+                    { name: "ThinkPad T14 Gen 3", id: "UUID-7C1D-3A4F", status: isVi ? "Hoạt động" : "Active" },
+                    { name: "HP EliteBook 840 G8", id: "UUID-2E5B-9C0A", status: isVi ? "Hoạt động" : "Active" },
+                  ].map((dev, i) => (
+                    <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "10px", padding: "3px 6px", backgroundColor: "#f9f9f9", borderRadius: "3px" }}>
+                      <div>
+                        <span style={{ fontWeight: 600, color: "#333333" }}>{dev.name}</span>
+                        <span style={{ color: "#999999", marginLeft: "4px", fontSize: "9px" }}>({dev.id})</span>
+                      </div>
+                      <span style={{ color: "#16a34a", fontWeight: 700, fontSize: "9px" }}>✓ {dev.status}</span>
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* Laptop Base Lip */}
-              <div className="retail-laptop-base" />
             </div>
           </div>
         </div>
@@ -132,10 +125,12 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
         <div>
           <div style={{ textAlign: "center", marginBottom: "28px" }}>
             <h3 className="retail-packages-title">
-              Các Gói Bản Quyền Key Online Theo Số Lượng
+              {isVi ? "Các Gói Bản Quyền Key Online Theo Số Lượng" : "Online License Packages by Volume"}
             </h3>
             <p className="retail-packages-subtitle">
-              Chính sách chiết khấu theo số lượng thiết bị • Vui lòng liên hệ để nhận bảng giá ưu đãi mới nhất
+              {isVi
+                ? "Chính sách chiết khấu theo số lượng thiết bị • Vui lòng liên hệ để nhận bảng giá ưu đãi mới nhất"
+                : "Volume discounts according to fleet size • Contact us to receive official pricing"}
             </p>
           </div>
 
@@ -143,20 +138,20 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
             {/* Card 1: 1 - 4 Key */}
             <div className="retail-card">
               <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#888888", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                CÁ NHÂN & MÁY LẺ
+                {t("tier1Badge")}
               </div>
               <div style={{ fontSize: "20px", fontWeight: 800, color: "#333333", margin: "4px 0 16px" }}>
-                Từ 1 – 4 Key
+                {isVi ? "Từ 1 – 4 Key" : "1 – 4 Keys"}
               </div>
 
               {/* Quote Placeholder */}
               <div style={{ marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #f0f0f0" }}>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#f9f9f9", padding: "6px 12px", borderRadius: "6px", border: "1px solid #e5e5e5" }}>
                   <Lock size={15} color="#ea580c" />
-                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#333333" }}>Liên Hệ Báo Giá</span>
+                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#333333" }}>{t("tier1Price")}</span>
                 </div>
                 <div style={{ fontSize: "12px", color: "#16a34a", fontWeight: 700, marginTop: "6px" }}>
-                  ✓ ĐÃ BAO GỒM 10% VAT
+                  {isVi ? "✓ ĐÃ BAO GỒM 10% VAT" : "✓ 10% VAT INCLUDED"}
                 </div>
               </div>
 
@@ -164,19 +159,19 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Bản quyền vĩnh viễn theo Mainboard máy</span>
+                  <span>{isVi ? "Bản quyền vĩnh viễn theo Mainboard máy" : "Perpetual license per Motherboard"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Kích hoạt nhanh chóng trong 30 giây</span>
+                  <span>{isVi ? "Kích hoạt nhanh chóng trong 30 giây" : "Instant activation in 30 seconds"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Cài lại win tự động kích hoạt lại</span>
+                  <span>{isVi ? "Cài lại win tự động kích hoạt lại" : "Preserved on Windows re-installation"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Hỗ trợ kỹ thuật qua Hotline / Messenger</span>
+                  <span>{isVi ? "Hỗ trợ kỹ thuật qua Hotline / Messenger" : "Direct Hotline / Messenger support"}</span>
                 </li>
               </ul>
 
@@ -186,31 +181,31 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 className="retail-card-btn retail-card-btn-outline"
               >
                 <PhoneCall size={15} color="#ea580c" />
-                <span>Nhận Báo Giá Gói 1 – 4 Key</span>
+                <span>{isVi ? "Nhận Báo Giá Gói 1 – 4 Key" : "Get 1 – 4 Keys Quote"}</span>
               </button>
             </div>
 
             {/* Card 2: 5 - 49 Key (POPULAR / HIGHLIGHT CARD) */}
             <div className="retail-card retail-card-popular">
               <span className="retail-card-badge">
-                <Sparkles size={12} /> DOANH NGHIỆP PHỔ BIẾN
+                <Sparkles size={12} /> {isVi ? "DOANH NGHIỆP PHỔ BIẾN" : "RECOMMENDED FOR SMB"}
               </span>
 
               <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#ff6f3d", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                DOANH NGHIỆP VỪA & NHỎ
+                {t("tier2Badge")}
               </div>
               <div style={{ fontSize: "20px", fontWeight: 800, color: "#333333", margin: "4px 0 16px" }}>
-                Từ 5 – 49 Key
+                {isVi ? "Từ 5 – 49 Key" : "5 – 49 Keys"}
               </div>
 
               {/* Quote Placeholder */}
               <div style={{ marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #f0f0f0" }}>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#fff7ed", padding: "6px 12px", borderRadius: "6px", border: "1px solid #fed7aa" }}>
                   <Lock size={15} color="#ff6f3d" />
-                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#ff6f3d" }}>Giá Chiết Khấu Ưu Đãi</span>
+                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#ff6f3d" }}>{t("tier2Price")}</span>
                 </div>
                 <div style={{ fontSize: "12px", color: "#16a34a", fontWeight: 700, marginTop: "6px" }}>
-                  ✓ ĐÃ BAO GỒM 10% VAT • HỖ TRỢ XUẤT HÓA ĐƠN
+                  {isVi ? "✓ ĐÃ BAO GỒM 10% VAT • HỖ TRỢ XUẤT HÓA ĐƠN" : "✓ 10% VAT INCLUDED • VAT INVOICES ISSUED"}
                 </div>
               </div>
 
@@ -218,19 +213,19 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#333333", fontWeight: 600 }}>
                   <Check size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Bản quyền vĩnh viễn theo Mainboard máy</span>
+                  <span>{isVi ? "Bản quyền vĩnh viễn theo Mainboard máy" : "Perpetual license per Motherboard"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#333333", fontWeight: 600 }}>
                   <Check size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Cấp tài khoản Portal quản lý key tập trung</span>
+                  <span>{isVi ? "Cấp tài khoản Portal quản lý key tập trung" : "Centralized Key Management Portal account"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#333333", fontWeight: 600 }}>
                   <Check size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Xuất giấy chứng nhận bản quyền từng thiết bị</span>
+                  <span>{isVi ? "Xuất giấy chứng nhận bản quyền từng thiết bị" : "Official device authenticity certificates"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#333333", fontWeight: 600 }}>
                   <Check size={16} color="#ff6f3d" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Hợp đồng kinh tế & Hóa đơn điện tử VAT</span>
+                  <span>{isVi ? "Hợp đồng kinh tế & Hóa đơn điện tử VAT" : "Official Contracts & Electronic VAT Invoices"}</span>
                 </li>
               </ul>
 
@@ -240,27 +235,27 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 className="retail-card-btn retail-card-btn-primary"
               >
                 <PhoneCall size={16} />
-                <span>Nhận Báo Giá Gói 5 – 49 Key</span>
+                <span>{isVi ? "Nhận Báo Giá Gói 5 – 49 Key" : "Get 5 – 49 Keys Quote"}</span>
               </button>
             </div>
 
             {/* Card 3: 50+ Key */}
             <div className="retail-card">
               <div style={{ fontSize: "12.5px", fontWeight: 700, color: "#888888", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                TỔ CHỨC & TẬP ĐOÀN
+                {t("tier3Badge")}
               </div>
               <div style={{ fontSize: "20px", fontWeight: 800, color: "#333333", margin: "4px 0 16px" }}>
-                Từ 50 Key Trở Lên
+                {isVi ? "Từ 50 Key Trở Lên" : "50+ Keys"}
               </div>
 
               {/* Quote Placeholder */}
               <div style={{ marginBottom: "16px", paddingBottom: "16px", borderBottom: "1px solid #f0f0f0" }}>
                 <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", backgroundColor: "#f9f9f9", padding: "6px 12px", borderRadius: "6px", border: "1px solid #e5e5e5" }}>
                   <Lock size={15} color="#16a34a" />
-                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#16a34a" }}>Báo Giá Dự Án Riêng</span>
+                  <span style={{ fontSize: "15px", fontWeight: 800, color: "#16a34a" }}>{t("tier3Price")}</span>
                 </div>
                 <div style={{ fontSize: "12px", color: "#16a34a", fontWeight: 700, marginTop: "6px" }}>
-                  ✓ CHIẾT KHẤU TỐI ĐA CHO DỰ ÁN
+                  {isVi ? "✓ CHIẾT KHẤU TỐI ĐA CHO DỰ ÁN" : "✓ MAXIMUM WHOLESALE MARGIN"}
                 </div>
               </div>
 
@@ -268,19 +263,19 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
               <ul style={{ listStyle: "none", padding: 0, margin: "0 0 24px 0", display: "flex", flexDirection: "column", gap: "10px", flex: 1 }}>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Chính sách chiết khấu tốt nhất thị trường</span>
+                  <span>{isVi ? "Chính sách chiết khấu tốt nhất thị trường" : "Best-in-market volume pricing"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Hỗ trợ triển khai máy chủ & giải pháp riêng</span>
+                  <span>{isVi ? "Hỗ trợ triển khai máy chủ & giải pháp riêng" : "Custom private server / on-premise setup"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Hợp đồng kinh tế mộc đỏ & Bàn giao tận nơi</span>
+                  <span>{isVi ? "Hợp đồng kinh tế mộc đỏ & Bàn giao tận nơi" : "Signed enterprise contract & full delivery"}</span>
                 </li>
                 <li style={{ display: "flex", alignItems: "flex-start", gap: "8px", fontSize: "13px", color: "#444444" }}>
                   <Check size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
-                  <span>Kỹ sư hỗ trợ cài đặt và chuyển giao 24/7</span>
+                  <span>{isVi ? "Kỹ sư hỗ trợ cài đặt và chuyển giao 24/7" : "24/7 engineer migration and onboarding"}</span>
                 </li>
               </ul>
 
@@ -290,13 +285,13 @@ export default function PricingKeyCards({ onOpenQuote }: PricingKeyCardsProps) {
                 className="retail-card-btn retail-card-btn-outline"
               >
                 <PhoneCall size={15} color="#ea580c" />
-                <span>Liên Hệ Báo Giá Từ 50 Key</span>
+                <span>{isVi ? "Liên Hệ Báo Giá Từ 50 Key" : "Get 50+ Keys Quote"}</span>
               </button>
             </div>
           </div>
 
           <div className="retail-packages-note">
-            ★ <strong style={{ color: "#ff6f3d" }}>Lưu ý:</strong> Từ 50 key trở lên hỗ trợ khảo sát và triển khai giải pháp kỹ thuật riêng cho hạ tầng nội bộ của doanh nghiệp.
+            ★ <strong style={{ color: "#ff6f3d" }}>{isVi ? "Lưu ý:" : "Note:"}</strong> {isVi ? "Từ 50 key trở lên hỗ trợ khảo sát và triển khai giải pháp kỹ thuật riêng cho hạ tầng nội bộ của doanh nghiệp." : "50+ key deployments include dedicated on-site IT consultation and custom network architecture."}
           </div>
         </div>
       </div>

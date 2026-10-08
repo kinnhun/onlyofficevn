@@ -12,17 +12,9 @@ export default function MainPackagesSection({ onOpenModal }: MainPackagesSection
   return (
     <section className="oo-partner-section">
       <div style={{ textAlign: "center", marginBottom: "36px" }}>
-        <span
-          style={{
-            color: "#ff6f3d",
-            fontSize: "12px",
-            fontWeight: 800,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
+        <div className="oo-partner-kicker">
           CHƯƠNG TRÌNH ĐỐI TÁC & ĐẠI LÝ CHIẾN LƯỢC
-        </span>
+        </div>
         <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
           Hai Gói Đại Lý Khởi Nghiệp & Độc Quyền Toàn Diện
         </h2>

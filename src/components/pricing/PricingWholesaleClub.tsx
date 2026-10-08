@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import { Briefcase, Lock } from "lucide-react";
 
 interface PricingWholesaleClubProps {
@@ -8,18 +9,20 @@ interface PricingWholesaleClubProps {
 }
 
 export default function PricingWholesaleClub({ onOpenQuote }: PricingWholesaleClubProps) {
+  const t = useTranslations("pricingWholesale");
+
   return (
     <div className="retail-wholesale-banner">
       <div className="retail-wholesale-info">
         <div className="retail-wholesale-badge">
           <Briefcase size={14} color="#ffffff" style={{ flexShrink: 0 }} />
-          <span>CHƯƠNG TRÌNH ĐỐI TÁC ĐẠI LÝ & CỬA HÀNG MÁY TÍNH</span>
+          <span>{t("badge")}</span>
         </div>
         <h3 className="retail-wholesale-title">
-          Nhập Sỉ OnlyOffice Để Phân Phối Cùng Mercy Tech
+          {t("title")}
         </h3>
         <p className="retail-wholesale-desc">
-          Chính sách chiết khấu sỉ cực cao dành riêng cho Đại lý & Kỹ thuật viên IT. Cung cấp bộ cài White-label riêng, kho Marketing hàng tuần, Hợp đồng mộc đỏ và hỗ trợ kỹ thuật trực tiếp.
+          {t("desc")}
         </p>
       </div>
 
@@ -29,7 +32,7 @@ export default function PricingWholesaleClub({ onOpenQuote }: PricingWholesaleCl
         className="retail-wholesale-btn"
       >
         <Lock size={16} color="#ea580c" style={{ flexShrink: 0 }} />
-        <span>Nhận Bảng Giá Sỉ Đại Lý</span>
+        <span>{t("btn")}</span>
       </button>
     </div>
   );

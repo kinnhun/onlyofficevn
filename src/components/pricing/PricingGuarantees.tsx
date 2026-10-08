@@ -1,34 +1,37 @@
 "use client";
 
 import React from "react";
+import { useTranslations } from "next-intl";
 import { Key, RefreshCw, ShieldAlert, Monitor, Award } from "lucide-react";
 
 export default function PricingGuarantees() {
+  const t = useTranslations("pricingGuarantees");
+
   const guarantees = [
     {
       icon: <Key size={22} color="#ff6f3d" />,
-      title: "KEY CẤP THEO MAIN - UUID",
-      desc: "Vĩnh viễn máy, reset máy sẽ được cấp lại chính key đã kích hoạt",
+      title: t("g1Title"),
+      desc: t("g1Desc"),
     },
     {
       icon: <RefreshCw size={22} color="#ff6f3d" />,
-      title: "ĐỔI MÁY CẦN MUA LẠI MỚI",
-      desc: "Mainboard - UUID hỏng hoặc thay mới cần mua mới key",
+      title: t("g2Title"),
+      desc: t("g2Desc"),
     },
     {
       icon: <ShieldAlert size={22} color="#ff6f3d" />,
-      title: "TRƯỜNG HỢP BẤT KHẢ KHÁNG",
-      desc: "Hỏa hoạn, thiên tai... vẫn được hỗ trợ chia sẻ gánh nặng rủi ro",
+      title: t("g3Title"),
+      desc: t("g3Desc"),
     },
     {
       icon: <Monitor size={22} color="#ff6f3d" />,
-      title: "NỀN TẢNG QUẢN LÝ KEY",
-      desc: "Quản lý – theo dõi – cấp lại key nhanh chóng, chuyên nghiệp",
+      title: t("g4Title"),
+      desc: t("g4Desc"),
     },
     {
       icon: <Award size={22} color="#ff6f3d" />,
-      title: "CHỨNG NHẬN THEO TỪNG MÁY",
-      desc: "Xác nhận key hợp lệ theo từng thiết bị, đầy đủ thông tin",
+      title: t("g5Title"),
+      desc: t("g5Desc"),
     },
   ];
 

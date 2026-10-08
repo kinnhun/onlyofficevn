@@ -58,7 +58,10 @@ export interface IBlogPostDocument extends Document {
   summary_en?: string;
   content_vi: string[];
   content_en: string[];
+  isMainFeatured?: boolean;
   contentHtml?: string;
+  contentHtml_vi?: string;
+  contentHtml_en?: string;
   sourceUrl?: string;
   sections: IBlogSection[];
   createdAt: Date;
@@ -127,6 +130,7 @@ const BlogPostSchema = new Schema<IBlogPostDocument>(
     authorRole_vi: { type: String, default: "Đội ngũ Kỹ sư Chuyển đổi số" },
     authorRole_en: { type: String, default: "Digital Transformation Team" },
     featured: { type: Boolean, default: false, index: true },
+    isMainFeatured: { type: Boolean, default: false, index: true },
     order: { type: Number, default: 0 },
     tags: [{ type: String, index: true }],
     summary_vi: { type: String },
@@ -134,6 +138,8 @@ const BlogPostSchema = new Schema<IBlogPostDocument>(
     content_vi: [{ type: String }],
     content_en: [{ type: String }],
     contentHtml: { type: String },
+    contentHtml_vi: { type: String },
+    contentHtml_en: { type: String },
     sourceUrl: { type: String },
     sections: [BlogSectionSchema],
   },

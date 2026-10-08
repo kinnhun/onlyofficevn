@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { ShieldCheck, FileText, CheckCircle2, PhoneCall, MessageCircle } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
@@ -9,6 +10,11 @@ interface PricingHeroBannerProps {
 }
 
 export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProps) {
+  const tPricing = useTranslations("pricingPage");
+  const tBranding = useTranslations("branding");
+  const locale = useLocale();
+  const isVi = locale === "vi";
+
   return (
     <section className="pricing-hero-section">
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -16,23 +22,23 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
         <div className="pricing-hero-badge">
           <span style={{ fontSize: "14px" }}>🇻🇳</span>
           <span className="pricing-hero-badge-title">
-            ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC TẠI VIỆT NAM
+            {tBranding("distributor").toUpperCase()}
           </span>
           <span className="pricing-hero-badge-dot">•</span>
           <span className="pricing-hero-badge-company">
-            CÔNG TY TNHH CÔNG NGHỆ MERCY
+            {tBranding("company")}
           </span>
         </div>
 
         {/* Main Heading */}
         <h1 className="pricing-hero-title">
-          Bảng Giá & Chính Sách Bản Quyền{" "}
+          {tPricing("title")}{" "}
           <span style={{ color: "#ff6f3d" }}>ONLYOFFICE</span>
         </h1>
 
         {/* Subtitle */}
         <p className="pricing-hero-subtitle">
-          Chính sách giá ưu đãi bảo mật theo quy mô thiết bị và đối tác. Cấp phép vĩnh viễn theo Mainboard máy tính, đầy đủ hóa đơn điện tử VAT, hợp đồng kinh tế và chứng nhận nguồn gốc mộc đỏ của Công ty TNHH Công Nghệ Mercy.
+          {tPricing("subtitle")}
         </p>
 
         {/* Dual CTA Buttons */}
@@ -42,10 +48,10 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
             type="button"
             onClick={onOpenQuote}
             className="pricing-hero-btn pricing-hero-btn-primary"
-            title="Nhập form nhận báo giá ưu đãi chính hãng"
+            title={isVi ? "Nhập form nhận báo giá ưu đãi chính hãng" : "Submit form for official discounted quote"}
           >
             <PhoneCall size={18} style={{ flexShrink: 0 }} />
-            <span>Liên Hệ Nhận Báo Giá Ưu Đãi</span>
+            <span>{isVi ? "Liên Hệ Nhận Báo Giá Ưu Đãi" : "Request Custom Quote"}</span>
           </button>
 
           {/* Button 2: Direct Messenger Contact */}
@@ -55,10 +61,10 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
             rel="noopener noreferrer"
             onClick={openMessengerChat}
             className="pricing-hero-btn pricing-hero-btn-secondary"
-            title="Liên hệ tư vấn Messenger"
+            title={isVi ? "Liên hệ tư vấn Messenger" : "Chat on Messenger"}
           >
             <MessageCircle size={19} color="#ffffff" style={{ flexShrink: 0 }} />
-            <span>Liên hệ tư vấn</span>
+            <span>{isVi ? "Liên hệ tư vấn" : "Live Messenger Support"}</span>
           </a>
         </div>
 
@@ -66,15 +72,15 @@ export default function PricingHeroBanner({ onOpenQuote }: PricingHeroBannerProp
         <div className="pricing-hero-trust-container">
           <div className="pricing-hero-trust-item">
             <CheckCircle2 size={16} color="#16a34a" style={{ flexShrink: 0 }} />
-            <span>Xuất Hóa Đơn VAT Điện Tử</span>
+            <span>{isVi ? "Xuất Hóa Đơn VAT Điện Tử" : "Official Electronic VAT Invoices"}</span>
           </div>
           <div className="pricing-hero-trust-item">
             <FileText size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
-            <span>Hợp Đồng & Biên Bản Mộc Đỏ</span>
+            <span>{isVi ? "Hợp Đồng & Biên Bản Mộc Đỏ" : "Legal Contracts with Red Stamp"}</span>
           </div>
           <div className="pricing-hero-trust-item">
             <ShieldCheck size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
-            <span>Bản Quyền Vĩnh Viễn Theo Main</span>
+            <span>{isVi ? "Bản Quyền Vĩnh Viễn Theo Main" : "Perpetual License per Motherboard"}</span>
           </div>
         </div>
       </div>

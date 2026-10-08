@@ -617,15 +617,22 @@ with open(vi_path, "w", encoding="utf-8") as f:
 with open(en_path, "w", encoding="utf-8") as f:
     json.dump(en_data, f, ensure_ascii=False, indent=2)
 
+# Also save directly to src/messages/vi.json and src/messages/en.json
+src_messages_dir = r"d:\mercy\testCloneGiaoDien\web\src\messages"
+with open(os.path.join(src_messages_dir, "vi.json"), "w", encoding="utf-8") as f:
+    json.dump(vi_data, f, ensure_ascii=False, indent=2)
+
+with open(os.path.join(src_messages_dir, "en.json"), "w", encoding="utf-8") as f:
+    json.dump(en_data, f, ensure_ascii=False, indent=2)
+
 # Also distribute to the modular src/messages structure
 group_keys = {
     "common": ["common", "header", "footer", "branding", "announcement"],
     "home": ["hero", "docsSection", "collabSection", "aiSection", "securitySection", "solutionsSection", "customersSection", "ratingsSection", "newsSection", "faqSection"],
-    "pricing": ["pricingPage", "pricingQuoteModal"],
+    "pricing": ["pricingPage", "pricingQuoteModal", "pricingGuarantees", "pricingWholesale", "pricingKeyCards"],
     "enterprise": ["demo", "seamlessCollaboration", "partnersPage", "blogPage"]
 }
 
-src_messages_dir = r"d:\mercy\testCloneGiaoDien\web\src\messages"
 for lang, data in [("vi", vi_data), ("en", en_data)]:
     lang_dir = os.path.join(src_messages_dir, lang)
     os.makedirs(lang_dir, exist_ok=True)
@@ -634,5 +641,5 @@ for lang, data in [("vi", vi_data), ("en", en_data)]:
         with open(os.path.join(lang_dir, f"{group}.json"), "w", encoding="utf-8") as f:
             json.dump(group_data, f, ensure_ascii=False, indent=2)
 
-print("SUCCESS: Updated messages/vi.json, messages/en.json and all src/messages/(vi|en) modular files!")
+print("SUCCESS: Updated src/messages/(vi|en).json and modular files!")
 

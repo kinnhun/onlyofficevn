@@ -1,56 +1,40 @@
-"use client";
+import React from "react";
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
+import DemoClientView from "@/components/demo/DemoClientView";
 
-import React, { useState } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isVi = locale === "vi";
 
-import DemoHero from "@/components/demo/DemoHero";
-import DemoOnlineSuite from "@/components/demo/DemoOnlineSuite";
-import DemoPcActivation from "@/components/demo/DemoPcActivation";
-import DemoMercyCheck from "@/components/demo/DemoMercyCheck";
-import DemoEnterpriseCta from "@/components/demo/DemoEnterpriseCta";
-import PricingQuoteModal from "@/components/pricing/PricingQuoteModal";
-
-export default function DemoPage() {
-  const [quoteModalOpen, setQuoteModalOpen] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<string>("OnlyOffice Docs Enterprise");
-
-  const handleOpenQuote = (productName?: string) => {
-    if (productName) setSelectedProduct(productName);
-    setQuoteModalOpen(true);
+  return {
+    title: isVi
+      ? "Dùng Thử & Trải Nghiệm ONLYOFFICE Enterprise — Tải Tool 7 Ngày Tự Động"
+      : "Try & Experience ONLYOFFICE Enterprise — 7-Day Free Trial",
+    description: isVi
+      ? "Trải nghiệm trực tuyến bộ công cụ ONLYOFFICE Docs (Word, Excel, PowerPoint, PDF) và tải công cụ kích hoạt 7 ngày tự động trên máy tính."
+      : "Experience ONLYOFFICE Docs online (Word, Excel, PowerPoint, PDF) and download our automated 7-day trial activation tool.",
+    alternates: {
+      canonical: isVi ? "/demo" : "/en/demo",
+      languages: {
+        "vi-VN": "/demo",
+        "en-US": "/en/demo",
+      },
+    },
   };
+}
 
-  return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", backgroundColor: "#ffffff" }}>
-      {/* Global Navigation Header */}
-      <Header />
+export default async function DemoPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-      <main style={{ flex: 1, backgroundColor: "#ffffff" }}>
-        {/* 1. Hero: Title, Official Badge, 3 Quick Jump Anchors */}
-        <DemoHero />
-
-        {/* 2. Interactive Online Cloud Suite: Word, Excel, PDF Form, Real-time Collaboration */}
-        <DemoOnlineSuite onOpenQuote={() => handleOpenQuote("Tư Vấn Máy Chủ Riêng")} />
-
-        {/* 3. 1-Click 7-Day PC Trial Activation: .BAT tool, ZIP, and detailed modal guide */}
-        <DemoPcActivation />
-
-        {/* 4. MercyCheck Security Scanner: Audit crack risk vs 100% legal OnlyOffice licensing */}
-        <DemoMercyCheck />
-
-        {/* 5. Enterprise Conversion Call-To-Action */}
-        <DemoEnterpriseCta onOpenQuote={() => handleOpenQuote("OnlyOffice Docs Enterprise")} />
-      </main>
-
-      {/* Global Footer */}
-      <Footer />
-
-      {/* Price Quote Request Modal */}
-      <PricingQuoteModal
-        isOpen={quoteModalOpen}
-        onClose={() => setQuoteModalOpen(false)}
-        defaultProduct={selectedProduct}
-      />
-    </div>
-  );
+  return <DemoClientView />;
 }

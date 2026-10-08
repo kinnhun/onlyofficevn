@@ -10,23 +10,15 @@ interface AffiliateSectionProps {
 export default function AffiliateSection({ onOpenModal }: AffiliateSectionProps) {
   return (
     <section className="oo-partner-section">
-      <div style={{ textAlign: "center", marginBottom: "36px" }}>
-        <span
-          style={{
-            color: "#ff6f3d",
-            fontSize: "12px",
-            fontWeight: 800,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
-          MỤC 3. MÔ HÌNH HỢP TÁC LINH HOẠT
-        </span>
-        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
-          3. Chương Trình Cộng Tác Viên (CTV)
+      <div style={{ textAlign: "center", marginBottom: "32px" }}>
+        <div className="oo-partner-kicker">
+          ĐỐI TÁC GIỚI THIỆU
+        </div>
+        <h2 className="oo-partner-heading" style={{ marginTop: "6px" }}>
+          Chương Trình Cộng Tác Viên (CTV)
         </h2>
-        <p className="oo-partner-subheading" style={{ maxWidth: "650px", margin: "10px auto 0" }}>
-          Giới thiệu nhận hoa hồng — <strong>Không cần vốn & Không tự cài đặt kỹ thuật</strong>
+        <p className="oo-partner-subheading" style={{ maxWidth: "650px", margin: "8px auto 0" }}>
+          Giới thiệu nhận hoa hồng hấp dẫn — <strong>Không cần nhập hàng & Mercy Tech hỗ trợ kỹ thuật trọn gói</strong>
         </p>
       </div>
 

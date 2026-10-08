@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function AnnouncementBar() {
@@ -11,7 +12,7 @@ export default function AnnouncementBar() {
 
   return (
     <div className="oo-advent-announce en" style={{ position: "relative" }}>
-      <a
+      <Link
         className="oo-advent-announce-wrapper en"
         href="/partners"
       >
@@ -39,7 +40,7 @@ export default function AnnouncementBar() {
             {t("textMobile")}
           </div>
         </div>
-      </a>
+      </Link>
       <button
         onClick={() => setVisible(false)}
         aria-label="Close announcement"

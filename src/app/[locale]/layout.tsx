@@ -5,6 +5,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import FloatingTrialButton from "@/components/FloatingTrialButton";
 import JsonLd from "@/components/seo/JsonLd";
+import I18nInitializer from "@/components/I18nInitializer";
 import { Open_Sans } from "next/font/google";
 import "../globals.css";
 
@@ -163,6 +164,7 @@ export default async function LocaleLayout({
       <body className={openSans.className} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <div id="__next">
+            <I18nInitializer />
             <div className="layout">{children}</div>
             <FloatingTrialButton />
           </div>

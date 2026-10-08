@@ -10,29 +10,14 @@ import { FlagVi } from "@/components/HeaderFlags";
 export default function FooterCompanyInfo() {
   const tBranding = useTranslations("branding");
 
-  // Helper with fallback to guarantee no crash if i18n cache is stale
-  const getSafe = (key: string, fallback: string) => {
-    try {
-      return tBranding.has(key) ? tBranding(key) : fallback;
-    } catch {
-      return fallback;
-    }
-  };
-
-  const distributor = getSafe("distributor", "Đơn vị phân phối tại Việt Nam");
-  const optimizedBy = getSafe("optimizedBy", "Tối ưu bởi Mercy Tech");
-  const company = getSafe("company", "CÔNG TY TNHH CÔNG NGHỆ MERCY");
-  const mst = getSafe("mst", "MST: 0319227767");
-  const hotlineNamed = getSafe("hotlineNamed", "0763.068.614 (CSKH MERCY TECH)");
-  const email = getSafe("email", "contact@mercytechglobal.com");
-  const address = getSafe(
-    "address",
-    "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam"
-  );
-  const mission = getSafe(
-    "mission",
-    "CÔNG TY TNHH CÔNG NGHỆ MERCY tiên phong cung cấp giải pháp văn phòng số OnlyOffice chuẩn hóa tại Việt Nam. Hợp thức hóa bản quyền và tối ưu 90% chi phí IT dài hạn."
-  );
+  const distributor = tBranding("distributor");
+  const optimizedBy = tBranding("optimizedBy");
+  const company = tBranding("company");
+  const mst = tBranding("mst");
+  const hotlineNamed = tBranding("hotlineNamed");
+  const email = tBranding("email");
+  const address = tBranding("address");
+  const mission = tBranding("mission");
 
   return (
     <div className="oo-footer-company-card">

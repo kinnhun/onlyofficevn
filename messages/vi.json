@@ -14,21 +14,6 @@
     "usCanada": "Mỹ & Canada",
     "language": "Ngôn ngữ"
   },
-  "announcement": {
-    "textDesktop": "• Hỗ trợ triển khai & kỹ thuật chính hãng toàn quốc",
-    "textMobile": "Đơn vị phân phối tại Việt Nam — Tối ưu bởi Mercy Tech"
-  },
-  "branding": {
-    "distributor": "Đơn vị phân phối tại Việt Nam",
-    "optimizedBy": "Tối ưu bởi Mercy Tech",
-    "company": "CÔNG TY TNHH CÔNG NGHỆ MERCY",
-    "mst": "MST: 0319227767",
-    "hotline": "Hotline / Messenger: 0763.068.614",
-    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
-    "email": "contact@mercytechglobal.com",
-    "address": "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam",
-    "mission": "Tiên phong cung cấp giải pháp văn phòng số OnlyOffice chuẩn hóa tại Việt Nam. Hợp thức hóa bản quyền và tối ưu 90% chi phí IT dài hạn."
-  },
   "header": {
     "home": "Trang chủ",
     "pricing": "Bảng Giá",
@@ -169,6 +154,34 @@
       }
     }
   },
+  "footer": {
+    "getFreeApps": "Tải ứng dụng miễn phí",
+    "rights": "Bảo lưu mọi quyền.",
+    "columns": {
+      "solutions": "Giải pháp",
+      "features": "Tính năng",
+      "byIndustry": "Theo ngành nghề",
+      "resources": "Tài nguyên",
+      "compare": "So sánh",
+      "support": "Hỗ trợ",
+      "company": "Công ty"
+    }
+  },
+  "branding": {
+    "distributor": "Đơn vị phân phối tại Việt Nam",
+    "optimizedBy": "Tối ưu bởi Mercy Tech",
+    "company": "CÔNG TY TNHH CÔNG NGHỆ MERCY",
+    "mst": "MST: 0319227767",
+    "hotline": "Hotline / Messenger: 0763.068.614",
+    "hotlineNamed": "0763.068.614 (CSKH MERCY TECH)",
+    "email": "contact@mercytechglobal.com",
+    "address": "175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam",
+    "mission": "Tiên phong cung cấp giải pháp văn phòng số OnlyOffice chuẩn hóa tại Việt Nam. Hợp thức hóa bản quyền và tối ưu 90% chi phí IT dài hạn."
+  },
+  "announcement": {
+    "textDesktop": "• Hỗ trợ triển khai & kỹ thuật chính hãng toàn quốc",
+    "textMobile": "Đơn vị phân phối tại Việt Nam — Tối ưu bởi Mercy Tech"
+  },
   "hero": {
     "titlePrefix": "Vận hành văn phòng riêng của bạn với",
     "titleBrand": "ONLYOFFICE",
@@ -306,19 +319,6 @@
       }
     ]
   },
-  "footer": {
-    "getFreeApps": "Tải ứng dụng miễn phí",
-    "rights": "Bảo lưu mọi quyền.",
-    "columns": {
-      "solutions": "Giải pháp",
-      "features": "Tính năng",
-      "byIndustry": "Theo ngành nghề",
-      "resources": "Tài nguyên",
-      "compare": "So sánh",
-      "support": "Hỗ trợ",
-      "company": "Công ty"
-    }
-  },
   "pricingPage": {
     "badge": "ĐƠN VỊ PHÂN PHỐI TẠI VIỆT NAM — TỐI ƯU BỞI MERCY TECH",
     "title": "Bảng Giá Bản Quyền ONLYOFFICE",
@@ -359,206 +359,34 @@
     "ctaDesc": "Đội ngũ chuyên viên Mercy Technology luôn sẵn sàng khảo sát nhu cầu, demo trực tiếp và gửi báo giá tối ưu nhất.",
     "ctaBtn": "Liên Hệ Messenger / Hotline: 0763.068.614"
   },
-  "partnersPage": {
-    "badge": "MẠNG LƯỚI ĐỐI TÁC TẠI VIỆT NAM — TỐI ƯU & ĐIỀU PHỐI BỞI MERCY TECH",
-    "title": "Trở Thành Đối Tác ONLYOFFICE Tại Việt Nam",
-    "subtitle": "Đồng hành cùng Công ty TNHH Công Nghệ Mercy mang giải pháp văn phòng an toàn, bảo mật và hiệu quả kinh tế đến hàng ngàn doanh nghiệp Việt Nam.",
-    "benefitsTitle": "Quyền Lợi Dành Cho Đối Tác",
-    "tiersTitle": "Các Hạng Mục Hợp Tác",
-    "formTitle": "Đăng Ký Tham Gia Mạng Lưới Đối Tác",
-    "formDesc": "Vui lòng điền thông tin bên dưới, chuyên viên phụ trách đối tác của Mercy Tech sẽ liên hệ lại với bạn trong vòng 24 giờ làm việc.",
-    "form": {
-      "fullName": "Họ và tên người liên hệ",
-      "company": "Tên công ty / Doanh nghiệp",
-      "taxId": "Mã số thuế",
-      "email": "Email công việc",
-      "phone": "Số điện thoại liên hệ",
-      "city": "Tỉnh / Thành phố",
-      "partnerType": "Loại hình hợp tác mong muốn",
-      "message": "Nhu cầu hoặc thông tin thêm",
-      "submit": "Gửi Yêu Cầu Hợp Tác Phân Phối",
-      "successTitle": "Đăng Ký Thành Công!",
-      "successDesc": "Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ liên hệ sớm nhất để trao đổi chính sách chiết khấu và gửi bộ tài liệu đại lý."
-    }
-  },
-  "blogPage": {
-    "badge": "MERCY TECH INSIGHTS",
-    "title": "Blog & Cẩm Nang ONLYOFFICE",
-    "subtitle": "Cập nhật tin tức, cẩm nang kỹ thuật và giải pháp văn phòng bảo mật từ Mercy Tech.",
-    "searchPlaceholder": "Tìm kiếm bài viết, hướng dẫn, Docker, bản quyền...",
-    "quickTopics": "Chủ đề tìm nhanh:",
-    "allArticles": "Tất cả bài viết",
-    "savedArticles": "Đã lưu",
-    "savedCount": "Đã lưu",
-    "sortBy": "Sắp xếp theo",
-    "sortNewest": "Mới nhất",
-    "sortOldest": "Cũ nhất",
-    "sortQuickRead": "Đọc nhanh (< 5 phút)",
-    "sortDeepDive": "Chuyên sâu (> 5 phút)",
-    "sortAlpha": "Tiêu đề (A → Z)",
-    "viewGrid": "Dạng lưới",
-    "viewList": "Dạng danh sách",
-    "liveDb": "Cơ sở dữ liệu MongoDB",
-    "totalArticles": "Bài viết",
-    "totalHours": "Giờ đọc tích lũy",
-    "showingArticles": "Hiển thị",
-    "forKeyword": "cho từ khóa",
-    "withTag": "với thẻ",
-    "resetFilters": "Đặt lại bộ lọc",
-    "readMore": "Đọc bài viết",
-    "readTime": "phút đọc",
-    "featured": "BÀI VIẾT NỔI BẬT",
-    "downloadTrial": "Tải File Dùng Thử .BAT",
-    "saveArticle": "Lưu bài viết",
-    "removeBookmark": "Bỏ lưu",
-    "noArticlesFound": "Không tìm thấy bài viết nào phù hợp",
-    "noArticlesDesc": "Hãy thử đổi từ khóa tìm kiếm hoặc bỏ chọn các thẻ đã lọc.",
-    "clearAll": "Xem tất cả bài viết",
-    "previous": "Trang trước",
-    "next": "Trang tiếp",
-    "page": "Trang",
-    "of": "trên",
-    "trialCardTitle": "ONLYOFFICE Docs Enterprise",
-    "trialCardSubtitle": "Kích hoạt tự động bản quyền 7 ngày",
-    "trialBadge": "100% DÙNG THỬ",
-    "trialBenefit1": "Mở khóa toàn bộ tính năng Enterprise On-Premises",
-    "trialBenefit2": "Script .BAT an toàn, không can thiệp hệ thống máy tính",
-    "trialBenefit3": "Hỗ trợ kỹ thuật 1-1 trực tiếp từ kỹ sư Mercy Tech",
-    "trialBenefit4": "Không cần cung cấp thông tin thẻ tín dụng",
-    "hotlineLabel": "Hotline Kỹ Thuật:",
-    "newsletterTitle": "Bản Tin Công Nghệ Doanh Nghiệp",
-    "newsletterSubtitle": "Nhận tổng hợp hàng tuần về an toàn dữ liệu On-Premises, các bản phát hành mới và ưu đãi bản quyền từ Mercy Tech.",
-    "newsletterPlaceholder": "Nhập địa chỉ email doanh nghiệp...",
-    "newsletterBtn": "Đăng ký nhận tin",
-    "newsletterSuccess": "Đăng ký thành công! Hãy kiểm tra hộp thư."
-  },
-  "seamlessCollaboration": {
-    "breadcrumb": {
-      "home": "Trang chủ",
-      "docs": "ONLYOFFICE Docs",
-      "current": "Cộng tác liền mạch"
+  "pricingQuoteModal": {
+    "badge": "BẢO MẬT & CHIẾT KHẤU TỐI ĐA",
+    "title": "Yêu Cầu Nhận Báo Giá Ưu Đãi",
+    "successTitle": "GỬI YÊU CẦU THÀNH CÔNG!",
+    "successDesc": "Hệ thống đang mở kết nối liên hệ với chuyên viên tư vấn Mercy Tech (Hotline: 0763.068.614) để gửi bảng giá chiết khấu chi tiết cho quý khách.",
+    "closeBtn": "Đóng cửa sổ",
+    "productLabel": "1. Sản phẩm quan tâm:",
+    "products": {
+      "keyOnline": "🔑 OnlyOffice Key Online (Vĩnh viễn theo Mainboard)",
+      "portal": "⚡ Tài Khoản Portal Quản Trị Đại Lý 24/7 (Xuất Key Tức Thì)",
+      "enterprise": "🏢 OnlyOffice Docs Enterprise (Máy chủ riêng / On-premise)",
+      "reseller": "💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng máy tính"
     },
-    "hero": {
-      "badge": "CỘNG TÁC THỜI GIAN THỰC",
-      "titlePrefix": "Cộng tác",
-      "titleHighlight": "hiệu quả",
-      "titleSuffix": "trên mọi loại tài liệu văn phòng",
-      "subtitle": "Chia sẻ, đồng chỉnh sửa và kết nối tức thì theo thời gian thực giúp đội ngũ làm việc nhanh hơn, giảm thiểu sai sót và bảo mật dữ liệu doanh nghiệp tuyệt đối.",
-      "startFree": "Bắt đầu miễn phí",
-      "contactSales": "Liên hệ tư vấn",
-      "trustSync": "0ms độ trễ đồng bộ",
-      "trustLock": "Chế độ khóa đoạn văn độc quyền",
-      "trustVideo": "Tích hợp Video Call Jitsi & Zoom",
-      "alt": "Giao diện cộng tác ONLYOFFICE"
+    "quantityLabel": "2. Số lượng dự kiến:",
+    "quantities": {
+      "tier1": "Từ 1 – 4 thiết bị (Cá nhân / Máy lẻ)",
+      "tier2": "Từ 5 – 49 thiết bị (Doanh nghiệp vừa & nhỏ)",
+      "tier3": "Từ 50 thiết bị trở lên (Dự án / Số lượng lớn)",
+      "tier4": "Số lượng sỉ định kỳ cho cửa hàng máy tính"
     },
-    "tabs": {
-      "share": "Chia sẻ",
-      "coedit": "Đồng chỉnh sửa",
-      "comment": "Bình luận",
-      "communicate": "Giao tiếp",
-      "trackChanges": "Theo dõi thay đổi",
-      "compareCombine": "So sánh & Ghép",
-      "manageVersions": "Quản lý phiên bản"
-    },
-    "features": {
-      "share": {
-        "badge": "01. PHÂN QUYỀN TRUY CẬP",
-        "title": "Chia Sẻ Tài Liệu Với Hệ Thống Phân Quyền Linh Hoạt",
-        "desc": "Chia sẻ tài liệu văn bản, bảng tính, bài thuyết trình và tệp PDF để xem hoặc chỉnh sửa, bật tính năng bình luận hoặc đánh giá xét duyệt. Tạo biểu mẫu điện tử sẵn sàng để người khác điền thông tin. Thiết lập bộ lọc dữ liệu tùy chỉnh cho phép từng cộng tác viên xem số liệu độc lập. Chia sẻ liên kết đến vùng dữ liệu được chọn để đồng nghiệp tìm kiếm nhanh chóng trong các bảng tính lớn. Hạn chế quyền sao chép, tải xuống và in ấn. Hỗ trợ chia sẻ công khai qua liên kết bảo mật.",
-        "points": [
-          "6 cấp độ phân quyền chuyên sâu: Toàn quyền (Full Access), Chỉ xem (Read Only), Đánh giá (Review), Bình luận (Comment), Điền biểu mẫu (Form Filling) và Lọc dữ liệu tùy chỉnh (Custom Filter).",
-          "Chia sẻ liên kết trực tiếp tới vùng dữ liệu hoặc ô tính cụ thể trong các bảng tính lớn hàng ngàn dòng.",
-          "Chặn sao chép, tải về và in ấn nhằm bảo vệ an toàn tối đa tài sản trí tuệ và bí mật kinh doanh."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "coedit": {
-        "badge": "02. ĐỒNG CHỈNH SỬA THỜI GIAN THỰC",
-        "title": "Đồng Chỉnh Sửa Mượt Mà, Không Lo Xung Đột Nội Dung",
-        "desc": "Cùng làm việc trên tài liệu trực tuyến trong thời gian thực. Sử dụng Fast Mode để thấy ngay thay đổi của đồng nghiệp theo từng ký tự gõ. Kích hoạt Strict Mode để khóa đoạn văn bản bạn đang soạn thảo, giúp tập trung làm việc riêng tư mà không bị người khác sửa đè.",
-        "points": [
-          "Fast Mode: Nhìn thấy con trỏ màu và từng ký tự đồng nghiệp gõ với độ trễ 0ms thời gian thực.",
-          "Strict Mode: Khóa đoạn văn bản bạn đang viết độc quyền cho đến khi bạn bấm Save để công bố.",
-          "Triệt tiêu hoàn toàn tình trạng trùng lặp hoặc xung đột chỉnh sửa (merge conflicts) giữa các cộng tác viên."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "comment": {
-        "badge": "03. BÌNH LUẬN & GẮN THẺ",
-        "title": "Bình Luận Trao Đổi & Gắn Thẻ @Mention Thành Viên",
-        "desc": "Để lại bình luận trực tiếp trên từng đoạn từ để thảo luận và phản hồi nhanh chóng. Gắn thẻ @tên thành viên trong nhận xét để mời họ tham gia cộng tác và tự động chia sẻ quyền truy cập tệp. Quản lý nhận xét dễ dàng, sắp xếp theo tác giả hoặc thời gian.",
-        "points": [
-          "Gắn thẻ @tên đồng nghiệp để gửi thông báo tức thời qua email và giao diện làm việc.",
-          "Phân loại, tìm kiếm và lọc nhận xét thông minh theo tác giả, thời gian hoặc trạng thái giải quyết.",
-          "Đánh dấu Hoàn tất (Resolve) khi góp ý đã được xử lý để tài liệu luôn gọn gàng và mạch lạc."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "communicate": {
-        "badge": "04. GIAO TIẾP TỨC THÌ",
-        "title": "Giao Tiếp Đa Kênh: Trò Chuyện & Gọi Video Ngay Trong Tài Liệu",
-        "desc": "Trò chuyện trực tiếp với đồng nghiệp ngay trong giao diện soạn thảo tài liệu. Kích hoạt plugin Jitsi, Rainbow hoặc Zoom để thực hiện cuộc gọi thoại và tổ chức họp video call mà không cần chuyển sang ứng dụng khác.",
-        "points": [
-          "Khung chat nội bộ tích hợp ngay trên thanh công cụ bên, lưu trữ trao đổi đi liền với tệp tài liệu.",
-          "Tổ chức cuộc họp video call chất lượng cao trực tiếp qua Jitsi / Zoom mà không tốn phí bản quyền phụ.",
-          "Duy trì 100% sự tập trung vào nội dung tài liệu mà không phải chuyển đổi cửa sổ phần mềm liên tục."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "trackChanges": {
-        "badge": "05. XÉT DUYỆT & THEO DÕI",
-        "title": "Theo Dõi Lịch Sử Thay Đổi Toàn Diện (Track Changes)",
-        "desc": "Bật chế độ Track Changes để đánh dấu rõ ràng mọi đóng góp và xét duyệt chỉnh sửa từ các thành viên khác. Chấp nhận (Accept) hoặc từ chối (Reject) từng thay đổi riêng lẻ hoặc toàn bộ cùng lúc. Tùy chọn cách thức hiển thị các chỉnh sửa đã thực hiện.",
-        "points": [
-          "Mỗi biên tập viên được gán một mã màu riêng biệt giúp nhận diện rõ ràng ai đã thêm hoặc bớt từng từ.",
-          "Xem trước linh hoạt ở 3 chế độ: Đánh dấu sửa đổi (Markup), Bản gốc ban đầu (Original) hoặc Bản duyệt cuối cùng (Final).",
-          "Chấp nhận hoặc từ chối từng đề xuất chỉnh sửa chỉ bằng một cú nhấp chuột của người kiểm duyệt."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "compareCombine": {
-        "badge": "06. SO SÁNH & GHÉP NỐI",
-        "title": "So Sánh & Ghép Tài Liệu Chuẩn Xác (Compare & Combine)",
-        "desc": "Nhanh chóng so sánh để tìm ra sự khác biệt giữa hai phiên bản tài liệu. Dễ dàng điều hướng giữa các điểm khác biệt, chấp nhận hoặc loại bỏ từng điểm. Ghép nối nội dung từ hai tài liệu thành một bản hoàn chỉnh duy nhất.",
-        "points": [
-          "Tự động rà soát và đối chiếu từng câu từ, công thức và bảng biểu giữa 2 phiên bản hợp đồng.",
-          "Thanh công cụ điều hướng thông minh giúp lướt qua từng điểm dị biệt chỉ trong vài giây.",
-          "Ghép nối nội dung từ hai bản nháp riêng rẽ thành một bản chuẩn cuối cùng mà không làm vỡ định dạng."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      },
-      "manageVersions": {
-        "badge": "07. QUẢN LÝ PHIÊN BẢN",
-        "title": "Quản Lý Lịch Sử Phiên Bản & Khôi Phục Tức Thì",
-        "desc": "Truy cập toàn bộ lịch sử phiên bản của tài liệu, kiểm tra ai đã tạo từng phiên bản, vào thời gian nào và những thay đổi cụ thể. Xem lại và khôi phục về bất kỳ phiên bản nào trước đó chỉ với 1 cú nhấp chuột, kể cả nội dung đã xóa.",
-        "points": [
-          "Nhật ký kiểm toán chi tiết lưu trữ chính xác Tác giả, Thời gian và các thay đổi đã thực hiện.",
-          "Khôi phục một chạm (1-click Rollback) về bất kỳ mốc lịch sử nào mà không làm mất bản nháp hiện tại.",
-          "Đặt tên phiên bản tùy chỉnh (Named Versions) để đánh dấu các mốc ký kết, nghiệm thu hoặc phát hành quan trọng."
-        ],
-        "tryNow": "Trải nghiệm tính năng này"
-      }
-    },
-    "matrix": {
-      "badge": "SỨC MẠNH VƯỢT TRỘI",
-      "title": "Tại Sao Doanh Nghiệp Chọn Cơ Chế Cộng Tác ONLYOFFICE?",
-      "subtitle": "Sự kết hợp hoàn hảo giữa tốc độ làm việc nhóm theo thời gian thực và tiêu chuẩn bảo mật dữ liệu cấp doanh nghiệp On-Premise.",
-      "card1Title": "2 Chế Độ Đồng Chỉnh Sửa Độc Quyền",
-      "card1Desc": "Chuyển đổi linh hoạt giữa Fast Mode (ký tự theo mili-giây) và Strict Mode (khóa đoạn văn riêng tư). Không một đối thủ nào khác trên thị trường sở hữu giải pháp này.",
-      "card2Title": "Bảo Mật Máy Chủ Riêng (On-Premise)",
-      "card2Desc": "Triển khai trực tiếp trên máy chủ nội bộ hoặc Private Cloud của bạn. Dữ liệu tài liệu, nội dung chat và video call không bao giờ bị rò rỉ ra dịch vụ bên thứ ba.",
-      "card3Title": "Tương Thích OOXML 100% Chuẩn Xác",
-      "card3Desc": "Mở và lưu trực tiếp định dạng Microsoft Office (.docx, .xlsx, .pptx). Đảm bảo giữ nguyên vẹn 100% bố cục, font chữ tiếng Việt, bảng biểu và công thức.",
-      "card4Title": "Họp Video Call Không Phụ Thu Phí",
-      "card4Desc": "Tích hợp sẵn tiện ích Jitsi, Rainbow, Zoom ngay trong thanh công cụ. Gọi thoại và họp video tức thì cùng đồng nghiệp mà không cần mua thêm gói phần mềm khác."
-    },
-    "cta": {
-      "badge": "MERCY TECH — ĐỐI TÁC ỦY QUYỀN ONLYOFFICE TẠI VIỆT NAM",
-      "title": "Sẵn Sàng Nâng Tầm Năng Suất Cộng Tác Cho Doanh Nghiệp?",
-      "subtitle": "Trải nghiệm miễn phí bản quyền ONLYOFFICE Enterprise hoặc nhận tư vấn lộ trình triển khai On-Premise bảo mật tối đa từ đội ngũ kỹ sư Mercy Tech.",
-      "buttonTrial": "Đăng ký trải nghiệm ngay",
-      "buttonConsult": "Liên hệ chuyên gia tư vấn"
-    }
+    "fullNameLabel": "Họ và tên *:",
+    "fullNamePlaceholder": "Nguyễn Văn A",
+    "phoneLabel": "Số điện thoại liên hệ *:",
+    "phonePlaceholder": "09xx xxx xxx",
+    "companyLabel": "Tên Công ty / Cửa hàng máy tính:",
+    "companyPlaceholder": "Công ty ABC / Vi tính XYZ (nếu có)",
+    "vatCheckbox": "Doanh nghiệp có nhu cầu xuất Hóa đơn điện tử VAT",
+    "submitBtn": "Gửi Yêu Cầu & Liên Hệ Báo Giá"
   },
   "demo": {
     "hero": {
@@ -695,33 +523,273 @@
       "hotline": "Hotline: 0763.068.614"
     }
   },
-  "pricingQuoteModal": {
-    "badge": "BẢO MẬT & CHIẾT KHẤU TỐI ĐA",
-    "title": "Yêu Cầu Nhận Báo Giá Ưu Đãi",
-    "successTitle": "GỬI YÊU CẦU THÀNH CÔNG!",
-    "successDesc": "Hệ thống đang mở kết nối liên hệ với chuyên viên tư vấn Mercy Tech (Hotline: 0763.068.614) để gửi bảng giá chiết khấu chi tiết cho quý khách.",
-    "closeBtn": "Đóng cửa sổ",
-    "productLabel": "1. Sản phẩm quan tâm:",
-    "products": {
-      "keyOnline": "🔑 OnlyOffice Key Online (Vĩnh viễn theo Mainboard)",
-      "portal": "⚡ Tài Khoản Portal Quản Trị Đại Lý 24/7 (Xuất Key Tức Thì)",
-      "enterprise": "🏢 OnlyOffice Docs Enterprise (Máy chủ riêng / On-premise)",
-      "reseller": "💼 Gói Đại Lý Sỉ / Phân phối cho cửa hàng máy tính"
+  "seamlessCollaboration": {
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "docs": "ONLYOFFICE Docs",
+      "current": "Cộng tác liền mạch"
     },
-    "quantityLabel": "2. Số lượng dự kiến:",
-    "quantities": {
-      "tier1": "Từ 1 – 4 thiết bị (Cá nhân / Máy lẻ)",
-      "tier2": "Từ 5 – 49 thiết bị (Doanh nghiệp vừa & nhỏ)",
-      "tier3": "Từ 50 thiết bị trở lên (Dự án / Số lượng lớn)",
-      "tier4": "Số lượng sỉ định kỳ cho cửa hàng máy tính"
+    "hero": {
+      "badge": "CỘNG TÁC THỜI GIAN THỰC",
+      "titlePrefix": "Cộng tác",
+      "titleHighlight": "hiệu quả",
+      "titleSuffix": "trên mọi loại tài liệu văn phòng",
+      "subtitle": "Chia sẻ, đồng chỉnh sửa và kết nối tức thì theo thời gian thực giúp đội ngũ làm việc nhanh hơn, giảm thiểu sai sót và bảo mật dữ liệu doanh nghiệp tuyệt đối.",
+      "startFree": "Bắt đầu miễn phí",
+      "contactSales": "Liên hệ tư vấn",
+      "trustSync": "0ms độ trễ đồng bộ",
+      "trustLock": "Chế độ khóa đoạn văn độc quyền",
+      "trustVideo": "Tích hợp Video Call Jitsi & Zoom",
+      "alt": "Giao diện cộng tác ONLYOFFICE"
     },
-    "fullNameLabel": "Họ và tên *:",
-    "fullNamePlaceholder": "Nguyễn Văn A",
-    "phoneLabel": "Số điện thoại liên hệ *:",
-    "phonePlaceholder": "09xx xxx xxx",
-    "companyLabel": "Tên Công ty / Cửa hàng máy tính:",
-    "companyPlaceholder": "Công ty ABC / Vi tính XYZ (nếu có)",
-    "vatCheckbox": "Doanh nghiệp có nhu cầu xuất Hóa đơn điện tử VAT",
-    "submitBtn": "Gửi Yêu Cầu & Liên Hệ Báo Giá"
+    "tabs": {
+      "share": "Chia sẻ",
+      "coedit": "Đồng chỉnh sửa",
+      "comment": "Bình luận",
+      "communicate": "Giao tiếp",
+      "trackChanges": "Theo dõi thay đổi",
+      "compareCombine": "So sánh & Ghép",
+      "manageVersions": "Quản lý phiên bản"
+    },
+    "features": {
+      "share": {
+        "badge": "01. PHÂN QUYỀN TRUY CẬP",
+        "title": "Chia Sẻ Tài Liệu Với Hệ Thống Phân Quyền Linh Hoạt",
+        "desc": "Chia sẻ tài liệu văn bản, bảng tính, bài thuyết trình và tệp PDF để xem hoặc chỉnh sửa, bật tính năng bình luận hoặc đánh giá xét duyệt. Tạo biểu mẫu điện tử sẵn sàng để người khác điền thông tin. Thiết lập bộ lọc dữ liệu tùy chỉnh cho phép từng cộng tác viên xem số liệu độc lập. Chia sẻ liên kết đến vùng dữ liệu được chọn để đồng nghiệp tìm kiếm nhanh chóng trong các bảng tính lớn. Hạn chế quyền sao chép, tải xuống và in ấn. Hỗ trợ chia sẻ công khai qua liên kết bảo mật.",
+        "points": [
+          "6 cấp độ phân quyền chuyên sâu: Toàn quyền (Full Access), Chỉ xem (Read Only), Đánh giá (Review), Bình luận (Comment), Điền biểu mẫu (Form Filling) và Lọc dữ liệu tùy chỉnh (Custom Filter).",
+          "Chia sẻ liên kết trực tiếp tới vùng dữ liệu hoặc ô tính cụ thể trong các bảng tính lớn hàng ngàn dòng.",
+          "Chặn sao chép, tải về và in ấn nhằm bảo vệ an toàn tối đa tài sản trí tuệ và bí mật kinh doanh."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "coedit": {
+        "badge": "02. ĐỒNG CHỈNH SỬA THỜI GIAN THỰC",
+        "title": "Đồng Chỉnh Sửa Mượt Mà, Không Lo Xung Đột Nội Dung",
+        "desc": "Cùng làm việc trên tài liệu trực tuyến trong thời gian thực. Sử dụng Fast Mode để thấy ngay thay đổi của đồng nghiệp theo từng ký tự gõ. Kích hoạt Strict Mode để khóa đoạn văn bản bạn đang soạn thảo, giúp tập trung làm việc riêng tư mà không bị người khác sửa đè.",
+        "points": [
+          "Fast Mode: Nhìn thấy con trỏ màu và từng ký tự đồng nghiệp gõ với độ trễ 0ms thời gian thực.",
+          "Strict Mode: Khóa đoạn văn bản bạn đang viết độc quyền cho đến khi bạn bấm Save để công bố.",
+          "Triệt tiêu hoàn toàn tình trạng trùng lặp hoặc xung đột chỉnh sửa (merge conflicts) giữa các cộng tác viên."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "comment": {
+        "badge": "03. BÌNH LUẬN & GẮN THẺ",
+        "title": "Bình Luận Trao Đổi & Gắn Thẻ @Mention Thành Viên",
+        "desc": "Để lại bình luận trực tiếp trên từng đoạn từ để thảo luận và phản hồi nhanh chóng. Gắn thẻ @tên thành viên trong nhận xét để mời họ tham gia cộng tác và tự động chia sẻ quyền truy cập tệp. Quản lý nhận xét dễ dàng, sắp xếp theo tác giả hoặc thời gian.",
+        "points": [
+          "Gắn thẻ @tên đồng nghiệp để gửi thông báo tức thời qua email và giao diện làm việc.",
+          "Phân loại, tìm kiếm và lọc nhận xét thông minh theo tác giả, thời gian hoặc trạng thái giải quyết.",
+          "Đánh dấu Hoàn tất (Resolve) khi góp ý đã được xử lý để tài liệu luôn gọn gàng và mạch lạc."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "communicate": {
+        "badge": "04. GIAO TIẾP TỨC THÌ",
+        "title": "Giao Tiếp Đa Kênh: Trò Chuyện & Gọi Video Ngay Trong Tài Liệu",
+        "desc": "Trò chuyện trực tiếp với đồng nghiệp ngay trong giao diện soạn thảo tài liệu. Kích hoạt plugin Jitsi, Rainbow hoặc Zoom để thực hiện cuộc gọi thoại và tổ chức họp video call mà không cần chuyển sang ứng dụng khác.",
+        "points": [
+          "Khung chat nội bộ tích hợp ngay trên thanh công cụ bên, lưu trữ trao đổi đi liền với tệp tài liệu.",
+          "Tổ chức cuộc họp video call chất lượng cao trực tiếp qua Jitsi / Zoom mà không tốn phí bản quyền phụ.",
+          "Duy trì 100% sự tập trung vào nội dung tài liệu mà không phải chuyển đổi cửa sổ phần mềm liên tục."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "trackChanges": {
+        "badge": "05. XÉT DUYỆT & THEO DÕI",
+        "title": "Theo Dõi Lịch Sử Thay Đổi Toàn Diện (Track Changes)",
+        "desc": "Bật chế độ Track Changes để đánh dấu rõ ràng mọi đóng góp và xét duyệt chỉnh sửa từ các thành viên khác. Chấp nhận (Accept) hoặc từ chối (Reject) từng thay đổi riêng lẻ hoặc toàn bộ cùng lúc. Tùy chọn cách thức hiển thị các chỉnh sửa đã thực hiện.",
+        "points": [
+          "Mỗi biên tập viên được gán một mã màu riêng biệt giúp nhận diện rõ ràng ai đã thêm hoặc bớt từng từ.",
+          "Xem trước linh hoạt ở 3 chế độ: Đánh dấu sửa đổi (Markup), Bản gốc ban đầu (Original) hoặc Bản duyệt cuối cùng (Final).",
+          "Chấp nhận hoặc từ chối từng đề xuất chỉnh sửa chỉ bằng một cú nhấp chuột của người kiểm duyệt."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "compareCombine": {
+        "badge": "06. SO SÁNH & GHÉP NỐI",
+        "title": "So Sánh & Ghép Tài Liệu Chuẩn Xác (Compare & Combine)",
+        "desc": "Nhanh chóng so sánh để tìm ra sự khác biệt giữa hai phiên bản tài liệu. Dễ dàng điều hướng giữa các điểm khác biệt, chấp nhận hoặc loại bỏ từng điểm. Ghép nối nội dung từ hai tài liệu thành một bản hoàn chỉnh duy nhất.",
+        "points": [
+          "Tự động rà soát và đối chiếu từng câu từ, công thức và bảng biểu giữa 2 phiên bản hợp đồng.",
+          "Thanh công cụ điều hướng thông minh giúp lướt qua từng điểm dị biệt chỉ trong vài giây.",
+          "Ghép nối nội dung từ hai bản nháp riêng rẽ thành một bản chuẩn cuối cùng mà không làm vỡ định dạng."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      },
+      "manageVersions": {
+        "badge": "07. QUẢN LÝ PHIÊN BẢN",
+        "title": "Quản Lý Lịch Sử Phiên Bản & Khôi Phục Tức Thì",
+        "desc": "Truy cập toàn bộ lịch sử phiên bản của tài liệu, kiểm tra ai đã tạo từng phiên bản, vào thời gian nào và những thay đổi cụ thể. Xem lại và khôi phục về bất kỳ phiên bản nào trước đó chỉ với 1 cú nhấp chuột, kể cả nội dung đã xóa.",
+        "points": [
+          "Nhật ký kiểm toán chi tiết lưu trữ chính xác Tác giả, Thời gian và các thay đổi đã thực hiện.",
+          "Khôi phục một chạm (1-click Rollback) về bất kỳ mốc lịch sử nào mà không làm mất bản nháp hiện tại.",
+          "Đặt tên phiên bản tùy chỉnh (Named Versions) để đánh dấu các mốc ký kết, nghiệm thu hoặc phát hành quan trọng."
+        ],
+        "tryNow": "Trải nghiệm tính năng này"
+      }
+    },
+    "matrix": {
+      "badge": "SỨC MẠNH VƯỢT TRỘI",
+      "title": "Tại Sao Doanh Nghiệp Chọn Cơ Chế Cộng Tác ONLYOFFICE?",
+      "subtitle": "Sự kết hợp hoàn hảo giữa tốc độ làm việc nhóm theo thời gian thực và tiêu chuẩn bảo mật dữ liệu cấp doanh nghiệp On-Premise.",
+      "card1Title": "2 Chế Độ Đồng Chỉnh Sửa Độc Quyền",
+      "card1Desc": "Chuyển đổi linh hoạt giữa Fast Mode (ký tự theo mili-giây) và Strict Mode (khóa đoạn văn riêng tư). Không một đối thủ nào khác trên thị trường sở hữu giải pháp này.",
+      "card2Title": "Bảo Mật Máy Chủ Riêng (On-Premise)",
+      "card2Desc": "Triển khai trực tiếp trên máy chủ nội bộ hoặc Private Cloud của bạn. Dữ liệu tài liệu, nội dung chat và video call không bao giờ bị rò rỉ ra dịch vụ bên thứ ba.",
+      "card3Title": "Tương Thích OOXML 100% Chuẩn Xác",
+      "card3Desc": "Mở và lưu trực tiếp định dạng Microsoft Office (.docx, .xlsx, .pptx). Đảm bảo giữ nguyên vẹn 100% bố cục, font chữ tiếng Việt, bảng biểu và công thức.",
+      "card4Title": "Họp Video Call Không Phụ Thu Phí",
+      "card4Desc": "Tích hợp sẵn tiện ích Jitsi, Rainbow, Zoom ngay trong thanh công cụ. Gọi thoại và họp video tức thì cùng đồng nghiệp mà không cần mua thêm gói phần mềm khác."
+    },
+    "cta": {
+      "badge": "MERCY TECH — ĐỐI TÁC ỦY QUYỀN ONLYOFFICE TẠI VIỆT NAM",
+      "title": "Sẵn Sàng Nâng Tầm Năng Suất Cộng Tác Cho Doanh Nghiệp?",
+      "subtitle": "Trải nghiệm miễn phí bản quyền ONLYOFFICE Enterprise hoặc nhận tư vấn lộ trình triển khai On-Premise bảo mật tối đa từ đội ngũ kỹ sư Mercy Tech.",
+      "buttonTrial": "Đăng ký trải nghiệm ngay",
+      "buttonConsult": "Liên hệ chuyên gia tư vấn"
+    }
+  },
+  "partnersPage": {
+    "badge": "MẠNG LƯỚI ĐỐI TÁC TẠI VIỆT NAM — TỐI ƯU & ĐIỀU PHỐI BỞI MERCY TECH",
+    "title": "Trở Thành Đối Tác ONLYOFFICE Tại Việt Nam",
+    "subtitle": "Đồng hành cùng Công ty TNHH Công Nghệ Mercy mang giải pháp văn phòng an toàn, bảo mật và hiệu quả kinh tế đến hàng ngàn doanh nghiệp Việt Nam.",
+    "benefitsTitle": "Quyền Lợi Dành Cho Đối Tác",
+    "tiersTitle": "Các Hạng Mục Hợp Tác",
+    "formTitle": "Đăng Ký Tham Gia Mạng Lưới Đối Tác",
+    "formDesc": "Vui lòng điền thông tin bên dưới, chuyên viên phụ trách đối tác của Mercy Tech sẽ liên hệ lại với bạn trong vòng 24 giờ làm việc.",
+    "form": {
+      "fullName": "Họ và tên người liên hệ",
+      "company": "Tên công ty / Doanh nghiệp",
+      "taxId": "Mã số thuế",
+      "email": "Email công việc",
+      "phone": "Số điện thoại liên hệ",
+      "city": "Tỉnh / Thành phố",
+      "partnerType": "Loại hình hợp tác mong muốn",
+      "message": "Nhu cầu hoặc thông tin thêm",
+      "submit": "Gửi Yêu Cầu Hợp Tác Phân Phối",
+      "successTitle": "Đăng Ký Thành Công!",
+      "successDesc": "Cảm ơn bạn đã quan tâm. Đội ngũ đối tác Mercy Tech sẽ liên hệ sớm nhất để trao đổi chính sách chiết khấu và gửi bộ tài liệu đại lý."
+    }
+  },
+  "blogPage": {
+    "badge": "MERCY TECH INSIGHTS",
+    "title": "Blog & Cẩm Nang ONLYOFFICE",
+    "subtitle": "Cập nhật tin tức, cẩm nang kỹ thuật và giải pháp văn phòng bảo mật từ Mercy Tech.",
+    "searchPlaceholder": "Tìm kiếm bài viết, hướng dẫn, Docker, bản quyền...",
+    "quickTopics": "Chủ đề tìm nhanh:",
+    "allArticles": "Tất cả bài viết",
+    "savedArticles": "Đã lưu",
+    "savedCount": "Đã lưu",
+    "sortBy": "Sắp xếp theo",
+    "sortNewest": "Mới nhất",
+    "sortOldest": "Cũ nhất",
+    "sortQuickRead": "Đọc nhanh (< 5 phút)",
+    "sortDeepDive": "Chuyên sâu (> 5 phút)",
+    "sortAlpha": "Tiêu đề (A → Z)",
+    "viewGrid": "Dạng lưới",
+    "viewList": "Dạng danh sách",
+    "liveDb": "Cơ sở dữ liệu MongoDB",
+    "totalArticles": "Bài viết",
+    "totalHours": "Giờ đọc tích lũy",
+    "showingArticles": "Hiển thị",
+    "forKeyword": "cho từ khóa",
+    "withTag": "với thẻ",
+    "resetFilters": "Đặt lại bộ lọc",
+    "readMore": "Đọc bài viết",
+    "readTime": "phút đọc",
+    "featured": "BÀI VIẾT NỔI BẬT",
+    "downloadTrial": "Tải File Dùng Thử .BAT",
+    "saveArticle": "Lưu bài viết",
+    "removeBookmark": "Bỏ lưu",
+    "noArticlesFound": "Không tìm thấy bài viết nào phù hợp",
+    "noArticlesDesc": "Hãy thử đổi từ khóa tìm kiếm hoặc bỏ chọn các thẻ đã lọc.",
+    "clearAll": "Xem tất cả bài viết",
+    "previous": "Trang trước",
+    "next": "Trang tiếp",
+    "page": "Trang",
+    "of": "trên",
+    "trialCardTitle": "ONLYOFFICE Docs Enterprise",
+    "trialCardSubtitle": "Kích hoạt tự động bản quyền 7 ngày",
+    "trialBadge": "100% DÙNG THỬ",
+    "trialBenefit1": "Mở khóa toàn bộ tính năng Enterprise On-Premises",
+    "trialBenefit2": "Script .BAT an toàn, không can thiệp hệ thống máy tính",
+    "trialBenefit3": "Hỗ trợ kỹ thuật 1-1 trực tiếp từ kỹ sư Mercy Tech",
+    "trialBenefit4": "Không cần cung cấp thông tin thẻ tín dụng",
+    "hotlineLabel": "Hotline Kỹ Thuật:",
+    "newsletterTitle": "Bản Tin Công Nghệ Doanh Nghiệp",
+    "newsletterSubtitle": "Nhận tổng hợp hàng tuần về an toàn dữ liệu On-Premises, các bản phát hành mới và ưu đãi bản quyền từ Mercy Tech.",
+    "newsletterPlaceholder": "Nhập địa chỉ email doanh nghiệp...",
+    "newsletterBtn": "Đăng ký nhận tin",
+    "newsletterSuccess": "Đăng ký thành công! Hãy kiểm tra hộp thư."
+  },
+  "pricingGuarantees": {
+    "g1Title": "KEY CẤP THEO MAIN - UUID",
+    "g1Desc": "Vĩnh viễn máy, reset máy sẽ được cấp lại chính key đã kích hoạt",
+    "g2Title": "ĐỔI MÁY CẦN MUA LẠI MỚI",
+    "g2Desc": "Mainboard - UUID hỏng hoặc thay mới cần mua mới key",
+    "g3Title": "TRƯỜNG HỢP BẤT KHẢ KHÁNG",
+    "g3Desc": "Hỏa hoạn, thiên tai... vẫn được hỗ trợ chia sẻ gánh nặng rủi ro",
+    "g4Title": "NỀN TẢNG QUẢN LÝ KEY",
+    "g4Desc": "Quản lý – theo dõi – cấp lại key nhanh chóng, chuyên nghiệp",
+    "g5Title": "CHỨNG NHẬN THEO TỪNG MÁY",
+    "g5Desc": "Xác nhận key hợp lệ theo từng thiết bị, đầy đủ thông tin"
+  },
+  "pricingWholesale": {
+    "badge": "CHƯƠNG TRÌNH ĐỐI TÁC ĐẠI LÝ & CỬA HÀNG MÁY TÍNH",
+    "title": "Nhập Sỉ OnlyOffice Để Phân Phối Cùng Mercy Tech",
+    "desc": "Chính sách chiết khấu sỉ cực cao dành riêng cho Đại lý & Kỹ thuật viên IT. Cung cấp bộ cài White-label riêng, kho Marketing hàng tuần, Hợp đồng mộc đỏ và hỗ trợ kỹ thuật trực tiếp.",
+    "btn": "Nhận Bảng Giá Sỉ Đại Lý"
+  },
+  "pricingKeyCards": {
+    "badge": "BẢN QUYỀN VĨNH VIỄN THEO MAINBOARD",
+    "titlePrefix": "ONLYOFFICE Key Online",
+    "titleHighlight": "Tối Ưu Bởi Mercy Tech",
+    "desc": "Giải pháp bản quyền trọn đời không lo gia hạn hàng năm. Kích hoạt trực tiếp qua mã bản quyền hoặc script tự động trong 30 giây. Reset win hay cài lại máy vẫn giữ nguyên bản quyền chính hãng.",
+    "featUuid": "Cấp phép theo UUID Main",
+    "featVat": "Xuất Hóa đơn điện tử VAT",
+    "featAgpl": "Chứng nhận AGPLv3 mộc đỏ",
+    "tier1Badge": "PHỔ THÔNG",
+    "tier1Title": "Key Online Cá Nhân",
+    "tier1Desc": "Phù hợp người dùng độc lập, freelance hoặc laptop cá nhân làm việc văn phòng.",
+    "tier1Price": "Liên Hệ Báo Giá",
+    "tier2Badge": "DOANH NGHIỆP",
+    "tier2Title": "Key Online Doanh Nghiệp",
+    "tier2Desc": "Phù hợp phòng ban, công ty vừa và nhỏ (SME) cần quản lý tập trung và hóa đơn VAT.",
+    "tier2Price": "Ưu Đãi Theo Lô",
+    "tier3Badge": "ĐẠI LÝ & IT",
+    "tier3Title": "Cổng Quản Trị Portal Đại Lý",
+    "tier3Desc": "Dành cho đại lý máy tính, phòng IT quản lý 50 - 500+ máy tính với tài khoản tự cấp key.",
+    "tier3Price": "Chiết Khấu Sỉ Tốt Nhất",
+    "btnQuote": "Yêu Cầu Báo Giá Kín"
+  },
+  "blogPage": {
+    "title": "ONLYOFFICE Blog",
+    "subtitle": "Tin tức chính thức, mẹo sử dụng, cập nhật sản phẩm và câu chuyện từ người dùng ONLYOFFICE",
+    "eventBarText": "Mùa tựu trường cùng ONLYOFFICE! Khám phá những ưu đãi đặc biệt và câu chuyện truyền cảm hứng",
+    "eventBarLink": "Tìm hiểu thêm",
+    "searchPlaceholder": "Tìm kiếm bài viết trên blog...",
+    "categoryTopics": "Chủ đề danh mục",
+    "inThePress": "ONLYOFFICE TRÊN BÁO CHÍ",
+    "viewAllPosts": "Xem tất cả bài viết",
+    "createAccountTitle": "Tạo tài khoản ONLYOFFICE miễn phí của bạn",
+    "createAccountDesc": "Trải nghiệm bộ ứng dụng văn phòng trên đám mây & không gian cộng tác toàn diện",
+    "emailPlaceholder": "Địa chỉ email của bạn",
+    "createNow": "TẠO NGAY",
+    "newsletterTitle": "Bản tin",
+    "firstNamePlaceholder": "Họ và tên",
+    "subscribe": "ĐĂNG KÝ",
+    "newsletterDisclaimer": "Bằng việc đăng ký, bạn đồng ý nhận tin tức và cập nhật sản phẩm từ ONLYOFFICE.",
+    "loadMorePosts": "TẢI THÊM BÀI VIẾT",
+    "noArticlesFound": "Không tìm thấy bài viết nào phù hợp với từ khóa của bạn",
+    "clearSearch": "Xóa bộ lọc tìm kiếm",
+    "searchResultsFor": "Kết quả tìm kiếm cho",
+    "allArticles": "Tất cả bài viết",
+    "by": "Bởi",
+    "minRead": "phút đọc",
+    "readMore": "Đọc tiếp",
+    "totalArticles": "bài viết",
+    "resetFilters": "Đặt lại bộ lọc"
   }
 }

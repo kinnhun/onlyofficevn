@@ -1,16 +1,14 @@
 "use client";
 
 import React from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { ShieldCheck, MessageCircle } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
   const tBranding = useTranslations("branding");
-  const locale = useLocale();
-  const isVi = locale === "vi";
-  const contactText = isVi ? "Liên hệ ngay để trải nghiệm" : "Contact Now for Live Demo";
+  const contactText = t("btnContactToExperience");
 
   return (
     <section

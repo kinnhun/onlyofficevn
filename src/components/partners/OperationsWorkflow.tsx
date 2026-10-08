@@ -77,22 +77,14 @@ export default function OperationsWorkflow() {
   return (
     <section className="oo-partner-section">
       {/* 4 Steps Section */}
-      <div style={{ textAlign: "center", marginBottom: "36px" }}>
-        <span
-          style={{
-            color: "#ff6f3d",
-            fontSize: "12px",
-            fontWeight: 800,
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-          }}
-        >
-          MỤC 4. VẬN HÀNH BÀI BẢN
-        </span>
-        <h2 className="oo-partner-heading" style={{ marginTop: "8px" }}>
-          4. Quy Trình 4 Bước Đăng Ký, Đào Tạo & Vận Hành
+      <div style={{ textAlign: "center", marginBottom: "32px" }}>
+        <div className="oo-partner-kicker">
+          VẬN HÀNH & KỸ THUẬT
+        </div>
+        <h2 className="oo-partner-heading" style={{ marginTop: "6px" }}>
+          Quy Trình Triển Khai & Hướng Dẫn Kỹ Thuật
         </h2>
-        <p className="oo-partner-subheading" style={{ maxWidth: "700px", margin: "10px auto 0" }}>
+        <p className="oo-partner-subheading" style={{ maxWidth: "700px", margin: "8px auto 0" }}>
           Chủ động 100% tài khoản Admin xuất Key 24/7 và xác thực trực tuyến với Server bản quyền
         </p>
       </div>
@@ -257,8 +249,8 @@ export default function OperationsWorkflow() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "10px",
-                  backgroundColor: p.bg,
-                  color: p.color,
+                  backgroundColor: "#f8fafc",
+                  border: "1px solid #e2e8f0",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",

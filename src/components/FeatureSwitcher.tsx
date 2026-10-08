@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { openMessengerChat } from "@/lib/messenger";
 
@@ -29,6 +29,22 @@ export default function FeatureSwitcher({
   backgroundColor = "#ffffff",
 }: FeatureSwitcherProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // Preload all tab images in background so tab switching is instantaneous
+  useEffect(() => {
+    if (typeof window !== "undefined" && items.length > 0) {
+      items.forEach((item) => {
+        if (item.imageUrl) {
+          const img = new Image();
+          img.src = item.imageUrl;
+        }
+        if (item.imageUrl2x) {
+          const img2x = new Image();
+          img2x.src = item.imageUrl2x;
+        }
+      });
+    }
+  }, [items]);
 
   const activeItem = items[activeIndex] || items[0];
 

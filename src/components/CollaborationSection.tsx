@@ -17,8 +17,8 @@ export default function CollaborationSection() {
     {
       id: "collab-coediting",
       label: <span>{t("items.coediting")}</span>,
-      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/co-editing.png",
-      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/co-editing@2x.png",
+      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/modes.png",
+      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/modes@2x.png",
     },
     {
       id: "collab-review",
@@ -29,20 +29,20 @@ export default function CollaborationSection() {
     {
       id: "collab-comments",
       label: <span>{t("items.comments")}</span>,
-      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/comments.png",
-      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/comments@2x.png",
+      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/leave.png",
+      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/leave@2x.png",
     },
     {
       id: "collab-chat",
       label: <span>{t("items.chat")}</span>,
-      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/chat.png",
-      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/chat@2x.png",
+      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/communicate.png",
+      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/communicate@2x.png",
     },
     {
       id: "collab-calls",
       label: <span>{t("items.calls")}</span>,
-      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/calls.png",
-      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/calls@2x.png",
+      imageUrl: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/make.png",
+      imageUrl2x: "https://static-site.onlyoffice.com/public/images/templates/main/collaboration/make@2x.png",
     },
   ];
 

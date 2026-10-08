@@ -19,7 +19,7 @@ import {
   ArrowRight,
   Sparkles,
   Lock,
-  Compass,
+  ChevronDown,
 } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
 
@@ -27,146 +27,197 @@ interface PartnerPolicySectionProps {
   onOpenModal: (pkgName?: string) => void;
 }
 
+function PolicyAccordionItem({
+  id,
+  num,
+  title,
+  isOpen,
+  onToggle,
+  children,
+}: {
+  id: string;
+  num: number;
+  title: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      id={id}
+      className="oo-partner-policy-card"
+      style={{
+        border: isOpen ? "1.5px solid #cbd5e1" : "1px solid #e2e8f0",
+        backgroundColor: "#ffffff",
+        borderRadius: "16px",
+        transition: "border-color 0.2s ease",
+        scrollMarginTop: "90px",
+      }}
+    >
+      <div
+        onClick={onToggle}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          cursor: "pointer",
+          userSelect: "none",
+          gap: "12px",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+          <div
+            style={{
+              width: "34px",
+              height: "34px",
+              borderRadius: "10px",
+              backgroundColor: isOpen ? "#ff6f3d" : "#f1f5f9",
+              color: isOpen ? "#ffffff" : "#475569",
+              border: "1px solid",
+              borderColor: isOpen ? "#ff6f3d" : "#e2e8f0",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: 800,
+              fontSize: "14px",
+              flexShrink: 0,
+              transition: "all 0.2s ease",
+            }}
+          >
+            {num}
+          </div>
+          <h3 style={{ fontSize: "17px", fontWeight: 800, color: "#1e293b", margin: 0, lineHeight: 1.4 }}>
+            {title}
+          </h3>
+        </div>
+        <div
+          style={{
+            width: "32px",
+            height: "32px",
+            borderRadius: "50%",
+            backgroundColor: "#f8fafc",
+            border: "1px solid #e2e8f0",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#64748b",
+            transition: "transform 0.2s ease",
+            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
+            flexShrink: 0,
+          }}
+        >
+          <ChevronDown size={18} />
+        </div>
+      </div>
+
+      {isOpen && (
+        <div style={{ marginTop: "18px", paddingTop: "18px", borderTop: "1px solid #f1f5f9" }}>
+          {children}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySectionProps) {
-  const [activeArticle, setActiveArticle] = useState<number | null>(null);
+  // Article 1 open by default for immediate preview
+  const [openArticles, setOpenArticles] = useState<number[]>([1]);
 
   const toggleArticle = (index: number) => {
-    setActiveArticle(activeArticle === index ? null : index);
+    setOpenArticles((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
   };
 
-  const articlePills = [
-    { id: 1, title: "1. Đối tượng tham gia" },
-    { id: 2, title: "2. Điều kiện đại lý" },
-    { id: 3, title: "3. Cấp đại lý & Chiết khấu" },
-    { id: 4, title: "4. Quyền lợi chung" },
-    { id: 5, title: "5. Nghĩa vụ đại lý" },
-    { id: 6, title: "6. Quy trình đăng ký" },
-    { id: 7, title: "7. Đào tạo & Kỹ thuật" },
-    { id: 8, title: "8. Đánh giá xét duyệt" },
-    { id: 9, title: "9. Chấm dứt hợp đồng" },
-  ];
+  const isAllOpen = openArticles.length === 9;
+  const toggleAll = () => {
+    if (isAllOpen) {
+      setOpenArticles([]);
+    } else {
+      setOpenArticles([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    }
+  };
 
   return (
     <section id="partner-policy" className="oo-partner-section">
-      {/* Container with bright, clean styling (NO black background) */}
       <div className="oo-partner-card">
         {/* Official Document Legal Ribbon */}
-        <div style={{ textAlign: "center", marginBottom: "36px" }}>
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "#fff7ed",
-              color: "#ea580c",
-              border: "1px solid #fed7aa",
-              padding: "6px 18px",
-              borderRadius: "20px",
-              fontSize: "12px",
-              fontWeight: 800,
-              letterSpacing: "0.05em",
-              textTransform: "uppercase",
-              marginBottom: "14px",
-            }}
-          >
-            <Scale size={15} color="#ff6f3d" />
+        <div style={{ textAlign: "center", marginBottom: "32px" }}>
+          <div className="oo-partner-kicker">
+            <Scale size={14} color="#ff6f3d" />
             <span>QUY CHẾ VẬN HÀNH PHÁP LÝ & KINH DOANH</span>
           </div>
 
-          <h2 className="oo-partner-heading" style={{ margin: "0 0 14px" }}>
-            Chính Sách Đại Lý Phân Phối OnlyOffice Chính Hãng
+          <h2 className="oo-partner-heading" style={{ margin: "0 0 10px" }}>
+            Chính Sách Đại Lý Phân Phối OnlyOffice
           </h2>
 
-          <p className="oo-partner-subheading" style={{ maxWidth: "880px", margin: "0 auto" }}>
-            <strong>CÔNG TY TNHH CÔNG NGHỆ MERCY (MERCY TECH)</strong> xây dựng chương trình hợp tác đại lý phân phối nhằm mở rộng mạng lưới cung cấp giải pháp văn phòng số, máy chủ và license bản quyền OnlyOffice chính hãng tới khách hàng trên toàn quốc. Trang này công bố chi tiết quyền lợi, điều kiện tham gia, cơ chế chiết khấu và quy trình đăng ký trở thành đại lý chính thức.
+          <p className="oo-partner-subheading" style={{ maxWidth: "840px", margin: "0 auto" }}>
+            Khung pháp lý, điều kiện hợp tác, phân cấp chiết khấu và quy trình bảo vệ quyền lợi dành cho đại lý và đối tác chiến lược trên toàn quốc.
           </p>
         </div>
 
-        {/* Quick Jump Bar */}
+        {/* Accordion Controls Bar */}
         <div
-          className="oo-partner-jump-bar"
           style={{
             display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "20px",
+            padding: "0 4px",
             flexWrap: "wrap",
-            gap: "8px",
-            justifyContent: "center",
-            padding: "16px",
-            backgroundColor: "#fffaf5",
-            borderRadius: "14px",
-            border: "1px solid #fed7aa",
-            marginBottom: "36px",
+            gap: "12px",
           }}
         >
-          {articlePills.map((pill) => (
-            <a
-              key={pill.id}
-              href={`#dieu-${pill.id}`}
-              className="oo-partner-jump-pill"
-              style={{
-                fontSize: "12.5px",
-                fontWeight: 700,
-                color: "#ea580c",
-                backgroundColor: "#ffffff",
-                border: "1px solid #fed7aa",
-                padding: "6px 14px",
-                borderRadius: "20px",
-                textDecoration: "none",
-                transition: "all 0.2s ease",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "5px",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#ff6f3d";
-                e.currentTarget.style.color = "#ffffff";
-                e.currentTarget.style.borderColor = "#ff6f3d";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#ffffff";
-                e.currentTarget.style.color = "#ea580c";
-                e.currentTarget.style.borderColor = "#fed7aa";
-              }}
-            >
-              <span>{pill.title}</span>
-            </a>
-          ))}
+          <div style={{ fontSize: "14px", fontWeight: 700, color: "#334155" }}>
+            Toàn văn 9 điều khoản quy chế (Bấm từng điều để xem nội dung chi tiết)
+          </div>
+          <button
+            type="button"
+            onClick={toggleAll}
+            style={{
+              background: "#ffffff",
+              border: "1.5px solid #cbd5e1",
+              borderRadius: "8px",
+              padding: "8px 16px",
+              fontSize: "13px",
+              fontWeight: 700,
+              color: "#1e293b",
+              cursor: "pointer",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#ff6f3d";
+              e.currentTarget.style.color = "#ff6f3d";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#cbd5e1";
+              e.currentTarget.style.color = "#1e293b";
+            }}
+          >
+            {isAllOpen ? "Thu gọn tất cả" : "Mở rộng tất cả 9 điều"}
+          </button>
         </div>
 
-        {/* 9 Detailed Articles in Structured Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+        {/* 9 Detailed Articles in Accordion Cards */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
 
           {/* Điều 1 */}
-          <div id="dieu-1" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                1
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                1. Đối Tượng Tham Gia Chương Trình Đại Lý
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
+          <PolicyAccordionItem
+            id="dieu-1"
+            num={1}
+            title="1. Đối Tượng Tham Gia Chương Trình Đại Lý"
+            isOpen={openArticles.includes(1)}
+            onToggle={() => toggleArticle(1)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
               Chương trình đại lý của Mercy Tech mở rộng cho các cá nhân, doanh nghiệp và tổ chức hoạt động trong lĩnh vực công nghệ thông tin và dịch vụ doanh nghiệp, bao gồm:
             </p>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
-                gap: "14px",
+                gap: "12px",
               }}
             >
               {[
@@ -182,45 +233,29 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                   style={{
                     backgroundColor: "#f8fafc",
                     border: "1px solid #e2e8f0",
-                    borderRadius: "12px",
-                    padding: "14px 16px",
+                    borderRadius: "10px",
+                    padding: "12px 14px",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 700, fontSize: "14px", color: "#1e293b", marginBottom: "4px" }}>
-                    <CheckCircle2 size={16} color="#ff6f3d" style={{ flexShrink: 0 }} />
+                  <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 700, fontSize: "13.5px", color: "#1e293b", marginBottom: "4px" }}>
+                    <CheckCircle2 size={15} color="#ff6f3d" style={{ flexShrink: 0 }} />
                     <span>{item.title}</span>
                   </div>
-                  <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
+                  <div style={{ fontSize: "12.5px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 2 */}
-          <div id="dieu-2" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                2
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                2. Điều Kiện Trở Thành Đại Lý Chính Thức
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
+          <PolicyAccordionItem
+            id="dieu-2"
+            num={2}
+            title="2. Điều Kiện Trở Thành Đại Lý Chính Thức"
+            isOpen={openArticles.includes(2)}
+            onToggle={() => toggleArticle(2)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "14px" }}>
               Để được phê duyệt và cấp mã đại lý trên hệ thống quản trị của Mercy Tech, ứng viên cần đáp ứng các tiêu chuẩn sau:
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
@@ -238,83 +273,67 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                     alignItems: "flex-start",
                     gap: "10px",
                     backgroundColor: "#f8fafc",
-                    padding: "12px 16px",
+                    padding: "12px 14px",
                     borderRadius: "10px",
                     border: "1px solid #f1f5f9",
-                    fontSize: "13.5px",
+                    fontSize: "13px",
                     color: "#334155",
                     lineHeight: 1.5,
                   }}
                 >
-                  <ShieldCheck size={18} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
+                  <ShieldCheck size={16} color="#16a34a" style={{ flexShrink: 0, marginTop: "2px" }} />
                   <span>{text}</span>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 3 */}
-          <div id="dieu-3" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                3
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                3. Các Cấp Đại Lý Và Cơ Chế Chiết Khấu Lũy Tiến
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "20px" }}>
+          <PolicyAccordionItem
+            id="dieu-3"
+            num={3}
+            title="3. Các Cấp Đại Lý Và Cơ Chế Chiết Khấu Lũy Tiến"
+            isOpen={openArticles.includes(3)}
+            onToggle={() => toggleArticle(3)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "18px" }}>
               Mercy Tech áp dụng cơ chế chiết khấu lũy tiến theo từng cấp độ hợp tác. Doanh số đại lý đạt được trong kỳ sẽ là căn cứ duy trì hoặc nâng cấp bậc chiết khấu trong kỳ kế tiếp (Mọi bảng giá sỉ chi tiết được gửi riêng theo chính sách bảo mật):
             </p>
 
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
-                gap: "20px",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
+                gap: "16px",
               }}
             >
               {/* Cấp Đồng */}
               <div
                 style={{
-                  backgroundColor: "#f8fafc",
-                  borderRadius: "14px",
-                  border: "1.5px solid #cbd5e1",
-                  padding: "24px 20px",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "12px",
+                  border: "1px solid #e2e8f0",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                 }}
               >
                 <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                    <span style={{ fontSize: "11px", fontWeight: 800, color: "#92400e", backgroundColor: "#fef3c7", padding: "3px 10px", borderRadius: "12px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "11px", fontWeight: 700, color: "#475569", backgroundColor: "#f1f5f9", padding: "2px 8px", borderRadius: "10px" }}>
                       TIÊU CHUẨN
                     </span>
                     <span style={{ fontSize: "12px", color: "#64748b", fontWeight: 600 }}>Cấp 1</span>
                   </div>
-                  <h4 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: "0 0 12px" }}>
+                  <h4 style={{ fontSize: "18px", fontWeight: 800, color: "#1e293b", margin: "0 0 10px" }}>
                     Đại Lý Cấp Đồng
                   </h4>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px", color: "#334155" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12.5px", color: "#334155" }}>
                     <div>• <strong>Doanh số cam kết:</strong> Từ 10 triệu đồng mỗi quý.</div>
                     <div style={{ color: "#ea580c", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
-                      <Lock size={13} />
-                      <span>Chiết khấu sỉ: Liên hệ nhận chính sách bảo mật</span>
+                      <Lock size={12} />
+                      <span>Chiết khấu sỉ: Liên hệ nhận bảng giá</span>
                     </div>
                     <div>• <strong>Thanh toán:</strong> Trả trước từng đơn hàng hoặc nạp đợt.</div>
                     <div>• <strong>Kỹ thuật:</strong> Hỗ trợ ưu tiên qua kênh đại lý riêng.</div>
@@ -324,15 +343,15 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                   type="button"
                   onClick={() => onOpenModal("Đăng Ký: Đại Lý Cấp Đồng")}
                   style={{
-                    marginTop: "20px",
+                    marginTop: "16px",
                     width: "100%",
-                    padding: "10px",
-                    borderRadius: "8px",
-                    backgroundColor: "#ffffff",
-                    border: "1.5px solid #cbd5e1",
+                    padding: "9px",
+                    borderRadius: "6px",
+                    backgroundColor: "#f8fafc",
+                    border: "1px solid #cbd5e1",
                     color: "#1e293b",
                     fontWeight: 700,
-                    fontSize: "13px",
+                    fontSize: "12.5px",
                     cursor: "pointer",
                   }}
                 >
@@ -344,51 +363,49 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
               <div
                 style={{
                   backgroundColor: "#ffffff",
-                  borderRadius: "14px",
-                  border: "2px solid #fed7aa",
-                  padding: "24px 20px",
+                  borderRadius: "12px",
+                  border: "1.5px solid #cbd5e1",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  boxShadow: "0 6px 18px rgba(234, 88, 12, 0.08)",
                 }}
               >
                 <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                    <span style={{ fontSize: "11px", fontWeight: 800, color: "#ea580c", backgroundColor: "#fff7ed", border: "1px solid #fed7aa", padding: "3px 10px", borderRadius: "12px" }}>
-                      PHỔ BIẾN NHẤT
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "11px", fontWeight: 700, color: "#0369a1", backgroundColor: "#e0f2fe", padding: "2px 8px", borderRadius: "10px" }}>
+                      PHỔ BIẾN
                     </span>
-                    <span style={{ fontSize: "12px", color: "#ea580c", fontWeight: 700 }}>Cấp 2</span>
+                    <span style={{ fontSize: "12px", color: "#0369a1", fontWeight: 700 }}>Cấp 2</span>
                   </div>
-                  <h4 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: "0 0 12px" }}>
+                  <h4 style={{ fontSize: "18px", fontWeight: 800, color: "#1e293b", margin: "0 0 10px" }}>
                     Đại Lý Cấp Bạc
                   </h4>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px", color: "#1e293b" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12.5px", color: "#1e293b" }}>
                     <div>• <strong>Doanh số cam kết:</strong> Từ 30 triệu đồng mỗi quý.</div>
-                    <div style={{ color: "#ea580c", fontWeight: 800, display: "inline-flex", alignItems: "center", gap: "4px" }}>
-                      <Lock size={13} />
-                      <span>Chiết khấu cao: Liên hệ nhận chính sách bảo mật</span>
+                    <div style={{ color: "#ea580c", fontWeight: 700, display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                      <Lock size={12} />
+                      <span>Chiết khấu cao: Liên hệ nhận bảng giá</span>
                     </div>
-                    <div>• <strong>Thanh toán:</strong> Công nợ linh hoạt tới 7 ngày sau kích hoạt.</div>
-                    <div>• <strong>Đặc quyền:</strong> Phân công nhân viên chăm sóc & kỹ sư 1-1.</div>
-                    <div>• <strong>Đào tạo:</strong> Tham gia khóa chuẩn hóa kỹ thuật máy trạm mỗi quý.</div>
+                    <div>• <strong>Thanh toán:</strong> Công nợ linh hoạt tới 7 ngày.</div>
+                    <div>• <strong>Đặc quyền:</strong> Phân công nhân viên chăm sóc 1-1.</div>
+                    <div>• <strong>Đào tạo:</strong> Khóa chuẩn hóa kỹ thuật máy trạm.</div>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={() => onOpenModal("Đăng Ký: Đại Lý Cấp Bạc")}
                   style={{
-                    marginTop: "20px",
+                    marginTop: "16px",
                     width: "100%",
-                    padding: "10px",
-                    borderRadius: "8px",
-                    backgroundColor: "#ea580c",
+                    padding: "9px",
+                    borderRadius: "6px",
+                    backgroundColor: "#ff6f3d",
                     border: "none",
                     color: "#ffffff",
                     fontWeight: 700,
-                    fontSize: "13px",
+                    fontSize: "12.5px",
                     cursor: "pointer",
-                    boxShadow: "0 2px 8px rgba(234, 88, 12, 0.3)",
                   }}
                 >
                   Nhận Chính Sách Cấp Bạc
@@ -398,93 +415,74 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
               {/* Cấp Vàng */}
               <div
                 style={{
-                  backgroundColor: "#fff7ed",
-                  borderRadius: "14px",
-                  border: "2px solid #ff6f3d",
-                  padding: "24px 20px",
+                  backgroundColor: "#ffffff",
+                  borderRadius: "12px",
+                  border: "1.5px solid #ff6f3d",
+                  padding: "20px 18px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
-                  boxShadow: "0 6px 18px rgba(255, 111, 61, 0.12)",
                 }}
               >
                 <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px" }}>
-                    <span style={{ fontSize: "11px", fontWeight: 800, color: "#c2410c", backgroundColor: "#ffedd5", padding: "3px 10px", borderRadius: "12px" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                    <span style={{ fontSize: "11px", fontWeight: 800, color: "#ea580c", backgroundColor: "#fff7ed", padding: "2px 8px", borderRadius: "10px" }}>
                       ĐẶC QUYỀN VIP
                     </span>
                     <span style={{ fontSize: "12px", color: "#ea580c", fontWeight: 700 }}>Cấp 3 VIP</span>
                   </div>
-                  <h4 style={{ fontSize: "20px", fontWeight: 800, color: "#9a3412", margin: "0 0 12px" }}>
+                  <h4 style={{ fontSize: "18px", fontWeight: 800, color: "#1e293b", margin: "0 0 10px" }}>
                     Đại Lý Cấp Vàng
                   </h4>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", fontSize: "13px", color: "#431407" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "12.5px", color: "#1e293b" }}>
                     <div>• <strong>Doanh số cam kết:</strong> Từ 80 triệu đồng mỗi quý.</div>
-                    <div style={{ color: "#c2410c", fontWeight: 800, display: "inline-flex", alignItems: "center", gap: "4px" }}>
-                      <Lock size={13} />
+                    <div style={{ color: "#ea580c", fontWeight: 800, display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                      <Lock size={12} />
                       <span>Chiết khấu tối đa: Giá sỉ rẻ nhất hệ thống</span>
                     </div>
-                    <div>• <strong>Thanh toán:</strong> Công nợ tới 15 ngày theo hợp đồng nguyên tắc.</div>
-                    <div>• <strong>Hệ thống:</strong> Cấp Portal Admin quản trị nhiều khách hàng tập trung.</div>
-                    <div>• <strong>Kỹ thuật chuyên sâu:</strong> Xử lý sự cố ưu tiên trong 30 phút.</div>
-                    <div>• <strong>Đặc quyền:</strong> Hỗ trợ bộ cài White-Label riêng & sự kiện kết nối.</div>
+                    <div>• <strong>Thanh toán:</strong> Công nợ tới 15 ngày theo hợp đồng.</div>
+                    <div>• <strong>Hệ thống:</strong> Cấp Portal Admin quản trị nhiều khách.</div>
+                    <div>• <strong>Kỹ thuật:</strong> Xử lý sự cố ưu tiên trong 30 phút.</div>
                   </div>
                 </div>
                 <button
                   type="button"
                   onClick={() => onOpenModal("Đăng Ký: Đại Lý Cấp Vàng")}
                   style={{
-                    marginTop: "20px",
+                    marginTop: "16px",
                     width: "100%",
-                    padding: "10px",
-                    borderRadius: "8px",
-                    backgroundColor: "#ff6f3d",
+                    padding: "9px",
+                    borderRadius: "6px",
+                    backgroundColor: "#ea580c",
                     border: "none",
                     color: "#ffffff",
-                    fontWeight: 800,
-                    fontSize: "13px",
+                    fontWeight: 700,
+                    fontSize: "12.5px",
                     cursor: "pointer",
-                    boxShadow: "0 2px 8px rgba(255, 111, 61, 0.4)",
                   }}
                 >
-                  Nhận Chính Sách Cấp Vàng VIP
+                  Nhận Chính Sách Cấp Vàng
                 </button>
               </div>
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 4 */}
-          <div id="dieu-4" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                4
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                4. Quyền Lợi Chung Của Đại Lý Hợp Tác
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
+          <PolicyAccordionItem
+            id="dieu-4"
+            num={4}
+            title="4. Quyền Lợi Chung Của Đại Lý Hợp Tác"
+            isOpen={openArticles.includes(4)}
+            onToggle={() => toggleArticle(4)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "14px" }}>
               Mọi đại lý đã ký hợp đồng với Mercy Tech đều được bảo đảm trọn vẹn các quyền lợi sau:
             </p>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))",
-                gap: "12px",
+                gap: "10px",
               }}
             >
               {[
@@ -501,46 +499,30 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                     backgroundColor: "#f8fafc",
                     border: "1px solid #e2e8f0",
                     borderRadius: "10px",
-                    padding: "14px 16px",
+                    padding: "12px 14px",
                   }}
                 >
-                  <div style={{ fontWeight: 700, fontSize: "13.5px", color: "#ea580c", marginBottom: "4px" }}>
+                  <div style={{ fontWeight: 700, fontSize: "13px", color: "#ea580c", marginBottom: "3px" }}>
                     ✓ {item.title}
                   </div>
-                  <div style={{ fontSize: "12.5px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
+                  <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 5 */}
-          <div id="dieu-5" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                5
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                5. Nghĩa Vụ Và Trách Nhiệm Của Đại Lý
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
+          <PolicyAccordionItem
+            id="dieu-5"
+            num={5}
+            title="5. Nghĩa Vụ Và Trách Nhiệm Của Đại Lý"
+            isOpen={openArticles.includes(5)}
+            onToggle={() => toggleArticle(5)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "14px" }}>
               Khi tham gia mạng lưới phân phối, đại lý cam kết thực hiện đúng các điều khoản:
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               {[
                 { title: "Tư vấn trung thực", desc: "Giới thiệu chính xác về tính năng, giá cả, thời hạn bảo hành vĩnh viễn và phạm vi hỗ trợ kỹ thuật của sản phẩm OnlyOffice." },
                 { title: "Không phân phối trái phép", desc: "Tuyệt đối không trích xuất, chỉnh sửa mã nguồn hoặc phân phối lại license phần mềm cho bên thứ ba khi không có sự chấp thuận bằng văn bản của Mercy Tech." },
@@ -552,52 +534,36 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                   key={idx}
                   style={{
                     backgroundColor: "#f8fafc",
-                    padding: "12px 16px",
-                    borderRadius: "10px",
+                    padding: "10px 14px",
+                    borderRadius: "8px",
                     border: "1px solid #f1f5f9",
                   }}
                 >
-                  <div style={{ fontWeight: 700, fontSize: "13.5px", color: "#c2410c", marginBottom: "2px" }}>
+                  <div style={{ fontWeight: 700, fontSize: "13px", color: "#c2410c", marginBottom: "2px" }}>
                     • {item.title}:
                   </div>
-                  <div style={{ fontSize: "13px", color: "#475569", lineHeight: 1.5 }}>{item.desc}</div>
+                  <div style={{ fontSize: "12.5px", color: "#475569", lineHeight: 1.5 }}>{item.desc}</div>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 6 */}
-          <div id="dieu-6" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                6
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                6. Quy Trình 5 Bước Đăng Ký Trở Thành Đại Lý
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "20px" }}>
+          <PolicyAccordionItem
+            id="dieu-6"
+            num={6}
+            title="6. Quy Trình 5 Bước Đăng Ký Trở Thành Đại Lý"
+            isOpen={openArticles.includes(6)}
+            onToggle={() => toggleArticle(6)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
               Quy trình gia nhập mạng lưới đại lý được chuẩn hóa nhanh gọn và minh bạch:
             </p>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 180px), 1fr))",
-                gap: "14px",
+                gap: "10px",
               }}
             >
               {[
@@ -610,55 +576,32 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                 <div
                   key={idx}
                   style={{
-                    backgroundColor: "#fffaf5",
-                    border: "1px solid #fed7aa",
-                    borderRadius: "12px",
-                    padding: "16px 14px",
-                    textAlign: "center",
+                    backgroundColor: "#f8fafc",
+                    border: "1px solid #e2e8f0",
+                    borderRadius: "10px",
+                    padding: "12px",
                   }}
                 >
-                  <div style={{ fontSize: "12px", fontWeight: 800, color: "#ea580c", textTransform: "uppercase", marginBottom: "6px" }}>
-                    {item.step}
-                  </div>
-                  <div style={{ fontSize: "14px", fontWeight: 800, color: "#1e293b", marginBottom: "6px" }}>
-                    {item.title}
-                  </div>
-                  <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.5 }}>
-                    {item.desc}
-                  </div>
+                  <div style={{ fontSize: "11px", fontWeight: 800, color: "#ea580c", textTransform: "uppercase" }}>{item.step}</div>
+                  <div style={{ fontWeight: 700, fontSize: "13px", color: "#1e293b", margin: "3px 0 4px" }}>{item.title}</div>
+                  <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.4 }}>{item.desc}</div>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 7 */}
-          <div id="dieu-7" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                7
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                7. Hỗ Trợ Đào Tạo & Kỹ Thuật Độc Quyền
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "16px" }}>
+          <PolicyAccordionItem
+            id="dieu-7"
+            num={7}
+            title="7. Hỗ Trợ Đào Tạo & Kỹ Thuật Độc Quyền"
+            isOpen={openArticles.includes(7)}
+            onToggle={() => toggleArticle(7)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "14px" }}>
               Mercy Tech đầu tư mạnh vào năng lực kỹ thuật và bán hàng của đại lý đối tác:
             </p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "14px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "10px" }}>
               {[
                 { title: "Khóa đào tạo cơ bản 100% miễn phí", desc: "Hướng dẫn cài đặt, kích hoạt key online, xử lý chuyển key khi reset win và sử dụng Portal quản trị." },
                 { title: "Quy chuẩn 5 bước tối ưu hóa máy trạm", desc: "Chuyển giao bộ script chuẩn hóa: gỡ sạch Office lậu, import font tiếng Việt không vỡ, mặc định lưu đuôi Microsoft và cấu hình AutoSave 1 phút." },
@@ -670,84 +613,52 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                   style={{
                     backgroundColor: "#f8fafc",
                     border: "1px solid #e2e8f0",
-                    borderRadius: "12px",
-                    padding: "16px",
+                    borderRadius: "10px",
+                    padding: "12px 14px",
                   }}
                 >
-                  <div style={{ fontWeight: 800, fontSize: "14px", color: "#ea580c", marginBottom: "4px" }}>
+                  <div style={{ fontWeight: 700, fontSize: "13px", color: "#ea580c", marginBottom: "3px" }}>
                     ★ {item.title}
                   </div>
-                  <div style={{ fontSize: "13px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
+                  <div style={{ fontSize: "12px", color: "#64748b", lineHeight: 1.5 }}>{item.desc}</div>
                 </div>
               ))}
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 8 */}
-          <div id="dieu-8" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                8
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                8. Đánh Giá & Xét Duyệt Cấp Đại Lý Định Kỳ
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "12px" }}>
+          <PolicyAccordionItem
+            id="dieu-8"
+            num={8}
+            title="8. Đánh Giá & Xét Duyệt Cấp Đại Lý Định Kỳ"
+            isOpen={openArticles.includes(8)}
+            onToggle={() => toggleArticle(8)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "10px" }}>
               Mercy Tech thực hiện đánh giá định kỳ mỗi quý (3 tháng/lần) dựa trên các tiêu chí:
             </p>
-            <ul style={{ listStyle: "disc", paddingLeft: "24px", margin: "0 0 16px 0", fontSize: "13.5px", color: "#334155", lineHeight: 1.7 }}>
+            <ul style={{ listStyle: "disc", paddingLeft: "20px", margin: "0 0 12px 0", fontSize: "13px", color: "#334155", lineHeight: 1.6 }}>
               <li>Tổng doanh số mua license & key mà đại lý đạt được trong kỳ đánh giá.</li>
               <li>Mức độ hài lòng và phản hồi của khách hàng cuối do đại lý phục vụ.</li>
               <li>Sự tuân thủ các quy định bảo mật giá sỉ, bảo mật dữ liệu và chuẩn mực thương hiệu.</li>
             </ul>
-            <div style={{ backgroundColor: "#fff7ed", border: "1px solid #fed7aa", padding: "12px 16px", borderRadius: "8px", fontSize: "13px", color: "#7c2d12" }}>
+            <div style={{ backgroundColor: "#f8fafc", border: "1px solid #e2e8f0", padding: "10px 14px", borderRadius: "8px", fontSize: "12.5px", color: "#334155" }}>
               <strong>Chính sách thăng hạng:</strong> Đại lý đạt doanh số vượt trội trong 1 quý sẽ được tự động nâng lên cấp bậc cao hơn để hưởng mức chiết khấu tốt hơn ngay trong quý tiếp theo.
             </div>
-          </div>
+          </PolicyAccordionItem>
 
           {/* Điều 9 */}
-          <div id="dieu-9" className="oo-partner-policy-card">
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-              <div
-                style={{
-                  width: "36px",
-                  height: "36px",
-                  borderRadius: "10px",
-                  backgroundColor: "#fff7ed",
-                  color: "#ea580c",
-                  border: "1px solid #fed7aa",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontWeight: 900,
-                  fontSize: "16px",
-                }}
-              >
-                9
-              </div>
-              <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#1e293b", margin: 0 }}>
-                9. Chấm Dứt Hợp Đồng Hợp Tác Đại Lý
-              </h3>
-            </div>
-            <p style={{ fontSize: "14.5px", color: "#475569", lineHeight: 1.6, marginBottom: "12px" }}>
+          <PolicyAccordionItem
+            id="dieu-9"
+            num={9}
+            title="9. Chấm Dứt Hợp Đồng Hợp Tác Đại Lý"
+            isOpen={openArticles.includes(9)}
+            onToggle={() => toggleArticle(9)}
+          >
+            <p style={{ fontSize: "14px", color: "#475569", lineHeight: 1.6, marginBottom: "10px" }}>
               Hợp đồng đại lý có thể chấm dứt hiệu lực trong các trường hợp sau:
             </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", fontSize: "13.5px", color: "#475569" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "6px", fontSize: "13px", color: "#475569" }}>
               <div style={{ display: "flex", gap: "8px" }}>
                 <span style={{ color: "#ef4444", fontWeight: 700 }}>•</span>
                 <span>Hai bên cùng thỏa thuận chấm dứt hợp tác bằng văn bản trước ít nhất 30 ngày.</span>
@@ -765,12 +676,23 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                 <span>Đại lý sử dụng hình ảnh, thương hiệu OnlyOffice gây ảnh hưởng xấu tới uy tín của Mercy Tech trên thị trường.</span>
               </div>
             </div>
-          </div>
+          </PolicyAccordionItem>
 
         </div>
 
-        {/* Official Sign-off & Contact Info Card (Unified Orange Brand Card) */}
-        <div className="oo-partner-signoff-card">
+        {/* Official Sign-off & Contact Info Card (Executive Dark Slate Brand Card) */}
+        <div
+          className="oo-partner-signoff-card"
+          style={{
+            marginTop: "36px",
+            background: "#0f172a",
+            borderRadius: "16px",
+            padding: "32px 28px",
+            color: "#ffffff",
+            border: "1px solid #1e293b",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.12)",
+          }}
+        >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "24px" }}>
             <div style={{ maxWidth: "680px" }}>
               <div
@@ -778,51 +700,52 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "6px",
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.08)",
                   padding: "4px 12px",
                   borderRadius: "20px",
                   fontSize: "11px",
-                  fontWeight: 800,
-                  color: "#ffffff",
+                  fontWeight: 700,
+                  color: "#38bdf8",
                   marginBottom: "12px",
+                  border: "1px solid rgba(255, 255, 255, 0.12)",
                 }}
               >
                 <span>🏢 ĐƠN VỊ PHÂN PHỐI CHÍNH THỨC</span>
               </div>
-              <h3 style={{ fontSize: "22px", fontWeight: 800, margin: "0 0 12px", color: "#ffffff" }}>
+              <h3 style={{ fontSize: "20px", fontWeight: 800, margin: "0 0 10px", color: "#ffffff" }}>
                 CÔNG TY TNHH CÔNG NGHỆ MERCY
               </h3>
-              <div style={{ fontSize: "14px", color: "#ffedd5", lineHeight: 1.7, display: "flex", flexDirection: "column", gap: "6px" }}>
-                <div>• <strong>Mã số thuế:</strong> 0319227767</div>
-                <div>• <strong>Hotline tiếp nhận đại lý:</strong> 0763.068.614 (Hỗ trợ 24/7)</div>
-                <div>• <strong>Email chính thức:</strong> contact@mercytechglobal.com</div>
-                <div>• <strong>Trụ sở chính:</strong> 175/3 Đường Nguyễn Thị Be, Ấp 33, Xã Đông Thạnh, Thành phố Hồ Chí Minh, Việt Nam</div>
+              <div style={{ fontSize: "13.5px", color: "#94a3b8", lineHeight: 1.7, display: "flex", flexDirection: "column", gap: "4px" }}>
+                <div>• <strong>Mã số thuế:</strong> <span style={{ color: "#e2e8f0" }}>0319227767</span></div>
+                <div>• <strong>Hotline đại lý:</strong> <span style={{ color: "#38bdf8" }}>0763.068.614</span> (Hỗ trợ 24/7)</div>
+                <div>• <strong>Email chính thức:</strong> <span style={{ color: "#e2e8f0" }}>contact@mercytechglobal.com</span></div>
+                <div>• <strong>Trụ sở:</strong> 175/3 Đường Nguyễn Thị Be, Xã Đông Thạnh, TP. Hồ Chí Minh</div>
               </div>
             </div>
 
-            <div className="oo-partner-hero-btns" style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <div className="oo-partner-hero-btns" style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               <button
                 type="button"
                 className="oo-partner-hero-btn"
                 onClick={() => onOpenModal("Đăng Ký Đại Lý Chính Thức")}
                 style={{
-                  backgroundColor: "#ffffff",
-                  color: "#ea580c",
+                  backgroundColor: "#ff6f3d",
+                  color: "#ffffff",
                   border: "none",
-                  borderRadius: "10px",
-                  padding: "14px 24px",
+                  borderRadius: "8px",
+                  padding: "13px 22px",
                   fontSize: "14px",
-                  fontWeight: 800,
+                  fontWeight: 700,
                   cursor: "pointer",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "8px",
-                  boxShadow: "0 4px 14px rgba(0, 0, 0, 0.12)",
+                  boxShadow: "0 4px 14px rgba(255, 111, 61, 0.35)",
                 }}
               >
-                <Lock size={16} color="#ea580c" />
-                <span>Nhận Báo Giá Sỉ & Hợp Đồng Đại Lý</span>
+                <Lock size={16} />
+                <span>Nhận Báo Giá Sỉ & Hợp Đồng</span>
               </button>
 
               <a
@@ -833,22 +756,21 @@ export default function PartnerPolicySection({ onOpenModal }: PartnerPolicySecti
                 title="Tư vấn nhanh qua Messenger"
                 className="oo-partner-hero-btn"
                 style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.18)",
+                  backgroundColor: "rgba(255, 255, 255, 0.08)",
                   color: "#ffffff",
-                  border: "1px solid rgba(255, 255, 255, 0.4)",
-                  borderRadius: "10px",
-                  padding: "14px 24px",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  borderRadius: "8px",
+                  padding: "13px 22px",
                   fontSize: "14px",
-                  fontWeight: 800,
+                  fontWeight: 600,
                   textDecoration: "none",
                   display: "inline-flex",
                   alignItems: "center",
                   justifyContent: "center",
                   gap: "8px",
-                  backdropFilter: "blur(4px)",
                 }}
               >
-                <MessageCircle size={18} color="#ffffff" />
+                <MessageCircle size={16} color="#38bdf8" />
                 <span>Liên hệ qua Messenger</span>
               </a>
             </div>
