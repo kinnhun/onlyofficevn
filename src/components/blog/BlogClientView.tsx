@@ -233,34 +233,6 @@ export default function BlogClientView({
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
-      {/* Top Event Announcement Bar */}
-      <div className="oo-blog-event-bar">
-        <span className="oo-blog-event-badge">EVENT</span>
-        <span>{t("eventBarText")}</span>
-        <button
-          type="button"
-          onClick={() => {
-            setActiveCategory("back-to-school");
-            window.scrollTo({ top: 120, behavior: "smooth" });
-          }}
-          style={{
-            background: "none",
-            border: "none",
-            color: "#ffffff",
-            textDecoration: "underline",
-            fontWeight: 700,
-            cursor: "pointer",
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "4px",
-            fontSize: "13.5px",
-          }}
-        >
-          <span>{t("eventBarLink")}</span>
-          <ArrowRight size={13} />
-        </button>
-      </div>
-
       <Header />
 
       <main className="oo-blog-container">
