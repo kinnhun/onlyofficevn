@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ONLYOFFICE_MESSENGER_URL, openMessengerChat } from "@/lib/messenger";
 
@@ -134,10 +135,8 @@ export default function SecuritySection() {
             </div>
 
             <div style={{ display: "flex", alignItems: "center", gap: "24px" }}>
-              <a
-                href="https://www.onlyoffice.com/blog/2018/05/how-onlyoffice-complies-with-gdpr"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/blog"
                 aria-label="GDPR Compliance"
                 style={{
                   display: "inline-block",
@@ -150,10 +149,8 @@ export default function SecuritySection() {
                   backgroundSize: "160px 80px",
                 }}
               />
-              <a
-                href="https://www.onlyoffice.com/blog/2020/10/how-onlyoffice-complies-with-hipaa"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/blog"
                 aria-label="HIPAA Compliance"
                 style={{
                   display: "inline-block",

@@ -87,21 +87,43 @@ export default function ArticleClientView({
   const sanitizedHtml = useMemo(() => {
     if (!post.contentHtml) return "";
     let html = post.contentHtml;
-    // Rewrite official onlyoffice.com links to internal web routes
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/blog\/category\/[^"'\s]+/gi, `/blog`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/blog\/[0-9]{4}\/[0-9]{2}\/([a-zA-Z0-9_-]+)[^"'\s]*/gi, `/blog/$1`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/blog\/([a-zA-Z0-9_-]+)[^"'\s]*/gi, `/blog/$1`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/blog\/?/gi, `/blog`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/download-desktop[^"'\s]*/gi, `/demo`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/download[^"'\s]*/gi, `/demo`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/word-processor[^"'\s]*/gi, `/soan-thao-van-ban`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/sheets[^"'\s]*/gi, `/spreadsheet-editor`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/presentation[^"'\s]*/gi, `/thuyet-trinh`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/pdf-editor[^"'\s]*/gi, `/chinh-sua-pdf`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/form-creator[^"'\s]*/gi, `/tao-bieu-mau`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/docs[^"'\s]*/gi, `/docs`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/desktop[^"'\s]*/gi, `/demo`);
-    html = html.replace(/https:\/\/www\.onlyoffice\.com\/?/gi, `/`);
+    // 1. Rewrite official onlyoffice.com links to internal web routes
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/blog\/category\/[^"'\s]+/gi, `/blog`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/blog\/\d{4}\/\d{2}\/([a-zA-Z0-9_\-]+)[^"'\s]*/gi, `/blog/$1`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/blog\/([a-zA-Z0-9_\-]+)[^"'\s]*/gi, `/blog/$1`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/blog\/?/gi, `/blog`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/download(?:-desktop)?(?:\.aspx)?[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/desktop[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/docspace-registration(?:\.aspx)?[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/resellers[^"'\s]*/gi, `/partners`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/word-processor[^"'\s]*/gi, `/soan-thao-van-ban`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/sheets[^"'\s]*/gi, `/spreadsheet-editor`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/(?:presentation|slides)[^"'\s]*/gi, `/thuyet-trinh`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/pdf-editor[^"'\s]*/gi, `/chinh-sua-pdf`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/form-creator[^"'\s]*/gi, `/tao-bieu-mau`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/docs[^"'\s]*/gi, `/docs`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/office-for-sharepoint[^"'\s]*/gi, `/cong-tac`);
+    html = html.replace(/https?:\/\/(?:www\.)?templates\.onlyoffice\.com[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?community\.onlyoffice\.com[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?onlyoffice\.com\/?/gi, `/`);
+
+    // 2. Rewrite external partner/app stores to internal demo/partner pages
+    html = html.replace(/https?:\/\/(?:www\.)?snapcraft\.io\/onlyoffice-desktopeditors[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?flathub\.org\/apps\/org\.onlyoffice\.desktopeditors[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?apps\.odoo\.com\/apps\/modules\/[^"'\s]*/gi, `/cong-tac`);
+    html = html.replace(/https?:\/\/(?:www\.)?marketplace\.atlassian\.com\/apps\/[^"'\s]*/gi, `/cong-tac`);
+    html = html.replace(/https?:\/\/(?:www\.)?antidote\.info[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?csa\.com\.hk[^"'\s]*/gi, `/partners`);
+    html = html.replace(/https?:\/\/liyalinux\.[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?github\.com\/ONLYOFFICE\/[^"'\s]*/gi, `/demo`);
+    html = html.replace(/https?:\/\/(?:www\.)?(?:twitter\.com|x\.com)\/ONLY_OFFICE[^"'\s]*/gi, `/`);
+
+    // 3. Remove target="_blank" so internal navigation happens smoothly within our application
+    html = html.replace(/target=["']_blank["']/gi, 'target="_self"');
+
+    // 4. Transform any other external link into internal route
+    html = html.replace(/href=(["'])(https?:\/\/(?!static-blog\.onlyoffice\.com|static-site\.onlyoffice\.com)[^"'\s>]+)\1/gi, 'href=$1/blog$1');
+
     return html;
   }, [post.contentHtml]);
 
@@ -111,10 +133,23 @@ export default function ArticleClientView({
     const href = target.getAttribute("href");
     if (!href) return;
 
+    e.preventDefault();
+
     // If it's an internal route starting with /
-    if (href.startsWith("/") && !href.startsWith("//")) {
-      e.preventDefault();
+    if (href.startsWith("/")) {
       router.push(href as any);
+      return;
+    }
+
+    // If an external link was clicked, safely map internally
+    if (href.includes("/blog")) {
+      router.push("/blog");
+    } else if (href.includes("download") || href.includes("demo") || href.includes("desktop")) {
+      router.push("/demo");
+    } else if (href.includes("partner")) {
+      router.push("/partners");
+    } else {
+      router.push("/");
     }
   };
 

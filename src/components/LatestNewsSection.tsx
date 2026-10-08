@@ -9,13 +9,13 @@ export default function LatestNewsSection() {
       title: "ONLYOFFICE Docs 9.4 released: license update, Dark Document for sheets, horizontal lines, new slide themes & transitions, and more",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/latest-news/docs-9-4.jpg",
       date: "19 May 2026",
-      href: "https://www.onlyoffice.com/blog/2026/05/onlyoffice-docs-9-4",
+      href: "/blog",
     },
     {
       title: "ONLYOFFICE DocSpace 3.7 released: file generation & new providers in AI agents, smarter forms, updated editors and license, and more",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/latest-news/menu-blog-2-docspace-3-7.png",
       date: "8 June 2026",
-      href: "https://www.onlyoffice.com/blog/2026/06/onlyoffice-docspace-3-7",
+      href: "/blog",
     },
   ];
 
@@ -26,7 +26,7 @@ export default function LatestNewsSection() {
       duration: "18:03",
       type: "Webinar",
       date: "24 February 2026",
-      href: "https://www.youtube.com/user/onlyofficeTV",
+      href: "/demo",
     },
     {
       title: "How to work with office files in Odoo using ONLYOFFICE",
@@ -34,7 +34,7 @@ export default function LatestNewsSection() {
       duration: "10:31",
       type: "Webinar",
       date: "6 November 2025",
-      href: "https://www.youtube.com/user/onlyofficeTV",
+      href: "/demo",
     },
   ];
 
@@ -44,14 +44,14 @@ export default function LatestNewsSection() {
       img: "https://static-site.onlyoffice.com/public/images/templates/main/latest-news/odoo_experience_2026.png",
       date: "September 24–26, 2026",
       location: "Brussels, Belgium",
-      href: "https://www.onlyoffice.com/events",
+      href: "/demo",
     },
     {
       title: "DSC Europe 26",
       img: "https://static-site.onlyoffice.com/public/images/templates/main/latest-news/dsc_europe_26.png",
       date: "November 23–27, 2026",
       location: "Belgrade, Serbia",
-      href: "https://www.onlyoffice.com/events",
+      href: "/demo",
     },
   ];
 
@@ -123,11 +123,9 @@ export default function LatestNewsSection() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
                 {releases.map((item, i) => (
-                  <a
+                  <Link
                     key={i}
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <div
@@ -158,20 +156,18 @@ export default function LatestNewsSection() {
                       <span>🕒</span>
                       <span>{item.date}</span>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
             <div style={{ marginTop: "24px" }}>
-              <a
-                href="https://www.onlyoffice.com/blog"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/blog"
                 style={{ color: "#ff6f3d", fontSize: "13px", fontWeight: 600, textDecoration: "underline" }}
               >
                 More news here
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -203,11 +199,9 @@ export default function LatestNewsSection() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
                 {webinars.map((item, i) => (
-                  <a
+                  <Link
                     key={i}
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <div
@@ -254,20 +248,18 @@ export default function LatestNewsSection() {
                       <span>📹 {item.type}</span>
                       <span>🕒 {item.date}</span>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
             <div style={{ marginTop: "24px" }}>
-              <a
-                href="https://www.youtube.com/user/onlyofficeTV"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/demo"
                 style={{ color: "#ff6f3d", fontSize: "13px", fontWeight: 600, textDecoration: "underline" }}
               >
                 More videos here
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -299,11 +291,9 @@ export default function LatestNewsSection() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
                 {events.map((item, i) => (
-                  <a
+                  <Link
                     key={i}
                     href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     style={{ textDecoration: "none" }}
                   >
                     <h3
@@ -333,14 +323,14 @@ export default function LatestNewsSection() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img src={item.img} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
 
             <div style={{ marginTop: "24px" }}>
               <Link
-                href="/events"
+                href="/demo"
                 style={{ color: "#ff6f3d", fontSize: "13px", fontWeight: 600, textDecoration: "underline" }}
               >
                 More events here
@@ -352,4 +342,3 @@ export default function LatestNewsSection() {
     </section>
   );
 }
-

@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { UserCheck, BookOpen, KeyRound, Receipt, Video, ExternalLink, Trash2, Download, Type, FileCode, Save } from "lucide-react";
+import Link from "next/link";
+import { UserCheck, BookOpen, KeyRound, Receipt, Video, ArrowRight, Trash2, Download, Type, FileCode, Save } from "lucide-react";
 
 export default function OperationsWorkflow() {
   const steps4 = [
@@ -181,10 +182,8 @@ export default function OperationsWorkflow() {
         </div>
 
         <div style={{ marginTop: "18px" }}>
-          <a
-            href="https://www.youtube.com/watch?v=kbMDYtwoCyE"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/demo"
             style={{
               color: "#dc2626",
               fontWeight: 700,
@@ -195,9 +194,9 @@ export default function OperationsWorkflow() {
               gap: "6px",
             }}
           >
-            <span>Xem trực tiếp trên kênh YouTube chính thức</span>
-            <ExternalLink size={14} />
-          </a>
+            <span>Trải nghiệm trực tiếp bộ công cụ và kích hoạt demo</span>
+            <ArrowRight size={14} />
+          </Link>
         </div>
       </div>
 

@@ -102,21 +102,21 @@ export const IN_THE_PRESS: PressItem[] = [
     title: "ONLYOFFICE Docs Developer review: an embedded office suite for your app",
     date: "1 Sep 2026",
     source: "KrowdBase",
-    url: "https://www.krowdbase.com/post/onlyoffice-docs-developer-review",
+    url: "/blog/get-started-with-document-editing-in-your-web-app-using-onlyoffice-create-app",
   },
   {
     id: "press-2",
     title: "I replaced Excel with this open-source alternative for a week—I wasn’t ready for the difference",
     date: "28 Aug 2026",
     source: "How-To Geek",
-    url: "https://www.howtogeek.com/microsoft-excel-replaced-with-onlyoffice-spreadsheet/",
+    url: "/blog/how-to-export-notion-pages-to-word-docx-and-keep-collaborating-afterward",
   },
   {
     id: "press-3",
     title: "Why European institutions are choosing self-hosted ONLYOFFICE over Microsoft 365",
     date: "15 Aug 2026",
     source: "TechRadar Pro",
-    url: "https://www.onlyoffice.com/blog",
+    url: "/blog/migrate-from-microsoft-365",
   },
 ];
 
