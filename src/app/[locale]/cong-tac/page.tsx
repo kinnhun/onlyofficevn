@@ -17,8 +17,16 @@ export async function generateMetadata({
     description: isVi
       ? "Chia sẻ, đồng chỉnh sửa thời gian thực, bình luận, họp video và theo dõi thay đổi mượt mà trên văn bản DOCX, bảng tính XLSX, slide PPTX và tệp PDF cùng ONLYOFFICE."
       : "Share, co-author and communicate in real time to get work done faster on all kinds of office documents with ONLYOFFICE.",
+    keywords: isVi
+      ? ["cộng tác trực tuyến", "đồng chỉnh sửa tài liệu", "làm việc nhóm từ xa", "soạn thảo đa người dùng", "ONLYOFFICE collaboration", "chia sẻ tài liệu bảo mật"]
+      : ["seamless collaboration", "real-time co-authoring", "document sharing", "remote team office", "ONLYOFFICE collaboration"],
     alternates: {
-      canonical: "/cong-tac",
+      canonical: "https://onlyofficevietnam.com/cong-tac",
+      languages: {
+        vi: "https://onlyofficevietnam.com/cong-tac",
+        en: "https://onlyofficevietnam.com/en/seamless-collaboration",
+        "x-default": "https://onlyofficevietnam.com/cong-tac",
+      },
     },
     openGraph: {
       title: isVi

@@ -6,6 +6,7 @@ export interface ToolMetadataInfo {
   ogTitle: string;
   ogDescription: string;
   canonical: string;
+  keywords: string[];
 }
 
 export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo {
@@ -15,8 +16,8 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
     case "document-editor":
       return {
         title: isVi
-          ? "ONLYOFFICE Document Editor — Phần Mềm Soạn Thảo Văn Bản Chuyên Nghiệp"
-          : "ONLYOFFICE Document Editor — Professional Word Processor (DOCX)",
+          ? "Trình Soạn Thảo Văn Bản DOCX Chuyên Nghiệp"
+          : "Professional Word Processor (DOCX)",
         description: isVi
           ? "Tương thích tuyệt đối với Microsoft Word (.docx). Soạn thảo đa người dùng thời gian thực, tích hợp Trợ lý AI và hỗ trợ hơn 50 định dạng văn bản."
           : "Full Microsoft Word (DOCX) compatibility, real-time co-authoring, integrated AI assistant, and advanced typography controls.",
@@ -27,13 +28,16 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Mở và chỉnh sửa file .docx mượt mà, không vỡ layout, tích hợp AI dịch thuật và sửa ngữ pháp."
           : "Work with DOCX files online with 100% formatting fidelity and real-time team collaboration.",
         canonical: "/document-editor",
+        keywords: isVi
+          ? ["soạn thảo văn bản", "phần mềm soạn thảo văn bản", "chỉnh sửa file docx", "thay thế Word", "soạn thảo trực tuyến", "ONLYOFFICE Document Editor", "trợ lý AI viết văn bản", "văn phòng số", "Mercy Tech"]
+          : ["document editor", "word processor", "DOCX editor", "MS Word alternative", "online document editing", "ONLYOFFICE Document Editor", "AI writing assistant"],
       };
 
     case "spreadsheet-editor":
       return {
         title: isVi
-          ? "ONLYOFFICE Spreadsheet Editor — Phần Mềm Bảng Tính Thông Minh Cho Doanh Nghiệp"
-          : "ONLYOFFICE Spreadsheet Editor — Smart Enterprise Sheets (XLSX)",
+          ? "Trình Bảng Tính Thông Minh XLSX & Pivot Table"
+          : "Smart Enterprise Sheets (XLSX)",
         description: isVi
           ? "Tương thích 100% Microsoft Excel (.xlsx), hơn 400 hàm tính toán, bảng Pivot động, chế độ Personal Sheet Views và tự động hóa với Macro."
           : "100% XLSX compatibility, 400+ mathematical and financial formulas, dynamic Pivot Tables, and Personal Sheet Views.",
@@ -44,13 +48,16 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Phân tích dữ liệu lớn mượt mà, hơn 400 hàm, Pivot Tables và cộng tác bảng tính không gián đoạn."
           : "Analyze big data with 400+ formulas, Pivot Tables, and seamless multi-user collaboration.",
         canonical: "/spreadsheet-editor",
+        keywords: isVi
+          ? ["bảng tính thông minh", "phần mềm bảng tính", "chỉnh sửa file xlsx", "thay thế Excel", "hàm excel trực tuyến", "ONLYOFFICE Spreadsheet Editor", "pivot table trực tuyến", "macro bảng tính"]
+          : ["spreadsheet editor", "online spreadsheets", "XLSX editor", "Excel alternative", "pivot tables online", "ONLYOFFICE Spreadsheet Editor"],
       };
 
     case "presentation-editor":
       return {
         title: isVi
-          ? "ONLYOFFICE Presentation Editor — Phần Mềm Tạo Bản Thuyết Trình Chuyên Nghiệp"
-          : "ONLYOFFICE Presentation Editor — Professional Online Slide Maker (PPTX)",
+          ? "Trình Tạo Bản Thuyết Trình PPTX Đa Phương Tiện"
+          : "Professional Online Slide Maker (PPTX)",
         description: isVi
           ? "Tương thích hoàn hảo với PowerPoint (.pptx) — hiệu ứng chuyển động phong phú, phát GIF trong slideshow, kho mẫu đa dạng và cộng tác thời gian thực."
           : "Native PPTX compatibility, multimedia embeds, smooth slide transitions, Presenter View, and real-time co-authoring for teams.",
@@ -61,13 +68,16 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Tương thích hoàn hảo với PowerPoint (.pptx) — phát GIF trực tiếp, AI trợ lý và trình chiếu thời gian thực."
           : "Work with PowerPoint files online with full formatting fidelity, animations, and presenter mode.",
         canonical: "/presentation-editor",
+        keywords: isVi
+          ? ["phần mềm thuyết trình", "tạo slide trực tuyến", "chỉnh sửa file pptx", "thay thế PowerPoint", "trình chiếu slide", "ONLYOFFICE Presentation Editor", "hiệu ứng thuyết trình"]
+          : ["presentation editor", "slide maker", "PPTX editor", "PowerPoint alternative", "online presentations", "ONLYOFFICE Presentation Editor"],
       };
 
     case "pdf-editor":
       return {
         title: isVi
-          ? "ONLYOFFICE PDF Editor — Phần Mềm Chỉnh Sửa PDF Toàn Diện & Ký Số"
-          : "ONLYOFFICE PDF Editor — Advanced PDF Editing & Digital Signatures",
+          ? "Trình Chỉnh Sửa PDF Toàn Diện & Ký Số Điện Tử"
+          : "Advanced PDF Editing & Digital Signatures",
         description: isVi
           ? "Chỉnh sửa trực tiếp nội dung văn bản, hình ảnh trong PDF, điền biểu mẫu tương tác, chuyển đổi hai chiều PDF sang DOCX và ký số pháp lý an toàn."
           : "Directly edit text and images in PDF files, fill interactive forms, convert two-way between PDF and DOCX, and apply legal e-signatures.",
@@ -78,13 +88,16 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Sửa trực tiếp file PDF không cần chuyển đổi, ký số bảo mật chuẩn quốc tế."
           : "Edit text, annotate, fill forms, and e-sign PDFs directly in your web browser.",
         canonical: "/pdf-editor",
+        keywords: isVi
+          ? ["chỉnh sửa PDF", "phần mềm sửa PDF", "chuyển PDF sang Word", "ký số PDF", "điền form PDF", "ONLYOFFICE PDF Editor", "tạo biểu mẫu PDF"]
+          : ["PDF editor", "edit PDF online", "PDF to Word converter", "digital signature PDF", "fillable PDF forms", "ONLYOFFICE PDF Editor"],
       };
 
     case "form-creator":
       return {
         title: isVi
-          ? "ONLYOFFICE Form Creator — Phần Mềm Tạo & Điền Biểu Mẫu Điện Tử"
-          : "ONLYOFFICE Form Creator — Interactive Digital Forms & Contracts",
+          ? "Trình Tạo Biểu Mẫu Điện Tử OFORM & PDF Tương Tác"
+          : "Interactive Digital Forms & Contracts",
         description: isVi
           ? "Biến tài liệu văn bản thành biểu mẫu PDF tương tác (OFORM) với đa dạng trường điền tự động hóa, kiểm tra ràng buộc logic và chữ ký số."
           : "Design fillable interactive PDF forms with automated fields, logic validation, and compliant digital signatures.",
@@ -95,13 +108,16 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Tạo biểu mẫu thu thập dữ liệu tự động, điền đa thiết bị và xác thực chữ ký điện tử."
           : "Create surveys, employment contracts, and forms that can be completed on any device.",
         canonical: "/form-creator",
+        keywords: isVi
+          ? ["tạo biểu mẫu điện tử", "phần mềm tạo form", "biểu mẫu OFORM", "tạo hợp đồng điện tử", "biểu mẫu PDF tương tác", "ONLYOFFICE Form Creator"]
+          : ["form creator", "digital form builder", "fillable forms", "OFORM", "interactive PDF contracts", "ONLYOFFICE Form Creator"],
       };
 
     case "diagram-viewer":
       return {
         title: isVi
-          ? "ONLYOFFICE Diagram Viewer — Trình Xem Sơ Đồ Microsoft Visio (VSDX) Không Cần License"
-          : "ONLYOFFICE Diagram Viewer — Native Microsoft Visio (VSDX) Viewer",
+          ? "Trình Xem Sơ Đồ Microsoft Visio (VSDX) Trực Tuyến"
+          : "Native Microsoft Visio (VSDX) Viewer",
         description: isVi
           ? "Mở và xem trực tiếp tệp sơ đồ Microsoft Visio (VSDX, VSD). Độ phân giải vector sắc nét, tải nhanh trên web và máy tính không cần mua license Visio."
           : "Open and inspect Microsoft Visio diagrams (VSDX, VSD) natively in your browser with crisp vector rendering without Visio licenses.",
@@ -112,15 +128,19 @@ export function getToolMetadata(slug: string, locale: string): ToolMetadataInfo 
           ? "Xem bản vẽ kỹ thuật và sơ đồ mạng VSDX sắc nét, không cần cài đặt phần mềm bên thứ ba."
           : "Inspect complex Visio network diagrams and engineering layouts with lightning-fast vector rendering.",
         canonical: "/diagram-viewer",
+        keywords: isVi
+          ? ["xem sơ đồ Visio", "mở file VSDX", "trình xem sơ đồ mạng", "thay thế Microsoft Visio", "xem bản vẽ kỹ thuật VSD", "ONLYOFFICE Diagram Viewer"]
+          : ["diagram viewer", "Visio viewer online", "open VSDX file", "Microsoft Visio alternative", "vector diagram viewer", "ONLYOFFICE Diagram Viewer"],
       };
 
     default:
       return {
-        title: "ONLYOFFICE Docs — Enterprise Office Suite",
+        title: "Enterprise Office Suite",
         description: "Powerful cloud office suite for editing text documents, spreadsheets, presentations, forms, and PDFs.",
         ogTitle: "ONLYOFFICE Docs",
         ogDescription: "Powerful cloud office suite for enterprise productivity.",
         canonical: `/${slug}`,
+        keywords: ["ONLYOFFICE", "office suite"],
       };
   }
 }

@@ -41,9 +41,29 @@ export async function generateMetadata({
   const baseUrl = "https://onlyofficevietnam.com";
   const currentPath = isVi ? `/blog/${slug}` : `/en/blog/${slug}`;
 
+  let pageTitle = post.title;
+  if (pageTitle.length > 60) {
+    const cut = pageTitle.slice(0, 60);
+    const lastSpace = cut.lastIndexOf(" ");
+    pageTitle = `${lastSpace > 35 ? cut.slice(0, lastSpace) : cut} | ONLYOFFICE`;
+  } else {
+    pageTitle = `${pageTitle} | ONLYOFFICE`;
+  }
+
   return {
-    title: `${post.title} | ONLYOFFICE Blog`,
+    title: {
+      absolute: pageTitle,
+    },
     description: post.excerpt,
+    keywords: [
+      post.title,
+      post.category,
+      ...(post.tags || []),
+      isVi ? "ONLYOFFICE Vietnam" : "ONLYOFFICE Vietnam",
+      isVi ? "văn phòng trực tuyến" : "online office suite",
+      isVi ? "hướng dẫn ONLYOFFICE" : "ONLYOFFICE tutorial",
+      isVi ? "bộ ứng dụng văn phòng" : "office productivity suite",
+    ],
     alternates: {
       canonical: `${baseUrl}${currentPath}`,
       languages: {

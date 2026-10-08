@@ -11,11 +11,20 @@ export async function generateMetadata({
   const { locale } = await params;
   const meta = getToolMetadata("form-creator", locale);
 
+  const isVi = locale === "vi";
+  const canonicalUrl = isVi ? meta.canonical : `/en${meta.canonical}`;
+
   return {
     title: meta.title,
     description: meta.description,
+    keywords: meta.keywords,
     alternates: {
-      canonical: meta.canonical,
+      canonical: `https://onlyofficevietnam.com${canonicalUrl}`,
+      languages: {
+        vi: `https://onlyofficevietnam.com${meta.canonical}`,
+        en: `https://onlyofficevietnam.com/en${meta.canonical}`,
+        "x-default": `https://onlyofficevietnam.com${meta.canonical}`,
+      },
     },
     openGraph: {
       title: meta.ogTitle,

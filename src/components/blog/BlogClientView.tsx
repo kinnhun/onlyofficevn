@@ -237,6 +237,18 @@ export default function BlogClientView({
 
       <main className="oo-blog-container">
         <div className="oo-blog-section-page">
+          {/* SEO H1 Heading */}
+          <div className="oo-blog-seo-header" style={{ marginBottom: "24px" }}>
+            <h1 style={{ fontSize: "28px", fontWeight: 800, color: "#1e293b", margin: "0 0 8px 0", letterSpacing: "-0.02em" }}>
+              {isVi ? "ONLYOFFICE Blog — Tin Tức, Cập Nhật Sản Phẩm & Hướng Dẫn" : "ONLYOFFICE Blog — News, Product Updates & Tutorials"}
+            </h1>
+            <p style={{ fontSize: "15px", color: "#64748b", margin: 0, lineHeight: 1.6 }}>
+              {isVi
+                ? "Khám phá các bản phát hành mới nhất của bộ ứng dụng văn phòng ONLYOFFICE Docs, hướng dẫn kỹ thuật soạn thảo và tối ưu chi phí doanh nghiệp."
+                : "Explore the latest releases of ONLYOFFICE Docs office suite, technical tutorials, and secure enterprise productivity solutions."}
+            </p>
+          </div>
+
           {/* Search Input Bar */}
           <div className="oo-blog-search-area">
             <div className="oo-blog-search-input-wrap">

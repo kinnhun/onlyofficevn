@@ -16,12 +16,35 @@ export async function generateMetadata({
   const currentPath = isVi ? "/blog" : "/en/blog";
 
   return {
-    title: isVi
-      ? "ONLYOFFICE Blog — Tin tức, Cập nhật sản phẩm & Mẹo sử dụng"
-      : "ONLYOFFICE Blog — Official News, Updates & Tutorials",
+    title: {
+      absolute: isVi
+        ? "ONLYOFFICE Blog — Tin Tức, Cập Nhật & Mẹo Sử Dụng | ONLYOFFICE Vietnam"
+        : "ONLYOFFICE Blog — News, Product Updates & Tutorials | ONLYOFFICE Vietnam",
+    },
     description: isVi
-      ? "Khám phá các bản phát hành mới nhất của ONLYOFFICE Docs, hướng dẫn kỹ thuật, so sánh tính năng và câu chuyện thành công từ cộng đồng nguồn mở."
+      ? "Khám phá các bản phát hành mới nhất của ONLYOFFICE Docs, hướng dẫn kỹ thuật soạn thảo, so sánh tính năng văn phòng và câu chuyện thành công."
       : "Discover the latest releases of ONLYOFFICE Docs, technical tutorials, feature comparisons, and success stories from the open-source community.",
+    keywords: isVi
+      ? [
+          "ONLYOFFICE Blog",
+          "tin tức ONLYOFFICE",
+          "hướng dẫn ONLYOFFICE Docs",
+          "cập nhật ONLYOFFICE v8.2",
+          "mẹo soạn thảo văn bản",
+          "thay thế Microsoft Office",
+          "bản quyền văn phòng doanh nghiệp",
+          "phần mềm văn phòng mã nguồn mở",
+          "ONLYOFFICE Vietnam",
+        ]
+      : [
+          "ONLYOFFICE Blog",
+          "ONLYOFFICE news",
+          "ONLYOFFICE tutorials",
+          "ONLYOFFICE release notes",
+          "open source office suite",
+          "office software guides",
+          "ONLYOFFICE Vietnam",
+        ],
     alternates: {
       canonical: `${baseUrl}${currentPath}`,
       languages: {
