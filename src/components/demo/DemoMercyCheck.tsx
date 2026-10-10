@@ -31,7 +31,44 @@ export default function DemoMercyCheck() {
   };
 
   return (
-    <section id="mercy-check" style={{ padding: "48px 20px 60px", backgroundColor: "#ffffff" }}>
+    <section id="mercy-check" className="demo-mercy-section">
+      <style>{`
+        .demo-mercy-section {
+          padding: 48px 20px 60px;
+          background-color: #ffffff;
+        }
+        .demo-mercy-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 28px;
+          align-items: stretch;
+        }
+        .demo-mercy-left-card {
+          background-color: #ffffff;
+          border-radius: 20px;
+          border: 1.5px solid #e2e8f0;
+          padding: 32px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+          .demo-mercy-section {
+            padding: 32px 14px 40px !important;
+          }
+          .demo-mercy-grid {
+            grid-template-columns: 1fr !important;
+            gap: 20px !important;
+          }
+          .demo-mercy-left-card {
+            padding: 20px 16px !important;
+            border-radius: 18px !important;
+          }
+        }
+      `}</style>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         {/* Header Section */}
         <div style={{ textAlign: "center", maxWidth: "840px", margin: "0 auto 36px" }}>
@@ -66,27 +103,9 @@ export default function DemoMercyCheck() {
         </div>
 
         {/* 2 Columns: Download Info + Terminal Mock */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-            gap: "28px",
-            alignItems: "stretch",
-          }}
-        >
+        <div className="demo-mercy-grid">
           {/* Left Column: Download & Features */}
-          <div
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "20px",
-              border: "1.5px solid #e2e8f0",
-              padding: "32px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              boxShadow: "0 10px 30px rgba(15, 23, 42, 0.05)",
-            }}
-          >
+          <div className="demo-mercy-left-card">
             <div>
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "12px" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>

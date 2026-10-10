@@ -197,30 +197,43 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
 
   // Dynamically load OnlyOffice DocsAPI script
   useEffect(() => {
+    setIsMounted(true);
     if (typeof window === "undefined") return;
 
-    if (window.DocsAPI) {
-      setIsDocsApiLoaded(true);
-      return;
+    const SCRIPT_SRC = "https://site.docs.onlyoffice.com/web-apps/apps/api/documents/api.js";
+    const SCRIPT_ID = "onlyoffice-api-script";
+
+    // Ensure the <script> tag is ALWAYS present in document.head
+    // DocsAPI.DocEditor uses document.scripts in getBasePath() to construct iframe src!
+    let existingScript = document.getElementById(SCRIPT_ID) as HTMLScriptElement | null;
+    if (!existingScript) {
+      existingScript = document.querySelector(`script[src="${SCRIPT_SRC}"]`) as HTMLScriptElement | null;
     }
 
-    const script = document.createElement("script");
-    script.src = "https://site.docs.onlyoffice.com/web-apps/apps/api/documents/api.js";
-    script.async = true;
-    script.onload = () => {
-      setIsDocsApiLoaded(true);
-    };
-    script.onerror = () => {
-      console.error("DocsAPI loading failed.");
-    };
-
-    document.head.appendChild(script);
-
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.id = SCRIPT_ID;
+      script.src = SCRIPT_SRC;
+      script.async = true;
+      script.onload = () => {
+        setIsDocsApiLoaded(true);
+      };
+      script.onerror = () => {
+        console.error("DocsAPI loading failed.");
+      };
+      document.head.appendChild(script);
+    } else {
+      if (window.DocsAPI) {
+        setIsDocsApiLoaded(true);
+      } else {
+        existingScript.addEventListener("load", () => {
+          setIsDocsApiLoaded(true);
+        });
       }
-    };
+    }
+
+    // DO NOT remove script from document.head on unmount because DocsAPI.DocEditor
+    // inspects document.scripts via getBasePath() to resolve the cloud editor URL!
   }, []);
 
   // Initialize OnlyOffice DocEditor instances for each active tab
@@ -271,7 +284,70 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
   }, []);
 
   return (
-    <section id="demo-online" style={{ padding: "30px 20px 48px", backgroundColor: "#ffffff" }}>
+    <section id="demo-online" className="demo-online-section">
+      <style>{`
+        .demo-online-section {
+          padding: 30px 20px 48px;
+          background-color: #ffffff;
+        }
+        .demo-online-tabs {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 12px;
+          margin-bottom: 16px;
+        }
+        .demo-online-tab-btn {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 16px;
+          border-radius: 14px;
+          cursor: pointer;
+          text-align: left;
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+          box-sizing: border-box;
+        }
+        .demo-online-frame {
+          border-radius: 18px;
+          border: 1.5px solid #cbd5e1;
+          background-color: #f8fafc;
+          overflow: hidden;
+          box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+          display: flex;
+          flex-direction: column;
+          height: 720px;
+        }
+        .demo-online-mobile-tip {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .demo-online-section {
+            padding: 24px 12px 36px !important;
+          }
+          .demo-online-tabs {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 8px !important;
+            margin-bottom: 12px !important;
+          }
+          .demo-online-tab-btn {
+            padding: 8px 10px !important;
+            border-radius: 10px !important;
+            gap: 8px !important;
+          }
+          .demo-online-frame {
+            height: 520px !important;
+            border-radius: 14px !important;
+          }
+          .demo-online-mobile-tip {
+            display: block !important;
+            font-size: 11.5px !important;
+            color: #64748b !important;
+            text-align: center !important;
+            margin-top: 10px !important;
+          }
+        }
+      `}</style>
       <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
         {/* Section Heading & Subtitle */}
         <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 28px" }}>
@@ -305,14 +381,7 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
         </div>
 
         {/* 4 Application Tab Switcher */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "12px",
-            marginBottom: "16px",
-          }}
-        >
+        <div className="demo-online-tabs">
           {tabs.map((tab) => {
             const isActive = activeTab === tab.id;
             const Icon = tab.icon;
@@ -380,18 +449,7 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
         </div>
 
         {/* Live Workspace Container Frame */}
-        <div
-          style={{
-            borderRadius: "18px",
-            border: "1.5px solid #cbd5e1",
-            backgroundColor: "#f8fafc",
-            overflow: "hidden",
-            boxShadow: "0 12px 32px rgba(15, 23, 42, 0.08)",
-            display: "flex",
-            flexDirection: "column",
-            height: "720px",
-          }}
-        >
+        <div className="demo-online-frame">
           {/* Editor Header Bar */}
           <div
             style={{
@@ -518,6 +576,11 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
               </div>
             )}
           </div>
+        </div>
+
+        {/* Mobile Orientation Tip */}
+        <div className="demo-online-mobile-tip">
+          💡 Gợi ý: Xoay ngang điện thoại hoặc mở trên máy tính để có trải nghiệm soạn thảo Online tốt nhất.
         </div>
 
         {/* Enterprise Private Cloud Consultation Bar */}

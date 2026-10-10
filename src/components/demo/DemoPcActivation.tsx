@@ -21,20 +21,64 @@ export default function DemoPcActivation() {
   };
 
   return (
-    <section id="demo-pc" style={{ padding: "40px 20px 48px", backgroundColor: "#f8fafc" }}>
+    <section id="demo-pc" className="demo-pc-section">
+      <style>{`
+        .demo-pc-section {
+          padding: 40px 20px 48px;
+          background-color: #f8fafc;
+        }
+        .demo-pc-card {
+          background: linear-gradient(135deg, #ffffff 0%, #fffbf7 60%, #fff7ed 100%);
+          border-radius: 24px;
+          border: 1.5px solid #fed7aa;
+          padding: 42px 36px;
+          box-shadow: 0 12px 36px rgba(234, 88, 12, 0.08);
+          position: relative;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+        .demo-pc-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 36px;
+          align-items: center;
+          position: relative;
+          z-index: 1;
+        }
+        .demo-pc-action-box {
+          background-color: #ffffff;
+          border-radius: 20px;
+          border: 1.5px solid #fed7aa;
+          padding: 28px;
+          box-shadow: 0 8px 24px rgba(234, 88, 12, 0.08);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+          .demo-pc-section {
+            padding: 28px 12px 36px !important;
+          }
+          .demo-pc-card {
+            padding: 22px 14px !important;
+            border-radius: 18px !important;
+          }
+          .demo-pc-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+          }
+          .demo-pc-action-box {
+            padding: 18px 14px !important;
+            border-radius: 16px !important;
+            gap: 14px !important;
+          }
+        }
+      `}</style>
       <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         {/* Main Activation Card */}
-        <div
-          style={{
-            background: "linear-gradient(135deg, #ffffff 0%, #fffbf7 60%, #fff7ed 100%)",
-            borderRadius: "24px",
-            border: "1.5px solid #fed7aa",
-            padding: "42px 36px",
-            boxShadow: "0 12px 36px rgba(234, 88, 12, 0.08)",
-            position: "relative",
-            overflow: "hidden",
-          }}
-        >
+        <div className="demo-pc-card">
           {/* Subtle glow accent */}
           <div
             style={{
@@ -49,16 +93,7 @@ export default function DemoPcActivation() {
             }}
           />
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-              gap: "36px",
-              alignItems: "center",
-              position: "relative",
-              zIndex: 1,
-            }}
-          >
+          <div className="demo-pc-grid">
             {/* Left Content Column */}
             <div>
               <div
@@ -125,18 +160,7 @@ export default function DemoPcActivation() {
             </div>
 
             {/* Right Action Column */}
-            <div
-              style={{
-                backgroundColor: "#ffffff",
-                borderRadius: "20px",
-                border: "1.5px solid #fed7aa",
-                padding: "28px",
-                boxShadow: "0 8px 24px rgba(234, 88, 12, 0.08)",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-              }}
-            >
+            <div className="demo-pc-action-box">
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                   <Laptop size={18} color="#ea580c" />

@@ -13,21 +13,66 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
   const t = useTranslations("demo.enterpriseCta");
 
   return (
-    <section style={{ padding: "40px 20px 80px", backgroundColor: "#ffffff" }}>
-      <div
-        style={{
-          maxWidth: "1280px",
-          margin: "0 auto",
-          background: "linear-gradient(135deg, #ffffff 0%, #fffbf7 50%, #fff7ed 100%)",
-          borderRadius: "28px",
-          border: "2px solid #fed7aa",
-          padding: "54px 40px",
-          color: "#0f172a",
-          boxShadow: "0 16px 45px rgba(234, 88, 12, 0.08)",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
+    <section className="demo-ent-section">
+      <style>{`
+        .demo-ent-section {
+          padding: 40px 20px 80px;
+          background-color: #ffffff;
+        }
+        .demo-ent-card {
+          max-width: 1280px;
+          margin: 0 auto;
+          background: linear-gradient(135deg, #ffffff 0%, #fffbf7 50%, #fff7ed 100%);
+          border-radius: 28px;
+          border: 2px solid #fed7aa;
+          padding: 54px 40px;
+          color: #0f172a;
+          box-shadow: 0 16px 45px rgba(234, 88, 12, 0.08);
+          position: relative;
+          overflow: hidden;
+          box-sizing: border-box;
+        }
+        .demo-ent-pillars {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 16px;
+          margin-bottom: 42px;
+          text-align: left;
+        }
+        .demo-ent-actions {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+          .demo-ent-section {
+            padding: 30px 12px 48px !important;
+          }
+          .demo-ent-card {
+            padding: 24px 14px !important;
+            border-radius: 20px !important;
+          }
+          .demo-ent-pillars {
+            grid-template-columns: 1fr !important;
+            gap: 12px !important;
+            margin-bottom: 28px !important;
+          }
+          .demo-ent-actions {
+            flex-direction: column !important;
+            width: 100% !important;
+            gap: 10px !important;
+          }
+          .demo-ent-actions > * {
+            width: 100% !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+          }
+        }
+      `}</style>
+      <div className="demo-ent-card">
         {/* Subtle orange ambient glow */}
         <div
           style={{
@@ -104,15 +149,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
           </p>
 
           {/* 4 Value Pillars Grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-              gap: "16px",
-              marginBottom: "42px",
-              textAlign: "left",
-            }}
-          >
+          <div className="demo-ent-pillars">
             {/* Pillar 1 */}
             <div
               style={{
@@ -247,15 +284,7 @@ export default function DemoEnterpriseCta({ onOpenQuote }: DemoEnterpriseCtaProp
           </div>
 
           {/* Action Buttons */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: "14px",
-              flexWrap: "wrap",
-            }}
-          >
+          <div className="demo-ent-actions">
             {/* Quote Modal Trigger Button */}
             <button
               type="button"
