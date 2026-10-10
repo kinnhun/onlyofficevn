@@ -241,6 +241,12 @@ export default function DemoOnlineSuite({ onOpenQuote }: DemoOnlineSuiteProps) {
         try {
           const fullConfig = { ...editorData.config, token: editorData.token };
           editorsRef.current[tabKey] = new window.DocsAPI.DocEditor(placeholderId, fullConfig);
+          // Prevent external DocsAPI iframe from stealing scroll position if user just landed on top
+          setTimeout(() => {
+            if (typeof window !== "undefined" && !window.location.hash && window.scrollY < 400) {
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }
+          }, 350);
         } catch (err) {
           console.error(`Error setting up DocsAPI editor for ${tabKey}:`, err);
         }

@@ -23,9 +23,12 @@ const routes = [
   '/en/blog/accessibility-conformance',
 ];
 
+const targetBase = process.argv[2] || 'http://localhost:3000';
+const client = targetBase.startsWith('https') ? require('https') : require('http');
+
 function fetchHtml(path) {
   return new Promise((resolve) => {
-    http.get(`http://localhost:3000${path}`, (res) => {
+    client.get(`${targetBase}${path}`, (res) => {
       let data = '';
       res.on('data', chunk => data += chunk);
       res.on('end', () => resolve({ path, status: res.statusCode, html: data }));
