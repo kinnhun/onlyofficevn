@@ -327,7 +327,7 @@ export default function DemoHero() {
                       lineHeight: "1.4",
                     }}
                   >
-                    ★ KHUYÊN DÙNG • 1-CLICK TỰ ĐỘNG (.BAT)
+                    ★ KHUYÊN DÙNG • BẢN CÀI ĐẶT (.EXE)
                   </span>
                   <span
                     style={{

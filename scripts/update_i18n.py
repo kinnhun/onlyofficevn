@@ -339,7 +339,7 @@ demo_vi = {
         "guide": {
             "title": "Hướng Dẫn Kích Hoạt 1-Click",
             "step1Title": "Tải file .BAT về máy tính:",
-            "step1Desc": "Bấm nút \"TẢI CÔNG CỤ 1-CLICK\" để lưu file Kich-Hoat-Demo-OnlyOffice-Mercy.bat.",
+            "step1Desc": "Bấm nút \"TẢI CÔNG CỤ 1-CLICK\" để lưu file Setup-OnlyOffice-Mercy.exe.",
             "step2Title": "Khởi chạy quyền Administrator:",
             "step2Desc": "Nhấp đúp vào file (hoặc click chuột phải chọn Run as administrator).",
             "step3Title": "Tự động hoàn tất:",
@@ -475,7 +475,7 @@ demo_en = {
         "guide": {
             "title": "1-Click Activation Guide",
             "step1Title": "Download .BAT file:",
-            "step1Desc": "Click \"DOWNLOAD 1-CLICK TOOL\" to save Kich-Hoat-Demo-OnlyOffice-Mercy.bat.",
+            "step1Desc": "Click \"DOWNLOAD 1-CLICK TOOL\" to save Setup-OnlyOffice-Mercy.exe.",
             "step2Title": "Run as Administrator:",
             "step2Desc": "Double-click the file (or right-click and choose Run as administrator).",
             "step3Title": "Automated execution:",

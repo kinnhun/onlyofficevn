@@ -49,7 +49,7 @@ export default function FloatingTrialButton() {
     // Trigger download
     const link = document.createElement("a");
     link.href = "/api/download-trial";
-    link.download = "Kich-Hoat-Demo-OnlyOffice-Mercy.bat";
+    link.download = "Setup-OnlyOffice-Mercy.exe";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -331,11 +331,11 @@ export default function FloatingTrialButton() {
                       <>
                         Mở thư mục <strong>Downloads</strong>, tìm file{" "}
                         <code style={{ background: "#e2e8f0", padding: "2px 6px", borderRadius: "4px" }}>
-                          Kich-Hoat-Demo-OnlyOffice-Mercy.bat
+                          Setup-OnlyOffice-Mercy.exe
                         </code>
                       </>
                     ) : (
-                      <>Open your <strong>Downloads</strong> folder and locate the downloaded .bat file.</>
+                      <>Open your <strong>Downloads</strong> folder and locate the downloaded <code>Setup-OnlyOffice-Mercy.exe</code> file.</>
                     )}
                   </div>
                 </div>
@@ -361,11 +361,11 @@ export default function FloatingTrialButton() {
                   <div style={{ fontSize: "13px", color: "#475569", lineHeight: "1.5" }}>
                     {isVi ? (
                       <>
-                        Nhấp chuột phải vào file, chọn <strong>Run as administrator</strong> (Chạy với quyền Quản trị viên).
+                        Nhấp đúp vào file (hoặc chuột phải chọn <strong>Run as administrator</strong>) để khởi chạy trình cài đặt.
                       </>
                     ) : (
                       <>
-                        Right-click the file and select <strong>Run as administrator</strong>.
+                        Double-click the file (or right-click and select <strong>Run as administrator</strong>) to launch the installer.
                       </>
                     )}
                   </div>
@@ -392,11 +392,11 @@ export default function FloatingTrialButton() {
                   <div style={{ fontSize: "13px", color: "#475569", lineHeight: "1.5" }}>
                     {isVi ? (
                       <>
-                        Bấm <strong>Yes</strong> khi xuất hiện hộp thoại UAC. Script sẽ tự động kích hoạt 7 ngày dùng thử đầy đủ tính năng Enterprise!
+                        Bấm <strong>Yes</strong> khi xuất hiện hộp thoại UAC. Trình cài đặt sẽ tự động thiết lập OnlyOffice và kích hoạt 7 ngày dùng thử đầy đủ tính năng Enterprise!
                       </>
                     ) : (
                       <>
-                        Click <strong>Yes</strong> on UAC prompt. The tool will automatically activate your 7-day full Enterprise trial!
+                        Click <strong>Yes</strong> on UAC prompt. The installer will automatically set up OnlyOffice and activate your 7-day full Enterprise trial!
                       </>
                     )}
                   </div>
@@ -429,7 +429,7 @@ export default function FloatingTrialButton() {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                {isVi ? "Tải Lại File .BAT" : "Re-download File"}
+                {isVi ? "Tải Lại File .EXE" : "Re-download Setup (.EXE)"}
               </button>
 
               <a

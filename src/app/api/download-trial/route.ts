@@ -3,21 +3,9 @@ import fs from "fs";
 import path from "path";
 
 export async function GET() {
-  const filePath = path.join(process.cwd(), "public", "Kich-Hoat-Demo-OnlyOffice-Mercy.bat");
-  
+  const filePath = path.join(process.cwd(), "public", "Setup-OnlyOffice-Mercy.exe");
+
   if (!fs.existsSync(filePath)) {
-    // Fallback to parent dir if needed
-    const fallbackPath = path.join(process.cwd(), "..", "Kich-Hoat-Demo-OnlyOffice-Mercy (4).bat");
-    if (fs.existsSync(fallbackPath)) {
-      const fileBuffer = fs.readFileSync(fallbackPath);
-      return new NextResponse(fileBuffer, {
-        headers: {
-          "Content-Disposition": 'attachment; filename="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"',
-          "Content-Type": "application/octet-stream",
-          "Cache-Control": "no-cache",
-        },
-      });
-    }
     return new NextResponse("File not found", { status: 404 });
   }
 
@@ -25,8 +13,8 @@ export async function GET() {
 
   return new NextResponse(fileBuffer, {
     headers: {
-      "Content-Disposition": 'attachment; filename="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"',
-      "Content-Type": "application/octet-stream",
+      "Content-Disposition": 'attachment; filename="Setup-OnlyOffice-Mercy.exe"',
+      "Content-Type": "application/vnd.microsoft.portable-executable",
       "Cache-Control": "no-cache",
     },
   });

