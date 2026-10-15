@@ -347,7 +347,7 @@ export default function DemoHero() {
                   {t("card2Title").replace(/^[0-9.]+\s*/, "")}
                 </div>
                 <div className="demo-hero-cta-sub">
-                  {t("card2Sub")} — Cài đặt tự động & tiêm bản quyền Enterprise đầy đủ tính năng kèm 3 Plugin AI
+                  {t("card2Sub")}
                 </div>
               </div>
             </div>
