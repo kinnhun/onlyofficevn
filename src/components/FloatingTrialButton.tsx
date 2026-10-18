@@ -48,7 +48,7 @@ export default function FloatingTrialButton() {
   const handleDownload = () => {
     // Trigger download
     const link = document.createElement("a");
-    link.href = "/api/download-trial";
+    link.href = "https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe";
     link.download = "Setup-OnlyOffice-Mercy.exe";
     document.body.appendChild(link);
     link.click();

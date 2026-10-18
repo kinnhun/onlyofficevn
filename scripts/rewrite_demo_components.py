@@ -1059,7 +1059,7 @@ export default function DemoPcActivation() {
 
               {/* Primary Download Button */}
               <a
-                href="/Setup-OnlyOffice-Mercy.exe"
+                href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                 download="Setup-OnlyOffice-Mercy.exe"
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -1106,7 +1106,7 @@ export default function DemoPcActivation() {
               {/* Secondary Actions: Backup ZIP + Guide */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                 <a
-                  href="/Setup-OnlyOffice-Mercy.exe"
+                  href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                   download="Setup-OnlyOffice-Mercy.exe"
                   style={{
                     backgroundColor: "#ffffff",

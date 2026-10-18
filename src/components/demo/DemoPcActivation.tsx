@@ -10,7 +10,7 @@ export default function DemoPcActivation() {
   const [guideOpen, setGuideOpen] = useState(false);
   const [copiedPs, setCopiedPs] = useState(false);
 
-  const psCmd = "$ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri 'https://onlyofficevietnam.com/Setup-OnlyOffice-Mercy.exe' -OutFile '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'; Start-Process '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'";
+  const psCmd = "$ProgressPreference='SilentlyContinue'; Invoke-WebRequest -Uri 'https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe' -OutFile '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'; Start-Process '$env:TEMP\\Setup-OnlyOffice-Mercy.exe'";
 
   const handleCopyPs = () => {
     if (typeof window !== "undefined") {
@@ -185,7 +185,7 @@ export default function DemoPcActivation() {
 
               {/* Primary Download Button */}
               <a
-                href="/Setup-OnlyOffice-Mercy.exe"
+                href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                 download="Setup-OnlyOffice-Mercy.exe"
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
@@ -232,7 +232,7 @@ export default function DemoPcActivation() {
               {/* Secondary Actions: Backup ZIP + Guide */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
                 <a
-                  href="/Setup-OnlyOffice-Mercy.exe"
+                  href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                   download="Setup-OnlyOffice-Mercy.exe"
                   style={{
                     backgroundColor: "#ffffff",
@@ -316,7 +316,7 @@ export default function DemoPcActivation() {
               >
                 <div style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
                   <span style={{ color: "#ea580c", fontWeight: 700 }}>PS&gt; </span>
-                  <span style={{ color: "#334155", fontWeight: 600 }}>iwr https://onlyofficevietnam.com/Setup-OnlyOffice-Mercy.exe ...</span>
+                  <span style={{ color: "#334155", fontWeight: 600 }}>iwr https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe ...</span>
                 </div>
                 <button
                   type="button"
