@@ -89,10 +89,12 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/logo.svg", type: "image/svg+xml" },
         { url: "https://static-site.onlyoffice.com/public/images/favicons/favicon32.png", sizes: "32x32", type: "image/png" },
         { url: "https://static-site.onlyoffice.com/public/images/favicons/favicon150.png", sizes: "150x150", type: "image/png" },
       ],
-      shortcut: "https://static-site.onlyoffice.com/public/images/favicons/favicon32.png",
+      shortcut: "/favicon.ico",
       apple: "https://static-site.onlyoffice.com/public/images/favicons/favicon150.png",
     },
     openGraph: {

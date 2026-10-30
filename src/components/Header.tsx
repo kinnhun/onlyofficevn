@@ -111,10 +111,30 @@ export default function Header() {
           <div style={{ display: "flex", alignItems: "center", gap: "12px", flexShrink: 0, whiteSpace: "nowrap" }}>
             <Link
               className="oo-header-logo en"
-              aria-label="Go to homepage"
+              aria-label="ONLYOFFICE - Go to homepage"
               href="/"
-              style={{ margin: 0, flexShrink: 0 }}
-            />
+              style={{
+                margin: 0,
+                flexShrink: 0,
+                display: "inline-flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg"
+                alt="ONLYOFFICE"
+                width={132}
+                height={26}
+                style={{
+                  height: "26px",
+                  width: "auto",
+                  maxWidth: "140px",
+                  display: "block",
+                  objectFit: "contain",
+                }}
+              />
+            </Link>
             <div
               className="mercy-header-divider"
               style={{

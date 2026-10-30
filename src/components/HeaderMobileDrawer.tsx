@@ -98,9 +98,29 @@ export default function HeaderMobileDrawer({
       >
         {/* Drawer Header */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontWeight: 800, fontSize: "16px", color: "#ff6f3d", letterSpacing: "0.5px" }}>
-            ONLYOFFICE
-          </span>
+          <Link
+            href="/"
+            onClick={onClose}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="/wp-content/themes/onlyoffice-vn/assets/images/logo/logo-onlyoffice.svg"
+              alt="ONLYOFFICE"
+              width={128}
+              height={24}
+              style={{
+                height: "24px",
+                width: "auto",
+                maxWidth: "135px",
+                display: "block",
+                objectFit: "contain",
+              }}
+            />
+          </Link>
           <button
             onClick={onClose}
             style={{
