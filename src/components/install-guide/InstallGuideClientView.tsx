@@ -831,6 +831,14 @@ export default function InstallGuideClientView() {
                   </span>
                 </div>
 
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "6px", marginBottom: "8px" }}>
+                  <span style={{ fontSize: "12px", color: "#ea580c", fontWeight: 700 }}>
+                    👉 Vuốt ngang bảng để xem chi tiết 7 tiêu chí so sánh
+                  </span>
+                  <span style={{ fontSize: "11px", color: "#64748b" }}>
+                    Cập nhật mới 2026
+                  </span>
+                </div>
                 <div className="ig-table-wrap">
                   <table className="ig-seo-table">
                     <thead>
@@ -1076,6 +1084,10 @@ export default function InstallGuideClientView() {
                   <div style={{ fontFamily: "monospace", color: "#ea580c", fontWeight: 700, marginTop: "4px" }}>
                     onlyofficevietnam.com/huong-dan-cai-dat
                   </div>
+                </div>
+
+                <div style={{ marginTop: "10px", padding: "8px 10px", background: "#fff7ed", borderRadius: "8px", border: "1px solid #fed7aa", fontSize: "11.5px", color: "#9a3412", lineHeight: "1.4" }}>
+                  💡 <strong>Bạn đang xem trên điện thoại?</strong> Hãy bấm nút <u>COPY LINK HƯỚNG DẪN</u> ở đầu trang để gửi nhanh qua Zalo cho máy tính!
                 </div>
               </div>
 
