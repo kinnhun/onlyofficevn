@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Primary static routes with their priority & update frequency
   const pages = [
     { path: "", priority: 1.0, changeFrequency: "daily" as const },
+    { path: "/huong-dan-cai-dat", priority: 0.95, changeFrequency: "weekly" as const },
     { path: "/docs", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/document-editor", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/spreadsheet-editor", priority: 0.9, changeFrequency: "weekly" as const },

@@ -16,6 +16,7 @@ export default function Header() {
   const tCommon = useTranslations("common");
   const tBranding = useTranslations("branding");
   const locale = useLocale();
+  const isVi = locale === "vi";
   const router = useRouter();
   const pathname = usePathname();
 
@@ -44,6 +45,12 @@ export default function Header() {
       href: "/partners",
       label: tHeader("partners"),
       isActive: pathname.startsWith("/partners"),
+    },
+    {
+      key: "caidat",
+      href: "/huong-dan-cai-dat",
+      label: isVi ? "Hướng Dẫn Cài Đặt" : "Installation",
+      isActive: pathname.startsWith("/huong-dan-cai-dat") || pathname.startsWith("/caidat"),
     },
     {
       key: "blog",

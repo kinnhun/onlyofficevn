@@ -58,6 +58,7 @@ export default function Footer() {
         { label: isVi ? "Bảng giá bản quyền ONLYOFFICE" : "Official ONLYOFFICE Pricing", href: "/pricing" },
         { label: isVi ? "Key Online vĩnh viễn theo Main" : "Lifetime Online Key (Hardware Bound)", href: "/pricing#packages" },
         { label: isVi ? "Tem cào Hologram 7 màu vật lý" : "Physical Hologram Sticker License", href: "/pricing#addons" },
+        { label: isVi ? "Hướng dẫn kích hoạt bản quyền" : "Activation Guide", href: "/huong-dan-cai-dat" },
         { label: isVi ? "Chính sách đại lý & phân phối" : "Dealer & Partner Program", href: "/partners" },
         { label: isVi ? "Trải nghiệm bản Demo tương tác" : "Interactive Product Demo", href: "/demo" },
       ],
@@ -82,6 +83,7 @@ export default function Footer() {
         { label: isVi ? "Email: contact@mercytechglobal.com" : "Email: contact@mercytechglobal.com", href: "mailto:contact@mercytechglobal.com", isExternal: true },
         { label: isVi ? "Trụ sở: 175/3 Nguyễn Thị Be, TP.HCM" : "HQ: 175/3 Nguyen Thi Be, HCMC", href: "#" },
         { label: isVi ? "Trung tâm trợ giúp ONLYOFFICE" : "ONLYOFFICE Help Center", href: "/docs" },
+        { label: isVi ? "Hướng dẫn cài đặt & Đổi máy (MCT5)" : "Installation & Transfer Guide (MCT5)", href: "/huong-dan-cai-dat" },
       ],
     },
   ];
