@@ -134,60 +134,19 @@ export default function InstallGuideClientView() {
         <section className="ig-hero-section" style={{ padding: "40px 20px 32px" }}>
           <div style={{ maxWidth: "960px", margin: "0 auto" }}>
             {/* Top Badge */}
-            <div className="ig-hero-badge">
+            {/* <div className="ig-hero-badge">
               <OnlyOfficeLogoIcon size={18} />
-              <span>HƯỚNG DẪN CHÍNH THỨC • ONLYOFFICE VIỆT NAM (MERCY TECH)</span>
-            </div>
+            <span> ONLYOFFICE VIỆT NAM (MERCY TECH)</span>
+          </div>
 
-            {/* Title */}
+          {/* Title */}
             <h1 className="ig-hero-title" style={{ fontSize: "38px", marginBottom: "12px" }}>
               Hướng Dẫn Cài Đặt &amp; Chuyển Đổi Bản Quyền <span>ONLYOFFICE</span>
             </h1>
 
             {/* Subtitle */}
-            <p className="ig-hero-subtitle" style={{ fontSize: "16px", marginBottom: "20px", color: "#475569" }}>
+            <p className="ig-hero-subtitle" style={{ fontSize: "16px", marginBottom: "0px", color: "#475569" }}>
               Bộ công cụ cài đặt ONLYOFFICE tối ưu bởi MERCY TECH
-            </p>
-
-            {/* Hero CTAs */}
-            <div className="ig-hero-ctas" style={{ gap: "12px" }}>
-              <a
-                href="/Setup-OnlyOffice-Mercy.exe"
-                download="Setup-OnlyOffice-Mercy.exe"
-                className="ig-btn-primary"
-                style={{ padding: "14px 28px", fontSize: "15px" }}
-              >
-                <Download size={20} />
-                <span>TẢI BỘ CÀI ĐẶT (.EXE)</span>
-              </a>
-
-              <a
-                href="https://zalo.me/0763068614"
-                target="_blank"
-                rel="noreferrer"
-                className="ig-btn-outline"
-                style={{ borderColor: "#ea580c", color: "#ea580c", background: "#fff7ed", padding: "13px 22px" }}
-                title="Nhắn Zalo hỗ trợ kỹ thuật nhanh"
-              >
-                <PhoneCall size={18} color="#ea580c" />
-                <span>ZALO KỸ THUẬT: 0763 068 614</span>
-              </a>
-
-              <button
-                type="button"
-                onClick={handleCopyLink}
-                className="ig-btn-outline"
-                style={{ padding: "13px 20px" }}
-                title="Sao chép link tải trực tiếp file exe"
-              >
-                {copiedLink ? <Check size={18} color="#16a34a" /> : <Link2 size={18} color="#64748b" />}
-                <span>{copiedLink ? "ĐÃ COPY LINK!" : "COPY LINK TẢI"}</span>
-              </button>
-            </div>
-
-            <p style={{ margin: "10px 0 0", fontSize: "12px", color: "#64748b", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", flexWrap: "wrap" }}>
-              <Zap size={14} color="#f59e0b" />
-              <span>File nhẹ ~5.2 MB • Chạy 1-Click tự động • Tương thích mọi bản Windows 7, 8, 10, 11</span>
             </p>
           </div>
         </section>
@@ -198,9 +157,19 @@ export default function InstallGuideClientView() {
         <div className="ig-container">
           {/* TAB SWITCHER: ƯU TIÊN BỘ ĐỔI MÁY Ở ĐẦU TIÊN */}
           <div className="ig-tabs-card" style={{ margin: "24px 0" }}>
-            <div className="ig-tabs-heading">
-              <Layers size={16} color="#ea580c" />
-              <span>BẠN ĐANG CẦN LÀM THAO TÁC NÀO? (CHỌN 1 TRONG 3):</span>
+            <div style={{ marginBottom: "16px" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "8px", marginBottom: "6px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "16px", fontWeight: 800, color: "#0f172a" }}>
+                  <Layers size={20} color="#ea580c" />
+                  <span>BẠN ĐANG CẦN HỖ TRỢ TRƯỜNG HỢP NÀO?</span>
+                </div>
+                <span style={{ fontSize: "12px", fontWeight: 700, color: "#c2410c", background: "#ffedd5", border: "1px solid #fed7aa", padding: "4px 12px", borderRadius: "9999px" }}>
+                  BẤM CHỌN 1 TRONG 3 Ô BÊN DƯỚI
+                </span>
+              </div>
+              <p style={{ margin: "0", fontSize: "13.5px", color: "#64748b" }}>
+                Vui lòng chọn đúng tình trạng máy tính của bạn để hệ thống hiển thị bài hướng dẫn phù hợp nhất:
+              </p>
             </div>
 
             <div className="ig-tabs-grid">
@@ -220,7 +189,7 @@ export default function InstallGuideClientView() {
                     <span className="ig-tab-badge" style={{ background: "#ea580c", color: "#fff" }}>Key MCT5</span>
                   </div>
                   <div className="ig-tab-desc">
-                    Gỡ key trên máy cũ ➔ Nhập lại key trên máy mới (Hỗ trợ 5 lần đổi).
+                    Đã có bản quyền, muốn chuyển sang máy tính khác (Hỗ trợ 5 lần đổi).
                   </div>
                 </div>
               </button>
@@ -240,7 +209,7 @@ export default function InstallGuideClientView() {
                     <span className="ig-tab-badge">Tem Cào / Key</span>
                   </div>
                   <div className="ig-tab-desc">
-                    Dành cho khách vừa mua Thẻ tem cào hoặc Key bản quyền online.
+                    Vừa mua bản quyền, kích hoạt bằng Thẻ tem cào hoặc Key Online.
                   </div>
                 </div>
               </button>
@@ -260,7 +229,7 @@ export default function InstallGuideClientView() {
                     <span className="ig-tab-badge">Miễn Phí</span>
                   </div>
                   <div className="ig-tab-desc">
-                    Không cần mã Key, bấm 1 nút là mở full Word, Excel dùng ngay.
+                    Chưa có mã Key, cài đặt để trải nghiệm trọn bộ tính năng ngay.
                   </div>
                 </div>
               </button>
