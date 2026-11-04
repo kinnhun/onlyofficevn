@@ -6,6 +6,50 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 const nextConfig: NextConfig = {
   output: "standalone",
   devIndicators: false,
+  async redirects() {
+    return [
+      {
+        source: "/caidat",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/huongdancaidat",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/cai-dat",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/huongdan",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/huong-dan",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/setup",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/install",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+      {
+        source: "/install-guide",
+        destination: "/huong-dan-cai-dat",
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return [
       {

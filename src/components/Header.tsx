@@ -43,13 +43,13 @@ export default function Header() {
     {
       key: "partners",
       href: "/partners",
-      label: tHeader("partners"),
+      label: isVi ? "Đại Lý" : tHeader("partners"),
       isActive: pathname.startsWith("/partners"),
     },
     {
       key: "caidat",
       href: "/huong-dan-cai-dat",
-      label: isVi ? "Hướng Dẫn Cài Đặt" : "Installation",
+      label: isVi ? "Cài Đặt" : "Installation",
       isActive: pathname.startsWith("/huong-dan-cai-dat") || pathname.startsWith("/caidat"),
     },
     {
@@ -193,12 +193,12 @@ export default function Header() {
         <nav
           className="desktop-header-nav"
           style={{
+            display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
-            flex: 1,
-            marginLeft: "20px",
+            justifyContent: "center",
+            flex: "1 1 auto",
+            margin: "0 clamp(4px, 1vw, 16px)",
             minWidth: 0,
-            flexWrap: "nowrap",
           }}
         >
           {/* 4 Direct Pages Links */}
@@ -207,7 +207,7 @@ export default function Header() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "8px",
+              gap: "clamp(2px, 0.4vw, 6px)",
               flexWrap: "nowrap",
               flexShrink: 0,
             }}
@@ -218,13 +218,13 @@ export default function Header() {
               href={navItems[0].href}
               className={`oo-main-nav-link ${navItems[0].isActive ? "active" : ""}`}
               style={{
-                fontSize: "14.5px",
+                fontSize: "clamp(13px, 0.95vw, 14.5px)",
                 fontWeight: navItems[0].isActive ? 700 : 600,
                 color: navItems[0].isActive ? "#ea580c" : "#334155",
                 backgroundColor: navItems[0].isActive ? "rgba(255, 111, 61, 0.09)" : "transparent",
                 borderColor: navItems[0].isActive ? "rgba(255, 111, 61, 0.22)" : "transparent",
                 textDecoration: "none",
-                padding: "8px 14px",
+                padding: "8px clamp(8px, 0.8vw, 13px)",
                 borderRadius: "8px",
                 display: "inline-flex",
                 alignItems: "center",
@@ -247,13 +247,13 @@ export default function Header() {
                 href={item.href}
                 className={`oo-main-nav-link ${item.isActive ? "active" : ""}`}
                 style={{
-                  fontSize: "14.5px",
+                  fontSize: "clamp(13px, 0.95vw, 14.5px)",
                   fontWeight: item.isActive ? 700 : 600,
                   color: item.isActive ? "#ea580c" : "#334155",
                   backgroundColor: item.isActive ? "rgba(255, 111, 61, 0.09)" : "transparent",
                   borderColor: item.isActive ? "rgba(255, 111, 61, 0.22)" : "transparent",
                   textDecoration: "none",
-                  padding: "8px 14px",
+                  padding: "8px clamp(8px, 0.8vw, 13px)",
                   borderRadius: "8px",
                   display: "inline-flex",
                   alignItems: "center",
@@ -267,107 +267,105 @@ export default function Header() {
               </Link>
             ))}
           </div>
-
-          {/* Right Action Buttons: Dùng Thử & Liên hệ */}
-          <div
-            className="oo-header-btns en"
-            style={{
-              display: "flex",
-              flexWrap: "nowrap",
-              alignItems: "center",
-              gap: "10px",
-              flexShrink: 0,
-              whiteSpace: "nowrap",
-            }}
-          >
-            {/* Free Trial / Demo Navigation Button */}
-            <Link
-              id="oo-menu-item-btn-download"
-              href="/demo"
-              className="oo-header-btn-download"
-              style={{
-                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-                color: "#ffffff",
-                padding: "0 18px",
-                height: "38px",
-                borderRadius: "8px",
-                border: "none",
-                fontWeight: 700,
-                fontSize: "13.5px",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "7px",
-                cursor: "pointer",
-                boxShadow: "0 2px 10px rgba(234, 88, 12, 0.3)",
-                transition: "all 0.2s ease",
-                whiteSpace: "nowrap",
-                flexShrink: 0,
-                textDecoration: "none",
-                lineHeight: "1",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
-                e.currentTarget.style.transform = "translateY(-1px)";
-                e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.4)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 2px 10px rgba(234, 88, 12, 0.3)";
-              }}
-              title={locale === "vi" ? "Trải nghiệm dùng thử trực tuyến & kích hoạt 7 ngày" : "Online demo & 7-day trial activation"}
-            >
-              <Download size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
-              <span>{tHeader("download")}</span>
-            </Link>
-
-            {/* Contact Button */}
-            <a
-              className="mercy-contact-btn en"
-              href="https://www.messenger.com/t/286163107904324"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={openMessengerChat}
-              title={locale === "vi" ? "Liên hệ" : "Contact us"}
-              style={{
-                background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
-                border: "none",
-                borderRadius: "8px",
-                whiteSpace: "nowrap",
-                flexShrink: 0,
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "7px",
-                padding: "0 15px",
-                height: "38px",
-                fontSize: "13.5px",
-                fontWeight: 700,
-                color: "#ffffff",
-                textDecoration: "none",
-                lineHeight: "1",
-                boxShadow: "0 2px 10px rgba(234, 88, 12, 0.25)",
-                transition: "all 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
-                e.currentTarget.style.transform = "translateY(-1px)";
-                e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.4)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 2px 10px rgba(234, 88, 12, 0.25)";
-              }}
-            >
-              <MessageCircle size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
-              <span style={{ fontSize: "13.5px", fontWeight: 700, color: "#ffffff", whiteSpace: "nowrap" }}>{tCommon("contact")}</span>
-            </a>
-          </div>
         </nav>
 
-        {/* Right Icon Actions (Language Switcher) */}
-        <LanguageSwitcher variant="header" />
+        {/* Right Action Buttons & Language Switcher (Grouped in ONE flex container to prevent overlap) */}
+        <div
+          className="oo-header-right-group"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            flexShrink: 0,
+            whiteSpace: "nowrap",
+          }}
+        >
+          {/* Free Trial / Demo Navigation Button */}
+          <Link
+            id="oo-menu-item-btn-download"
+            href="/demo"
+            className="oo-header-btn-download"
+            style={{
+              background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+              color: "#ffffff",
+              padding: "0 clamp(10px, 1.2vw, 16px)",
+              height: "38px",
+              borderRadius: "8px",
+              border: "none",
+              fontWeight: 700,
+              fontSize: "13px",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              cursor: "pointer",
+              boxShadow: "0 2px 10px rgba(234, 88, 12, 0.3)",
+              transition: "all 0.2s ease",
+              whiteSpace: "nowrap",
+              flexShrink: 0,
+              textDecoration: "none",
+              lineHeight: "1",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #f9571f 0%, #c2410c 100%)";
+              e.currentTarget.style.transform = "translateY(-1px)";
+              e.currentTarget.style.boxShadow = "0 4px 14px rgba(234, 88, 12, 0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 2px 10px rgba(234, 88, 12, 0.3)";
+            }}
+            title={locale === "vi" ? "Trải nghiệm dùng thử trực tuyến & kích hoạt 7 ngày" : "Online demo & 7-day trial activation"}
+          >
+            <Download size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
+            <span>{tHeader("download")}</span>
+          </Link>
+
+          {/* Contact Button */}
+          <a
+            className="mercy-contact-btn en"
+            href="https://www.messenger.com/t/286163107904324"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={openMessengerChat}
+            title={locale === "vi" ? "Liên hệ" : "Contact us"}
+            style={{
+              background: "#fff7ed",
+              border: "1.5px solid #fed7aa",
+              borderRadius: "8px",
+              whiteSpace: "nowrap",
+              flexShrink: 0,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "6px",
+              padding: "0 clamp(8px, 0.9vw, 12px)",
+              height: "38px",
+              fontSize: "13px",
+              fontWeight: 700,
+              color: "#ea580c",
+              textDecoration: "none",
+              lineHeight: "1",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "#ffedd5";
+              e.currentTarget.style.borderColor = "#ea580c";
+              e.currentTarget.style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "#fff7ed";
+              e.currentTarget.style.borderColor = "#fed7aa";
+              e.currentTarget.style.transform = "translateY(0)";
+            }}
+          >
+            <MessageCircle size={15} strokeWidth={2.5} color="#ea580c" style={{ flexShrink: 0 }} />
+            <span className="mercy-contact-text">{tCommon("contact")}</span>
+          </a>
+
+          {/* Language Switcher */}
+          <LanguageSwitcher variant="header" />
+        </div>
       </div>
 
       {/* Mobile Drawer */}
