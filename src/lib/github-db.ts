@@ -407,6 +407,10 @@ export function getGithubToken(): string {
   return process.env.GITHUB_TOKEN || process.env.GH_DB_TOKEN || "";
 }
 
+export function getGithubBackupToken(): string {
+  return process.env.GH_BACKUP_TOKEN || "";
+}
+
 export function getGithubOwner(): string {
   return process.env.GITHUB_OWNER || "kinnhun";
 }
@@ -492,11 +496,12 @@ async function readFile<T>(filePath: string, defaultFallback: T): Promise<{ data
         cache: "no-store",
       });
 
-      if (res.status === 401 && token !== BACKUP_GITHUB_TOKEN) {
+      const backupToken = getGithubBackupToken();
+      if (res.status === 401 && backupToken && token !== backupToken) {
         console.warn(`[github-db] Token 401 on ${filePath}, retrying with backup token...`);
         res = await fetch(url, {
           headers: {
-            Authorization: `Bearer ${BACKUP_GITHUB_TOKEN}`,
+            Authorization: `Bearer ${backupToken}`,
             Accept: "application/vnd.github.v3+json",
             "Content-Type": "application/json",
           },
@@ -627,11 +632,12 @@ async function writeFile<T>(
           }),
         });
 
-        if (res.status === 401 && getGithubToken() !== BACKUP_GITHUB_TOKEN) {
+        const backupToken = getGithubBackupToken();
+        if (res.status === 401 && backupToken && getGithubToken() !== backupToken) {
           res = await fetch(apiUrl(filePath), {
             method: "PUT",
             headers: {
-              Authorization: `Bearer ${BACKUP_GITHUB_TOKEN}`,
+              Authorization: `Bearer ${backupToken}`,
               Accept: "application/vnd.github.v3+json",
               "Content-Type": "application/json",
             },
