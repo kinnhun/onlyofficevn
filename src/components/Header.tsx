@@ -53,6 +53,12 @@ export default function Header() {
       isActive: pathname.startsWith("/huong-dan-cai-dat") || pathname.startsWith("/caidat"),
     },
     {
+      key: "tro-ly-ai",
+      href: "/tro-ly-onlyoffice",
+      label: isVi ? "Trợ Lý AI" : "AI Assistant",
+      isActive: pathname.startsWith("/tro-ly-onlyoffice"),
+    },
+    {
       key: "blog",
       href: "/blog",
       label: tHeader("blog"),

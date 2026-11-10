@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import FloatingTrialButton from "@/components/FloatingTrialButton";
+import FloatingChatWidget from "@/features/ai-assistant/components/FloatingChatWidget";
 import JsonLd from "@/components/seo/JsonLd";
 import I18nInitializer from "@/components/I18nInitializer";
 import { Open_Sans } from "next/font/google";
@@ -169,6 +170,7 @@ export default async function LocaleLayout({
             <I18nInitializer />
             <div className="layout">{children}</div>
             <FloatingTrialButton />
+            <FloatingChatWidget />
           </div>
         </NextIntlClientProvider>
       </body>

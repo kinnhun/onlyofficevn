@@ -20,6 +20,15 @@ const ALIAS_PATHS = [
   "installation",
 ];
 
+const AI_REDIRECT_TARGET = "/tro-ly-onlyoffice";
+const AI_ALIAS_PATHS = [
+  "tro-ly-ai",
+  "trolyai",
+  "trolyonlyoffice",
+  "ai-support",
+  "ai-assistant",
+];
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -34,6 +43,12 @@ export default function middleware(request: NextRequest) {
     if (pathToCheck && ALIAS_PATHS.includes(pathToCheck)) {
       const targetUrl = request.nextUrl.clone();
       targetUrl.pathname = locale === "vi" ? REDIRECT_TARGET : `/${locale}${REDIRECT_TARGET}`;
+      return NextResponse.redirect(targetUrl, 307);
+    }
+
+    if (pathToCheck && AI_ALIAS_PATHS.includes(pathToCheck)) {
+      const targetUrl = request.nextUrl.clone();
+      targetUrl.pathname = locale === "vi" ? AI_REDIRECT_TARGET : `/${locale}${AI_REDIRECT_TARGET}`;
       return NextResponse.redirect(targetUrl, 307);
     }
   }

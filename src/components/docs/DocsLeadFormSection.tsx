@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { message } from "antd";
 import { useLocale } from "next-intl";
 import { CheckCircle2, MessageCircle, Send, Phone } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
@@ -22,7 +23,7 @@ export default function DocsLeadFormSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.phone || !formData.fullName) {
-      alert(isVi ? "Vui lòng nhập Họ tên và Số điện thoại" : "Please provide your name and phone number");
+      message.warning(isVi ? "Vui lòng nhập Họ tên và Số điện thoại" : "Please provide your name and phone number");
       return;
     }
     setSubmitted(true);

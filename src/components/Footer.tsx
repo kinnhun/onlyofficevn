@@ -82,6 +82,7 @@ export default function Footer() {
         { label: isVi ? "Kỹ sư Mercy Tech hỗ trợ 1-1" : "Mercy Tech 1-on-1 Engineering Support", href: "https://www.messenger.com/t/286163107904324", isExternal: true },
         { label: isVi ? "Email: contact@mercytechglobal.com" : "Email: contact@mercytechglobal.com", href: "mailto:contact@mercytechglobal.com", isExternal: true },
         { label: isVi ? "Trụ sở: 175/3 Nguyễn Thị Be, TP.HCM" : "HQ: 175/3 Nguyen Thi Be, HCMC", href: "#" },
+        { label: isVi ? "Trợ lý AI Hỗ trợ 24/7" : "AI Assistant 24/7", href: "/tro-ly-onlyoffice" },
         { label: isVi ? "Trung tâm trợ giúp ONLYOFFICE" : "ONLYOFFICE Help Center", href: "/docs" },
         { label: isVi ? "Hướng dẫn cài đặt & Đổi máy (MCT5)" : "Installation & Transfer Guide (MCT5)", href: "/huong-dan-cai-dat" },
       ],
