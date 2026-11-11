@@ -1,19 +1,20 @@
 "use client";
 
 import React, { useRef } from "react";
+import { Button, Grid } from "antd";
 import {
-  Download,
-  Type,
-  Key,
-  ImagePlus,
-  FileSpreadsheet,
-  Keyboard,
-  Headset,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+  DownloadOutlined,
+  FontSizeOutlined,
+  KeyOutlined,
+  PictureOutlined,
+  TableOutlined,
+  LaptopOutlined,
+  CustomerServiceOutlined,
+  LeftOutlined,
+  RightOutlined,
+} from "@ant-design/icons";
 
-type QuickSuggestionsProps = {
+export type QuickSuggestionsProps = {
   onSelect: (question: string) => void;
   onAttachImage?: () => void;
   disabled?: boolean;
@@ -22,32 +23,35 @@ type QuickSuggestionsProps = {
 const SUGGESTIONS = [
   {
     label: "Cài đặt phần mềm",
-    icon: Download,
+    icon: <DownloadOutlined style={{ color: "#ea580c" }} />,
     query: "Hướng dẫn chọn và cài đặt phần mềm ONLYOFFICE đúng hệ điều hành",
   },
   {
     label: "Font và tiếng Việt",
-    icon: Type,
+    icon: <FontSizeOutlined style={{ color: "#ea580c" }} />,
     query: "Văn bản mở lên bị lỗi font .VnTime ô vuông thì xử lý thế nào?",
   },
   {
-    label: "Tài khoản/Key Mercy",
-    icon: Key,
-    query: "Hướng dẫn đăng nhập tài khoản Mercy, nhập key hoặc dùng thử 7 ngày",
+    label: "Tài khoản & Demo 7 ngày",
+    icon: <KeyOutlined style={{ color: "#ea580c" }} />,
+    query:
+      "Hướng dẫn đăng nhập tài khoản Mercy, nhập key hoặc dùng thử Demo 7 ngày",
   },
   {
     label: "Lỗi gõ tiếng Việt",
-    icon: Keyboard,
-    query: "Khắc phục lỗi gõ tiếng Việt bị nhảy chữ hoặc mất dấu trong ONLYOFFICE",
+    icon: <LaptopOutlined style={{ color: "#ea580c" }} />,
+    query:
+      "Khắc phục lỗi gõ tiếng Việt bị nhảy chữ hoặc mất dấu trong ONLYOFFICE",
   },
   {
     label: "Công thức bảng tính",
-    icon: FileSpreadsheet,
-    query: "Bảng tính báo lỗi công thức hoặc sai định dạng ngày tháng số tiền",
+    icon: <TableOutlined style={{ color: "#ea580c" }} />,
+    query:
+      "Bảng tính báo lỗi công thức hoặc sai định dạng ngày tháng số tiền",
   },
   {
     label: "Gặp kỹ thuật viên",
-    icon: Headset,
+    icon: <CustomerServiceOutlined style={{ color: "#ea580c" }} />,
     query: "Tôi cần chuyển kỹ thuật viên hỗ trợ kiểm tra trực tiếp",
   },
 ];
@@ -58,72 +62,130 @@ export function QuickSuggestions({
   disabled,
 }: QuickSuggestionsProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const screens = Grid.useBreakpoint();
+  const isSm = Object.keys(screens).length > 0 ? Boolean(screens.sm) : true;
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const offset = direction === "left" ? -220 : 220;
+      const offset = direction === "left" ? -240 : 240;
       scrollRef.current.scrollBy({ left: offset, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="relative px-3 sm:px-4 py-2 border-t border-slate-200 bg-[#F9FAFB]">
-      <div className="max-w-4xl mx-auto flex items-center gap-2">
-        <span className="text-[11px] font-bold text-[#475467] shrink-0">
+    <div
+      style={{
+        padding: isSm ? "8px 18px" : "8px 12px",
+        borderTop: "1px solid #e2e8f0",
+        backgroundColor: "#f8fafc",
+        flexShrink: 0,
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "880px",
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        }}
+      >
+        <span
+          style={{
+            fontSize: "11.5px",
+            fontWeight: 700,
+            color: "#64748b",
+            flexShrink: 0,
+          }}
+        >
           Gợi ý:
         </span>
 
         <div
           ref={scrollRef}
-          className="flex-1 flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5"
+          className="no-scrollbar"
+          style={{
+            flex: 1,
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            overflowX: "auto",
+            padding: "2px 0",
+          }}
         >
           {onAttachImage && (
-            <button
-              type="button"
+            <Button
+              shape="round"
+              size="small"
               disabled={disabled}
+              icon={<PictureOutlined />}
               onClick={onAttachImage}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold text-[#C4320A] bg-[#FFF4EE] hover:bg-[#FFE6D8] border border-[#FF520D]/30 whitespace-nowrap transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
+              style={{
+                backgroundColor: "#fff7ed",
+                borderColor: "#fdba74",
+                color: "#c2410c",
+                fontWeight: 700,
+                fontSize: "12px",
+                height: "30px",
+                padding: "0 12px",
+                flexShrink: 0,
+              }}
             >
-              <ImagePlus className="w-3.5 h-3.5 shrink-0" />
-              <span>Gửi ảnh cần hỗ trợ</span>
-            </button>
+              Gửi ảnh cần hỗ trợ
+            </Button>
           )}
 
-          {SUGGESTIONS.map((item) => {
-            const Icon = item.icon;
-            return (
-              <button
-                key={item.label}
-                type="button"
-                disabled={disabled}
-                onClick={() => onSelect(item.query)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-[#101828] bg-white hover:bg-[#FFF4EE] border border-slate-200 hover:border-[#FF520D]/50 whitespace-nowrap transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
-              >
-                <Icon className="w-3.5 h-3.5 text-[#FF520D] shrink-0" />
-                <span>{item.label}</span>
-              </button>
-            );
-          })}
+          {SUGGESTIONS.map((item) => (
+            <Button
+              key={item.label}
+              shape="round"
+              size="small"
+              disabled={disabled}
+              icon={item.icon}
+              onClick={() => onSelect(item.query)}
+              style={{
+                backgroundColor: "#ffffff",
+                borderColor: "#e2e8f0",
+                color: "#334155",
+                fontWeight: 600,
+                fontSize: "12px",
+                height: "30px",
+                padding: "0 12px",
+                flexShrink: 0,
+              }}
+            >
+              {item.label}
+            </Button>
+          ))}
         </div>
 
-        <div className="hidden sm:flex items-center gap-0.5 shrink-0 pl-1">
-          <button
-            type="button"
-            onClick={() => scroll("left")}
-            aria-label="Cuộn gợi ý sang trái"
-            className="p-1 rounded-full hover:bg-slate-200/70 text-[#475467] hover:text-[#101828] transition-colors cursor-pointer"
+        {isSm && (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+              flexShrink: 0,
+            }}
           >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <button
-            type="button"
-            onClick={() => scroll("right")}
-            aria-label="Cuộn gợi ý sang phải"
-            className="p-1 rounded-full hover:bg-slate-200/70 text-[#475467] hover:text-[#101828] transition-colors cursor-pointer"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
+            <Button
+              type="text"
+              shape="circle"
+              size="small"
+              icon={<LeftOutlined style={{ fontSize: 11, color: "#64748b" }} />}
+              onClick={() => scroll("left")}
+              aria-label="Cuộn gợi ý sang trái"
+            />
+            <Button
+              type="text"
+              shape="circle"
+              size="small"
+              icon={<RightOutlined style={{ fontSize: 11, color: "#64748b" }} />}
+              onClick={() => scroll("right")}
+              aria-label="Cuộn gợi ý sang phải"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

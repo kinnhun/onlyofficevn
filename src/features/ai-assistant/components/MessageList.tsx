@@ -1,20 +1,20 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { MessageItem } from "./MessageItem";
+import React, { useEffect, useRef, useState } from "react";
+import { Card, Row, Col, Tag, Avatar, Spin, Grid } from "antd";
 import {
-  Bot,
-  Download,
-  Key,
-  Type,
-  ImagePlus,
-  Loader2,
-  ShieldCheck,
-  ArrowRight,
-} from "lucide-react";
+  RobotOutlined,
+  DownloadOutlined,
+  KeyOutlined,
+  FontSizeOutlined,
+  PictureOutlined,
+  SafetyCertificateOutlined,
+  ArrowRightOutlined,
+} from "@ant-design/icons";
+import { MessageItem } from "./MessageItem";
 import type { ChatMessage, ProcessingStage } from "../types";
 
-type MessageListProps = {
+export type MessageListProps = {
   messages: ChatMessage[];
   isLoading: boolean;
   stage?: ProcessingStage;
@@ -34,6 +34,56 @@ const STAGE_LABELS: Record<string, string> = {
   preparing_answer: "Đang chuẩn bị câu trả lời...",
 };
 
+type StarterCardItem = {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  actionType: "query" | "attach";
+  query: string;
+};
+
+const STARTER_CARDS: StarterCardItem[] = [
+  {
+    id: "card_install",
+    title: "Cài đặt phần mềm",
+    description:
+      "Chọn đúng bộ cài Windows, macOS, Linux và xử lý lỗi thiếu DLL hoặc không mở được ứng dụng.",
+    icon: <DownloadOutlined style={{ fontSize: 20, color: "#ea580c" }} />,
+    actionType: "query",
+    query: "Hướng dẫn cài đặt phần mềm ONLYOFFICE phù hợp hệ điều hành",
+  },
+  {
+    id: "card_font",
+    title: "Font và tiếng Việt",
+    description:
+      "Xử lý lỗi font TCVN3/VNI, xung đột bộ gõ Unikey, lệch bảng và canh lề chuẩn Nghị định 30.",
+    icon: <FontSizeOutlined style={{ fontSize: 20, color: "#ea580c" }} />,
+    actionType: "query",
+    query:
+      "Văn bản bị lỗi font .VnTime ô vuông hoặc lỗi gõ tiếng Việt thì kiểm tra thế nào?",
+  },
+  {
+    id: "card_key",
+    title: "Tài khoản & Demo 7 ngày",
+    description:
+      "Hướng dẫn dùng thử Demo 7 ngày miễn phí, nhập mã kích hoạt/tem cào Mercy và cài lại máy tính.",
+    icon: <KeyOutlined style={{ fontSize: 20, color: "#ea580c" }} />,
+    actionType: "query",
+    query:
+      "Hướng dẫn đăng nhập tài khoản, dùng thử Demo 7 ngày và nhập key/tem cào Mercy",
+  },
+  {
+    id: "card_image",
+    title: "Gửi ảnh cần hỗ trợ",
+    description:
+      "Đính kèm hoặc dán (Ctrl+V) tối đa 3 ảnh màn hình lỗi, so sánh Trước/Sau hoặc mẫu bố cục mong muốn.",
+    icon: <PictureOutlined style={{ fontSize: 20, color: "#ea580c" }} />,
+    actionType: "attach",
+    query: "Em muốn gửi ảnh chụp màn hình lỗi để kiểm tra",
+  },
+];
+
 export function MessageList({
   messages,
   isLoading,
@@ -44,6 +94,9 @@ export function MessageList({
   onFeedback,
 }: MessageListProps) {
   const bottomRef = useRef<HTMLDivElement>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const screens = Grid.useBreakpoint();
+  const isSm = Object.keys(screens).length > 0 ? Boolean(screens.sm) : true;
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -51,137 +104,236 @@ export function MessageList({
 
   if (messages.length === 0) {
     return (
-      <div className="flex-1 p-4 sm:p-8 flex flex-col items-center justify-center overflow-y-auto bg-[#F9FAFB]">
-        <div className="max-w-3xl w-full text-center space-y-6 animate-in fade-in duration-200">
-          <div className="inline-flex items-center justify-center relative">
-            <div className="w-16 h-16 rounded-2xl bg-[#FF520D] text-white flex items-center justify-center shadow-md">
-              <Bot className="w-8 h-8" />
+      <div
+        style={{
+          flex: 1,
+          padding: isSm ? "32px 24px" : "20px 14px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          overflowY: "auto",
+          background:
+            "linear-gradient(180deg, #ffffff 0%, #f8fafc 55%, #fff7ed 100%)",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "780px",
+            width: "100%",
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "22px",
+          }}
+        >
+          {/* Hero AI Icon & Light Badge */}
+          <div
+            style={{
+              display: "inline-flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "10px",
+            }}
+          >
+            <div
+              style={{
+                padding: "8px",
+                borderRadius: "24px",
+                backgroundColor: "#fff7ed",
+                border: "1px solid #ffedd5",
+                boxShadow: "0 8px 24px rgba(234, 88, 12, 0.12)",
+              }}
+            >
+              <Avatar
+                shape="square"
+                size={60}
+                icon={<RobotOutlined style={{ fontSize: 30, color: "#ffffff" }} />}
+                style={{
+                  background:
+                    "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
+                  borderRadius: "16px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              />
             </div>
-            <span className="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-[#101828] text-white text-[10px] font-bold tracking-wide border-2 border-white">
-              Trợ lý AI
-            </span>
+
+            <Tag
+              color="orange"
+              style={{
+                margin: 0,
+                padding: "2px 12px",
+                borderRadius: "999px",
+                fontWeight: 700,
+                fontSize: "11.5px",
+                border: "1px solid #fdba74",
+                backgroundColor: "#fff7ed",
+                color: "#c2410c",
+              }}
+            >
+              Trợ lý AI · Hỗ trợ bởi Mercy Tech
+            </Tag>
           </div>
 
-          <div className="space-y-2">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#101828] tracking-tight">
+          {/* Heading & Friendly Greeting */}
+          <div style={{ maxWidth: "600px" }}>
+            <h2
+              style={{
+                margin: "0 0 8px 0",
+                fontSize: isSm ? "28px" : "22px",
+                fontWeight: 800,
+                color: "#1e293b",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.25,
+              }}
+            >
               Trợ lý kỹ thuật ONLYOFFICE
             </h2>
-            <p className="text-xs font-semibold text-[#FF520D]">
-              Hỗ trợ bởi Mercy Tech · Trợ lý AI
-            </p>
-            <p className="text-sm text-[#344054] max-w-xl mx-auto leading-relaxed pt-1">
-              Chào anh/chị, em là trợ lý AI hỗ trợ ONLYOFFICE của Mercy Tech. Anh/chị
-              có thể mô tả vấn đề hoặc gửi ảnh màn hình để em cùng kiểm tra.
-            </p>
-          </div>
-
-          {/* 4 Official Starter Cards per Specification Section 4.1 */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
-            <button
-              type="button"
-              onClick={() =>
-                onSelectAction?.("Hướng dẫn cài đặt phần mềm ONLYOFFICE phù hợp hệ điều hành")
-              }
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#FF520D] hover:shadow-sm transition-all flex items-start gap-3 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#FFF4EE] text-[#FF520D] flex items-center justify-center shrink-0">
-                <Download className="w-5 h-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#101828]">
-                    Cài đặt phần mềm
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#FF520D] opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-                <p className="text-xs text-[#475467] mt-1 leading-relaxed">
-                  Chọn đúng bộ cài Windows, macOS, Linux và xử lý lỗi thiếu DLL hoặc không mở được ứng dụng.
-                </p>
-              </div>
-            </button>
-
-            <button
-              type="button"
-              onClick={() =>
-                onSelectAction?.(
-                  "Văn bản bị lỗi font .VnTime ô vuông hoặc lỗi gõ tiếng Việt thì kiểm tra thế nào?"
-                )
-              }
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#FF520D] hover:shadow-sm transition-all flex items-start gap-3 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#FFF4EE] text-[#FF520D] flex items-center justify-center shrink-0">
-                <Type className="w-5 h-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#101828]">
-                    Font và tiếng Việt
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#FF520D] opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-                <p className="text-xs text-[#475467] mt-1 leading-relaxed">
-                  Xử lý lỗi font TCVN3/VNI, xung đột bộ gõ Unikey, lệch bảng và canh lề chuẩn Nghị định 30.
-                </p>
-              </div>
-            </button>
-
-            <button
-              type="button"
-              onClick={() =>
-                onSelectAction?.(
-                  "Hướng dẫn đăng nhập tài khoản, dùng thử 7 ngày và nhập key/tem cào Mercy"
-                )
-              }
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#FF520D] hover:shadow-sm transition-all flex items-start gap-3 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
-            >
-              <div className="w-10 h-10 rounded-xl bg-[#FFF4EE] text-[#FF520D] flex items-center justify-center shrink-0">
-                <Key className="w-5 h-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#101828]">
-                    Tài khoản/Key Mercy
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#FF520D] opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-                <p className="text-xs text-[#475467] mt-1 leading-relaxed">
-                  Hướng dẫn dùng thử 7 ngày, nhập mã kích hoạt, cài lại Windows và tra cứu theo phiên đăng nhập.
-                </p>
-              </div>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => {
-                if (onTriggerAttachImage) {
-                  onTriggerAttachImage();
-                } else {
-                  onSelectAction?.("Em muốn gửi ảnh chụp màn hình lỗi để kiểm tra");
-                }
+            <p
+              style={{
+                margin: 0,
+                fontSize: "14px",
+                color: "#475569",
+                lineHeight: 1.6,
               }}
-              className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-[#FF520D] hover:shadow-sm transition-all flex items-start gap-3 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF520D]"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#FFF4EE] text-[#FF520D] flex items-center justify-center shrink-0">
-                <ImagePlus className="w-5 h-5" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#101828]">
-                    Gửi ảnh cần hỗ trợ
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#FF520D] opacity-60 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-                <p className="text-xs text-[#475467] mt-1 leading-relaxed">
-                  Đính kèm hoặc dán (Ctrl+V) tối đa 3 ảnh lỗi, so sánh Trước/Sau hoặc mẫu bố cục mong muốn.
-                </p>
-              </div>
-            </button>
+              Chào anh/chị, em là trợ lý AI hỗ trợ ONLYOFFICE của Mercy Tech.
+              Anh/chị có thể chọn nhanh chủ đề bên dưới, mô tả tình trạng đang gặp
+              hoặc dán ảnh chụp màn hình (<strong>Ctrl + V</strong>) để em cùng kiểm tra.
+            </p>
           </div>
 
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-[11px] text-[#475467]">
-            <span className="inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#FF520D]" />
-              <span>Không cần cung cấp mật khẩu, OTP hoặc mã kích hoạt đầy đủ</span>
+          {/* 4 Official Ant Design Starter Cards */}
+          <div style={{ width: "100%", textAlign: "left" }}>
+            <Row gutter={[14, 14]}>
+              {STARTER_CARDS.map((item) => {
+                const isHovered = hoveredCard === item.id;
+                return (
+                  <Col xs={24} sm={12} key={item.id}>
+                    <Card
+                      hoverable
+                      onMouseEnter={() => setHoveredCard(item.id)}
+                      onMouseLeave={() => setHoveredCard(null)}
+                      onClick={() => {
+                        if (item.actionType === "attach") {
+                          if (onTriggerAttachImage) {
+                            onTriggerAttachImage();
+                          } else {
+                            onSelectAction?.(item.query);
+                          }
+                        } else {
+                          onSelectAction?.(item.query);
+                        }
+                      }}
+                      styles={{
+                        body: {
+                          padding: "16px 18px",
+                          display: "flex",
+                          alignItems: "flex-start",
+                          gap: "14px",
+                        },
+                      }}
+                      style={{
+                        height: "100%",
+                        borderRadius: "16px",
+                        backgroundColor: "#ffffff",
+                        borderColor: isHovered ? "#fb923c" : "#e2e8f0",
+                        boxShadow: isHovered
+                          ? "0 8px 20px rgba(234, 88, 12, 0.10)"
+                          : "0 1px 3px rgba(15, 23, 42, 0.04)",
+                        transition: "all 0.2s ease",
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          borderRadius: "12px",
+                          backgroundColor: isHovered ? "#ffedd5" : "#fff7ed",
+                          border: "1px solid #fed7aa",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                          transition: "background-color 0.2s ease",
+                        }}
+                      >
+                        {item.icon}
+                      </div>
+
+                      <div style={{ flex: 1, minWidth: 0 }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            gap: "8px",
+                            marginBottom: "4px",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontSize: "14px",
+                              fontWeight: 700,
+                              color: isHovered ? "#ea580c" : "#1e293b",
+                              transition: "color 0.2s ease",
+                            }}
+                          >
+                            {item.title}
+                          </span>
+                          <ArrowRightOutlined
+                            style={{
+                              fontSize: 13,
+                              color: "#ea580c",
+                              opacity: isHovered ? 1 : 0.55,
+                              transform: isHovered
+                                ? "translateX(3px)"
+                                : "translateX(0)",
+                              transition: "all 0.2s ease",
+                            }}
+                          />
+                        </div>
+                        <p
+                          style={{
+                            margin: 0,
+                            fontSize: "12.5px",
+                            color: "#64748b",
+                            lineHeight: 1.55,
+                          }}
+                        >
+                          {item.description}
+                        </p>
+                      </div>
+                    </Card>
+                  </Col>
+                );
+              })}
+            </Row>
+          </div>
+
+          {/* Privacy & Security Reassurance Pill */}
+          <div
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "6px 14px",
+              borderRadius: "999px",
+              backgroundColor: "#ffffff",
+              border: "1px solid #e2e8f0",
+              fontSize: "12px",
+              color: "#475569",
+            }}
+          >
+            <SafetyCertificateOutlined
+              style={{ color: "#ea580c", fontSize: 14 }}
+            />
+            <span>
+              Bảo mật thông tin: Không cần cung cấp mật khẩu, mã OTP hoặc mã kích
+              hoạt đầy đủ
             </span>
           </div>
         </div>
@@ -190,11 +342,27 @@ export function MessageList({
   }
 
   const stageText =
-    STAGE_LABELS[stage] || "Đang tìm hướng dẫn phù hợp và chuẩn bị câu trả lời...";
+    STAGE_LABELS[stage] ||
+    "Đang tìm hướng dẫn phù hợp và chuẩn bị câu trả lời...";
 
   return (
-    <div className="flex-1 p-4 sm:p-6 overflow-y-auto bg-[#F9FAFB]">
-      <div className="max-w-4xl mx-auto space-y-4">
+    <div
+      style={{
+        flex: 1,
+        padding: isSm ? "24px" : "14px",
+        overflowY: "auto",
+        backgroundColor: "#f8fafc",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "880px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          gap: "16px",
+        }}
+      >
         {messages.map((msg) => (
           <MessageItem
             key={msg.id}
@@ -209,13 +377,42 @@ export function MessageList({
           <div
             role="status"
             aria-live="polite"
-            className="flex gap-2.5 items-center justify-start w-full animate-in fade-in duration-150"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "10px",
+              justifyContent: "flex-start",
+              width: "100%",
+            }}
           >
-            <div className="w-8 h-8 rounded-xl bg-[#FFF4EE] border border-[#FF520D]/30 flex items-center justify-center text-[#FF520D] shrink-0">
-              <Loader2 className="w-4 h-4 animate-spin" />
-            </div>
-            <div className="rounded-2xl rounded-tl-xs px-4 py-2.5 bg-white border border-slate-200 text-[#101828] text-xs font-medium shadow-2xs">
-              {stageText}
+            <Avatar
+              size={32}
+              icon={<RobotOutlined />}
+              style={{
+                backgroundColor: "#fff7ed",
+                color: "#ea580c",
+                border: "1px solid #fed7aa",
+                borderRadius: "8px",
+                flexShrink: 0,
+              }}
+            />
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "10px",
+                padding: "10px 16px",
+                borderRadius: "14px 14px 14px 2px",
+                backgroundColor: "#ffffff",
+                border: "1px solid #e2e8f0",
+                color: "#334155",
+                fontSize: "12.5px",
+                fontWeight: 500,
+                boxShadow: "0 1px 3px rgba(0, 0, 0, 0.04)",
+              }}
+            >
+              <Spin size="small" />
+              <span>{stageText}</span>
             </div>
           </div>
         )}

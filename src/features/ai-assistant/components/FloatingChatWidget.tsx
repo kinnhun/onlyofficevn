@@ -117,7 +117,7 @@ export function FloatingChatWidget() {
     }
   }, [messages.length, isLoading, isOpen]);
 
-  if (pathname === "/tro-ly-onlyoffice" || pathname?.startsWith("/admin")) {
+  if (pathname?.includes("/tro-ly-onlyoffice") || pathname?.startsWith("/admin")) {
     return null;
   }
 
