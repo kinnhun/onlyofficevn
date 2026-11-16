@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { Link } from "@/i18n/routing";
 import { X, ChevronRight, Download, Phone, MessageCircle, ChevronDown } from "lucide-react";
 import { openMessengerChat } from "@/lib/messenger";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 interface HeaderMobileDrawerProps {
   isOpen: boolean;
@@ -443,7 +444,13 @@ export default function HeaderMobileDrawer({
         <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "auto", paddingTop: "14px" }}>
           <Link
             href="/demo"
-            onClick={onClose}
+            onClick={() => {
+              trackAnalyticsEvent("header_trial_nav_click", {
+                button_location: "mobile_drawer_nav",
+                button_label: tHeader("download"),
+              });
+              onClose();
+            }}
             style={{
               backgroundColor: "#ff6f3d",
               color: "#ffffff",
@@ -467,6 +474,7 @@ export default function HeaderMobileDrawer({
             href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-location="mobile_drawer_contact"
             onClick={(e) => {
               onClose();
               openMessengerChat(e);

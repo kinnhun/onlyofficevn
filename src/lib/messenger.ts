@@ -1,3 +1,6 @@
+import type React from "react";
+import { trackContactClick } from "./analytics";
+
 /**
  * Utility to handle opening Facebook Messenger chat directly.
  * 
@@ -18,12 +21,24 @@ export const ONLYOFFICE_INTENT_ANDROID = `intent://user-thread/${ONLYOFFICE_PAGE
  *   If user doesn't switch to app within 2.5s, falls back to direct thread web URL.
  * - On Desktop: Opens https://www.messenger.com/t/286163107904324 in a new tab.
  */
-export function openMessengerChat(e?: React.MouseEvent | React.FormEvent | MouseEvent) {
+export function openMessengerChat(
+  e?: React.MouseEvent | React.FormEvent | MouseEvent,
+  trackingLocation?: string
+) {
   if (e && typeof e.preventDefault === "function") {
     e.preventDefault();
   }
 
   if (typeof window === "undefined") return;
+
+  const targetEl = e?.currentTarget instanceof HTMLElement ? e.currentTarget : null;
+  const location =
+    trackingLocation ||
+    targetEl?.getAttribute("data-analytics-location") ||
+    targetEl?.id ||
+    "messenger_cta";
+  const label = targetEl?.textContent?.trim()?.slice(0, 80) || undefined;
+  trackContactClick(location, label);
 
   const ua = navigator.userAgent || navigator.vendor || (window as any).opera || "";
   const isIOS =

@@ -10,6 +10,7 @@ import {
   ReloadOutlined,
 } from "@ant-design/icons";
 import { openMessengerChat } from "@/lib/messenger";
+import { trackAnalyticsEvent, trackDownloadTrial } from "@/lib/analytics";
 import { usePathname } from "@/i18n/config";
 
 export default function FloatingTrialButton() {
@@ -34,6 +35,10 @@ export default function FloatingTrialButton() {
   }, []);
 
   const handleOpenAiAssistant = () => {
+    trackAnalyticsEvent("ai_assistant_open", {
+      button_location: "floating_ai_button",
+      button_label: isVi ? "Trợ lý AI" : "AI Assistant",
+    });
     window.dispatchEvent(new CustomEvent("open-onlyoffice-ai-chat"));
   };
 
@@ -55,7 +60,9 @@ export default function FloatingTrialButton() {
     return () => observer.disconnect();
   }, []);
 
-  const handleDownload = () => {
+  const handleDownload = (source = "floating_trial_button") => {
+    trackDownloadTrial(source, isVi ? "Tải Bản Dùng Thử" : "Download Trial");
+
     const link = document.createElement("a");
     link.href = "https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe";
     link.download = "Setup-OnlyOffice-Mercy.exe";
@@ -153,6 +160,7 @@ export default function FloatingTrialButton() {
             icon={<MessageOutlined style={{ fontSize: "16px", color: "#ea580c" }} />}
             href="https://www.messenger.com/t/286163107904324"
             target="_blank"
+            data-analytics-location="floating_contact"
             onClick={openMessengerChat}
             style={{
               background: "#ffffff",
@@ -206,7 +214,7 @@ export default function FloatingTrialButton() {
           shape="round"
           size="large"
           icon={<DownloadOutlined style={{ fontSize: "19px", color: "#ffffff" }} />}
-          onClick={handleDownload}
+          onClick={() => handleDownload("floating_trial_button")}
           style={{
             background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
             border: "none",
@@ -387,7 +395,7 @@ export default function FloatingTrialButton() {
           <Button
             size="large"
             icon={<ReloadOutlined />}
-            onClick={handleDownload}
+            onClick={() => handleDownload("floating_modal_redownload")}
             style={{ flex: 1, borderRadius: "8px", fontWeight: 600, height: "42px" }}
           >
             {isVi ? "Tải Lại .EXE" : "Re-download"}
@@ -398,6 +406,7 @@ export default function FloatingTrialButton() {
             icon={<MessageOutlined />}
             href="https://www.messenger.com/t/286163107904324"
             target="_blank"
+            data-analytics-location="floating_modal_contact"
             onClick={openMessengerChat}
             style={{
               flex: 1,

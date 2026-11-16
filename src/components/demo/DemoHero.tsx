@@ -3,6 +3,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { FileText, Download, ShieldAlert, CheckCircle2, ShieldCheck, Zap, ArrowRight } from "lucide-react";
+import { trackDownloadTrial } from "@/lib/analytics";
 
 export default function DemoHero() {
   const t = useTranslations("demo.hero");
@@ -292,6 +293,7 @@ export default function DemoHero() {
           <a
             href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
             download="Setup-OnlyOffice-Mercy.exe"
+            onClick={() => trackDownloadTrial("demo_hero_banner", "Dùng Thử 7 Ngày (PC) - Tải & Dùng Thử Ngay")}
             className="demo-hero-cta-btn"
           >
             {/* Subtle background glow element */}

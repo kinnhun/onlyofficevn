@@ -9,6 +9,7 @@ import HeaderMobileDrawer from "@/components/HeaderMobileDrawer";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import HeaderEnterpriseDropdown from "@/components/HeaderEnterpriseDropdown";
 import { openMessengerChat } from "@/lib/messenger";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 
 export default function Header() {
   const tHeader = useTranslations("header");
@@ -290,6 +291,12 @@ export default function Header() {
             id="oo-menu-item-btn-download"
             href="/demo"
             className="oo-header-btn-download"
+            onClick={() =>
+              trackAnalyticsEvent("header_trial_nav_click", {
+                button_location: "header_nav",
+                button_label: tHeader("download"),
+              })
+            }
             style={{
               background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
               color: "#ffffff",
@@ -332,6 +339,7 @@ export default function Header() {
             href="https://www.messenger.com/t/286163107904324"
             target="_blank"
             rel="noopener noreferrer"
+            data-analytics-location="header_contact"
             onClick={openMessengerChat}
             title={locale === "vi" ? "Liên hệ" : "Contact us"}
             style={{

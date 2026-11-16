@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Download, HelpCircle, X, CheckCircle2, ShieldCheck, Terminal, Copy, Check, Sparkles, Laptop, FileCheck } from "lucide-react";
+import { trackDownloadTrial } from "@/lib/analytics";
 
 export default function DemoPcActivation() {
   const t = useTranslations("demo.pcActivation");
@@ -187,6 +188,7 @@ export default function DemoPcActivation() {
               <a
                 href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                 download="Setup-OnlyOffice-Mercy.exe"
+                onClick={() => trackDownloadTrial("demo_pc_activation_primary", t("downloadBtn"))}
                 style={{
                   background: "linear-gradient(135deg, #ff6f3d 0%, #ea580c 100%)",
                   color: "#ffffff",
@@ -234,6 +236,7 @@ export default function DemoPcActivation() {
                 <a
                   href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
                   download="Setup-OnlyOffice-Mercy.exe"
+                  onClick={() => trackDownloadTrial("demo_pc_activation_secondary", t("downloadZip"))}
                   style={{
                     backgroundColor: "#ffffff",
                     color: "#334155",

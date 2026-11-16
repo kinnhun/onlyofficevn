@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { trackDownloadTrial } from "@/lib/analytics";
 import {
   Download,
   Key,
@@ -403,6 +404,7 @@ export default function InstallGuideClientView() {
                         <a
                           href="/Setup-OnlyOffice-Mercy.exe"
                           download="Setup-OnlyOffice-Mercy.exe"
+                          onClick={() => trackDownloadTrial("install_guide_transfer", "Tải Bộ Cài Cho Máy Mới (.exe)")}
                           className="ig-btn-primary"
                           style={{ padding: "12px 24px", fontSize: "14px" }}
                         >
@@ -544,6 +546,7 @@ export default function InstallGuideClientView() {
                           <a
                             href="/Setup-OnlyOffice-Mercy.exe"
                             download="Setup-OnlyOffice-Mercy.exe"
+                            onClick={() => trackDownloadTrial("install_guide_step1", "TẢI BỘ CÀI ĐẶT (.EXE)")}
                             className="ig-btn-primary"
                             style={{ padding: "10px 22px", fontSize: "13.5px" }}
                           >
@@ -730,6 +733,7 @@ export default function InstallGuideClientView() {
                           <a
                             href="/Setup-OnlyOffice-Mercy.exe"
                             download="Setup-OnlyOffice-Mercy.exe"
+                            onClick={() => trackDownloadTrial("install_guide_trial_step1", "TẢI BẢN DÙNG THỬ (.EXE)")}
                             className="ig-btn-primary"
                             style={{ padding: "10px 22px", fontSize: "13.5px" }}
                           >
@@ -1011,6 +1015,7 @@ export default function InstallGuideClientView() {
                   <a
                     href="/Setup-OnlyOffice-Mercy.exe"
                     download="Setup-OnlyOffice-Mercy.exe"
+                    onClick={() => trackDownloadTrial("install_guide_side_card", "TẢI BỘ CÀI ĐẶT (.EXE)")}
                     className="ig-btn-primary"
                     style={{ width: "100%", justifyContent: "center", boxSizing: "border-box" }}
                   >
