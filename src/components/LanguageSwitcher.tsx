@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { useLocale } from "next-intl";
-import { ChevronDown, Check } from "lucide-react";
+import { ChevronDown, Check, Globe } from "lucide-react";
 import { FlagVi, FlagEn } from "@/components/HeaderFlags";
 import {
   locales,
@@ -270,13 +270,19 @@ export default function LanguageSwitcher({
           }
         }}
       >
-        {renderFlag(currentLocale)}
-        <span style={{ fontWeight: 600, lineHeight: "1" }}>
+        <span className="oo-lang-globe-icon" style={{ alignItems: "center", flexShrink: 0 }}>
+          <Globe size={18} strokeWidth={1.9} />
+        </span>
+        <span className="oo-lang-flag-icon" style={{ alignItems: "center", flexShrink: 0 }}>
+          {renderFlag(currentLocale)}
+        </span>
+        <span className="oo-lang-text-wrap" style={{ fontWeight: 600, lineHeight: "1" }}>
           <span className="oo-lang-btn-text-full">{localeNames[currentLocale]}</span>
           <span className="oo-lang-btn-text-short">{localeShortNames[currentLocale]}</span>
         </span>
         <ChevronDown
           size={14}
+          className="oo-lang-chevron"
           style={{
             transition: "transform 0.2s ease",
             transform: isOpen

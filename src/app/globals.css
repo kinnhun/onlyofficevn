@@ -20057,7 +20057,18 @@ body.modal-open .oo-floating-trial-container {
   display: flex;
 }
 
+.oo-lang-globe-icon {
+  display: none;
+}
+
+.oo-lang-flag-icon {
+  display: inline-flex;
+}
+
 @media screen and (max-width: 1024px) {
+  .oo-header {
+    height: auto !important;
+  }
 
   /* Hide desktop nav on all mobile/tablet views */
   .desktop-header-nav {
@@ -20086,17 +20097,125 @@ body.modal-open .oo-floating-trial-container {
     width: 132px !important;
     min-width: 132px !important;
     height: 26px !important;
-    display: inline-block !important;
+    display: inline-flex !important;
+    align-items: center !important;
   }
 
-  /* Ensure hamburger button is visible */
+  /* Ensure hamburger button renders at crisp tap-target size (override legacy 20x14 rule) */
   .oo-header-hamburger {
     display: inline-flex !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 0 !important;
+    padding: 6px !important;
+    flex-shrink: 0 !important;
+    border-radius: 8px;
   }
 
   /* Hide badge and divider on small mobile screens to keep header sleek */
   .mercy-header-badge,
   .mercy-header-divider {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .oo-header-container {
+    height: 56px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+  }
+
+  .oo-header-left-group {
+    gap: 6px !important;
+  }
+
+  .oo-header-hamburger {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 4px !important;
+  }
+
+  .oo-header-logo {
+    width: 112px !important;
+    min-width: 112px !important;
+    height: 22px !important;
+  }
+
+  .oo-header-logo img {
+    height: 22px !important;
+    max-width: 112px !important;
+  }
+
+  .oo-header-right-group {
+    gap: 5px !important;
+  }
+
+  .oo-header-btn-download {
+    width: auto !important;
+    height: 32px !important;
+    padding: 0 9px !important;
+    font-size: 11.5px !important;
+    gap: 4px !important;
+    border-radius: 7px !important;
+    white-space: nowrap !important;
+  }
+
+  .oo-header-btn-download svg {
+    width: 13px !important;
+    height: 13px !important;
+  }
+
+  .oo-header-btn-download-text {
+    display: inline !important;
+    line-height: 1 !important;
+  }
+
+  .mercy-contact-btn {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    border-radius: 7px !important;
+  }
+
+  .mercy-contact-btn svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .oo-lang-flag-icon,
+  .oo-lang-text-wrap {
+    display: none !important;
+  }
+
+  .oo-lang-globe-icon {
+    display: inline-flex !important;
+    color: #334155 !important;
+  }
+
+  .oo-lang-dropdown-btn {
+    min-width: 0 !important;
+    width: auto !important;
+    height: 32px !important;
+    padding: 0 4px !important;
+    gap: 2px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .oo-lang-dropdown-btn:hover,
+  .oo-lang-dropdown-btn.open {
+    background-color: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .mercy-contact-btn {
     display: none !important;
   }
 }

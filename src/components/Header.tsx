@@ -101,7 +101,7 @@ export default function Header() {
         }}
       >
         {/* Left Side: Mobile Hamburger Button & Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
+        <div className="oo-header-left-group" style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
           {/* Mobile Hamburger Button (Strictly hidden on desktop via CSS) */}
           <button
             className="oo-header-hamburger en"
@@ -291,6 +291,7 @@ export default function Header() {
             id="oo-menu-item-btn-download"
             href="/demo"
             className="oo-header-btn-download"
+            aria-label={tHeader("download")}
             onClick={() =>
               trackAnalyticsEvent("header_trial_nav_click", {
                 button_location: "header_nav",
@@ -329,8 +330,8 @@ export default function Header() {
             }}
             title={locale === "vi" ? "Trải nghiệm dùng thử trực tuyến & kích hoạt 7 ngày" : "Online demo & 7-day trial activation"}
           >
-            <Download size={15} strokeWidth={2.5} style={{ flexShrink: 0 }} />
-            <span>{tHeader("download")}</span>
+            <Download size={16} strokeWidth={2.5} style={{ flexShrink: 0 }} />
+            <span className="oo-header-btn-download-text">{tHeader("download")}</span>
           </Link>
 
           {/* Contact Button */}
@@ -341,6 +342,7 @@ export default function Header() {
             rel="noopener noreferrer"
             data-analytics-location="header_contact"
             onClick={openMessengerChat}
+            aria-label={locale === "vi" ? "Liên hệ" : "Contact us"}
             title={locale === "vi" ? "Liên hệ" : "Contact us"}
             style={{
               background: "#fff7ed",
