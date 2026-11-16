@@ -23,8 +23,8 @@ export default function HeaderEnterpriseDropdown({ locale }: HeaderEnterpriseDro
   };
 
   const handleClickItem = (e: React.MouseEvent) => {
+    openMessengerChat(e, "header_enterprise_dropdown");
     setIsOpen(false);
-    openMessengerChat(e);
   };
 
   return (

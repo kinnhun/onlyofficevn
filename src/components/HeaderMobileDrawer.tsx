@@ -308,9 +308,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docs_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -320,9 +321,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docs_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -332,9 +334,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docs_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -348,9 +351,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docspace_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -360,9 +364,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docspace_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -372,9 +377,10 @@ export default function HeaderMobileDrawer({
                   href="https://www.messenger.com/t/286163107904324"
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-analytics-location="mobile_drawer_docspace_enterprise"
                   onClick={(e) => {
-                    onClose();
                     openMessengerChat(e);
+                    onClose();
                   }}
                   style={{ fontSize: "13.5px", color: "#334155", padding: "5px 6px", fontWeight: 600, textDecoration: "none" }}
                 >
@@ -386,9 +392,10 @@ export default function HeaderMobileDrawer({
                     href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-analytics-location="mobile_drawer_contact_sales"
                     onClick={(e) => {
-                      onClose();
                       openMessengerChat(e);
+                      onClose();
                     }}
                     style={{ fontSize: "13px", color: "#ea580c", padding: "4px 6px", fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}
                   >
@@ -399,9 +406,10 @@ export default function HeaderMobileDrawer({
                     href="https://www.messenger.com/t/286163107904324"
                     target="_blank"
                     rel="noopener noreferrer"
+                    data-analytics-location="mobile_drawer_request_demo"
                     onClick={(e) => {
-                      onClose();
                       openMessengerChat(e);
+                      onClose();
                     }}
                     style={{ fontSize: "13px", color: "#ea580c", padding: "4px 6px", fontWeight: 700, textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}
                   >

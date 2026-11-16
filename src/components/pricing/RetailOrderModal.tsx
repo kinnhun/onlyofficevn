@@ -78,7 +78,7 @@ export default function RetailOrderModal({ isOpen, onClose, defaultProduct }: Re
       (address ? `Địa chỉ giao: ${address}%0A` : "");
 
     setTimeout(() => {
-      openMessengerChat();
+      openMessengerChat(undefined, "retail_order_modal");
     }, 600);
   };
 

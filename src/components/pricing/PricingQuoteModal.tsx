@@ -63,7 +63,7 @@ export default function PricingQuoteModal({ isOpen, onClose, defaultProduct }: P
       (note ? `Ghi chú: ${note}%0A` : "");
 
     setTimeout(() => {
-      openMessengerChat();
+      openMessengerChat(undefined, "pricing_quote_modal");
     }, 600);
   };
 
