@@ -6,8 +6,6 @@ export type QuickSuggestionsProps = {
   disabled?: boolean;
 };
 
-export function QuickSuggestions(
-  _props: QuickSuggestionsProps
-) {
+export function QuickSuggestions() {
   return null;
 }

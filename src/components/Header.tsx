@@ -7,7 +7,6 @@ import { Download, Menu, X, MessageCircle } from "lucide-react";
 import { FlagVi, FlagEn } from "@/components/HeaderFlags";
 import HeaderMobileDrawer from "@/components/HeaderMobileDrawer";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import HeaderRightActions from "@/components/HeaderRightActions";
 import HeaderEnterpriseDropdown from "@/components/HeaderEnterpriseDropdown";
 import { openMessengerChat } from "@/lib/messenger";
 

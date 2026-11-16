@@ -65,6 +65,14 @@ const AUDIENCE_LABELS: Record<NonNullable<AiFaq["audience"]>, string> = {
   technician: "Nội bộ Kỹ thuật viên",
 };
 
+function withUpdatedTimestamp(faq: AiFaq, status?: FaqArticleStatus): AiFaq {
+  return {
+    ...faq,
+    ...(status ? { status } : {}),
+    updatedAt: Date.now(),
+  };
+}
+
 export function FaqManagementTab({
   faqs,
   onSaveFaq,
@@ -105,11 +113,7 @@ export function FaqManagementTab({
   const handleQuickToggleWithdraw = (faq: AiFaq) => {
     const nextStatus: FaqArticleStatus =
       faq.status === "withdrawn" ? "published" : "withdrawn";
-    onSaveFaq({
-      ...faq,
-      status: nextStatus,
-      updatedAt: Date.now(),
-    });
+    onSaveFaq(withUpdatedTimestamp(faq, nextStatus));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -117,10 +121,7 @@ export function FaqManagementTab({
     if (!editingFaq || !editingFaq.question.trim() || !editingFaq.answer.trim()) {
       return;
     }
-    onSaveFaq({
-      ...editingFaq,
-      updatedAt: Date.now(),
-    });
+    onSaveFaq(withUpdatedTimestamp(editingFaq));
     setIsModalOpen(false);
   };
 

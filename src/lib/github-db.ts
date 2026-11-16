@@ -7,6 +7,7 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { getRetailPrice, getDealerPrice } from "./pricing-config";
+import { invalidateStickersIndex } from "./stickers-indexer";
 
 // ─── Customer ───
 export interface Customer {
@@ -1042,7 +1043,6 @@ const STICKERS_CACHE_TTL_MS = 30000; // 30-second RAM cache
 export function invalidateStickersCache() {
   _stickersCache = null;
   try {
-    const { invalidateStickersIndex } = require("./stickers-indexer");
     invalidateStickersIndex();
   } catch { }
 }

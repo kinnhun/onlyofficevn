@@ -182,6 +182,7 @@ export function useSupportChat(pageContext?: string) {
   const [error, setError] = useState<string | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
   const initPromiseRef = useRef<Promise<string | null> | null>(null);
+  const conversationId = conversation?.id;
 
   useEffect(() => {
     try {
@@ -195,7 +196,7 @@ export function useSupportChat(pageContext?: string) {
   }, []);
 
   const ensureConversation = useCallback(async (): Promise<string | null> => {
-    if (conversation?.id) return conversation.id;
+    if (conversationId) return conversationId;
     if (initPromiseRef.current) return initPromiseRef.current;
 
     const promise = (async () => {
@@ -272,7 +273,7 @@ export function useSupportChat(pageContext?: string) {
 
     initPromiseRef.current = promise;
     return promise;
-  }, [conversation?.id, pageContext]);
+  }, [conversationId, pageContext]);
 
   useEffect(() => {
     void ensureConversation();
@@ -388,7 +389,7 @@ export function useSupportChat(pageContext?: string) {
         0
       );
 
-      for (let rawFile of selected) {
+      for (const rawFile of selected) {
         const file = await downscaleImageIfOversized(rawFile);
         const mime = (file.type || "").toLowerCase();
         if (!["image/png", "image/jpeg", "image/jpg", "image/webp"].includes(mime)) {
@@ -775,13 +776,13 @@ export function useSupportChat(pageContext?: string) {
         prev.map((m) => (m.id === messageId ? { ...m, feedback: outcome } : m))
       );
 
-      if (!conversation?.id) return { shouldSuggestHandoff: false };
+      if (!conversationId) return { shouldSuggestHandoff: false };
       try {
         const res = await fetch("/api/support/feedback", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            conversationId: conversation.id,
+            conversationId,
             messageId,
             outcome,
             note,
@@ -796,7 +797,7 @@ export function useSupportChat(pageContext?: string) {
         return { shouldSuggestHandoff: false };
       }
     },
-    [conversation?.id]
+    [conversationId]
   );
 
   const startNewIssueOrConversation = useCallback(async () => {
@@ -815,19 +816,19 @@ export function useSupportChat(pageContext?: string) {
   }, [ensureConversation]);
 
   const deleteCurrentConversation = useCallback(async () => {
-    if (!conversation?.id) {
+    if (!conversationId) {
       await startNewIssueOrConversation();
       return;
     }
     try {
-      await fetch(`/api/support/conversations/${conversation.id}`, {
+      await fetch(`/api/support/conversations/${conversationId}`, {
         method: "DELETE",
       });
     } catch {
       // Ignore network error and clear client state
     }
     await startNewIssueOrConversation();
-  }, [conversation?.id, startNewIssueOrConversation]);
+  }, [conversationId, startNewIssueOrConversation]);
 
   const markTicketCreated = useCallback((ticketId: string) => {
     setConversation((prev) =>

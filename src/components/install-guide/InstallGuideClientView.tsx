@@ -302,7 +302,7 @@ export default function InstallGuideClientView() {
                             <span>Thao tác bạn cần làm:</span>
                           </div>
                           <div>
-                            Mở file <strong>Setup-OnlyOffice-Mercy.exe</strong> trên máy cũ ➔ Nhấp chuột vào nút <strong>"Gỡ Key"</strong> (Deactivate) và chọn <strong>Xác nhận</strong>.
+                            Mở file <strong>Setup-OnlyOffice-Mercy.exe</strong> trên máy cũ ➔ Nhấp chuột vào nút <strong>&ldquo;Gỡ Key&rdquo;</strong> (Deactivate) và chọn <strong>Xác nhận</strong>.
                           </div>
                         </div>
 
@@ -312,7 +312,7 @@ export default function InstallGuideClientView() {
                             <span>Hiện tượng trên màn hình:</span>
                           </div>
                           <div>
-                            Màn hình sẽ hiển thị: <em>"Đã giải phóng bản quyền khỏi máy cũ thành công!"</em>. Máy chủ Mercy Tech tự động hoàn trả 1 lượt đổi máy vào mã Key của bạn.
+                            Màn hình sẽ hiển thị: <em>&ldquo;Đã giải phóng bản quyền khỏi máy cũ thành công!&rdquo;</em>. Máy chủ Mercy Tech tự động hoàn trả 1 lượt đổi máy vào mã Key của bạn.
                           </div>
                         </div>
                       </div>
@@ -383,8 +383,8 @@ export default function InstallGuideClientView() {
                           </div>
                           <ol style={{ margin: "6px 0 0", paddingLeft: "20px" }}>
                             <li style={{ marginBottom: "4px" }}>Mở máy tính mới lên, nhấp vào nút cam bên dưới để tải bộ cài.</li>
-                            <li style={{ marginBottom: "4px" }}>Mở file vừa tải lên ➔ Chọn tab <strong>"Key Bản Quyền Online"</strong>.</li>
-                            <li>Dán lại đúng dãy mã Key MCT5 (dạng <code>MCT5-XXXX...</code>) rồi bấm nút <strong>"KÍCH HOẠT LẠI BẢN QUYỀN"</strong>.</li>
+                            <li style={{ marginBottom: "4px" }}>Mở file vừa tải lên ➔ Chọn tab <strong>&ldquo;Key Bản Quyền Online&rdquo;</strong>.</li>
+                            <li>Dán lại đúng dãy mã Key MCT5 (dạng <code>MCT5-XXXX...</code>) rồi bấm nút <strong>&ldquo;KÍCH HOẠT LẠI BẢN QUYỀN&rdquo;</strong>.</li>
                           </ol>
                         </div>
 
@@ -571,7 +571,7 @@ export default function InstallGuideClientView() {
                           <div style={{ padding: "14px 16px", background: "#fff7ed", border: "1.5px solid #fed7aa", borderRadius: "10px", fontSize: "13.5px", color: "#7c2d12", lineHeight: "1.6" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "6px", fontWeight: 800, marginBottom: "6px", color: "#9a3412" }}>
                               <ShieldAlert size={16} color="#ea580c" />
-                              <span>NẾU MÀN HÌNH HIỆN BẢNG XANH "Windows protected your PC":</span>
+                              <span>NẾU MÀN HÌNH HIỆN BẢNG XANH &ldquo;Windows protected your PC&rdquo;:</span>
                             </div>
                             <ol style={{ margin: "0", paddingLeft: "20px" }}>
                               <li style={{ marginBottom: "2px" }}>Bấm vào dòng chữ gạch chân: <strong><u>More info</u></strong> (Thông tin thêm).</li>
@@ -605,7 +605,7 @@ export default function InstallGuideClientView() {
                             <div style={{ padding: "10px 14px", background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "8px", fontSize: "13.5px", color: "#1e293b", display: "flex", alignItems: "center", gap: "8px" }}>
                               <KeyRound size={16} color="#3b82f6" style={{ flexShrink: 0 }} />
                               <div>
-                                <strong>Có Key Online:</strong> Nhấp vào tab <em>"Key Bản Quyền Online"</em> và dán dãy Product Key vào ô nhập.
+                                <strong>Có Key Online:</strong> Nhấp vào tab <em>&ldquo;Key Bản Quyền Online&rdquo;</em> và dán dãy Product Key vào ô nhập.
                               </div>
                             </div>
                           </div>
@@ -675,7 +675,7 @@ export default function InstallGuideClientView() {
                           <span style={{ width: "28px", height: "28px", borderRadius: "50%", background: "#16a34a", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "14px" }}>
                             4
                           </span>
-                          <strong style={{ fontSize: "17px", color: "#0f172a" }}>Bấm "CÀI ĐẶT &amp; KÍCH HOẠT" ➔ Hoàn tất trong 30 giây</strong>
+                          <strong style={{ fontSize: "17px", color: "#0f172a" }}>Bấm &ldquo;CÀI ĐẶT &amp; KÍCH HOẠT&rdquo; ➔ Hoàn tất trong 30 giây</strong>
                         </div>
 
                         <div style={{ marginLeft: "38px" }}>
@@ -758,7 +758,7 @@ export default function InstallGuideClientView() {
                           <span style={{ width: "26px", height: "26px", borderRadius: "50%", background: "#16a34a", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "13px" }}>
                             3
                           </span>
-                          <strong style={{ fontSize: "16px", color: "#0f172a" }}>Bấm nút "CÀI ĐẶT &amp; DÙNG THỬ 7 NGÀY (MIỄN PHÍ)"</strong>
+                          <strong style={{ fontSize: "16px", color: "#0f172a" }}>Bấm nút &ldquo;CÀI ĐẶT &amp; DÙNG THỬ 7 NGÀY (MIỄN PHÍ)&rdquo;</strong>
                         </div>
                         <div style={{ marginLeft: "36px" }}>
                           <div style={{ padding: "12px 14px", background: "#ecfdf5", border: "1px solid #a7f3d0", borderRadius: "10px", fontSize: "14px", color: "#065f46", lineHeight: "1.6" }}>
@@ -799,7 +799,7 @@ export default function InstallGuideClientView() {
                             <span className="ig-zoom-pill"><Maximize2 size={13} /> BẤM PHÓNG TO</span>
                           </div>
                         </div>
-                        <div className="ig-image-caption">Gợi ý trên bộ cài: "ĐỂ TRỐNG NẾU BẠN MUỐN DÙNG THỬ 7 NGÀY (MIỄN PHÍ)"</div>
+                        <div className="ig-image-caption">Gợi ý trên bộ cài: &ldquo;ĐỂ TRỐNG NẾU BẠN MUỐN DÙNG THỬ 7 NGÀY (MIỄN PHÍ)&rdquo;</div>
                       </div>
                     </div>
                   </div>

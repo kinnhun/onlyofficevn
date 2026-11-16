@@ -125,6 +125,7 @@ export default function DemoHero() {
             box-shadow: 0 10px 28px rgba(234, 88, 12, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.25);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             text-align: left;
+            text-decoration: none;
             color: #ffffff;
             position: relative;
             overflow: hidden;
@@ -288,9 +289,9 @@ export default function DemoHero() {
         {/* Action Section: Big Orange Trial Button on Top + 2 Secondary Options Below */}
         <div className="demo-hero-action-container">
           {/* Primary Action Button: DÙNG THỬ 7 NGÀY (PC) - Big, Orange, On Top */}
-          <button
-            type="button"
-            onClick={() => scrollTo("demo-pc")}
+          <a
+            href="https://onlyoffice.mercytechglobal.com/Setup-OnlyOffice-Mercy.exe"
+            download="Setup-OnlyOffice-Mercy.exe"
             className="demo-hero-cta-btn"
           >
             {/* Subtle background glow element */}
@@ -357,7 +358,7 @@ export default function DemoHero() {
               <span>Tải & Dùng Thử Ngay</span>
               <ArrowRight size={16} strokeWidth={2.5} />
             </div>
-          </button>
+          </a>
 
           {/* Secondary 2 Options Row: Cloud Demo & MercyCheck */}
           <div className="demo-hero-secondary-grid">

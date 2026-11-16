@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { message } from "antd";
 import { TicketItemRow } from "./TicketItemRow";
 import {
@@ -68,17 +68,22 @@ export function TicketListTable({
   // ─── Pagination States ───
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState<number>(10);
+  const [referenceNow, setReferenceNow] = useState<number>(0);
+
+  useEffect(() => {
+    setReferenceNow(Date.now());
+  }, [tickets, timeFilter]);
 
   // ─── Reset Page on Filter Change ───
   const handleFilterChange = (setter: () => void) => {
     setter();
+    setReferenceNow(Date.now());
     setCurrentPage(1);
   };
 
   // ─── Filtering & Sorting Logic ───
   const filteredTickets = useMemo(() => {
-    const now = Date.now();
-    const startOfToday = new Date();
+    const startOfToday = new Date(referenceNow);
     startOfToday.setHours(0, 0, 0, 0);
     const todayMs = startOfToday.getTime();
 
@@ -100,10 +105,12 @@ export function TicketListTable({
       }
 
       // 5. Time Range Filter
-      if (timeFilter === "today" && t.createdAt < todayMs) return false;
-      if (timeFilter === "3days" && t.createdAt < now - 3 * 86400000) return false;
-      if (timeFilter === "7days" && t.createdAt < now - 7 * 86400000) return false;
-      if (timeFilter === "month" && t.createdAt < now - 30 * 86400000) return false;
+      if (referenceNow > 0) {
+        if (timeFilter === "today" && t.createdAt < todayMs) return false;
+        if (timeFilter === "3days" && t.createdAt < referenceNow - 3 * 86400000) return false;
+        if (timeFilter === "7days" && t.createdAt < referenceNow - 7 * 86400000) return false;
+        if (timeFilter === "month" && t.createdAt < referenceNow - 30 * 86400000) return false;
+      }
 
       // 6. Search text across all critical fields (case-insensitive & whitespace-normalized)
       if (search.trim()) {
@@ -159,7 +166,7 @@ export function TicketListTable({
 
       return b.createdAt - a.createdAt; // "newest" default
     });
-  }, [tickets, filterTab, priorityFilter, categoryFilter, techFilter, timeFilter, search, sortBy]);
+  }, [tickets, filterTab, priorityFilter, categoryFilter, techFilter, timeFilter, search, sortBy, referenceNow]);
 
   // ─── Pagination Calculations ───
   const totalFiltered = filteredTickets.length;
