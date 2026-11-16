@@ -32,7 +32,6 @@ import Link from "next/link";
 import { useSupportChat } from "../hooks/useSupportChat";
 import { ChatSidebar } from "./ChatSidebar";
 import { MessageList } from "./MessageList";
-import { QuickSuggestions } from "./QuickSuggestions";
 import { ChatInput } from "./ChatInput";
 import { HandoffModal } from "./HandoffModal";
 
@@ -77,10 +76,9 @@ export function FullPageChatApp() {
     const transcript = messages
       .map(
         (m) =>
-          `[${
-            m.role === "user"
-              ? "Khách hàng"
-              : m.role === "technician"
+          `[${m.role === "user"
+            ? "Khách hàng"
+            : m.role === "technician"
               ? "Kỹ thuật viên Mercy Tech"
               : "Trợ lý kỹ thuật ONLYOFFICE (AI)"
           } - ${new Date(m.timestamp).toLocaleTimeString("vi-VN")}]:\n${m.content}\n`
@@ -452,11 +450,10 @@ export function FullPageChatApp() {
 
           {handoffState === "handoff_requested" && (
             <Alert
-              title={`Đã chuyển yêu cầu ${
-                conversation?.assignedTicketId
+              title={`Đã chuyển yêu cầu ${conversation?.assignedTicketId
                   ? `(#${conversation.assignedTicketId})`
                   : ""
-              } sang kỹ thuật viên kèm tóm tắt chẩn đoán. Giờ làm việc: ${policy.supportHours}.`}
+                } sang kỹ thuật viên kèm tóm tắt chẩn đoán. Giờ làm việc: ${policy.supportHours}.`}
               type="warning"
               showIcon
               banner
@@ -496,12 +493,6 @@ export function FullPageChatApp() {
               onFeedback={(msgId, rating) =>
                 void submitOutcomeFeedback(msgId, rating)
               }
-            />
-
-            <QuickSuggestions
-              disabled={isLoading}
-              onSelect={(query) => void sendTurn(query)}
-              onAttachImage={() => fileInputRef.current?.click()}
             />
 
             <ChatInput

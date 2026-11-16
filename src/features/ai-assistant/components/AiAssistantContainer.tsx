@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useAiChat } from "../hooks/useAiChat";
 import { ChatHeader } from "./ChatHeader";
 import { MessageList } from "./MessageList";
-import { QuickSuggestions } from "./QuickSuggestions";
 import { ChatInput } from "./ChatInput";
 import { HandoffModal } from "./HandoffModal";
 
@@ -40,11 +39,6 @@ export function AiAssistantContainer() {
         isLoading={isLoading}
         onSelectAction={(actionText) => sendMessage(actionText)}
         onFeedback={setFeedback}
-      />
-
-      <QuickSuggestions
-        disabled={isLoading}
-        onSelect={(query) => sendMessage(query)}
       />
 
       <ChatInput

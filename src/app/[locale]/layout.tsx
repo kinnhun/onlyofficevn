@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import FloatingTrialButton from "@/components/FloatingTrialButton";
 import FloatingChatWidget from "@/features/ai-assistant/components/FloatingChatWidget";
 import JsonLd from "@/components/seo/JsonLd";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import I18nInitializer from "@/components/I18nInitializer";
 import { Open_Sans } from "next/font/google";
 import "../globals.css";
@@ -173,6 +174,7 @@ export default async function LocaleLayout({
             <FloatingChatWidget />
           </div>
         </NextIntlClientProvider>
+        <GoogleAnalytics />
       </body>
     </html>
   );
